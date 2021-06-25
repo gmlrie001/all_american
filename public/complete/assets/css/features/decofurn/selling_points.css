@@ -1,0 +1,44 @@
+.selling-points {
+    background-color: #f8f8f8;
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    line-height: 65px;
+}
+.selling-points a, .selling-points a:hover, .selling-points a:focus {
+    display: block;
+    float: left;
+    width: 25%;
+    text-decoration: none;
+    line-height: 65px;
+    min-height: 65px;
+}
+.selling-points .slick-slide + .slick-slide a {
+    border-left: 1px solid #cccccc;
+}
+.selling-points a strong {
+    display: block;
+    float: left;
+    width: 100%;
+    font-size: 14px;
+    color: #161a60;
+    line-height: 20px;
+    text-transform: uppercase;
+    margin-top: 6.5%;
+}
+.selling-points a strong + span {
+    display: block;
+    float: left;
+    width: 100%;
+    font-weight: 300;
+    font-size: 13px;
+    color: #3c3c3c;
+    line-height: 13px;
+}
+.selling-slider .slick-slide img {
+    display: inline-block;
+}
+@media (max-width: 767px) {
+    .selling-points {
+        display: none;
+    }
+}

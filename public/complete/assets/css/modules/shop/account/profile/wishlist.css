@@ -1,0 +1,74 @@
+.wishlist-card {
+  max-width: 555px;
+  width: 100%;
+  max-height: 240px;
+  height: 100%;
+  padding: 30px;
+  margin: 0;
+  outline: 1px solid #d6d6d6;
+  outline-offset: -1px;
+}
+
+.wishlist-card .card-body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 28px;
+  color: #000000;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.wishlist-card .card-body h3 {
+  font-size: 14px;
+  line-height: 25px;
+  margin: 0.25rem auto 0.618rem;
+}
+
+.wishlist-card .card-body h5 {
+  font-size: 13px;
+  line-height: inherit;
+  margin: 0;
+}
+
+.wishlist-card .card-body p {
+  font-size: 13px;
+  line-height: 25px;
+  margin: 0;
+}
+
+.wishlist-card .card-body [class*=cta] {
+  max-height: 50px !important;
+  line-height: 50px !important;
+  padding: 0;
+}
+
+.wishlist-card .card-body [class*=cta] > * {
+  margin: 0;
+  padding: 0 0.5rem;
+  font-size: 100%;
+  line-height: 40px;
+  /* line-height: 50px; */
+}
+
+@media only screen and (max-width: 992px) {
+  .wishlist-card {
+    max-height: unset;
+    padding: 1rem 0.5rem 1.618rem;
+  }
+
+  .wishlist-card .card-body h3 {
+    margin: 0.5rem auto;
+  }
+  
+  .wishlist-card .card-body [class*=cta] {
+    max-height: 40px !important;
+    line-height: 40px !important;
+    padding: 0;
+  }
+  
+  .wishlist-card .card-body [class*=cta] > * {
+    margin: 0;
+    padding: 0 0.375rem;
+    line-height: 40px;
+  }
+
+}

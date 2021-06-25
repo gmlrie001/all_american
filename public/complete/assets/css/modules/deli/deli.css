@@ -1,0 +1,52 @@
+/**
+ *
+ * Deli Page Styling (Adaptive)
+ */
+
+.deli-articles article {
+  margin: 3rem auto;
+}
+
+.deli-articles article.odd {
+  background-color: var(--text-secondary-color);
+}
+
+.deli-articles article.odd * {
+  color: #2d2d2d;
+}
+
+.deli-articles article.odd .image {
+  order: 0;
+}
+
+.deli-articles article.even {
+  background-color: var(--theme-color);
+}
+
+.deli-articles article.even * {
+  color: #ffffff;
+}
+
+.deli-articles article.even .image {
+  order: 12;
+}
+
+.deli-articles .col-12.col-lg-6.image {
+  margin-top: -6rem !important;
+}
+
+.deli-articles .col-12.col-lg-6.image img.img-fluid {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media only screen and (max-width: 992px) {
+  .deli-articles article.even .image {
+    order: 0;
+  }
+
+  .deli-articles article {
+    margin: 1rem auto;
+  }
+}

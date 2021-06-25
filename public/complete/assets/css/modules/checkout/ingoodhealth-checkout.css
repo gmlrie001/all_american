@@ -1,0 +1,203 @@
+.cart-product h2 a {
+  font-size: 14px !important;
+  font-weight: 500;
+  line-height: 19px !important;
+  letter-spacing: 0;
+}
+
+.cart-product h4,
+.cart-product label {
+  font-size: 12px !important;
+  font-weight: 300;
+  line-height: 38px;
+}
+
+.cart-product h4 span {
+  font-size: 11px !important;
+  font-weight: 600;
+  line-height: 38px;
+}
+
+.payment-order-summary h2 {
+  margin-bottom: 20px;
+  font-size: 15px;
+  line-height: inherit;
+}
+
+.payment-order-summary p,
+.payment-order-summary a,
+.payment-order-summary h3,
+.payment-order-summary h4 {
+  margin-top: 0;
+  margin-bottom: 0.618rem;
+  color: inherit;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 0.875;
+}
+
+.payment-order-summary h4 {
+  margin: 1rem auto;
+  line-height: 1.5;
+}
+
+.payment-order-summary p span,
+.payment-order-summary a span,
+.payment-order-summary h3 span,
+.payment-order-summary h4 span {
+  margin-top: 0;
+  margin-bottom: inherit;
+  color: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  line-height: inherit;
+}
+
+.promo-form input.form-control {
+  font-size: 14px;
+  text-align: left;
+  line-height: 40px;
+  height: 40px;
+  border-radius: 0;
+  padding: 1rem 0.618rem;
+}
+
+.promo-form button {
+  font-size: 15px;
+}
+
+.continue-button {
+  width: 100%;
+  max-height: 40px;
+  border: none;
+  background-color: #87ce6e;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 40px;
+  text-transform: uppercase;
+}
+
+.arrow {
+  font: normal normal 13px 'Poppins', sans-serif;
+  line-height: inherit;
+  color: #ffffff;
+}
+
+.arrow.completed div span,
+.arrow div span,
+.arrow.active div span {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.arrow.completed div,
+.arrow div {
+  background-color: #868483;
+  color: inherit;
+  outline: 1px solid #ffffff;
+  outline-offset: -1px;
+}
+
+.arrow.active div {
+  background-color: #0e546f;
+  color: inherit;
+  outline: 1px solid #ffffff;
+  outline-offset: -1px;
+}
+
+.arrow:first-child div span {
+  margin: 0 10px 0 1rem;
+}
+
+.arrow div span {
+  font-weight: 400;
+  font-size: inherit;
+  margin: 0 10px 0 1rem;
+}
+
+.shipping-options-list-options>div div {
+  font-size: 13px;
+  line-height: 25px;
+}
+
+.payment-order-summary p,
+.payment-order-summary a,
+.payment-order-summary h3,
+.payment-order-summary h4 {
+  margin-top: 0;
+  margin-bottom: 0.618rem;
+  color: inherit;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.618;
+}
+
+
+
+@media only screen and (max-width: 992px) {
+  .arrow {
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+
+  .arrow:nth-child(1) {
+    margin-left: 0;
+  }
+
+  .arrow:nth-child(4) {
+    max-width: 25%;
+  }
+
+  .arrow>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .arrow>div:after {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: block;
+    width: 100%;
+    height: 3px;
+    content: "";
+    background: #b4b4b4;
+  }
+
+  .arrow div span {
+    background-color: inherit;
+  }
+
+  .arrow.completed div span,
+  .arrow div span,
+  .arrow.active div span {
+    color: #ffffff;
+    font-size: 23px;
+  }
+
+  .arrow:first-child div span,
+  .arrow div span {
+    margin: auto;
+  }
+
+  .add-address form,
+  .add-address form *,
+  form .continue-button {
+    line-height: 40px;
+    max-height: 40px;
+    font-size: 15px;
+  }
+
+  .promo-form {
+    padding: 0 !important;
+  }
+  .promo-form,
+  .promo-form * {
+    max-height: 40px;
+    line-height: 40px;
+  }
+
+}

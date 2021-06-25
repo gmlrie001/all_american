@@ -1,0 +1,127 @@
+/**
+ * Account Dialog/Interaction Modals
+ */
+
+dialog#update-address,
+.modal-contained {
+  max-width: 800px;
+  width: 100%;
+  max-height: 87.5vh;
+  height: 100%;
+  top: 10vh;;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 90010;
+}
+dialog#site-search {
+  max-height: 5vh;
+  height: auto;
+  top: 25vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+dialog#add2cart {
+  max-height: 47.5vh;
+  margin-bottom: 0;
+  cursor: pointer;
+  font-size: 3rem;
+}
+dialog span:not(.fa),
+dialog#update-address span:not(.fa),
+dialog#add2cart span:not(.fa) {
+  margin-bottom: 0;
+  cursor: pointer;
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+dialog form,
+dialog#update-address form {
+  margin-top: 1.618rem;
+}
+
+dialog form label,
+dialog#update-address form label {
+  display: block !important;
+  margin-bottom: 1rem;
+}
+
+dialog form .form-control,
+dialog#update-address form .form-control {
+  font-size: 14px;
+}
+
+dialog form .form-control {
+  font-size: 1rem;
+  line-height: 50px;
+  max-height: 50px;
+}
+
+[class*=dialog-overlay] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  background-color: rgba(10, 10, 10, 0.5);
+  overflow: hidden;
+  z-index: 90010;
+}
+
+@media only screen and (max-width: 992px) {
+
+  dialog form .form-control {
+    font-size: 13px;
+    line-height: 40px;
+    max-height: 40px;
+  }
+
+  dialog,
+  dialog#update-address,
+  dialog#add2cart,
+  .modal-contained {
+    max-width: 95%;
+    max-height: calc(100vh - 15%);
+    overflow: auto;
+    top: 2.5%;
+    transform: translate3d(0, 0, 0);
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  dialog h3,
+  dialog#update-address h3,
+  .modal-contained h3 {
+    font-size: 21px;
+    line-height: inherit;
+  }
+
+  dialog span,
+  dialog#update-address span {
+    font-size: 30px;
+    margin-bottom: 0;
+  }
+
+  dialog button.btn,
+  dialog#update-address button.btn,
+  .modal-contained button.btn {
+    max-width: 100%;
+  }
+
+  dialog a[class*=btn], dialog a[class*=cta] {
+    font-weight: 500 !important;
+    margin-bottom: 0;
+  }
+
+  dialog#add2cart .add2cart-cta.my-3 {
+    margin-bottom: 0 !important;
+  }
+
+}

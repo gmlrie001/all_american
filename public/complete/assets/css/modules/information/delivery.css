@@ -1,0 +1,57 @@
+.tncs {
+  color: #041020;
+  font: normal normal 18px/37px 'Poppins', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 37px;
+  text-align: left;
+}
+
+.tncs h1 {
+  margin: 90px auto 60px;
+  text-align: left;
+}
+
+.tncs .page-content {
+  margin-top: 10px;
+  text-align: left;
+}
+
+.tncs .page-content.description section {
+  color: #041020;
+  font: normal normal 18px/37px 'Poppins', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 37px;
+  text-align: left;
+}
+
+.tncs .page-content.description section {
+  margin: 45px auto 50px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-align: left;
+}
+
+.tncs .page-content.description section:last-of-type {
+  margin-bottom: 90px;
+}
+
+.tncs section h2 {
+  color: #041020;
+  font: inherit;
+  font-size: 25px;
+  letter-spacing: 0;
+  line-height: 37px;
+  text-align: inherit;
+  text-transform: uppercase;
+}
+
+.tncs section p {
+  color: #041020;
+  font: inherit;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 37px;
+  text-align: inherit;
+}

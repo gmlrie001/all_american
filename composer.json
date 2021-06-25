@@ -1,0 +1,38 @@
+{
+  "name": "template/all_american",
+  "type": "library",
+  "description": "All American Auto Ecommerce site styling, through CSS, and dynamic functionality via JS/JQuery",
+  "keywords": [
+    "style", 
+    "js", 
+    "jquery", 
+    "templating" 
+  ],    
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "gmlrie001",
+      "email": "dev2@monzamedia.com"
+    }
+  ],
+  "require": {},
+  "minimum-stability": "dev",
+  "config": {
+    "sort-packages": true
+  },
+  "autoload": {
+    "psr-4": {
+      "Templates\\AllAmerican\\": "src"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Templates\\AllAmerican\\AllAmericanServiceProvider"
+      ],
+      "aliases": {
+        "AllAmerican": "Templates\\AllAmerican\\Facades\\AllAmerican"
+      }
+    }
+  }
+}

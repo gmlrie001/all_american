@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Century Gothic';
+    src: local('Century Gothic'), local('CenturyGothic'),
+        url('hinted-CenturyGothic.woff2') format('woff2'),
+        url('hinted-CenturyGothic.woff') format('woff'),
+        url('hinted-CenturyGothic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Century Gothic';
+    src: local('Century Gothic Bold'), local('CenturyGothic-Bold'),
+        url('hinted-CenturyGothic-Bold.woff2') format('woff2'),
+        url('hinted-CenturyGothic-Bold.woff') format('woff'),
+        url('hinted-CenturyGothic-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}

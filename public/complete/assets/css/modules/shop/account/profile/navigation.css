@@ -1,0 +1,80 @@
+.profile-section-title h2 {
+  margin: 0 auto 1.618rem;
+}
+
+.account {
+  background-color: #ececec;
+  color: #000000;
+  font: normal normal 14px/50px 'Poppins', sans-serif;
+  font-weight: 400;
+  line-height: 50px;
+}
+
+.account nav {
+  max-height: 50px;
+}
+
+.account nav .nav-item {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.account nav .nav-item:first-of-type {
+  margin-left: 0;
+}
+.account nav .nav-item:last-of-type {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.account ul li > a.nav-link.active {
+  font-weight: 600;
+}
+
+.account ul li > a.nav-link {
+  margin-bottom: 0;
+  color: inherit;
+  font: inherit;
+  font-size: 14px;
+  font-weight: inherit;
+  line-height: inherit;
+  text-transform: uppercase;
+}
+
+#profile label {
+  max-width: 100%;
+  width: 100%;
+}
+#profile .form-control {
+  max-height: 40px;
+  font-size: 13px;
+  line-height: 37px;
+}
+#profile h4 {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.card-body .validity p {
+  color: #ff0000 !important;
+}
+
+@media only screen and (max-width: 1024px) {
+  .profile-section-title h2 {
+    margin: 0 auto;
+  }
+  
+}
+
+@media only screen and (max-width: 992px) {
+  .account,
+  .account nav,
+  .account ul li > a.nav-link {
+    line-height: 40px;
+  }
+
+  .account nav .nav-item {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}

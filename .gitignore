@@ -1,0 +1,11 @@
+/vendor/
+
+*.zip
+*.gz
+*.bzip2
+*.bz2
+*.tar
+*.tar.gz
+*.tgz
+*.tar.bz2
+*.tbz2

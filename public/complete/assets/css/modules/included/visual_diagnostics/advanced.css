@@ -1,0 +1,103 @@
+/**
+ *
+ * Specific Diagnostics - ADVANCED
+ *
+ * Different types of elements and tags are defined with 
+ * various colours in order to fine tune the debugging process.
+ *
+ * Elements/Tags:
+ *  => empty line items;
+ *  => images with no|empty alt;
+ *  => table lines; and
+ *  => links with no title | empty title | no_title_with_href#, etc.
+ */
+
+table#imgtest th,
+table#imgtest td {
+  text-align: center;
+  padding: 5px;
+}
+
+table#imgtest tbody th {
+  text-align: right;
+}
+
+table#imgtest img {
+  width: 25px;
+  height: 25px;
+}
+
+*:empty,
+div:empty,
+span:empty,
+li:empty,
+p:empty,
+td:empty,
+th:empty {
+  padding: 0.5em;
+  background: yellow;
+}
+
+*[style],
+font,
+center {
+  outline: 2px solid red;
+}
+
+*[class=""],
+*[id=""] {
+  outline: 2px dotted red;
+}
+
+img[alt=""] {
+  border: 1px dotted red;
+}
+
+img:not([alt]) {
+  border: 2px solid red;
+}
+
+img[title=""] {
+  outline: 1px dotted fuchsia;
+}
+
+img:not([title]) {
+  outline: 2px solid fuchsia;
+}
+
+table:not([summary]) {
+  outline: 2px solid red;
+}
+
+table[summary=""] {
+  outline: 1px dotted red;
+}
+
+th {
+  border: 1px solid red;
+}
+
+th[scope="col"],
+th[scope="row"] {
+  border: none;
+}
+
+a[href]:not([title]) {
+  border: 2px solid red;
+}
+
+a[title=""] {
+  outline: 2px dotted red;
+}
+
+a[href="#"] {
+  background: lime;
+}
+
+a[href=""] {
+  background: fuchsia;
+}
+
+li {
+  margin: 0.67em 0;
+}

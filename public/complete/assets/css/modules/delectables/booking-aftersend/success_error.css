@@ -1,0 +1,181 @@
+/**
+ *
+ * POST Booking Enquiry Submission
+ *
+ * Success|Error Message
+ *
+ */
+
+.enquiry-message.banner,
+.enquiry-message.banner img.img-fluid {
+  max-height: 500px;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.booking-message {
+  min-height: 520px;
+  margin-top: 130px;
+}
+
+.booking-message h1 {
+  font: normal normal 30px 'Century Gothic', sans-serif;
+}
+
+.message {
+  max-width: 100%;
+  max-height: 200px;
+  height: 200px;
+  margin: auto;
+  background-color: #082437;
+  color: #ffffff;
+  padding-left: 100px !important;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  padding-top: 2rem;
+}
+
+.site-tree-decoration {
+  top: -1rem;
+  bottom: unset;
+  right: -1.375rem;
+}
+
+.message h2.title {
+  font: normal normal 25px 'Century Gothic', sans-serif;
+}
+
+.message .description p {
+  font: normal normal 17px/30px 'Century Gothic', sans-serif;
+  margin-bottom: 1.618rem;
+}
+
+.message .description p:last-child {
+  margin-top: 0.618rem;
+  margin-bottom: 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .booking-message h1 {
+    font-size: 20px;
+  }
+
+  .site-tree-decoration {
+    top: unset;
+    bottom: 0.25rem;
+    right: -0.25rem;
+  }
+
+  .site-tree-decoration img.img-fluid {
+    max-width: 90px !important;
+    max-height: 90px !important;
+  }
+
+  .message {
+    max-width: 318px;
+    max-height: 290px;
+    height: 290px;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    color: #ffffff;
+    margin-bottom: 2rem;
+  }
+
+  .message h2.title {
+    font-size: 17px;
+  }
+
+  .message .description p {
+    font: normal normal 13px/24px 'Century Gothic', sans-serif;
+    margin-bottom: 1rem;
+  }
+
+  .message .description p:last-child {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+  }
+}
+
+/**
+.enquiry-message.banner {
+  max-height:500px;
+  width:100%;
+  object-fit:cover;
+}
+.booking-message {
+  min-height:520px;
+  margin-top:130px;
+}
+.booking-message h1 {
+  font: normal normal 30px 'Century Gothic', sans-serif;
+}
+.message {
+  max-width: 100%;
+  max-height: 200px;
+  height: 200px;
+  margin: auto;
+  background-color: #082437;
+  color: #ffffff;
+  padding-left: 100px !important;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  padding-top: 2rem;
+}
+.site-tree-decoration {
+  top:-1rem;
+  bottom: unset;
+  right:-1.375rem;
+}
+.message h2.title {
+  font:normal normal 25px 'Century Gothic', sans-serif;
+}
+.message .description p {
+  font:normal normal 17px/30px 'Century Gothic', sans-serif;
+  margin-bottom:1.618rem;
+}
+.message .description p:last-child {
+  margin-top:0.618rem;
+  margin-bottom:0;
+}
+@media only screen and (max-width: 767px) {
+  .booking-message h1 {
+    font-size:20px;
+  }
+  .site-tree-decoration {
+    top: unset;
+    bottom: 0.25rem;
+    right: -0.25rem;
+  }
+  .site-tree-decoration img.img-fluid {
+    max-width: 90px !important;
+    max-height: 90px !important;
+  }
+  .message {
+    max-width: 318px;
+    max-height: 290px;
+    height: 290px;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    color: #ffffff;
+    margin-bottom: 2rem;
+  }
+
+  .message h2.title {
+    font-size:17px;
+  }
+  .message .description p {
+    font:normal normal 13px/24px 'Century Gothic', sans-serif;
+    margin-bottom:1rem;
+  }
+  .message .description p:last-child {
+    margin-top:0.5rem;
+    margin-bottom:0;
+  }
+}
+**/

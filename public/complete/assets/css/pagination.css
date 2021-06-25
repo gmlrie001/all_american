@@ -1,0 +1,28 @@
+.pagination {
+    float: right;
+    display: block;
+}
+.pagination li * {
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    border: 1px solid #818181;
+    color: #757575;
+    font-size: 16px;
+    float: left;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+.pagination li *, .pagination li *:hover, .pagination li *:focus {
+    color: inherit;
+    font-size: inherit;
+    text-decoration: none;
+    font-weight: inherit;
+}
+.pagination li:hover *, .pagination li.active * {
+    border: 1px solid #161a60;
+    color: #ffffff;
+    background: #161a60;
+}

@@ -1,0 +1,73 @@
+/**
+ * File: register.css
+ * Login-Register: Register Component Styling
+ *
+ */
+
+.register-form {
+  color: #878787;
+  width: 100%;
+}
+
+.register-form h2 {
+  color: #000000;
+  font: inherit;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: inherit;
+  margin-bottom: 30px;
+}
+
+.register-form form label {
+  color: #555555;
+  margin: 0.5rem 0;
+}
+
+.register-form form label span {
+  color: inherit;
+  font-size: 1rem;
+  line-height: 37px;
+}
+
+.register-form form input.form-control {
+  max-height: 40px;
+  height: 40px;
+  border-color: #959595;
+  border-radius: 0;
+  background-color: transparent;
+  color: #878787;
+  line-height: 40px;
+}
+
+.register-form form input.form-control:focus,
+.register-form form input.form-control:active,
+.register-form form input.form-control:hover {
+  background-color: #ffffff;
+}
+
+.register-cta {
+  margin: 1.618rem auto 1rem;
+}
+
+.register-cta .submit-btn {
+  max-width: 250px;
+  background-color: #041020;
+  color: #ffffff;
+}
+
+@media only screen and (max-width: 992px) {
+  .register-form {
+    font-size: 1rem;
+    line-height: 29px;
+  }
+  .register-form h2 {
+    font-size: 1.25rem;
+    line-height: 21px;
+  }
+  .register-form form * {
+    font-size: 15px !important;
+    margin-bottom: 0 !important;
+  }
+
+}
+

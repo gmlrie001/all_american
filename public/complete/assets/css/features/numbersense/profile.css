@@ -1,0 +1,489 @@
+.profile-margin-top {
+    margin-top: 30px;
+}
+.profile-tab-container a {
+    display: block;
+    margin-bottom: 10px;
+    float: left;
+    width: 100%;
+    cursor: pointer;
+    text-decoration: none;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    color: #ffffff !important;
+    font-size: 16px;
+    background: #000000;
+}
+.profile-tab-container a i {
+    float: right;
+    line-height: 40px;
+}
+.delete-address {
+    margin-top: 15px;
+    line-height: 40px;
+    margin-right: 15px; 
+}
+h1 .delete-address {
+    margin: 0;
+}
+.profile-tab-container a.active {
+    background: #0054a6 !important;
+    color: #ffffff;
+}
+.profile-form h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-weight: 700;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #000000;
+    display: block;
+    float: left;
+    width: 100%;
+}
+.profile-form h2 span {
+    font-weight: 700;
+    font-size: 19px;
+    text-transform: uppercase;
+    color: #1c21e8;
+}
+.profile-form input, .profile-form select {
+    height: 30px;
+    line-height: 30px;
+    border-radius: 0;
+    border: 1px solid #ebebeb;
+    color: #9f9f9f;
+    font-weight: 300;
+    font-size: 15px;
+    display: block;
+    width: 70% !important;
+    float: left;
+}
+.profile-form input[name="address_line_2"] {
+    margin-left: 25% !important;
+}
+.profile-form label {
+    color: #000000;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 30px;
+    display: block;
+    width: 30% !important;
+    float: left;
+}
+.profile-form .form-group {
+    margin-bottom: 10px;
+    display: block;
+    float: left;
+    width: 100%;
+}
+.profile-form button {
+    margin-top: 15px;
+    display: block;
+    float: right;
+    border: none;
+    color: #ffffff;
+    width: 175px;
+    max-width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #23346d;
+    font-weight: 500;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+.profile-form button.red-button {
+    margin-right: 0;
+    margin-bottom: 25px;
+    background: #1cbf01;
+}
+.edit-address-form h1 {
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 16px;
+    display: block;
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 0;
+    background: #000000;
+    height: 50px;
+    cursor: pointer;
+    line-height: 50px;
+    padding: 0 15px;
+}
+.edit-address-form h1 > i {
+    line-height: 50px;
+    width: 10px;
+}
+.edit-address-form form {
+    display: none;
+}
+.edit-address-form h1 > span {
+    margin-right: 30px;
+    font-weight: 300;
+    font-size: 16px;
+}
+.edit-address-form h1 > span i {
+    margin-left: 10px;
+    font-weight: 300;
+    font-size: 16px;
+}
+.edit-address-form h1 > span i.fa-check-square-o {
+    color: #a3db4a;
+}
+.order-dropdown {
+    display: none;
+    margin-bottom: 10px;
+    margin-top: -10px;
+    float: left;
+    width: 100%;
+}
+.order-dropdown a {
+    background: #2f2f2f;
+    margin-bottom: 0;
+}
+.order-history-row .bordered {
+    border: 1px solid #ebebeb;
+    margin-bottom: 30px;
+    padding: 0 15px 20px 15px;
+}
+.order-history-row h3 {
+    font-weight: 500;
+    color: #000000;
+    font-size: 22px;
+    height: 22px;
+    line-height: 22px;
+    display: block;
+    float: left;
+    width: 100%;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+.order-history-row h3 a {
+    display: block;
+    float: right;
+    width: 175px;
+    max-width: 100%;
+    height: 30px;
+    line-height: 33px;
+    text-decoration: none;
+    text-align: center;
+    color: #ffffff;
+    background: #1cbf01;
+    font-weight: 400;
+    font-size: 14px;
+}
+.order-history-row .row h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    height: 16px;
+}
+.order-history-row h4 {
+    font-weight: 400;
+    color: #717171;
+    font-size: 14px;
+    display: block;
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+.order-history-row .row p {
+    font-weight: 400;
+    color: #000000;
+    font-size: 12px;
+    line-height: 12px;
+    display: block;
+    float: left;
+    width: 100%;
+    margin-bottom: 25px;
+}
+.order-history-row .row .margin-small p {
+    margin-bottom: 7px;
+}
+.order-history-row .row p span {
+    float: left;
+}
+.order-product .bordered {
+    padding: 10px;
+}
+.order-product .bordered .thumbnail {
+    float: left;
+    width: 30%;
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 0;
+    border: 1px solid #ebebeb;
+}
+.order-product .bordered .thumbnail + div {
+    float: left;
+    width: 70%;
+    display: block;
+}
+.order-product .bordered h2 {
+    float: left;
+    width: 100%;
+    display: block;
+    padding: 0 12px;
+    color: #000000;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.order-product .bordered h3 {
+    float: left;
+    width: 100%;
+    display: block;
+    padding: 0 12px;
+    color: #000000;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.order-product .bordered p {
+    float: left;
+    width: 100%;
+    display: block;
+    color: #000000;
+    font-size: 13px;
+    font-weight: 400;
+    text-align: right;
+    margin-bottom: 8px;
+    padding: 0 12px;
+}
+.order-product .bordered p:last-of-type {
+    margin-bottom: 0;
+}
+.order-product .bordered p span {
+    float: left;
+}
+
+.add-address-form h1 {
+    display: block;
+    float: left;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background: #f7336b;
+    color: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 0 20px;
+}
+.add-address-form label {
+    padding: 0 20px;
+    color: #3c3c3c;
+    font-weight: 300;
+    font-size: 15px;
+    margin: 0;
+    line-height: 40px;
+}
+.add-address-form .form-group {
+    margin-bottom: 15px;
+}
+.add-address-form input, .add-address-form select {
+    height: 40px;
+    padding: 0 15px;
+    border: 1px solid #000000;
+    font-weight: 300;
+    font-size: 13px;
+    color: #9f9f9f;
+}
+.add-address-form p {
+    padding: 0;
+    font-weight: 300;
+    font-size: 12px;
+    color: #4a4a4a;
+    margin-right: 25%;
+}
+.add-address-form button {
+    border: none;
+    display: block;
+    max-width: 100%;
+    width: 175px;
+    height: 40px;
+    background: #dc2020;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 15px;
+    text-transform: uppercase;
+    float: right;
+    margin-right: 33.33%;
+}
+.add-address {
+    margin-top: 25px;
+    float: left;
+   width: 100%;
+}
+.add-address a {
+    display: block;
+    float: right;
+    background: #ec008c;
+    width: 175px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    text-transform: uppercase;
+    max-width: 100%;
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: 400;
+    color: #ffffff;
+    margin-bottom: 25px;
+}
+.add-address-form {
+    display: none;
+}
+.edit-address-form h1 {
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 16px;
+    display: block;
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 0;
+    background: #000000;
+    height: 50px;
+    cursor: pointer;
+    line-height: 50px;
+    padding: 0 15px;
+}
+.edit-address-form h1 > i {
+    line-height: 50px;
+    width: 10px;
+}
+.edit-address-form form {
+    display: none;
+}
+.edit-address-form h1 > span {
+    margin-right: 30px;
+    font-weight: 300;
+    font-size: 16px;
+}
+.edit-address-form h1 > span i {
+    margin-left: 10px;
+    font-weight: 300;
+    font-size: 16px;
+}
+.edit-address-form h1 > span i.fa-check-square-o {
+    color: #a3db4a;
+}
+.edit-address-form p {
+    font-size: 12px;
+    margin-right: 25%;
+}
+@media (max-width: 1440px) {
+    .profile-form h2 span {
+        font-size: 19px;
+    }
+    .profile-form label, .profile-form input {
+        font-size: 13px;
+    }
+    .edit-address-form h1 > span {
+        font-size: 13px;
+    }
+}
+@media (max-width: 991px) {
+
+    .profile-form button {
+        width: 100%;
+    }
+    .profile-form label {
+        width: 100% !important;
+    }
+    .profile-form input[name="address_line_2"] {
+        margin-left: 0% !important;
+    }
+    .profile-form input {
+        width: 100% !important;
+    }
+    ul.profile-tab-container {
+        padding: 0 15px;
+        list-style: none;
+    }
+    ul.profile-tab-container li a {
+        background: #000000;
+        display: block;
+        height: 55px;
+        line-height: 55px;
+        padding: 0 20px;
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: 400;
+        color: #ffffff;
+        margin-bottom: 1px;
+    }
+    ul.profile-tab-container li i {
+        float: right;
+        line-height: 55px;
+        font-style: normal;
+    }
+    ul.profile-tab-container li ul {
+        float: left;
+        position: absolute;
+        padding: 0;
+        top: 100%;
+        display: none;
+        background: #ffffff;
+        list-style: none;
+        z-index: 4;
+        left: 15px;
+        right: 15px;
+    }
+    .order-dropdown {
+        display: none;
+        margin-bottom: 0;
+        margin-top: 0;
+        float: left;
+        width: 100%;
+    }
+    ul.profile-tab-container li ul li a {
+        background: #0054a6;
+        color: #ffffff;
+    }
+    ul.profile-tab-container li ul li a.active {
+        background: #0054a6;
+        color: #ffffff;
+    }
+    .edit-address-form h1 > span {
+        font-size: 0;
+        line-height: 65px;
+    }
+    ul.profile-tab-container li ul li a {
+        background: #929292;
+    }
+    .profile-form .form-group {
+        margin-bottom: 10px;
+        padding-right: 15px;
+        padding-right: 15px;
+    }
+}
+@media (max-width: 767px) {
+    .profile-form h2 {
+        display: none;
+    }
+    .profile-form input {
+        height: 35px;
+        line-height: 35px;
+    }
+    .profile-form label {
+        line-height: 20px;
+    }
+    .address-info h1 span {
+        display: none;
+    }
+}

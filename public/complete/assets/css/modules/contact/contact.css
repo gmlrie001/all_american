@@ -1,0 +1,408 @@
+/**
+
+ * File: contact.css
+
+ * Contact Page Styling (Adaptive)
+
+ *
+
+ * ALL DECENDANTS/Child nodes of .contact set to inherit
+
+ * all font properties, color and letter-spacing.
+
+ */
+
+
+
+.contact {
+
+  color: #041020;
+
+  font: normal normal 19px/37px 'Poppins', sans-serif;
+
+  font-weight: 400;
+
+  letter-spacing: 0;
+
+}
+
+
+
+.contact h1,
+
+.contact .page-title {
+
+  margin-top: 0;
+
+  margin-bottom: 35px;
+
+}
+
+
+
+.contact-form h3,
+
+.title h3,
+
+h3.title {
+
+  margin: 20px 0;
+
+  color: inherit;
+
+  font: inherit;
+
+  font-size: 25px;
+
+  font-weight: 500;
+
+  letter-spacing: inherit;
+
+  line-height: inherit;
+
+}
+
+
+
+/* Introduction Column Content */
+
+.contact .intro-content {
+
+  color: inherit;
+
+  font: inherit;
+
+  font-weight: inherit;
+
+  letter-spacing: inherit;
+
+}
+
+
+
+.contact .intro-content p,
+
+.contact .intro-content a,
+
+.contact .intro-content * a {
+
+  color: inherit;
+
+  font: inherit;
+
+  font-weight: inherit;
+
+}
+
+
+
+.contact .intro-content p {
+
+  margin-bottom: 50px;
+
+}
+
+
+
+.contact .intro-content a,
+
+.contact .intro-content * a {
+
+  color: #0e546f !important;
+
+}
+
+
+
+/* Contact Form Column Content */
+
+.contact-form label {
+
+  margin-bottom: 0;
+
+}
+
+
+
+.contact-form input.form-control,
+
+.contact-form textarea.form-control {
+
+  margin-top: 15px;
+
+  margin-bottom: 15px;
+
+  border-radius: 0;
+
+  line-height: 40px;
+
+  padding-top: 0;
+
+  padding-bottom: 0;
+
+}
+
+
+
+.contact-form input.form-control {
+
+  max-height: 40px;
+
+}
+
+
+
+.contact-form textarea.form-control {
+
+  max-height: 165px;
+
+  overflow-y: auto;
+
+}
+
+
+
+.contact-form .submit-cta {
+
+  max-height: 37px;
+
+  height: auto;
+
+  margin: 10px 0 20px;
+
+  border-radius: 0;
+
+  line-height: 37px;
+
+}
+
+
+
+.contact-form .btn.submit-form {
+
+  max-width: 280px;
+
+  width: 100%;
+
+  padding: 0;
+
+  border-radius: 0;
+
+  background-color: #0c5875;
+
+  color: #ffffff;
+
+  font: inherit;
+
+  font-size: 18px;
+
+  font-weight: 400;
+
+  text-align: center;
+
+}
+
+
+
+input.form-control,
+
+textarea.form-control,
+
+.contact-form .form-control::-webkit-input-placeholder,
+
+.contact-form .form-control::-moz-placeholder,
+
+.contact-form .form-control:-ms-input-placeholder,
+
+.contact-form .form-control:-moz-placeholder,
+
+::-webkit-input-placeholder,
+
+::-moz-placeholder,
+
+:-ms-input-placeholder,
+
+:-moz-placeholder {
+
+  color: #878787;
+
+  font: inherit;
+
+  font-size: 1rem;
+
+  font-weight: inherit;
+
+}
+
+
+
+@media only screen and (max-width: 992px) {
+
+  .contact {
+
+    font-size: 17px;
+
+    line-height: 28px;
+
+  }
+
+
+
+  .contact h1,
+
+  .contact .page-title {
+
+    margin-bottom: 15px;
+
+  }
+
+
+
+  .contact-form h3,
+
+  .title h3,
+
+  h3.title {
+
+    font-size: 21px;
+
+    font-weight: 500;
+
+    margin: 15px auto;
+
+  }
+
+
+
+  .contact .intro-content p {
+
+    margin-bottom: 35px;
+
+  }
+
+  .contact .intro-content p:last-of-type {
+
+    margin-bottom: 50px;
+
+  }
+
+
+
+  .contact-form .btn.submit-form {
+
+    max-width: 240px;
+
+  }
+
+
+
+  .contact-form textarea.form-control {
+
+    max-height: 200px;
+
+  }
+
+
+
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+  .contact {
+
+    font-size: 1rem;
+
+    line-height: 31px;
+
+  }
+
+
+
+  .contact-form h3,
+
+  .title h3,
+
+  h3.title {
+
+    font-size: 20px;
+
+  }
+
+
+
+  .contact .intro-content p {
+
+    margin-bottom: 30px;
+
+  }
+
+  .contact .intro-content p:last-of-type {
+
+    margin-bottom: 40px;
+
+  }
+
+
+
+  .contact-form .btn.submit-form {
+
+    max-width: 210px;
+
+  }
+
+
+
+}
+
+
+
+@media only screen and (max-width: 576px) {
+
+  .contact-form h3,
+
+  .title h3,
+
+  h3.title {
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+  }
+
+
+
+  .contact .intro-content p {
+
+    margin-bottom: 25px;
+
+  }
+
+  .contact .intro-content p:last-of-type {
+
+    margin-bottom: 40px;
+
+  }
+
+
+
+  .contact-form .btn.submit-form {
+
+    max-width: 100%;
+
+  }
+
+
+
+  .contact-form textarea.form-control {
+
+    max-height: unset;
+
+  }
+
+
+
+}
+

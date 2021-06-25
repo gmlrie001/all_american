@@ -1,0 +1,88 @@
+
+.share-modal {
+    display: none;
+    position: fixed;
+    top: 15%;
+    left: 0;
+    max-width: 100%;
+    min-height: 380px;
+    width: 500px;
+    background: rgb(255, 255, 255);
+    z-index: 102;
+    right: 0;
+    padding-bottom: 20px;
+    border: 3px solid #004737;
+    margin: auto;
+}
+.share-modal .text-center {
+    padding: 0 50px;
+}
+.close-share {
+    position: absolute;
+    top: 0;
+    margin: 0 !important;
+    right: 5px;
+}
+.share-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.8);
+    z-index: 101;
+}
+.share-modal h1 {
+    float: left;
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 20px;
+    color: #000000;
+    margin-top: 40px;
+}
+.share-modal a {
+    display: inline-block;
+    height: 43px;
+    width: 43px;
+    text-align: center;
+    line-height: 46px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    margin: 20px 10px 0 10px;
+}
+.share-modal a.fa-facebook-f {
+    background: #23346d;
+}
+.share-modal a.fa-twitter {
+    background: #55acee;
+}
+.share-modal a.fa-pinterest-p {
+    background: #cb2027;
+}
+.share-modal a.fa-google-plus {
+    background: #dd4b39;
+}
+.share-modal a.fa-envelope {
+    background: #23346d;
+}
+.share-modal a.fa-whatsapp {
+    background: #25d366;
+}
+.share-modal a.fa-linkedin {
+    background: #0077b5;
+}
+.share-modal a.fa-reddit {
+    background: #cee3f8;
+}
+.share-modal a.fa-tumblr {
+    background: #36465d;
+}
+.share-modal a.fa-stumbleupon {
+    background: #eb4924;
+}

@@ -1,0 +1,173 @@
+.social.card {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(25%, 1fr));
+  grid-template-rows: 1rem 1fr 1rem;
+}
+
+.social.card .content {
+  background-color: #d3d3d3;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row: 1 / span 3;
+  padding: 2rem !important;
+  padding-right: 11rem !important;
+}
+
+.social.card .image {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row: 2;
+  padding: 0 !important;
+}
+
+.home.what-to-do.listing .card .card-title {
+  margin-bottom: 1rem;
+}
+
+
+@media only screen and (max-width: 1024px) {
+  .home.what-to-do.listing .card .card-title {
+    margin-bottom: 1rem;
+  }
+
+  .home.what-to-do.listing .card .card-title {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 600;
+  }
+
+  .home.what-to-do.listing .card .content p {
+    font-size: 13px;
+    line-height: 23px;
+    font-weight: 300;
+  }
+
+  .home.what-to-do.listing .card .content a {
+    font-size: 13px;
+    font-weight: 400;
+  }
+
+  .social.card .content {
+    padding-right: 8.5rem !important;
+  }
+
+  .home.what-to-do.listing .card .content p {
+    margin-bottom: 1rem;
+  }
+
+  .home.what-to-do.listing .card {
+    margin: 2rem 0;
+    max-width: 100%;
+  }
+
+}
+
+@media only screen and (max-width: 992px) {
+
+  .home.what-to-do.listing .card .card-title {
+    margin-bottom: 1rem;
+  }
+
+  .home.what-to-do.listing .card .card-title {
+    margin-bottom: 1rem;
+  }
+
+  .home.what-to-do.listing .card .card-title {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 600;
+  }
+
+  .home.what-to-do.listing .card .content p {
+    font-size: 14px;
+    line-height: 23px;
+    font-weight: 300;
+  }
+
+  .home.what-to-do.listing .card .content a {
+    font-size: 13px;
+    font-weight: 400;
+  }
+
+  .home.what-to-do.listing .card {
+    margin: 40px 0;
+    min-width: 300px;
+    max-width: 375px;
+  }
+
+  .social.card {
+    display: grid;
+    grid-template-rows: repeat(4, minmax(auto, 130px));
+    grid-template-columns: 1rem auto 1rem;
+  }
+
+  .social.card .content {
+    background-color: #d3d3d3;
+    grid-row: 3 / span 2;
+    grid-column: 1 / span 3;
+    margin-top: -130px;
+    padding: 195px 2rem 0 !important;
+  }
+
+  .social.card .image {
+    grid-row: 1 / span 2;
+    grid-column: 2;
+  }
+
+  .social-transposed.card {
+    display: grid;
+    grid-template-rows: repeat(4, minmax(auto, 130px));
+    grid-template-columns: 2rem auto 2rem;
+  }
+
+  .social-transposed.card .content {
+    background-color: #d3d3d3;
+    grid-row: 2 / span 3;
+    grid-column: 1 / span 3;
+    margin-top: -130px;
+    padding-top: 195px !important;
+  }
+
+  .social-transposed.card .image {
+    grid-row: 1 / span 2;
+    grid-column: 2;
+    padding: 0 2rem;
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+  .home.what-to-do.listing .card {
+    margin: 30px 0;
+  }
+
+}
+
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+  .home.what-to-do.listing .card {
+    margin: 1.618rem auto;
+  }
+
+  .home.what-to-do.listing .card:first-child {
+    margin-top: 1.618rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+
+  .home.what-to-do.listing .card:first-child {
+    margin-top: 30px;
+  }
+
+  .home.what-to-do.listing .card {
+    margin: 30px auto;
+  }
+}
+
+@media only screen and (max-width: 345px) {
+  .social.card .content {
+    margin-top: -130px;
+    padding: 130px 2rem 0 !important;
+  }
+}

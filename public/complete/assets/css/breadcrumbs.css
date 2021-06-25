@@ -1,0 +1,27 @@
+.breadcrumbs{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.breadcrumbs a, .breadcrumbs a:hover, .breadcrumbs a:focus {
+    display: block;
+    float: left;
+    text-decoration: none;
+    color: #555555;
+    font-size: 13px;
+    font-weight: 400;
+}
+.breadcrumbs a:after {
+    content: url("/resources/views/templates/images/template/breadcrumb-arrow.png");
+    margin: 0 15px;
+}
+.breadcrumbs a:last-child, .breadcrumbs a:last-child:hover, .breadcrumbs a:last-child:focus {
+    color: #161a60;
+}
+.breadcrumbs a:last-child:after {
+    display: none;
+}
+@media (max-width: 991px) {
+    .breadcrumbs{
+        display: none;
+    }
+}

@@ -1,0 +1,9 @@
+/**
+ *
+ * Global Diagnostic -- Reddish outline is added to EVERY element
+ *
+ */
+
+* {
+  outline: 1px solid rgba(250, 10, 10, 0.5);
+}

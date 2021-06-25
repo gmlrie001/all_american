@@ -1,0 +1,36 @@
+
+.credit-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    height: 75px;
+    width: 500px;
+    background: rgb(255, 255, 255);
+    z-index: 102;
+    right: 0;
+    border: 3px solid #03529b;
+    margin: auto;
+    bottom: 0;
+}
+.credit-modal .text-center {
+    padding: 0 50px;
+    margin: 25px 0;
+}
+.close-credit {
+    position: absolute;
+    top: 0;
+    margin: 0 !important;
+    right: 5px;
+}
+.credit-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.8);
+    z-index: 101;
+}

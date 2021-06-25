@@ -1,0 +1,170 @@
+/* DASHBOARD STYLES */
+.dashboard_main {
+    float: left;
+    width: 100%;
+    min-height: 90vh;
+    background-position: top left 15vw;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% auto;
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+}
+.notification-slider {
+    background: #ffffff;
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+    box-shadow: 0 0 20px -4px #000000;
+    float: left;
+    width: 100%;
+    padding-bottom: 35px;
+}
+.notification-slider.mini {
+    padding-bottom: 0;
+}
+.notification-slider > div {
+    float: left;
+    width: 100%;
+}
+.notification-slider > div a, .notification-slider > div a:hover, .notification-slider > div a:focus {
+    position: relative;
+    display: block;
+    float: left;
+    width: 100%;
+    text-decoration: none;
+}
+.notification-slider > div h2 {
+    display: block;
+    float: left;
+    width: 100%;
+    padding: 0 15px;
+    margin-top: 50px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 17px;
+    line-height: 19px;
+    font-weight: 600;
+    color: #181818;
+}
+.notification-slider > div img + h2 {
+    margin-top: 15px;
+}
+.notification-slider > div p {
+    display: block;
+    float: left;
+    width: 100%;
+    padding: 0 15px;
+    margin-bottom: 15px;
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 300;
+    color: #181818;
+}
+.notification-slider > div span {
+    display: block;
+    float: left;
+    width: 100%;
+    padding: 0 15px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 16px;
+    font-style: italic;
+    font-weight: 300;
+    color: #181818;
+}
+.notification-slider > div em {
+    position: absolute;
+    padding: 0 5px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 300;
+    top: 15px;
+    left: 0;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 22px;
+    display: inline-block;
+}
+.notification-slider > div em.urgent {
+    background: #FF1C15;
+}
+.notification-slider > div em.annoucement {
+    background: #00FF23;
+}
+.notification-slider > div em.important {
+    background: #CC6E11;
+}
+.notification-slider > div em.notice {
+    background: #980299;
+}
+.notification-slider > h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    text-indent: 15px;
+    line-height: 40px;
+    background: #161616;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 700;
+}
+.notification-slider > h1 span {
+    display: block;
+    float: right;
+    background: #32a93b;
+    line-height: 40px;
+    width: 40px;
+    text-align: center;
+    height: 40px;
+    cursor: pointer;
+    text-indent: 0;
+}
+.notification-slider > h1 span.maximize {
+    display: none;
+}
+.notification-slider > h1 span img {
+    display: inline-block;
+    max-width: 23px;
+}
+.notification-slider .slick-dots {
+    bottom: -30px;
+    text-align: left;
+    margin-bottom: 0;
+    left: 15px;
+    right: 15px;
+}
+.notification-slider .slick-dots li {
+    width: 10px;
+    height: 10px;
+    margin: 0 10px 0 0;
+}
+.notification-slider .slick-dots li button:before {
+    display: none;
+}
+.notification-slider .slick-dots li button {
+    padding: 0;
+    display: block;
+    float: left;
+    width: 10px;
+    height: 10px;
+    background: #161616;
+    border-radius: 50%;
+}
+.notification-slider .slick-dots li.slick-active button, .notification-slider .slick-dots li:hover button {
+    background: #32a93b;
+}
+.todo-list {
+    background: #ffffff;
+    min-height: 40vh;
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+    box-shadow: 0 0 20px -4px #000000;
+    float: left;
+    width: 100%;
+}
+@media (max-width: 767px) {
+    .dashboard_main {
+        height: auto;
+    }
+}

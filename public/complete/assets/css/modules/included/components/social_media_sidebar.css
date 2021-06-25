@@ -1,0 +1,115 @@
+/**
+ * Social Media Sidebar Context Sharing Dropdown
+ */
+ .sidebar-ctas {
+  position: fixed;
+  top: 200px;
+  right: 0;
+  max-width: 50px;
+  width: 50px;
+  height: auto;
+  z-index: 80;
+}
+
+.sidebar-cta .sidebar-btn {
+  max-width: 50px;
+  max-height: 50px;
+  border-bottom: 1px solid #ffffff;
+  background-color: #87ce6e;/*#95c13d;*/
+  line-height: 50px;
+  text-align: center;
+}
+
+.sidebar-cta:last-of-type .sidebar-btn {
+  border-bottom: 0;
+}
+
+.sidebar-cta .sidebar-btn:hover,
+.sidebar-cta .sidebar-btn:active,
+.sidebar-cta .sidebar-btn:focus {
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+}
+
+.sidebar-ctas .share-cta {
+  position: absolute;
+  right: 0;
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.share-desktop-dropdown a {
+  width: 50px;
+  margin: auto;
+  border-bottom: 1px solid #ffffff;
+  background-color: #3498c7;
+  color: #ffffff;
+  font-size: 1rem;
+  line-height: 50px;
+  text-align: center;
+}
+.share-desktop-dropdown a:last-of-type {
+  border-bottom: 0;
+}
+
+.share-desktop-button {
+  max-height: 50px;
+  background-color: #87ce6e;
+  line-height: 50px;
+}
+
+.share-desktop-dropdown,
+.share-desktop-button {
+  box-shadow: -1px 0 2px 0px rgba(10,10,10,0.35);
+}
+
+.share-desktop-button img.img-fluid {
+  max-height: 50px;
+  padding: 17.5px;
+}
+
+@media only screen and (max-width: 992px) {
+  .sidebar-ctas {
+    top: 100px;
+    right: 0;
+    max-width: 40px;
+    width: 40px;
+  }
+
+  .sidebar-cta .sidebar-btn {
+    height: 40px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 40px;
+  }
+
+  .sidebar-cta:nth-child(1) {
+    top: 45px;
+  }
+
+  .sidebar-cta:nth-child(2) {
+    top: 90px;
+  }
+
+  .sidebar-ctas .share-cta {
+    max-width: 40px;
+    width: 40px;
+    max-height: 40px;
+  }
+
+  .share-desktop-button {
+    max-height: 40px;
+    line-height: 40px;
+  }
+
+  .share-desktop-button img.img-fluid {
+    max-height: 30px;
+    padding: 7.5px;
+  }
+
+  .share-desktop-dropdown a {
+    line-height: 40px !important;
+    width: 40px
+  }
+}

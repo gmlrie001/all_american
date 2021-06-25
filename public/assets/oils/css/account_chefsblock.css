@@ -1,0 +1,292 @@
+.orderWrap {
+    margin-top: 30px;
+}
+.orderWrap h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1b1b19;
+    text-transform: uppercase;
+}
+.orderWrap h3 span {
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 20px;
+}
+.orderBlock {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.orderBlock .borderWrap {
+    padding: 30px;
+}
+.orderBlock h5 {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.orderBlock p {
+    font-size: 13px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.orderBlock p span {
+    font-weight: 500;
+    display: inline-block;
+    width: 50%;
+    text-transform: uppercase;
+}
+.accountHeader {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    line-height: 45px;
+    margin-bottom: 40px;
+}
+.accountHeader .links a {
+    border-right: 1px solid #4b4b4b;
+    padding-right: 20px;
+    margin-left: 20px;
+    color: #ffffff;
+    font-size: 0.93333333333rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.accountHeader .links a.active {
+    font-weight: 500;
+}
+.accountHeader .links a:first-of-type {
+    margin-left: 0;
+}
+.accountHeader .links a:last-of-type {
+    border: none;
+}
+.accountFromContain .form-group {
+    margin-bottom: 30px;
+}
+.accountHeaderDrop {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.accountHeaderDrop .dropDownBtn {
+    display: block;
+    width: 100%;
+    font-weight: 400;
+    color: #ffffff;
+    text-align: left;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #212121;
+    border: none;
+    padding: 10px 30px;
+    font-size: 1rem;
+    line-height: 40px;
+    border-radius: 0;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.accountHeaderDrop .dropDownBtn::after {
+    display: inline-block;
+    content: url(/assets/icons/dropdown-white.svg);
+    border: none;
+    vertical-align: 4px;
+    float: right;
+}
+.accountHeaderDrop .dropdown-menu {
+    line-height: 36px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    float: left;
+    min-width: 96%;
+    margin: 0 30px;
+    font-size: 1rem;
+    color: #212529;
+    text-align: center;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 0;
+}
+.addressBlock .orderBlock p span {
+    font-weight: 500;
+    display: block;
+    width: 100%;
+    text-transform: uppercase;
+}
+.addAdressOverlay, .returnItemOverlay {
+    z-index: 50;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.6);
+    display: none;
+}
+.addAdressContain, .returnItemContain {
+    z-index: 60;
+    display: none;
+    position: fixed;
+    top: 5%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow-y: auto;
+}
+.addAdressContain .addressBlock, .returnItemContain .addressBlock {
+    background: #ffffff;
+    padding: 30px;
+}
+.addAdressContain .addressBlock .article img, .returnItemContain .addressBlock .article img {
+    float: right;
+}
+.addAdressContain .formBlock, .returnItemContain .formBlock {
+    margin-top: 30px;
+}
+.addAdressContain .formBlock .form-control, .returnItemContain .formBlock .form-control {
+    margin-bottom: 5px;
+}
+.addAdressContain .formBlock p {
+    font-size: 13px;
+    font-weight: 300;
+    margin-top: 0;
+}
+.accountPageWrap .orderBlock p span {
+    font-weight: 500;
+    display: block;
+    width: 100% !important;
+    text-transform: uppercase;
+}
+.accountPageWrap .orderBlock.borderWrap {
+    padding: 30px;
+}
+.orderBlock .orderProduct .borderWrap {
+    padding: 10px !important;
+}
+.orderBlock .orderProduct h4 {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.orderBlock .orderProduct .col-8 {
+    padding-left: 30px;
+}
+.returnItemContain .custom-file-label {
+    width: 95%;
+    height: auto;
+    padding: 5px;
+    line-height: 105px;
+    color: #ffffff;
+    background-color: #78909c;
+    border: none;
+    border-radius: 0; 
+    text-align: center;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.returnItemContain .uploadInput {
+    display: none;
+}
+.returnItemContain .custom-file-label:hover {
+    cursor: pointer;
+}
+.returnItemContain .custom-file-label::after {
+    display: none !important;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    height: 150px;
+    padding: 5px;
+    line-height: 150px;
+    color: #ffffff;
+    content: "Upload images";
+    background-color: #78909c;
+    border: none;
+    border-radius: 0;
+    width: 100%;    
+    text-align: center;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.walletContain .block {
+    padding: 30px 20px;
+}
+.walletContain .block h2 {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.walletContain .block .postalForm input {
+    width: 55%;
+}
+.walletContain .article h3 {
+    margin-top: 30px;
+}
+.walletContain .article h4 {
+    font-weight: 600;
+}
+.walletContain .article p {
+    margin-top: 0;
+}
+.walletContain .article p span {
+    margin-right: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.walletContain .article p strong {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+@media (max-width: 1200px) { 
+    a.deleteBtn {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .orderProduct a.smlBtn {
+        min-width: 150px;
+        min-height: 50px;
+    }
+}
+@media (max-width: 768px) { 
+    .accountHeader .links a {
+        font-size: 11px;
+    }
+    .orderBlock .orderProduct .col-8 {
+        padding-left: 15px;
+        margin-top: 15px;
+    }
+    .walletContain .block {
+        margin-bottom: 30px;
+    }
+    .walletContain .block .postalForm input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .promoContain input {
+        display: block;
+        width: 100% !important;
+    }
+    .addAdressContain, .returnItemContain {
+        width: 95vw;
+    }
+    .returnItemContain .uploadInput {
+        display: block;
+        height: 130px;
+        width: 75%;
+    }
+    .returnItemContain .custom-file-label {
+        text-align: center !important;
+    }
+}

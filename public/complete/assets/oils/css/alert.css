@@ -1,0 +1,95 @@
+ .alert-success {
+    background-color: #1cbf01;
+    border-color: #1cbf01;
+    color: #ffffff;
+    font-size: 15px;
+    margin-bottom: 0;
+    padding: 0 15px;
+    border: none;
+    line-height: 50px;
+}
+.alert-success p {
+    margin-bottom: 0;
+    font-weight: 500;
+    color: #ffffff;
+}
+.alert-success p i {
+    margin-right: 20px;
+    color: #ffffff;
+}
+.alert-success p i.fa-times {
+    margin-right: 0;
+    float: right;
+    cursor: pointer;
+    line-height: 50px;
+}
+.alert-danger {
+   background-color: #fb2424;
+   border-color: #fb2424;
+   color: #ffffff;
+   font-size: 16px;
+   margin-bottom: 0;
+   padding: 0 15px;
+   border: none;
+   line-height: 50px;
+}
+.alert-danger p {
+   margin-bottom: 0;
+   font-weight: 500;
+   color: #ffffff;
+}
+.alert-danger p i {
+   margin-right: 20px;
+   color: #ffffff;
+}
+.alert-danger p i.fa-times {
+   margin-right: 0;
+   float: right;
+   cursor: pointer;
+   line-height: 50px;
+}
+@media (max-width: 767px){
+    .alert-success p i {
+        font-size: 10px;
+    }
+    .alert-success p {
+        margin-bottom: 0;
+        font-weight: 500;
+        font-size: 12px;
+        padding: 0px 0px;
+        position: relative;
+    }
+    .alert-danger p i.fa-times {
+        margin-top: 0;
+        left: auto;
+        right: 6px;
+    }
+    .alert {
+        border-radius: 0;
+    }
+    .alert-danger, .alert-danger .container {
+        padding: 0;
+        line-height: 20px;
+    }
+    .alert-danger p i {
+        font-size: 10px;
+    }
+    .alert-danger p i {
+        margin-right: 10px;
+        position: absolute;
+        top: 12px;
+        left: 6px;
+    }
+    .alert-danger p {
+        margin-bottom: 0;
+        font-weight: 500;
+        font-size: 14px;
+        padding: 10px 20px;
+        position: relative;
+    }
+    .alert-danger p i.fa-times {
+        margin-top: 0;
+        left: auto;
+        right: 6px;
+    }
+}

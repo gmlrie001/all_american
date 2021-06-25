@@ -1,0 +1,21 @@
+.notifyBG {
+    background: #fbc02d;
+    color: #ffffff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.notifyBG a, .notifyBG a:hover  {
+    color: #ffffff;
+    text-decoration: none;
+}
+.notifyBG img {
+    margin-top: 2px;
+}
+
+@media (max-width: 576px) {
+    .notifyBG a:first-of-type {
+        width: 80%;
+        display: inline-block;
+        text-align: left;
+    }
+}

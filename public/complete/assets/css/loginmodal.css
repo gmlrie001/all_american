@@ -1,0 +1,62 @@
+.login-modal {
+    display: none;
+    position: fixed;
+    top: 15%;
+    left: 0;
+    max-width: 100%;
+    min-height: 380px;
+    width: 500px;
+    background: rgb(255, 255, 255);
+    z-index: 102;
+    right: 0;
+    padding-bottom: 20px;
+    border: 3px solid #03529b;
+    margin: auto;
+}
+
+.login-modal .text-center {
+    padding: 0 50px;
+}
+
+.close-login {
+    position: absolute;
+    top: 10px;
+    margin: 0 !important;
+    right: 15px;
+}
+
+.login-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 101;
+}
+
+.login-modal h1 {
+    float: left;
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 20px;
+    color: #000000;
+    margin-top: 0px;
+}
+
+.login-modal .login-form {
+    background: none !important;
+    padding: 5px 30px;
+}
+
+.login-modal .login-form .btn {
+    width: 100% !important;
+}
+
+.login-modal .login-form .form-control {
+    border: 1px solid #858585;
+}

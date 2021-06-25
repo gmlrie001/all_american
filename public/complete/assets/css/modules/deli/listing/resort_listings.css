@@ -1,0 +1,143 @@
+/**
+ *
+ * Resorts Listing Styling (Adaptive)
+ *
+ */
+
+.card-columns-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-rows: minmax(420px, 480px);
+  grid-gap: 25px;
+  align-items: flex-start;
+}
+
+.resort-listing.banner {
+  max-height: 800px;
+}
+
+.star-rating img.img-fluid {
+  max-width: 20px;
+  max-height: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.resort-listings .Camps Bay Continental-resort-card {
+  max-width: 430px;
+  max-height: 480px;
+  height: 100%;
+  background-color: #ffffff;
+}
+
+.resort-listings .Camps Bay Continental-resort-card .position-relative {
+  min-height: 320px;
+}
+
+.resort-listings .Camps Bay Continental-resort-card img.card-img-top {
+  max-height: 320px;
+  object-fit: cover;
+}
+
+.resort-listings .Camps Bay Continental-resort-card .card-text {
+  padding: 26px 27px !important;
+/*
+  padding-left: 27px !important;
+  padding-right: 27px !important;
+*/
+}
+
+h2.title {
+  color: #252525;
+}
+
+.resort-listings .Camps Bay Continental-resort-card .card-img-overlay {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-height: 95px;
+  height: 100%;
+  width: 100%;
+  margin-top: -95px !important;
+  padding: 18px 15px !important;
+  background-color: rgba(2, 19, 31, 0.6);
+  color: #ffffff;
+  line-height: 1;
+}
+
+/* .resort-listings .Camps Bay Continental-resort-card .card-img-overlay a, */
+.resort-listings .Camps Bay Continental-resort-card .card-img-overlay h4 {
+  font: normal normal 17px "Century Gothic", sans-serif;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.15;
+  margin-bottom: 10px !important;
+}
+
+.resort-listings .resort-title-rating {
+  height: auto;
+}
+
+.star-rating img:first-child {
+  margin-left: 0 !important;
+}
+
+.star-rating img:last-child {
+  margin-right: 0 !important;
+}
+
+[class*=class-stars] .title h4 {
+  font: normal normal 20px 'Century Gothic', sans-serif;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 1200px) {
+  .card-columns-grid {
+    grid-template-columns: repeat(2, minmax(320px, 1fr));
+    grid-template-rows: minmax(auto, 375px);
+  }
+
+  .resort-listings .Camps Bay Continental-resort-card .position-relative {
+    min-height: unset;
+  }
+
+}
+
+@media only screen and (max-width: 992px) {
+  .resort-listings .Camps Bay Continental-resort-card {
+    max-width: 100%;
+  }
+
+  .resort-listings .Camps Bay Continental-resort-card {
+    min-width: 320px;
+    max-width: 375px;
+    width: 100%;
+    max-height: unset !important;
+  }
+
+}
+
+@media only screen and (max-width: 767px) {
+
+  .card-columns-grid {
+    grid-template-columns: repeat(1, minmax(320px, 1fr));
+    grid-template-rows: minmax(auto, 375px);
+  }
+
+  .resort-listings .Camps Bay Continental-resort-card {
+    min-width: 320px;
+    max-width: 100%;
+    max-height: unset !important;
+  }
+
+}
+
+@media only screen and (max-width: 767px) and (orientation: landscape) {
+
+  .card-columns-grid {
+    grid-template-columns: repeat(2, minmax(320px, 1fr));
+    grid-template-rows: minmax(auto, 375px);
+  }
+
+}

@@ -1,0 +1,147 @@
+
+
+
+$(document).ready(function(){
+    
+
+    $('.btn-functions').click(function(){
+        window.location.href = $(this).attr('href');
+    });
+    
+    $( "body" ).scroll(function() {
+        $('.tool-container.tool-top, .tool-container.tool-bottom').css('display', 'none');
+    });
+    
+    $('.listing-select input[type="checkbox"]').on('change', function(event){
+        if($('.listing-select input[type="checkbox"]:checked').length > 0){
+            $('.selected-options').fadeIn();
+        }else {
+            $('.selected-options').fadeOut();
+        }
+    });
+    
+    $('.options').on('click', function(event){
+        event.stopImmediatePropagation();
+
+        var width = $(this).next().children().outerWidth();
+        var length = $(this).next().children().length;
+        var attr = $(this).next().attr('style');
+
+        $(this).toggleClass('active');
+
+        if(typeof attr !== typeof undefined && attr !== false){
+            $(this).next().removeAttr('style');
+        } else {
+            $('.'+$(this).next().attr('class')).removeAttr('style');
+            $(this).next().css('width', (length*width)+'px');
+        }
+    });
+    
+    $('.get-selected-items').on('click', function(event) {
+        event.preventDefault();
+        var selected = [];
+        $('.data-row .listing-select input:checked').each(function(i) {
+            selected[i] = $(this).attr('value');
+        });
+        var route = $(this).attr('href');
+        route = route+'?ids='+selected;
+        window.location.href = route;
+    });
+
+    $("#basic-addon2 i").click(function(){
+        console.log($(this).attr("class"));
+        $(this).parents('form:first').submit();
+    });
+    
+    $('.listing-view.list').sortable({
+        handle: '.handle',
+        placeholder: "ui-state-highlight",
+        update: function(event, ui) {
+            var data = {
+                id : ui.item.find('.handle').data("id"), 
+                orderAbove : ui.item.prev().find(".order-item").data("order") || 0,
+                orderOrigin : ui.item.find(".order-item").data("order"),
+                tableName : ui.item.data('table')
+            };
+            
+            url = "/vault/reorder/list";
+            
+            if(ui.item.find('.handle').data("category") != null){
+                url = "/vault/products/reorder/list";
+            }else if(ui.item.find('.handle').data("parent") != null){
+                url = "/vault/products/categories/reorder/list";
+            }else if(ui.item.find('.handle').data("stockist") != null){
+                url = "/vault/stockists/reorder/list";
+            }
+            
+            var token = $("input[name='_token'").val();
+            
+            // POST to server using $.post or $.ajax
+            $.ajax({
+                data: data,
+                type: 'POST',
+                headers: {'X-CSRF-TOKEN': token},
+                url: url
+            }).done(function(result) {
+                console.log(result);
+                window.location.reload();
+            }).fail(function(error) {
+                console.log(error);
+            });
+        }
+    });
+
+    $('.listing-view.grid').sortable({
+        handle: '.handle',
+        placeholder: "ui-state-highlight",
+        update: function(event, ui) {
+            var data = {
+                id : ui.item.find('.handle').data("id"), 
+                orderAbove : ui.item.prev().find(".order-item").data("order") || 0,
+                orderOrigin : ui.item.find(".order-item").data("order"),
+                tableName : ui.item.data('table')
+            };
+            console.log(data);
+            
+            url = "/vault/reorder/list";
+            
+            if(ui.item.find('.handle').data("category") != null){
+                url = "/vault/products/reorder/list";
+            }else if(ui.item.find('.handle').data("parent") != null){
+                url = "/vault/products/categories/reorder/list";
+            }else if(ui.item.find('.handle').data("stockist") != null){
+                url = "/vault/stockists/reorder/list";
+            }
+            
+            var token = $("input[name='_token'").val();
+            // POST to server using $.post or $.ajax
+            $.ajax({
+                data: data,
+                type: 'POST',
+                headers: {'X-CSRF-TOKEN': token},
+                url: url
+            }).done(function(result) {
+                console.log(result);
+                window.location.reload();
+            }).fail(function(error) {
+                console.log(error);
+            });
+        }
+    });
+
+    $('.listing-view').disableSelection();
+    
+    $(".listing-expand").on('click', function(e) {
+        e.preventDefault();
+        $(this).find('i').toggleClass('fa-plus fa-minus');
+        $(this).parent().parent().toggleClass('active')
+        $("#"+$(this).attr('href')).slideToggle(500);
+        
+        $(document).foundation('equalizer','reflow');
+    });
+
+    $('input[name=import_file]').on('change', function(event){
+        $('#import .message').text("");
+        $('#import .message').text("Your file has been successfully uploaded");
+    }); 
+});

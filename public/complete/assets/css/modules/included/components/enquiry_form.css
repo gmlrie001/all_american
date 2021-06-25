@@ -1,0 +1,298 @@
+/**
+ *
+ * Enquiry Form Styling (Adaptive)
+ *
+ */
+
+.enquiry-page .form-control ::-webkit-input-placeholder,
+.enquiry-page .form-control ::-moz-placeholder,
+.enquiry-page .form-control :-ms-input-placeholder,
+.enquiry-page .form-control :-moz-placeholder,
+.enquiry-page .form-control {
+  padding: 20px 15px;
+  color: #707070;
+  font: normal normal 13px/33px 'Century Gothic', sans-serif;
+}
+
+.enquiry-page .form-input-group .form-control:not(textarea) {
+  font-size: 13px !important;
+}
+
+.enquiry-page {
+  font-family: 'Century Gothic', sans-serif;
+  background-color: rgba(2, 19, 31, 0.4);
+  padding: 55px 65px;
+  max-height: 735px;
+  margin-top: calc(120px + 2 * 30px);
+  margin-bottom: 80px;
+}
+
+.single-page-background-image {
+  max-width: 100%;
+  min-height: calc(100vh - (75px + 1.125rem));
+  overflow: hidden !important;
+
+  background-image: url('/assets/images/modules/booking/form/booking_form_background.jpg');
+  background-position: center center;
+  background-size: cover;
+}
+
+.enquiry-page .row.enquiry-form {
+  padding: 0 50px;
+}
+
+.enquiry-page .form-control {
+  border-radius: 0 !important;
+}
+
+.enquiry-page .form-control .enquiry-page input,
+.enquiry-page select,
+.enquiry-page select *,
+.enquiry-page textarea {
+  padding: 20px 15px;
+  color: #707070;
+  font: normal normal 13px/33px 'Century Gothic', sans-serif;
+}
+
+.enquiry-page button[type="submit"] {
+  padding: 0;
+  border-radius: 0;
+  font: normal normal 20px 'Century Gothic', sans-serif;
+  background-color: #02131f;
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 65px;
+}
+
+.enquiry-page button[type="submit"]:active,
+.enquiry-page button[type="submit"]:hover,
+.enquiry-page button[type="submit"]:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.enquiry-page h2.title {
+  font: normal normal 30px/34px 'Century Gothic', sans-serif;
+}
+
+.enquiry-page .supporting-description p {
+  font: normal normal 17px/30px 'Century Gothic', sans-serif;
+}
+
+.enquiry-page h2.title {
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+.enquiry-page h2.title,
+.enquiry-page .supporting-description p {
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.enquiry-page .supporting-description p {
+  margin-bottom: 45px;
+}
+
+.enquiry-page .enquiry-form form {
+  padding-left: 0;
+  padding-right: 15px;
+}
+
+.supporting-description {
+  max-width: 575px;
+  padding-left: 75px;
+  padding-right: 0;
+}
+
+.supporting-description p:first-of-type {
+  line-height: inherit;
+  margin-top: -5px;
+}
+
+.enquiry-page .form-input-group:nth-of-type(1) {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.enquiry-page .form-input-group {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.form-row.form-input-group:last-of-type {
+  margin-bottom: 0 !important;
+}
+
+.enquiry-page .form-input-group .form-control:not(textarea) {
+  max-height: 40px;
+  height: 40px;
+  border-radius: 0.125rem;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.enquiry-page .form-input-group #google-recaptcha.form-control {
+  max-height: 80px;
+  height: 80px;
+  border-radius: 0.125rem;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+select#resort {
+  padding: 0 10px;
+}
+
+.enquiry-page button[type="submit"] {
+    max-width: 300px;
+    width: 100%;
+    max-height: 65px;
+    height: 65px;
+    padding: 0;
+    margin: 7.5px auto;
+}
+
+.input-daterange .input-group-addon {
+  margin-bottom: 10px !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  background-color: #02131f;
+  color: #ffffff;
+  font: normal normal 13px/30px 'Century Gothic', sans-serif;
+  font-weight: 700;
+  line-height: 35px !important;
+  text-transform: uppercase;
+}
+
+.input-daterange input {
+  padding: 20px 15px !important;
+  font-size: 13px !important;
+  line-height: 1.5;
+  text-align: left !important;
+}
+
+.enquiry-page textarea {
+  resize: none;
+  overflow: hidden;
+}
+
+.enquiry-page #google-recaptcha {
+  max-height: 65px;
+}
+
+.enquiry-page #google-recaptcha {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.enquiry-page #google-recaptcha.temp-class {
+  max-height: 63px;
+  background-color: transparent;
+  border: none;
+}
+
+.enquiry-page #google-recaptcha>img.temp-placeholder {
+  width: 100%;
+  max-height: 80px;
+  height: 80px;
+  margin-top: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  object-fit: contain;
+}
+
+@media only screen and (max-width: 1280px) {
+  .enquiry-page {
+    padding: 55px 45px;
+  }
+
+  .supporting-description {
+    padding-left: 50px;
+  }
+
+}
+
+@media only screen and (max-width: 1024px) {
+  .enquiry-page {
+    padding: 50px 25px;
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+  .single-page-background-image {
+    overflow: auto !important;
+  }
+
+  .enquiry-page {
+    padding: 45px 20px;
+    max-height: unset;
+    margin-top: 90px;
+  }
+
+  .supporting-description {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .enquiry-page h2.title {
+    font-size: 21px;
+    line-height: 34px;
+    margin-bottom: 25px;
+  }
+
+  .single-page-background-image {
+    min-height: 100vh;
+    overflow-y: auto !important;
+    background-image: url('/assets/images/modules/booking/form/booking_form_background_mobile.jpg');
+    background-position: bottom center;
+    background-size: cover;
+  }
+
+  .enquiry-page {
+    max-width: calc(100% - 2 * 20px);
+    max-height: unset;
+    margin-top: 120px;
+    padding: 30px 20px;
+  }
+
+  .enquiry-page button[type="submit"] {
+    max-width: 100%;
+    max-height: 50px;
+    line-height: 50px;
+  }
+
+  .enquiry-page .enquiry-form form {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .enquiry-page button[type="submit"] {
+    font-size: 20px;
+    line-height: 50px;
+  }
+
+  .supporting-description {
+    margin-top: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .enquiry-page .supporting-description p,
+  .supporting-description p:first-of-type {
+    font-size: 14px;
+    line-height: 26px;
+  }
+
+  .enquiry-page #google-recaptcha.temp-class {
+    padding-left: 9px;
+    padding-right: 9px;
+    background-color: #ffffff;
+  }
+
+  .submit-cta {
+    margin: 20px auto;
+  }
+}

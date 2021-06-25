@@ -1,0 +1,110 @@
+/* SELECTED OPTIONS STYLES */
+.selected-options {
+    display: none;
+    position: fixed;
+    bottom: 15px;
+    right: 0;
+    margin: auto;
+    z-index: 5;
+}
+.selected-options a {
+    line-height: 75px;
+    background-color: #37474f;
+    color: #ffffff;
+    width: 100%;
+    float: left;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-decoration: none;
+}
+.selected-options a:first-child {
+    border-right: 1px solid #c6c6c6;
+}
+.selected-options .dropup .dropdown-toggle {
+    height: 75px;
+    line-height: 75px;
+    border: none;
+    border-radius: 0;
+    background: #37474f;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 20px;
+    width: 100%;
+    padding-bottom: 0;
+    padding-top: 0;
+    border-right: 1px solid #c6c6c6;
+    text-align: left;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.selected-options .dropup .dropdown-toggle .caret {
+    float: right;
+    margin-top: 17%;
+    border-bottom: 0;
+    border-top: 6px solid;
+    border-right: 6px solid transparent;
+    border-left: 6px solid transparent;
+}
+.selected-options .open.dropup > .dropdown-toggle {
+    background: #263238;
+    color: #ffffff;
+}
+.selected-options .open.dropup .dropdown-menu {
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    background-color: #263238;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+.selected-options .open.dropup .dropdown-menu li a, .open.dropup .dropdown-menu li a:hover, .open.dropup .dropdown-menu li a:focus {
+    padding-left: 25px;
+    padding-right: 25px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 20px;
+    border-bottom: 1px solid #c6c6c6;
+    height: 70px;
+    line-height: 70px;
+    background: transparent;
+}
+.selected-options .open.dropup .dropdown-menu li a i {
+    float: right;
+    height: 70px;
+    line-height: 70px;
+}
+@media(max-width: 1450px){
+    .selected-options {
+        width: 50%;
+    }
+}
+@media (max-width: 1440px) {
+    .selected-options .dropup .dropdown-toggle {
+        height: 50px;
+        line-height: 50px;
+        font-size: 17px;
+    }
+    .selected-options a {
+        line-height: 50px;
+        font-size: 17px;
+    }
+    .selected-options .open.dropup .dropdown-menu li a, .open.dropup .dropdown-menu li a:hover, .open.dropup .dropdown-menu li a:focus {
+        padding-left: 15px;
+        padding-right: 15px;
+        font-size: 17px;
+        height: 50px;
+        line-height: 50px;
+    }
+}
+@media (max-width: 1199px) {
+    .selected-options {
+        width: 75%;
+    }
+}
+@media (max-width: 991px) {
+    .selected-options {
+        display: none;
+    }
+}

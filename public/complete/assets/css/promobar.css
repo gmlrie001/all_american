@@ -1,0 +1,36 @@
+.promobar a, .promobar a:hover, .promobar a:focus {
+    line-height: 40px;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 13px;
+}
+.sticky-header.stick-me.sticking .promobar a, .sticky-header.stick-me.sticking .promobar a:hover, .sticky-header.stick-me.sticking .promobar a:focus {
+    line-height: 35px;
+    font-size: 13px;
+}
+@media (max-width: 1330px) {
+    .promobar a, .promobar a:hover, .promobar a:focus {
+        line-height: 30px;
+        font-size: 13px;
+    }
+}
+@media (max-width: 1150px) {
+    .promobar a, .promobar a:hover, .promobar a:focus {
+        font-size: 12px;
+    }
+}
+@media (max-width: 1065px) {
+    .promobar a, .promobar a:hover, .promobar a:focus {
+        font-size: 11px;
+        line-height: 15px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+    .sticky-header.stick-me.sticking .promobar a, .sticky-header.stick-me.sticking .promobar a:hover, .sticky-header.stick-me.sticking .promobar a:focus {
+        font-size: 11px;
+        line-height: 15px;
+    }
+}
+@media (max-width: 991px) {
+    
+}

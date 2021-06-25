@@ -1,0 +1,266 @@
+/**
+ *
+ * Natural Herbs and Spices
+ *
+ * Product Listing and Specific Pages
+ *
+ * Feb 2019
+ * Monzamedia (https://monzamedia.com)
+ *
+ */
+
+ .products-listing a,
+ .products-listing a:hover,
+ .products-listing a:active,
+ .products-listing a:focus {
+     text-decoration: none;
+ }
+ .products-listing .listed-product {
+     border: 0;
+     margin-top: 65px;
+ }
+ .products-listing .listed-product:first-child {
+     margin-top: 40px;
+ }
+ .products-listing .listed-product h3.card-title,
+ .products-listing .listed-product h3.card-title:focus,
+ .products-listing .listed-product h3.card-title:active,
+ .products-listing .listed-product h3.card-title:hover {
+     font: normal normal 14px/31px 'Nunito', sans-serif;
+     color: #565656;
+     text-decoration: none !important;
+ }
+ .products-listing .listed-product-body {
+     padding: 0;
+ }
+ [class*=product] .product-filters {
+     font-family: 'Nunito', sans-serif;
+     height: 60px;
+ }
+ [class*=product] .product-filters a {
+     margin: 0;
+     font-size: 14px;
+     line-height: 45px;
+ }
+ [class*=product] .product-filters .row:first-child [class*=col] {
+     max-height: 45px;
+     cursor: pointer;
+ }
+ [class*=product] .product-filters [class*=col] a.btn:hover {
+     background-color: #c1d100;
+     border-radius: 0;
+ }
+ [class*=product] .product-filters [class*=col] a.btn:hover {
+     color: #ffffff;
+     text-decoration: none;
+ }
+ [class*=product] .product-filters [class*=col] img {
+ max-width: 45px;
+ }
+ 
+ .products-listing .product-thumbnail + .top-left {
+     max-width: 100%;
+     opacity: 0;
+     top: 50%;
+     left: 50%;
+     height: auto;
+     transform: translate3d( -50%, -50%, 0 );
+ }
+ .products-listing .product-thumbnail:hover + .top-left,
+ .products-listing .product-thumbnail + .top-left:hover {
+     opacity: 1;
+ }
+ 
+ .products-listing .title-date {
+     height: 30px;
+     padding: 10px 0;
+ }
+ .products-listing h3.card-title::after {
+     content: url( '/assets/images/helpers/icons/product-listing-more.png' );
+     float: right;
+     width: auto;
+     padding-right: 0;
+ }
+ [class*=product] .product-filters .row:first-child [class*=col]:hover h3.card-title::after,
+ .products-listing h3.card-title:hover::after {
+     content: url( '/assets/images/helpers/icons/product-listing-more-hover.png' );
+ }
+ /*
+ .products-listing .reflected {
+     position: relative;
+     overflow: hidden;
+ }
+ .products-listing .reflected img.product-thumbnail {
+     width: 100%;
+     margin: 0 auto;
+ }
+ */
+ .products-listing .listed-product {
+     position:relative;
+ }
+ .products-listing .listed-product img.product-thumbnail {
+     width: 100%;
+     margin: 0 auto;
+ }
+ .border-bottom {
+     border-bottom: 1px solid #efefef !important;
+ }
+ strong {
+     font-weight: 700;
+ }
+ .product .product-info {
+     margin: 40px auto;
+ }
+ .product .food-groups img {
+     padding-left: 0;
+ }
+ .product img.food-group {
+     max-height: 20px;
+     max-width: 40px;
+ }
+ .product .sharing {
+     margin-top: 5rem;
+ }
+ .product .sharing p {
+     line-height: 3rem;
+     font-weight: 600;
+ }
+ .product .share {
+     width: 3rem;
+     height: 3rem;
+     margin-left: 5px;
+     margin-right: 5px;
+     padding: 0;
+     border-radius: 50%;
+     text-align: center;
+     line-height: 3.5rem;
+ }
+ .product .share .fa[class*=fa-] {
+     font-size: 1.3rem;
+     color: #ffffff;
+     line-height: 3rem;
+ }
+ .product .facebook {
+     background-color: #18356f;
+ }
+ .product .twitter {
+     background-color: #2a89bf;
+ }
+ .product .related-products h4 {
+     font-size: 12px;
+     line-height: 20px;
+ }
+ .product .related-products a {
+     color: #565656;
+     text-decoration: none;
+ }
+ 
+ .info {
+     padding-right: 25%;
+ }
+ @media only screen and (max-width: 1024px) {
+     .products-listing .product-thumbnail + .top-left {
+         max-width: 75%;
+         transform: translate3d( -50%, -65%, 0 );
+     }
+     [class*=product] .product-filters [class*=col] img {
+         max-width: 35px;
+     }
+ } 
+ @media only screen and (max-width: 768px) {
+     .products-listing .listed-product img.product-thumbnail {
+         width: 100%;
+     }
+ 
+     .products-listing .product-thumbnail + .top-left {
+         max-width: 75%;
+         transform: translate3d( -50%, -75%, 0 );
+     }
+ }
+ @media only screen and (max-width: 480px) {
+     .products-listing .listed-product img.product-thumbnail {
+         width: 100%;
+         transform: translate3d( 0, 0 ,0 );
+         margin: auto;
+     }
+     .product .related-products a {
+         margin-top: 1rem;
+         margin-bottom: 3rem;
+     }
+     [class*=product] .product-filters {
+         height: auto;
+     }
+     .info {
+         padding-right: 0;
+     }
+     .products-listing .listed-product h3.card-title,
+ .products-listing .listed-product h3.card-title:focus,
+ .products-listing .listed-product h3.card-title:active,
+ .products-listing .listed-product h3.card-title:hover {
+     font-size: 13px;
+ }
+ .products-listing .product-thumbnail + .top-left {
+     max-width: 75%;
+     transform: translate3d( -50%, -75%, 0 );
+ 
+ }
+ }
+ 
+ .products-listing .group-modal-content [class*=col] img.img-fluid:not(.hover-state),
+ .products-listing img.img-fluid.hover-state.position-absolute {
+   width: 50px;
+ }
+ .products-listing img.img-fluid.hover-state.position-absolute {
+   width: 65px;
+ }
+ 
+ .products-listing .group-modal-content .fish img.img-fluid.hover-state,
+ .products-listing .group-modal-content .meat img.img-fluid.hover-state,
+ .products-listing .group-modal-content .chicken img.img-fluid.hover-state,
+ .products-listing .group-modal-content .pizza img.img-fluid.hover-state,
+ .products-listing .group-modal-content .veg img.img-fluid.hover-state {
+   display: none;
+   top: -7.5px;
+   right: 5px;
+ }
+ .products-listing .group-modal-content .fish:hover img.img-fluid.hover-state,
+ .products-listing .group-modal-content .meat:hover img.img-fluid.hover-state,
+ .products-listing .group-modal-content .chicken:hover img.img-fluid.hover-state,
+ .products-listing .group-modal-content .pizza:hover img.img-fluid.hover-state,
+ .products-listing .group-modal-content .veg:hover img.img-fluid.hover-state {
+   display: block;
+ }
+ 
+   .product .group-modal-content [class*=col] img.img-fluid:not(.hover-state),
+   .product img.img-fluid.hover-state.position-absolute {
+       width: 50px;
+   }
+   .product img.img-fluid.hover-state.position-absolute {
+       width: 65px;
+   }
+   
+   .product .group-modal-content .fish img.img-fluid.hover-state,
+   .product .group-modal-content .meat img.img-fluid.hover-state,
+   .product .group-modal-content .chicken img.img-fluid.hover-state,
+   .product .group-modal-content .pizza img.img-fluid.hover-state,
+   .product .group-modal-content .veg img.img-fluid.hover-state {
+       display: none;
+       top: -7.5px;
+       right: 5px;
+   }
+   .product .group-modal-content .fish:hover img.img-fluid.hover-state,
+   .product .group-modal-content .meat:hover img.img-fluid.hover-state,
+   .product .group-modal-content .chicken:hover img.img-fluid.hover-state,
+   .product .group-modal-content .pizza:hover img.img-fluid.hover-state,
+   .product .group-modal-content .veg:hover img.img-fluid.hover-state {
+       display: block;
+   }
+   
+   @media only screen and (max-width: 768px) {
+     .products-listing img.img-fluid.product-image,
+     .product img.img-fluid.product-image {
+       margin-bottom: 3rem;
+     }
+   }
+ 
+ 

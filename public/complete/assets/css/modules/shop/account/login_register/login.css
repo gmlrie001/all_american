@@ -1,0 +1,62 @@
+/**
+ * File: login.css
+ * Login-Register: Login Component Styling
+ *
+ */
+
+.login-form {
+  color: #878787;
+  width: 100%;
+}
+
+.login-form h2 {
+  color: #000000;
+  font: inherit;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: inherit;
+  margin-bottom: 30px;
+}
+
+.login-form form label {
+  color: inherit;
+  margin: 0.5rem 0;
+}
+
+.login-form form label span {
+  color: inherit;
+  font-size: 1rem;
+  line-height: 40px;
+}
+
+.login-form form input.form-control {
+  max-height: 50px;
+  height: 50px;
+  border-color: #959595;
+  border-radius: 0;
+  color: #878787;
+  line-height: 50px;
+}
+
+.login-cta .submit-btn {
+  max-width: 250px;
+  background-color: #0c5875;
+  color: #ffffff;
+} 
+
+@media only screen and (max-width: 992px) {
+  .login-form {
+    font-size: 1rem;
+    line-height: 29px;
+  }
+  .login-form h2 {
+    font-size: 1.25rem;
+    line-height: 21px;
+  }
+  .login-form form * {
+    font-size: 15px !important;
+    margin-bottom: 0 !important;
+  }
+
+}
+

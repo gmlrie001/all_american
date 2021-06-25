@@ -1,0 +1,202 @@
+.font-weight-medium {
+    font-weight: 500;
+}
+.topNavBG {
+    position: relative;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #c12136;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+.topNavBG .links a, .topNavBG .cart a {
+    color: inherit;
+    font-size: 12px;
+    font-weight: 300;
+}
+.topNavBG .links a {
+    border-right: 1px solid #ffffff;
+    padding-right: 0.618rem;
+    margin-left: 0.618rem;
+}
+.topNavBG .links a:last-of-type {
+    border: none;
+}
+.topNavBG .cart a {
+    border-right: 1px solid #ffffff;
+    padding-right: 0.618rem;
+    margin-right: 0.618rem;
+}
+.topNavBG .cart a:last-of-type {
+    margin-right: 0;
+    border-right: 0;
+}
+.topNavBG .cart a {
+    color: inherit;
+}
+.topNavBG .cart .qty {
+    display: inline;
+    background: #051a2d;
+    padding: 6px;
+    margin-left: 10px;
+}
+.topNavBG .cart .qty.none {
+    display: none;
+    background: #2e7d32;
+}
+/*--    CART DROPDOWN   --*/
+.container.cartDropdown {
+    display: none;
+    position: absolute;
+    right: 20%;
+    top: 50px;
+    z-index: 1000;
+    padding: 20px;
+    background: inherit;    
+    max-width: 400px !important;
+    -webkit-box-shadow: 0px 5px 12px 0px rgba(2,3,3,0.2);
+    -moz-box-shadow: 0px 5px 12px 0px rgba(2,3,3,0.2);
+    box-shadow: 0px 5px 12px 0px rgba(2,3,3,0.2);
+}
+.cartDropdown .prodDetails {
+    border-bottom: 1px solid #cccccc;
+    padding:20px;
+}
+.cartDropdown .prodDetails .image img {
+    background: #f4f4f4;
+    padding: 5px;
+}
+.cartDropdown .title h2 {
+    font-size: 11px;
+    color: inherit;
+    text-transform: uppercase;
+    margin-top: 0.25rem;
+}
+.cartDropdown .title h2 > a {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 5px;
+    padding: 5px;
+    color: inherit;
+    font-size: 150%;
+    line-height: inherit;
+    outline: 1px solid;
+    outline-offset: 1px;
+}
+.cartDropdown .title h3 {
+    font-size: 11px;
+    color: inherit;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+/* 
+.cartDropdown .price .input-group input {
+    width: 15px;
+    height: 15px;
+    line-height: 12px;
+    background: none;
+}
+.cartDropdown .price .input-group input.button-minus, .cartDropdown .price .input-group input.button-plus {
+    border: 1px solid #848484;
+}
+.cartDropdown .price .input-group input.quantity-field {
+    margin-right: 1px;
+    margin-left: 14px;
+    border: none;
+}
+*/
+.cartDropdown  input,
+.cartDropdown  textarea {
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  margin: 0;
+  outline: none;
+  padding: 10px;
+}
+input[type="button"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+.cartDropdown input::-webkit-outer-spin-button,
+.cartDropdown input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.cartDropdown .input-group {
+    clear: both;
+    position: relative;
+}
+.cartDropdown .input-group input[type='button'] {
+    background-color: #eeeeee;
+    min-width: 20px;
+    width: auto;
+    transition: all 300ms ease;
+}
+.cartDropdown .input-group .button-minus,
+.cartDropdown .input-group .button-plus {
+  font-weight: bold;
+  height: 22px;
+  padding: 0;
+  width: 38px;
+  position: relative;
+}
+.cartDropdown .input-group .quantity-field {
+    position: relative;
+    height: 20px;
+    left: 0;
+    text-align: center;
+    width: 40px;
+    display: inline-block;
+    font-size: 13px;
+    margin: 0 0 5px;
+}
+.cartDropdown .button-plus {
+  left: -13px;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+}
+.cartDropdown .total h5 {
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+.cartDropdown .proceedBtn a {
+    margin-top: 30px;
+    background: #ffffff;
+    color: #777777;
+    display: block;
+    min-width: 100%;
+    text-align:center;
+    line-height: 50px;
+    min-height: 50px;
+    font-weight: 500;
+}
+.cartDropdown .proceedBtn a:hover {
+    background: #000000;
+}
+.cartDropdown .price {
+    margin-top: 15px;
+}
+.cartDropdown .price h5 {
+    font-size: 11px;
+    font-weight: 5000;
+}
+.qty span {
+    color: #fff;
+}
+@media (max-width: 1440px) {
+    .container.cartDropdown {
+        display: none;
+        position: absolute;
+        right: 8.375%;
+    }
+}
+@media (max-width: 1200px) {
+    .container.cartDropdown {
+        display: none;
+        position: absolute;
+        right: 3.25%;
+    }
+}

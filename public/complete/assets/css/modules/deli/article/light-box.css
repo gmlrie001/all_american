@@ -1,0 +1,180 @@
+/**
+ *
+ * Image LightBox
+ * src: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_lightbox
+ *
+ */
+
+.column {
+  float: left;
+  width: 33.33333%;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  padding-top: 100px;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: auto;
+  z-index: 1;
+}
+
+.modal-content {
+  position: relative;
+  max-width: calc(0.75 * 1200px);
+  width: calc(0.75 * 90%);
+  margin: auto;
+  padding: 0;
+  background-color: #fefefe;
+}
+
+.modal {
+  padding-top: 20px;
+  border-radius: 0;
+}
+
+.modal-content {
+  background-color: transparent !important;
+}
+
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: #ffffff !important;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+/*
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+*/
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.numbertext {
+  position: absolute;
+  top: 0;
+  left: 5%;
+  padding: 1rem 0;
+  color: #f2f2f2;
+  font-size: 16px;
+}
+
+img {
+  margin-bottom: -4px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#myModal {
+  z-index: 20100 !important;
+}
+
+#myModal .modal-content {
+  top: 50%;
+  left: 0;
+  transform: translate3d(0, -50%, 0);
+}
+
+@media only screen and (max-width: 992px) {}
+
+@media only screen and (max-width: 767px) {
+
+  .modal-content {
+    max-width: 100%;
+    width: 100%;
+    margin-top: 3rem;
+  }
+
+  .close {
+    top: -50px;
+  }
+
+  .prev {
+    left: 0;
+  }
+
+  .next {
+    right: 0;
+  }
+
+}
+
+
+@media only screen and (max-width: 767px) and (orientation: landscape) {
+
+  .modal-content {
+    margin-top: 2rem;
+  }
+
+  .close {
+    top: -25px;
+  }
+
+}

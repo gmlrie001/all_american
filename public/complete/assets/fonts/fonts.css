@@ -1,0 +1,55 @@
+/**
+ *
+ * Natural Designs Font-Family(ies)
+ *
+ * -> Nunito light;
+ * -> Nunito regular;
+ * -> Nunito semi-bold;
+ * -> Nunito bold; and
+ * -> Nunito extra-bol.
+ *
+ *
+ * Monzamedia (http://monzamedia.com)
+ * Feb 2019
+ *
+ */
+
+@font-face {
+    font-family: 'Nunito-Light';
+    src:
+         url( '/assets/fonts/Nunito-Light.tff' ) format( 'tff' );
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nunito-Regular';
+    src:
+         url( '/assets/fonts/Nunito-Regular.tff' ) format( 'tff' );
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nunito-SemiBold';
+    src:
+         url( '/assets/fonts/Nunito-SemiBold.tff' ) format( 'tff' );
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nunito-Bold';
+    src:
+         url( '/assets/fonts/Nunito-Bold.tff' ) format( 'tff' );
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nunito-ExtraBold';
+    src:
+         url( '/assets/fonts/Nunito-ExtraBold.tff' ) format( 'tff' );
+    font-weight: normal;
+    font-style: normal;
+}

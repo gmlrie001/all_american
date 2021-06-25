@@ -1,0 +1,349 @@
+/* HEADER STYLES */
+.header {
+    background: #ffffff;
+    height: 10vh;
+    width: 100%;
+    z-index: 1001;
+    padding: 0;
+}
+.header-content > a, .header-content > a:hover, .header-content > a:focus {
+    display: block;
+    float: right;
+    margin-right: 70px;
+    font-family: 'ralewaymedium';
+    font-size: 18px;
+    text-transform: uppercase;
+    height: 10vh;
+    line-height: 10vh;
+    color: #ffffff;
+    text-decoration: none;
+}
+.divider-text {
+    color: #ffffff;
+    background: #6b6b6b;
+    padding: 0 15px;
+}
+.link-dropdown {
+    padding: 0;
+    list-style: none;
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: all 500ms ease-out;
+    -moz-transition: all 500ms ease-out;
+    -o-transition: all 500ms ease-out;
+    transition: all 500ms ease-out;
+}
+.link-dropdown li {
+    position: relative;
+}
+.link-dropdown li a, .link-dropdown li a:hover, .link-dropdown li a:focus {
+    position: relative;
+    z-index: 100;
+    display: block;
+    color: #121212;
+    text-decoration: none;
+    font-weight: 500;
+    -webkit-transition: all 500ms ease-out;
+    -moz-transition: all 500ms ease-out;
+    -o-transition: all 500ms ease-out;
+    transition: all 500ms ease-out;
+}
+.link-dropdown li:hover a, .link-dropdown li:hover a:hover, .link-dropdown li:hover a:focus, .link-dropdown li.active a {
+    color: #ffffff;
+}
+.header-content > a span, .header-content > a:hover span, .header-content > a:focus span {
+    margin-right: 30px;
+    color: #121212;
+}
+.header-content > div {
+    float: left;
+    height: 10vh;
+}
+.vault-logo {
+    background: #181818;
+    padding: 0 15px;
+    width: 15vw;
+}
+.header-content > div a, .header-content > div a:hover, .header-content > div a:focus {
+    display: block;
+    float: left;
+    height: 10vh;
+    line-height: 10vh;
+}
+.header-content > div a.hamburger, .header-content > div a.hamburger:hover, .header-content > div a.hamburger:focus {
+    margin-right: 30px;
+    padding-top: 7%;
+    margin-top: 9px;
+}
+.header-content > div a.hamburger span, .header-content > div a.hamburger:hover span, .header-content > div a.hamburger:focus span {
+    width: 40px;
+    height: 5px;
+    background: #181818;
+    margin-bottom: 5px;
+    display: block;
+    border-radius: 5px;
+}
+.header-content > div img {
+    max-height: 6vh;
+}
+/* SIDEBAR STYLES */
+div.menu-link {
+    line-height: 50px;
+    font-size: 30px;
+    font-weight: 300;
+    margin-right: 45px;
+    color: #ffffff;
+}
+.main-link a, .main-link a:hover, .main-link a:focus {
+    color: #fff !important;
+    background-color: #000000 !important;
+    /* border-top: 1px solid #292929; */
+}
+li.main-link {
+    float: left;
+    width: 100%;
+}
+.main-link + ul {
+    background-color: #ffffff;
+    float: left;
+    width: 100%;
+}
+.sublink, .sublink a {
+    padding-left: 5%;    
+}
+.sublink ul {
+    list-style: none;
+    padding-left: 0;
+}
+.nav > li > a {
+    padding: 0;
+}
+.nav-img {
+    padding: 0;
+    margin-left: 30px;
+    max-width: 210px;
+}
+.side-nav .main-link:nth-child(1) a,.side-nav  .main-link:nth-child(1) a:hover,.side-nav  .main-link:nth-child(1) a:focus {
+    color: #ffffff !important;
+    /* border-top: 1px solid #cbc8c8; */
+    background-color: #000000 !important;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.side-nav .nav .main-link a, .side-nav .nav .main-link a:hover, .side-nav .nav .main-link a:focus {
+    color: #ffffff !important;
+    text-transform: uppercase;
+    /* border-top: 1px solid #cbc8c8; */
+    background-color: #414141 !important;
+}
+.main-link.spacer {
+    height: 25px;
+}
+.main-link a {
+    position: relative;
+    display: block;
+    padding: 0;
+    text-decoration: none;
+}
+.nav-list li {
+    font-size: 15px;    
+}
+.nav-list li i {
+    float: none !important;
+}
+.nav-list .drop-logo {
+    float: right !important;
+    line-height: 40px;
+    padding: 0 1rem 0 0;
+}
+.nav-list {
+    list-style: none;
+    line-height: 40px;
+    display: block;
+    padding: 0;
+    margin: 0;
+    height: 90vh;
+    overflow: hidden;
+    width: 100%;
+}
+.nav li a {
+    position: relative;
+    display: block;
+    background: none !important;
+    color: #363334 !important;
+}
+.nav li {
+    border-bottom: #adadad solid 1px;
+    position: relative;
+}
+.nav li * {
+    position: relative;
+    z-index: 2;
+}
+
+li .bg-colour {
+    position: absolute;
+    background-color: #c30d16;
+    display: block;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    z-index: 1;
+    -webkit-transition: all 500ms ease-out;
+    -moz-transition: all 500ms ease-out;
+    -o-transition: all 500ms ease-out;
+    transition: all 500ms ease-out;
+}
+li.active span.bg-colour, li:hover span.bg-colour {
+    width: 100%;
+}
+.nav li.active a, .nav li a:hover {
+    color: #ffffff !important;
+    -webkit-transition: all 500ms ease-out;
+    -moz-transition: all 500ms ease-out;
+    -o-transition: all 500ms ease-out;
+    transition: all 500ms ease-out;
+}
+.side-nav {
+    width: 15vw;
+    position: fixed;
+    z-index: 10;
+    float: left;
+    left: 0;
+    top: 10vh;
+    height: 90vh;
+    background-color: #000000;
+    padding: 0;
+    overflow: hidden;
+    -webkit-transition: left 500ms ease-out;
+    -moz-transition: left 500ms ease-out;
+    -o-transition: left 500ms ease-out;
+    transition: left 500ms ease-out;
+}
+.side-nav.active {
+    left: 0;
+}
+.main-link:hover a {
+    background-color: #3d3d3d !important;
+}
+@media (max-width: 1440px) {
+    div.menu-link {
+        font-size: 17px;
+        margin-right: 15px;
+    }
+    .nav-list {
+        line-height: 40px;
+    }
+    .nav-list .drop-logo {
+        line-height: 40px;
+        font-size: 14px;
+    }
+    .side-nav .nav-list li a span {
+        font-size: 14px;
+    }
+    .nav-list .drop-logo {
+        padding: 0 15px 0 0;
+    }
+    .side-nav .nav-list .drop-logo {
+        width: 30px;
+    }
+    .side-nav, 
+    .vault-logo {
+        width: 17vw;
+    }
+
+}
+@media (max-width: 1199px) {
+    .side-nav .nav-list li a span {
+        font-size: 12px;
+        margin-left: 10px;
+    }
+    .header-content > div img {
+        max-height: none;
+        max-width: 100%;
+    }
+}
+@media (max-width: 1024px) {
+    .side-nav.inactive .nav-list li i.col-md-2 {
+        margin-left: 9px;
+    }
+    .side-nav, 
+    .vault-logo {
+        width: 20vw;
+    }
+}
+@media (max-width: 991px) {
+    .header-content > a span, .header-content > a:hover span, .header-content > a:focus span {
+        display: none;
+    }
+    .header-content > a, .header-content > a:hover, .header-content > a:focus {
+        margin-right: 30px;
+    }
+}
+@media(max-width: 900px) {
+    div.menu-link {
+        font-size: 22px;
+        margin-right: 20px;
+    }
+}
+@media (max-width: 768px) {
+    .side-nav, 
+    .vault-logo {
+        width: 30vw;
+    }
+}
+@media (max-width: 767px) {
+    .header-content > div img {
+        max-width: 100%;
+    }
+    .header-content > a img, .header-content > a:hover img, .header-content > a:focus img {
+        max-height: 4vh;
+    }
+    .header {
+        height: 7vh;
+    }
+    .header-content > div a, .header-content > div a:hover, .header-content > div a:focus {
+        height: 7vh;
+        line-height: 7vh;
+    }
+    .header-content > a, .header-content > a:hover, .header-content > a:focus {
+        margin-right: 20px;
+        height: 7vh;
+        line-height: 7vh;
+    }
+    .side-nav {
+        width: 100vw;
+        top: 7vh;
+        height: 93vh;
+        left: -100vw;
+    }
+    .header-content > div a.hamburger, .header-content > div a.hamburger:hover, .header-content > div a.hamburger:focus {
+        margin-right: 19px;
+        padding-top: 40%;
+        margin-top: 8px;
+    }
+    .header-content > div a.hamburger span, .header-content > div a.hamburger:hover span, .header-content > div a.hamburger:focus span {
+        width: 25px;
+        height: 3px;
+        background: #181818;
+        margin-bottom: 5px;
+        display: block;
+        border-radius: 5px;
+    }
+    .side-nav .nav-list li a span {
+        font-size: 17px;
+        margin-left: 10px;
+    }
+    .nav-list li i {
+        float: none !important;
+        display: inline-block;
+        min-width: 50px;
+    }
+    .nav-list .drop-logo {
+        line-height: 35px;
+    }
+    .nav-list {
+        line-height: 35px;
+    }
+}

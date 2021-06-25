@@ -1,0 +1,280 @@
+/**
+ * Footer Styling (Responsive/Adaptive)
+ */
+
+footer:not(.article-footer) {
+  max-height: unset !important;
+  background-color: #041020;
+}
+
+footer:not(.article-footer) .navigation {
+  background-color: transparent;
+}
+
+footer:not(.article-footer) .copyright {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0;
+}
+
+footer:not(.article-footer) .copyright {
+  max-height: 50px;
+  background-color: #030e1c;
+  justify-content: center;
+}
+
+footer:not(.article-footer) .copyright p,
+footer:not(.article-footer) .copyright p * {
+  margin-bottom: 0 !important;
+  padding: 0;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 200;
+  line-height: 50px;
+}
+
+
+footer:not(.article-footer) {
+  background-color: var(--theme-color);
+  color: var(--color-white);
+  font-family: var(--alt-font);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 34px;
+}
+
+footer:not(.article-footer) {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+footer:not(.article-footer) {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+}
+
+footer:not(.article-footer) h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #4472b0;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 33px;
+  text-transform: uppercase;
+}
+
+footer:not(.article-footer) ul *,
+footer:not(.article-footer) ul li,
+footer:not(.article-footer) ul li a {
+  color: var(--color-white);
+  font-size: 1rem;
+  line-height: 34px;
+  font-weight: 300;
+}
+
+footer:not(.article-footer) .footer-social-media {
+  font-size: 15px;
+  line-height: 33px;
+  font-weight: 400;
+}
+
+footer:not(.article-footer) .footer-social-media a,
+footer:not(.article-footer) .footer-social-media * {
+  /* font-size: inherit; */
+  /* line-height: inherit; */
+}
+
+footer:not(.article-footer) .social-media {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+footer:not(.article-footer) .form-title .title h2 {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: calc(1em * (20 / 1000));
+  line-height: 33px;
+}
+
+footer:not(.article-footer) label {
+  padding: 0 !important;
+}
+
+footer:not(.article-footer) .footer-social-media a,
+footer:not(.article-footer) .footer-social-media a i {
+  font-size: 25px;
+  line-height: 33px;
+  color: #ffffff;
+}
+
+footer:not(.aritcle-footer) button.btn.submit-btn,
+footer:not(.article-footer) label,
+footer:not(.article-footer) .form-control  {
+  max-width: 375px;
+  width: 100%;
+  max-height: 50px;
+  height: 50px;
+  padding: 0;
+  border-radius: 0;
+  line-height: 50px;
+}
+
+footer:not(.article-footer) label,
+footer:not(.article-footer) .form-control {
+  display: block !important;
+}
+
+footer:not(.aritcle-footer) button.btn.submit-btn {
+  background-color: #068b49;
+  color: var(--color-white);
+}
+
+footer:not(.article-footer) .custom-container p,
+footer:not(.article-footer) .custom-container p * {
+  font: normal normal 14px/18px var(--alt-font);
+  letter-spacing: calc(1em * (20 / 1000));
+  margin-bottom: 0 !important;
+}
+
+footer:not(.article-footer) p {
+  margin-bottom: 0.5rem !important;
+}
+
+footer:not(.article-footer) br {
+  display: none;
+}
+
+footer:not(.article-footer) .section-divider hr {
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  border: 0;
+  border-top: 1px solid rgba(250, 250, 250, 1);
+}
+
+.subscription-signup .row.text-center .col.col-lg>a {
+  font-size: 14px;
+  margin: auto 0.625rem !important;
+}
+
+.subscription-signup .row.text-center .col.col-lg>a:first-of-type {
+  margin-left: 0 !important;
+}
+
+.subscription-signup .row.text-center .col.col-lg>a:last-of-type {
+  margin-right: 0 !important;
+}
+
+@media only screen and (max-width: 1280px) {
+  footer:not(.article-footer) .nav-item .nav-link {
+    margin-bottom: 0;
+  }
+
+  footer:not(.article-footer) .nav-item strong {
+    font-size: 105% !important;
+  }
+
+  footer:not(.article-footer) .section-4 .nav-item .nav-link {
+    font-size: 95% !important;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .subscribe-cta {
+    max-width: 375px;
+    margin: auto;
+  }
+
+}
+
+@media only screen and (max-width: 992px) {
+
+  footer:not(.article-footer) {
+    max-height: 320px;
+  }
+
+  footer:not(.article-footer) section[class*=section]:last-of-type {
+    margin-bottom: 0 !important;
+  }
+
+  footer:not(.article-footer) br {
+    display: block;
+    line-height: 1.618 !important;
+  }
+
+  footer:not(.article-footer) label,
+  footer:not(.article-footer) .form-control {
+    margin: auto;
+  }
+
+  footer:not(.article-footer) .copyright {
+    position: relative !important;
+    max-width: unset;
+    max-height: unset !important;
+    height: auto !important;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  footer:not(.article-footer) .copyright p,
+  footer:not(.article-footer) .copyright p * {
+    line-height: inherit;
+  }
+
+  footer:not(.aritcle-footer) button.btn.submit-btn,
+  footer:not(.article-footer) label,
+  footer:not(.article-footer) .form-control {
+    max-height: 40px;
+    height: 40px;
+    border: 0;
+    font-size: 16px;
+    line-height: 40px;
+  }
+
+  .subscription-signup .row.text-center .col.col-lg>a {
+    font-size: 12px !important;
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+  footer:not(.article-footer) .custom-container * {
+    line-height: 22px !important;
+    letter-spacing: calc(1em * (60 / 1000));
+  }
+
+  footer:not(.article-footer) .custom-container p {
+    padding: 0;
+  }
+
+  footer:not(.article-footer) .copyright-legal {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  footer:not(.article-footer) .form-title .title h2 {
+    text-align: left;
+    margin-bottom: 0.618rem !important;
+  }
+
+}
+
+@media only screen and (max-width: 576px) {
+  footer:not(.article-footer) .copyright-legal {
+    margin-top: 10px;
+    margin-bottom: 1rem;
+  }
+
+  footer:not(.article-footer) .copyright p,
+  footer:not(.article-footer) .copyright p * {
+    margin-bottom: 1rem !important;
+  }
+
+}

@@ -1,0 +1,327 @@
+/**
+ * News listing page 3 up
+ */
+
+:root {
+  --text-color: #000000;
+  --link-color: #4472b0;
+  --card-date: #87ce6e;
+  --card-bg: #ebebeb;
+}
+
+.cardgrid,
+.recipes-listing-cardgrid {
+  /* position: relative; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(auto, calc( 100% / 4 - 1.25rem) ));
+  grid-template-rows: auto;
+  grid-gap: 1.618rem;
+  /*justify-content: center;*/
+}
+
+.c-card,
+.recipes-listing-card {
+  position: relative;
+  max-width: 500px;
+  width: 100%;
+  max-height: 685px;
+  height: auto;
+  overflow: hidden;
+}
+
+.c-date,
+.recipes-listing-date {
+  position: absolute;
+  top: 2.5vmin;
+  left: 2.5vmin;
+  max-width: 60px;
+  width: 100%;
+  max-height: 60px;
+  height: 100%;
+}
+
+.c-date,
+.recipes-listing-date {
+  background-color: var(--card-date);
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+.c-date date,
+.recipes-listing-date date {
+  font-size: 24px;
+  line-height: 18px;
+}
+
+.c-date date span,
+.recipes-listing-date date span {
+  font-size: 12px;
+  line-height: inherit;
+}
+
+.c-card .card-image-top,
+.recipes-listing-card .card-image-top {
+/*
+  min-height: 272.5px;
+  max-height: 375px;
+*/
+  object-fit: cover;
+  background-color: #fafafa;
+}
+
+.c-card .card-body-content,
+.recipes-listing-card .card-body-content {
+  background-color: var(--bg-color-white);
+  overflow-y: auto;
+}
+
+.c-card h3,
+.c-card .card-body-content h3,
+.c-card .card-listing-title,
+.recipes-listing-card h3,
+.recipes-listing-card .card-body-content h3,
+.recipes-listing-card .card-listing-title {
+  min-height: 45px;
+  max-height: 45px;
+  margin-top: 0;
+  margin-bottom: 0.618rem;
+  color: inherit;
+  font: normal normal 18px/18px 'Poppins', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.c-card p,
+.c-card .card-body-content p,
+.recipes-listing-card p,
+.card-body-content p {
+  min-height: 100px;
+  max-height: 100px;
+  margin-bottom: 1rem;
+  color: inherit;
+  font: normal normal 16px/30px 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+.c-card a,
+.c-card .card-body-content a,
+.recipes-listing-card a,
+.card-body-content a {
+  min-height: 30px;
+  max-height: 30px;
+  margin-bottom: 0.618rem;
+  color: var(--link-color);
+  font: normal normal 15px/28px 'Poppins', sans-serif;
+  text-decoration: underline;
+  text-decoration-color: var(--link-color);
+}
+
+.c-card a:active,
+.c-card a:focus,
+.c-card a:hover {
+  color: var(--link-color) !important;
+}
+
+.c-card .card-body-content.body-padding,
+.recipes-listing-card .card-body-content.body-padding {
+  padding: 45px;
+}
+
+.c-card .stretched-link::after,
+.recipes-listing-card .stretched-link::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: auto;
+  content: "";
+  background-color: rgba(0, 0, 0, 0);
+}
+
+[class*=listing-card] [class*=interactions] {
+  display: flex;
+  bottom: 0.5rem;
+  left: 0;
+  right: 0;
+  max-width: 100%;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.recipes-listing .card-body-content.body-padding {
+  background-color: #ebebeb;
+}
+
+.recipes-listing .recipes-listing-card:hover .card-body-content.body-padding,
+.recipes-listing .recipes-listing-card:active .card-body-content.body-padding,
+.recipes-listing .recipes-listing-card:focus .card-body-content.body-padding,
+.recipes-listing .recipes-listing-card:hover .card-body-content.body-padding a,
+.recipes-listing .recipes-listing-card:active .card-body-content.body-padding a,
+.recipes-listing .recipes-listing-card:focus .card-body-content.body-padding a {
+  background-color: #f07968;
+  color: #ffffff;
+}
+
+.recipes-listing .recipes-listing-card:hover .card-body-content.body-padding a,
+.recipes-listing .recipes-listing-card:active .card-body-content.body-padding a,
+.recipes-listing .recipes-listing-card:focus .card-body-content.body-padding a {
+  text-decoration: underline;
+  text-decoration-color: #ffffff;
+}
+
+@media only screen and (max-width: 1600px) {
+
+  .c-card h3,
+  .c-card .card-body-content h3,
+  .c-card p,
+  .c-card .card-body-content p,
+  .c-card a,
+  .c-card .card-body-content a,
+  .recipes-listing-card h3,
+  .card-body-content h3,
+  .recipes-listing-card p,
+  .card-body-content p,
+  .recipes-listing-card a,
+  .card-body-content a {
+    min-height: unset;
+    max-height: unset;
+  }
+
+  .recipes-listing-cardgrid {
+    grid-template-columns: repeat(3, minmax(auto, 415px));
+  }
+
+  .c-card,
+  .recipes-listing-card {
+    max-width: 415px;
+  }
+}
+
+
+@media only screen and (max-width: 1440px) {
+  .recipes-listing-cardgrid {
+    grid-template-columns: repeat(auto-fit, minmax(auto, calc(100% / 4 - 1.25rem)));
+  }
+
+  .c-card,
+  .recipes-listing-card {
+    max-width: 375px;
+  }
+
+  .c-card .card-body-content.body-padding,
+  .recipes-listing-card .card-body-content.body-padding {
+    padding: 40px;
+  }
+}
+
+/**/
+@media only screen and (max-width: 1366px) {
+  .recipes-listing-cardgrid {
+    grid-template-columns: repeat(auto-fit, minmax(auto, 355px));
+  }
+
+  .c-card,
+  .recipes-listing-card {
+    max-width: 355px;
+  }
+
+  .c-card .card-body-content.body-padding,
+  .recipes-listing-card .card-body-content.body-padding {
+    padding: 30px;
+  }
+}
+
+/**/
+
+/**/
+@media only screen and (max-width: 1280px) {
+  .recipes-listing-cardgrid {
+    grid-template-columns: repeat(auto-fit, minmax(auto, 333px));
+  }
+
+  .c-card,
+  .recipes-listing-card {
+    max-width: 333px;
+  }
+
+  .c-card .card-body-content.body-padding,
+  .recipes-listing-card .card-body-content.body-padding {
+    padding: 25px;
+  }
+}
+
+/**/
+
+/**/
+@media only screen and (max-width: 1024px) {
+  .recipes-listing-cardgrid {
+    grid-template-columns: repeat(auto-fit, minmax(auto, 475px));
+  }
+
+  .c-card,
+  .recipes-listing-card {
+    max-width: 475px;
+  }
+}
+
+/**/
+
+/**/
+@media only screen and (max-width: 992px) {
+/*  .recipes-listing-cardgrid {
+    grid-template-columns: repeat(auto-fit, minmax(auto, 425px));
+  }
+*/
+  .recipes-listing-cardgrid {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+  }
+
+  .c-card,
+  .recipes-listing-card {
+    max-width: 425px;
+  }
+
+  .c-card .card-image-top, .recipes-listing-card .card-image-top {
+    min-height: unset;
+  }
+}
+
+/**/
+
+/**/
+@media only screen and (max-width: 768px) {
+  .recipes-listing-cardgrid {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+  }
+
+  .c-card,
+  .recipes-listing-card {
+    max-width: 100%;
+  }
+
+}
+
+/**/
+
+@media only screen and (max-width: 576px) {
+  .recipes-listing-cardgrid {
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+}
+
+
+/*
+@media only screen and (max-width: 480px) {}
+*/
+
+/*
+@media only screen and (max-width: 320px) {}
+*/

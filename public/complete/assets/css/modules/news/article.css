@@ -1,0 +1,202 @@
+/**
+* News Article styling
+*
+*/
+
+/* .news-article-related-items */
+.news-article a,
+.news-article p,
+.news-article p *,
+.news-article span,
+.news-article ul li,
+.news-article ul li *,
+.news-article-related-items p,
+.news-article-related-items p *,
+.news-article-related-items * {
+  color: #041020;
+  text-align: left;
+}
+
+.news-article [class*=recipe] p a {
+  color: var( --bg-color-blue );
+}
+
+.news-article-related-items h2,
+.news-article-related-items h3 {
+  font-size: 1.618rem;
+}
+
+.news-article .share_icons a {
+  color: var( --color-white );
+}
+
+.news-article ul li,
+.news-article ul li * {
+  margin-bottom: 0.618rem;
+}
+
+.news-article [class*=recipe] ul {
+  columns: 2;
+  padding: 0 1.618rem;
+}
+
+.news-article .recipe-quick-info {
+  margin-bottom: 1rem;
+}
+
+.news-article .recipe-quick-info p,
+.news-article .recipe-quick-info p * {
+  margin-bottom: 0;
+}
+
+/* HACKs from NaturalHerbsAndSpices Recipe Article Section */
+.news-article .recipe-quick-info p,
+.news-article .recipe-quick-info p * {
+  color: var(--color-white);
+  line-height: 1.618;
+}
+
+.news-article .recipe-quick-info img.img-fluid {
+  filter: grayscale(1);
+}
+
+.news-article .recipe-slider-nav img.img-fluid {
+  padding: 0.5rem 0.25rem !important;
+}
+
+.news-article .card.recipe-post .description,
+.news-article .card.recipe-post .description * {
+  text-align: left !important;
+  font-size: 92.5%;
+}
+
+.news-article .share_icons p {
+  margin: 0;
+  margin-right: 1rem;
+  padding: 0;
+  line-height: 50px;
+}
+
+.news-article .share_icons a {
+  min-width: 40px;
+  max-width: 40px;
+  width: 100%;
+  max-height: 40px;
+  height: 100%;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+  line-height: 40px;
+  text-align: center !important;
+}
+
+.news-article h2.section-title:after {
+  content: "";
+}
+
+.section-title h2,
+h2.section-title {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  line-height: 37px !important;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  margin-top: 0;  
+}
+
+.listing-card .body h4,
+.listing-card .body p {
+  line-height: 22px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+.listing-card .body h4 {
+  font-size: 18px;
+}
+.listing-card .body p {
+  font-size: 18px;
+}
+
+.listing-card .image span {
+  width: 50px;
+  height: 50px;
+  background-color: #000;
+  color: #fff;
+  top: 1rem;
+  left: 1rem;
+  position: absolute;
+  font-size: 0.875rem;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  font-weight: 600;
+}
+
+.listing-card .product-interactions {
+  display:flex;
+  bottom:0.5rem;
+  left:0;
+  right:0;
+  max-width:100%;
+  width:100%;
+  justify-content:space-between;
+}
+
+.listing-card .product-interactions > a {
+  font-size:1.5rem;
+  padding:1rem;
+  color: #fff !important;
+  text-shadow: 1px 1px 2px rgba(10,10,10,0.75);
+  z-index:20010;
+}
+
+.listing-card .product-interactions [class*=fa] {
+  color: inherit;
+}
+.listing-card .product-interactions.position-absolute {
+  color: #ffffff;
+}
+
+@media only screen and (max-width: 992px) {
+  .news-article .card.recipe-post h3.card-title {
+    font-size: 125%;
+  }
+
+  .news-article .share_icons a {
+    min-width: 35px;
+    max-width: 35px;
+    max-height: 35px;
+    line-height: 35px !important;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .news-article .recipe-slider-nav img.img-fluid {
+    padding: 1rem 0.5rem !important;
+  }
+
+  .news-article [class*=recipe-slider] img.img-fluid {
+    max-height: unset;
+    margin: auto;
+  }
+
+  .news-article ul li,
+  .news-article ul li * {
+    margin-bottom: 0.5rem;
+  }
+
+  .news-article .share_icons {
+    margin: 1.75rem 0;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .news-article [class*=recipe] ul {
+    columns: 1;
+    padding: 0 1rem;
+  }
+}

@@ -1,0 +1,70 @@
+/**
+ * File: login_register.css
+ * Login-Register: Single Page with Login & Register Component Styling
+ *
+ */
+
+#account-login {
+  color: #000000;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: inherit;
+}
+
+#account-login .form-control,
+#account-login .login-cta button.btn {
+  max-height: 50px;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: inherit;
+  letter-spacing: calc( 1em * ( 20 / 1000 ) );
+  line-height: 50px;
+}
+
+/*
+#account-login .forgot-password {
+  margin-top: 1rem;
+}
+*/
+
+#account-login .forgot-password a {
+  color: var(--bg-color-blue) !important;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: inherit;
+  line-height: 50px;
+}
+
+#register-form {
+  padding: 1rem 1.618rem;
+  background-color: #ebebeb;
+  color: #555555;
+}
+
+#register-form {
+  color: #000000;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: inherit;
+}
+
+#register-form .form-control,
+#register-form .register-cta button.btn {
+  max-height: 40px;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: inherit;
+  letter-spacing: calc( 1em * ( 20 / 1000 ) );
+  line-height: 40px;
+}
+
+@media only screen and (max-width: 992px) {
+  .login-component,
+  .register-component {
+    margin-top: 0.618rem;
+    margin-bottom: 1.618rem;
+  }
+
+}

@@ -1,0 +1,94 @@
+.faqContain .selectors a {
+    border: 1px solid #d6d6d6;
+    padding: 15px 20px;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 500;
+    color: #1b1b19;
+    text-transform: uppercase;
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+}
+.faqContain .selectorTitle a {
+    border: 1px solid #d6d6d6;
+    padding: 15px 20px;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 500;
+    color: #1b1b19;
+    text-transform: uppercase;
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    background: url("/assets/icons/dropdown-black.svg") no-repeat center right 20px;
+}
+.faqContain .selectors a.active {
+    background: #051c2e;
+    color: #ffffff;
+}
+.faqContain .selectors a:hover {
+    background: #224765;
+    color: #ffffff;
+}
+.faqContain .answerContain {
+    border: 1px solid #d6d6d6;
+    padding: 25px;
+}
+.faqContain .answerContain h2 {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.faqContain .answerContain .questionBlock:hover {
+    cursor: pointer;
+}
+.faqContain .answerContain .questionBlock h3 {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 10px;
+    border-bottom: 1px solid #d6d6d6;
+}
+.faqContain .answerContain .questionBlock > div {
+    float: left;
+    width: 100%;
+    display: none;
+}
+.faqContain .answerContain .questionBlock h3::after {
+    content: "+";
+    position: absolute;
+    right: 20px;
+    top: 5px;
+    display: block;
+    height: 20px;
+    width: 20px;
+    border: 1px solid #d6d6d6;
+    border-radius: 0;
+    text-align: center;
+    line-height: 20px;
+    font-size: 17px;
+    font-weight: 600;
+    color: #1b1b19;
+}
+.faqContain .answerContain .questionBlock.active h3::after {
+    content: "-";
+    line-height: 18px;
+}
+.faqContain .answerContain .questionBlock.active p {
+    display: block;
+}
+.faqContain .answerContain .questionBlock p {
+    display: block;
+    font-size: 13px;
+    line-height: 28px;
+    font-weight: 300;
+    color: #212121;
+    padding-left: 10px;
+}
+@media (max-width: 576px) {
+    .faqContain .answerContain .questionBlock h3 {
+        /* margin-right: 20px; */
+        padding-right: 30px;
+    }
+}

@@ -1,0 +1,543 @@
+.custom-control-input {
+    position: absolute;
+    top: 0.25rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 15px;
+    height: 15px;
+    opacity: 0;
+    z-index: 90900;
+}
+.categoryWrap .contain {
+    margin-bottom: 40px;
+}
+.sortBy a.dropdown-toggle {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 59px;
+    color: #1b1b19;
+}
+.sortBy .dropdown-toggle::after {
+    display: inline-block;
+    content: url('/assets/icons/dropdown-black.svg');
+    border: none;
+    vertical-align: 1px;
+}
+.sortBy .dropdown-menu {
+    background: #ffffff;
+    border-radius: 0;
+    z-index: 1000;
+    float: left;
+    min-width: auto;
+    text-align: right;
+    list-style: none;
+    border: 1px solid rgba(0,0,0,.15);
+    padding-top: 0;
+    padding-bottom: 0;
+    top: 20px !important;
+    left: -131px !important;
+}
+.sortBy .dropdown-menu a {
+    font-size: 0.93333333333rem;
+    color: #1b1b19;
+    padding-left: 85px;
+}
+.sortBy .dropdown-item:focus, .sortBy .dropdown-item:hover {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #000000;
+}
+
+/*--
+FILTER
+--*/
+.borderFilter {
+    border-top: 1px solid #f4f4f4;
+    padding: 20px 0;
+}
+/* .accordion .collapse {
+    margin-top: 15px !important;
+}
+.filterWrap .collapse.show .accordion h5::after {
+    content: "+";
+}
+.filterWrap .accordion h5 {
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.filterWrap .accordion h5::after {
+    content: "-";
+    line-height: 20px;
+    font-size: 30px;
+    float: right;
+}
+.filterWrap .sizeFilter a {
+    font-size: 10px;
+    color: #1b1b19;
+    border: 1px solid #d6d6d6;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    line-height: 18px;
+    text-align: center;
+    display: inline-block;
+    margin-right: 10px;
+}
+.filterWrap label.filterSelect input {
+    display: none;
+}
+.filterWrap label.filterSelect.active img, .filterWrap label.filterSelect:hover img, .filterWrap label.filterSelect input:checked + img {
+    border-radius: 50%;
+    box-sizing: content-box;
+}
+.filterWrap label {
+    margin-right: 25px;
+}
+.filterWrap label p {
+    font-size: 10px;
+    margin-top: 5px;
+} */
+.filterWrap .title h5, .filterMobileopen .title h5 {
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.filterWrap .title h4, .filterMobileopen .title h4 {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.filterWrap .applied a, .filterMobileopen .applied a {
+    background: #f4f4f4;
+    font-size: 12px;
+    color: #212121;
+    line-height: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.filterWrap .applied a:last-of-type, .filterMobileopen .applied a:last-of-type {
+    background: none;
+    text-decoration: underline;
+}
+.filterWrap .applied, .filterMobileopen .applied {
+    margin-bottom: 20px;
+}
+.filterWrap .productPadding, .filterMobileopen .productPadding {
+    padding-bottom: 20px;
+}
+.filterWrap .sizeContain input[type="radio"], .filterMobileopen .sizeContain input[type="radio"] {
+    width: 30px !important;
+    height: 30px !important;
+}
+.filterWrap .sizeContain label span:first-of-type, .filterMobileopen .sizeContain label span:first-of-type {
+    left: -30px !important;
+    top: -12px !important;
+}
+.filterWrap .sizeContain.productPadding, .filterWrap .colourContain.productPadding, .filterMobileopen .colourContain.productPadding {
+    padding-bottom: 16px;
+}
+.filterWrap .sizeContain h4, .filterWrap .colourContain h4, .filterWrap .materialContain h4, .filterMobileopen .materialContain h4 {
+    margin-bottom: 15px;
+}
+.filterWrap .custom-control, .filterMobileopen .custom-control {
+    margin-bottom: 3px;
+}
+.filterWrap .custom-control .custom-control-label, .filterMobileopen .custom-control .custom-control-label {
+    font-size: 13px;
+    padding-left: 10px;
+}
+.filterWrap .custom-control-label span, .filterMobileopen .custom-control-label::before {
+    position: absolute;
+    top: .25rem;
+    left: 0;
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    pointer-events: none;
+    content: "";
+    background-color: #fff;
+    border-radius: 0;
+    border: #adb5bd solid 1px;
+    margin-bottom: 5px;
+}
+.filterWrap .custom-control-label::after {
+    position: absolute;
+    top: .25rem;
+    left: 0;
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    content: "";
+    background: no-repeat 50%/50% 50%;
+}
+.filterMobileopen {
+    z-index: 800;
+    padding: 30px;    
+    position: fixed;    
+    display: none;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: #ffffff;
+}
+
+.productListWrap .block.soldOut {
+    background: #fefefe;
+    opacity: 0.5;
+}
+.productListWrap .block {
+    min-height: 280px;
+    background: #fefefe;
+    padding: 0px;
+    margin-bottom: 30px;
+}
+.productListWrap .block .title h1, .productListWrap .block .info h2, .productListWrap .block .info h5  {
+    color: #212121;
+}
+.productListWrap .block .title h1, .productListWrap .block .info h2, .productListWrap .block .info h5, .productListWrap .block .info h4 {
+    margin-bottom: 0;
+}
+.productListWrap .block .title h1 {
+    min-height: 52px;
+    margin-top: 1rem;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: inherit;
+    /* text-transform: uppercase; */
+}
+.productListWrap .block .info {
+    margin-top: 5px;
+}
+.productListWrap .block .info h4, .productListWrap .block .info h2 {
+    color: #000000 !important;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 21px;
+}
+.productListWrap .block .info h4 {
+    text-decoration: line-through;
+    color: #a4a4a4;
+}
+.productListWrap .block .info h5 {
+    font-size: 10px;
+    line-height: 24px;
+}
+.productListWrap .block .info .size {
+    border-left: 1px #212121 solid;
+}
+.productListWrap .block .price {
+    /* padding-left: 0;
+    padding-right: 0; */
+}
+.productListWrap .block .price * {
+    color: #c1ac3a !important;
+}
+.productListWrap > a {
+    position: relative;
+    margin-bottom: 40px;
+}
+.productListWrap .productTag {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    line-height: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+}
+.productListWrap {
+    margin-top: 0;
+}
+.productListWrap .content.hidden {
+    display: none;
+}
+.mobileFilter .viewChange {
+    display: none !important;
+}
+.mobileFilter .viewChange a {
+    border: 1px solid #c7c7c7;
+    line-height: 40px;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.mobileFilter .filteropen {
+    display: block;
+}
+.mobileFilter .filteropen a.filterBtn {
+    display: inline-block;
+    border: 1px solid #c7c7c7;
+    width: 100%;
+    display: block;
+    height: 40px;
+    line-height: 30px;
+    font-size: 15px;
+    color: #212121;
+    padding: 5px 15px;
+    text-align: center;
+}
+
+.productViewWrap .image .thumbNail {
+    margin-top: 20px;
+}
+.productViewWrap .image .thumbNail div img {
+    border: 1px solid #d6d6d6;
+}
+.productViewWrap .image .thumbNail .slick-slide {
+    /* border: 1px solid #cccccc; */
+    margin: 0 15px;
+}
+
+/*--
+PRODUCT
+--*/
+.productViewWrap .sizeContain {
+    position: relative;
+}
+.productViewWrap .details .sizeContain label, .filterWrap .sizeContain label, .filterMobileopen .sizeContain label {
+    margin-right: 10px;
+}
+.productViewWrap .details .sizeContain label:hover, .filterWrap .sizeContain label:hover, .filterMobileopen .sizeContain label:hover {
+    cursor: pointer;
+}
+.productViewWrap .details .sizeContain input[type="radio"], .filterWrap .sizeContain input[type="radio"], .filterMobileopen .details .sizeContain input[type="radio"] {
+    width: 40px;
+    height: 40px;
+    border-radius: 0;
+    background-color: white;
+    -webkit-appearance: none; /*to disable the default appearance of radio button*/
+    -moz-appearance: none;
+}
+.productViewWrap .details .sizeContain input[type="radio"]:focus { /*no need, if you don't disable default appearance*/
+    outline-color: transparent; /*to remove the square border on focus*/
+}
+.productViewWrap .details .sizeContain input[type="radio"]:checked, .filterWrap .sizeContain input[type="radio"]:checked, .filterMobileopen .sizeContain input[type="radio"]:checked { /*no need, if you don't disable default appearance*/
+    border: 2px solid #004737;
+}
+.productViewWrap .details .sizeContain input[type="radio"]:checked ~ span:first-of-type, .filterWrap .sizeContain input[type="radio"]:checked ~ span:first-of-type, .filterMobileopen .sizeContain input[type="radio"]:checked ~ span:first-of-type {
+    color: #004737;
+}
+.custom-control-label::before,
+.custom-checkbox::before,
+input[type=checkbox] .custom-checkbox::after {
+    background-color: #004737;
+}
+.custom-control-label::before,
+.custom-checkbox::before,
+input[type=checkbox]:checked .custom-checkbox::after,
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #b1b1b1;
+}
+.productViewWrap .details .sizeContain label span:first-of-type, .filterWrap .sizeContain label span:first-of-type, .filterMobileopen .sizeContain label span:first-of-type {
+    position: relative;
+    left: -23px;
+    top: -15px;
+    bottom: 0;
+    font-size: 10px;
+    color: #000000;
+    text-align: center;
+    line-height: 40px;
+}
+.productViewWrap .details .colourContain label:hover, .filterWrap .colourContain label:hover, .filterMobileopen .colourContain label:hover {
+    cursor: pointer;
+}
+.productViewWrap .details .colourContain input[type="radio"], .filterWrap .colourContain input[type="radio"], .filterMobileopen .colourContain input[type="radio"] {
+    width: 30px;
+    height: 30px;
+    border-radius: 0;
+    border: none;
+    background-color: white;
+    -webkit-appearance: none; /*to disable the default appearance of radio button*/
+    -moz-appearance: none;
+}
+.productViewWrap .details .colourContain p, .filterWrap .colourContain p, .filterMobileopen .colourContain p {
+    font-size: 10px;
+}
+.productViewWrap .details .colourContain input[type="radio"]:focus { /*no need, if you don't disable default appearance*/
+    outline-color: transparent; /*to remove the square border on focus*/
+}
+.productViewWrap .details .colourContain input[type="radio"]:checked, .filterMobileopen .details .colourContain input[type="radio"]:checked { /*no need, if you don't disable default appearance*/
+    border: 2px solid #004737;
+    /* border-radius: 50%; */
+    width: 32px;
+    height: 32px;
+}
+.productViewWrap .details .colourContain label span:first-of-type, .filterWrap .colourContain label span:first-of-type {
+    position: relative;
+    left: -34px;
+    top: -12px;
+    bottom: 0;
+}
+
+.productViewWrap .details .title h1 {
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.productViewWrap .details .code h5 {
+    font-size: 14px;
+    font-weight: 500;
+    color: #bfbfbf;
+    text-transform: uppercase;
+}
+.productViewWrap .details .amounts {
+    display: inline-block;
+}
+.productViewWrap .details .amounts .price, .productViewWrap .details .amounts .slashedPrice {
+    display: inline-block;
+}
+.productViewWrap .details .amounts .price h2 {
+    font-size: 27px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+    color: #051c2e;
+    margin-bottom: 17px;
+}
+.productViewWrap .details .amounts .slashedPrice h3 {
+    font-size: 16px;
+    text-decoration: line-through;
+    display: inline-block;
+    color: #bfbfbf;
+    margin-left: 10px;
+} 
+.productViewWrap .details .sizeContain .title h4, .productViewWrap .details .colourContain .title h4, .productViewWrap .details .quantityContain .title h4, .productViewWrap .details .materialContain .title h4 {
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 20px; 
+}
+.productViewWrap .details .sizeContain .title h4 span, .productViewWrap .details .colourContain .title h4 span {
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: initial;
+    margin-left: 20px;
+}
+.productViewWrap .details .quantityContain {
+    margin-bottom: 35px;
+}
+.productViewWrap .details .productButtons {
+    margin-top: 20px;
+}
+.productViewWrap .details .form-control {
+    display: block;
+    width: 100px;
+    height: 45px !important;
+    padding: 0 15px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 45px;
+    color: #000000;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #d6d6d6;
+    border-radius: 0;
+    transition: border-color .15s ease-in-out,box-shadow .15s 
+}
+.productDescr {
+    margin-top: 15px;
+}
+.productDescr .nav-tabs .nav-item.show .nav-link, .productDescr .nav-tabs .nav-link.active {
+    color: #495057;
+    background-color: #fff;
+    border: none;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.productDescr .nav-tabs .nav-link.active {
+    border-bottom: 2px #1b1b19 solid;
+}
+.productDescr .nav-tabs .nav-link {
+    border: 1px solid transparent;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #495057;
+}
+.productDescr .tab-content {
+    margin-top: 20px;
+}
+
+
+@media (max-width: 1024px) { 
+    .productListWrap .block .info h4, .productListWrap .block .info h2 {
+        font-size: 13px;
+        font-weight: 700;
+    }
+    .sortBy .dropdown-menu {
+        left: 0 !important;
+    }
+}
+@media (max-width: 768px) {
+    .productListWrap .block .price {
+        padding-left: 15px;
+    }
+    .productListWrap .block .info h2 {
+        font-size: 16px;
+    }
+    .productListWrap .block .info .size {
+        border-left: none;
+    }
+    .productButtons button.smlBtn {
+        min-width: 100%;
+        font-size: 19px;
+    }
+    .productViewWrap .details {
+        margin-top: 20px;
+    }
+    .productListWrap .block .title h1 {
+        font-size: 17px;
+        font-weight: 800;
+        line-height: 26px;
+        text-transform: uppercase;
+        min-height: 0;
+        margin-top: 10px;
+    }
+    .productListWrap .block {
+        min-height: 232px;
+        max-height: unset;
+    }
+    .productViewWrap .image .thumbNail {
+        display: none;
+    }
+
+    .sortBy {
+        display: none;
+    }
+    .sortBy a.dropdown-toggle {
+       /* border: 1px solid #c7c7c7; */
+        width: 100%;
+        display: block;
+        height: 40px;
+        line-height: 30px;
+        font-size: 15px;
+        color: #212121;
+        padding: 0 15px;
+        text-align: center;
+    }
+    .sortBy .dropdown-menu {
+        top: 5px !important;
+        left: -19px !important;
+    }
+}
+@media (max-width: 576px) {
+    .productDescr .nav-tabs .nav-link {
+        border: 1px solid transparent;
+        border-top-left-radius: .25rem;
+        border-top-right-radius: .25rem;
+        font-size: 11px;
+        padding: 0 5px;
+    }
+    .mobileFilter {
+        margin-bottom: 30px;
+    }
+}

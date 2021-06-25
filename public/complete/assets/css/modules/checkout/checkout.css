@@ -1,0 +1,97 @@
+.checkout-nav {
+  counter-reset: section;
+}
+header.article-header {
+  background-color: unset !important;
+  min-height: unset !important;
+  max-height: unset !important;
+}
+
+.checkout-nav .nav-item .nav-link,
+.checkout-nav .nav-item .nav-link.active {
+  color: #ffffff;
+  font: normal normal 4px/24px 'Poppins', sans-serif;
+  outline: 3px solid #ffffff;
+  outline-offset: -1px;
+  padding: 0 10px !important;
+}
+.checkout-nav .nav-item .nav-link {
+  background-color: #8e8c8b !important;
+  text-align: center;
+}
+.checkout-nav .nav-item .nav-link.active {
+  background-color: #0c5875 !important;
+  color: #ffffff !important;
+  text-align: center;
+}
+.checkout-nav .nav-item .nav-link::before {
+  counter-increment: section;
+  content: counter(section);
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  max-width: 50px;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 7.5px;
+  text-align: center;
+  margin-right: 10px;
+}
+.checkout-nav .nav-item:first-of-type .nav-link::before {
+  padding: 0 10px;
+}
+
+.checkout-content {
+  counter-reset: section;
+  font: normal normal 18px/37px 'Poppins', sans-serif;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 0;
+  padding: 0.875rem 1rem;
+}
+
+.checkout-summary-details {
+  background-color: transparent !important;
+  color: #000000;
+  font: normal normal 15px 'Poppins', sans-serif;
+  font-weight: 600;
+  line-height: inherit;
+}
+
+.checkout-summary-details h3 {
+  margin-top: 1.618rem;
+  font-size: 15px;
+  line-height: inherit;
+}
+
+.checkout-summary-details p {
+  margin-bottom: 0.618rem;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 28px;
+}
+
+.summary-content .row:last-of-type {
+  margin-top: 1rem;
+}
+
+.summary-content .row .col:last-of-type {
+  text-align: right;
+}
+
+.products-listing {
+  outline: 1px solid #000000;
+  outline-offset: -1px;
+}
+
+.remove-row-item {
+  color: #000000 !important;
+  font-size: 1rem;
+  line-height: 2;
+  text-align: center;
+}
+
+@media only screen and (max-width: 992px) {
+	checkout-nav .nav-item .nav-link::before {
+		display: block;
+	}
+}

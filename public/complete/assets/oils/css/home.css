@@ -1,0 +1,320 @@
+/*
+@import url( 'ACarlsonPro/acarlsonpro-font.css' ) all;
+*/
+
+.heroBanner, .ctaBanner {
+    position: relative;
+}
+.heroBanner .heroText, .ctaBanner .heroText {
+    position: absolute;
+    color: #4e523b;
+    padding-right: 100px;
+    top: 30%;
+    line-height: 30px;
+}
+.ctaBanner .heroText {
+    padding-right: 0;
+    top: 20%;
+}
+.heroBanner .heroText h3, .ctaBanner .heroText h3 {
+    color: #90a351;
+    font-family: 'ACarlsonPro-Semibold', Fallback, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+.heroBanner .heroText h1, .ctaBanner .heroText h1 {
+    font-size: 50px;
+    font-family: 'ACarlsonPro-Bold', Fallback, sans-serif;
+    line-height: 46px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    letter-spacing: calc( 1em * ( 100 / 1000 ) );
+}
+.heroBanner .heroText p, .ctaBanner .heroText p {
+    font-size: 15px;
+    font-family: 'ACarlsonPro-Regular', Fallback, sans-serif;
+    font-weight: 400;
+    line-height: 28px;
+    margin-bottom: 1rem;
+}
+.heroText a.btn.smlBtn {
+    font-family: 'ACarlsonPro-Semibold', Fallback, sans-serif;
+    max-width: 300px;
+    width: auto !important;
+    padding: 0 3rem !important;
+    border: 1px solid #c1ac3a !important;
+    border-radius: 3rem;
+    background-color: transparent;
+    color: #c1ac3a !important;
+}
+.heroText a.btn.smlBtn:active,
+.heroText a.btn.smlBtn:focus,
+.heroText a.btn.smlBtn:hover {
+    font-family: 'ACarlsonPro-Semibold', Fallback, sans-serif;
+    background-color: #c1ac3a !important;
+    color: #ffffff !important;
+}
+.heroBannerMobile .heroText {
+    font-family: 'ACarlsonPro-Regular', Fallback, sans-serif;
+    color: #4e523b;    
+    margin-top: 60px;
+}
+.heroBannerMobile .heroText h3 {
+    font-family: 'ACarlsonPro-Regular', Fallback, sans-serif;
+    color: #90a351;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.heroBannerMobile .heroText h1 {
+    font-family: 'ACarlsonPro-Bold', Fallback, sans-serif;
+    font-size: 35px;
+    line-height: 38px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.heroBannerMobile .heroText p {
+    font-family: 'ACarlsonPro-Regular', Fallback, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 28px;
+}
+.heroBannerMobile .heroText a {
+    font-family: 'ACarlsonPro-Semibold', Fallback, sans-serif;
+    margin-top: 30px;
+}
+.quickLinksWrap {
+    padding-top:45px;
+    padding-bottom:75px;
+}
+.quickLinksWrap .contain {
+    position: relative;
+}
+.quickLinksWrap .contain img.readMore {
+    position: absolute;
+    right: 15px;
+    bottom: 0;
+}
+.quickLinksWrap .contain .title {
+    color: #ffffff;
+    display: block;
+    width: 100%;
+    float: left;
+    height: 50%;
+    top: 40%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+}
+.quickLinksWrap .contain .title h2 {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.productHome, .blogHome {
+    margin-top: 70px;
+}
+.productHome .productWrap .block {
+    background: #f4f4f4;
+    padding: 10px 20px 30px 20px;
+}
+.productWrap .block .title h1, .productWrap .block .info h2, .productWrap .block .info h5  {
+    color: #212121;
+}
+.productWrap .block .info h2 {
+    color: #f68121;
+}
+.productWrap .block .title h1, .productWrap .block .info h2, .productWrap .block .info h5, .productWrap .block .info h4 {
+    margin-bottom: 0;
+}
+.productWrap .block .title h1 {
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 26px;
+    text-transform: uppercase;
+}
+.productWrap .block .info {
+    margin-top: 5px;
+}
+.productWrap .block .info h4, .productWrap .block .info h2 {
+    font-size: 16px;
+    font-weight: 700;
+}
+.productWrap .block .info h4 {
+    text-decoration: line-through;
+    color: #a4a4a4;
+}
+.productWrap .block .info h5 {
+    font-size: 14px;
+}
+.productWrap .block .info .size {
+    border-left: 1px #212121 solid;
+}
+.productWrap .block .price {
+    /* padding-left: 0;
+    padding-right: 0; */
+}
+.productWrap > a {
+    position: relative;
+    margin-bottom: 40px;
+}
+.productWrap .productTag {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    line-height: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+}
+.productWrap, .blogWrap {
+    margin-top: 60px;
+}
+/* .productHome a.link {
+    font-size: 17px;
+    text-transform: uppercase;
+    color: #212121;
+    font-weight: 700;
+    margin-top: 10px;
+} */
+.blogWrap .content .info {
+    margin-top: 15px;
+}
+.blogWrap .content h5 {
+    color: #424242;
+    font-size: 14px;
+    line-break: 28px;
+}
+.blogWrap .content h1 {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+    color: #212121;
+    text-transform: uppercase;
+}
+.ctaBanner {
+    margin-top: 100px;
+}
+.home-feats {
+    margin-top: 60px;
+}
+.home-feats a, .home-feats a:hover, .home-feats a:focus {
+    text-decoration: none;
+}
+.home-feats a h2 {
+    display: block;
+    font-size: 18px;
+    color: #1b1b19;
+    font-weight: 700;
+    line-height: 30px;
+    margin-bottom: 0;
+}
+.home-feats a p {
+    font-size: 14px;
+    color: #1b1b19;
+    font-weight: 300;
+    line-height: 30px;
+    margin-top: 30px;
+}
+.home-feats a strong {
+    font-size: 14px;
+    color: #1b1b19;
+    font-weight: 600;
+}
+@media (max-width: 1440px) { 
+    .ctaBanner {
+        margin-top: 80px;
+    }
+    .heroBanner .heroText {
+        padding-right: 50px;
+        top: 30%;
+    }
+    .heroBanner .heroText h1, .ctaBanner .heroText h1 {
+        font-size: 40px;
+        line-height: 40px;
+    }
+    .heroBanner .heroText p, .ctaBanner .heroText p  {
+        font-size: 14px;
+    }
+}
+@media (max-width: 1024px) {
+    .ctaBanner {
+        margin-top: 60px;
+    }
+    .heroBanner .heroText {
+        top: 20%;
+        float: right;
+        right: 0;
+    }
+    .productWrap .block .info h4, .productWrap .block .info h2 {
+        font-size: 13px;
+        font-weight: 700;
+    }
+    .ctaBanner .heroText {
+        padding-right: 0;
+        padding-left: 50px;
+        top: 30%;
+    }
+}
+@media (max-width: 768px) {
+    .ctaBanner {
+        margin-top: 40px;
+    }
+    .quickLinksWrap .contain {
+        margin-bottom: 30px
+    }
+    .productWrap .block .price {
+        padding-left: 15px;
+    }
+    .productWrap .block .info .size {
+        border-left: none;
+    }
+    .productWrap .block .info h2 {
+        font-size: 16px;
+    }
+    .productWrap .block .title h1 {
+        font-size: 13px;
+        font-weight: 800;
+        line-height: 19px;
+        text-transform: uppercase;
+        min-height: 50px;
+    }
+    .productHome, .blogHome {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .quickLinksWrap .contain img.readMore {
+        display: none;
+    }
+    .quickLinksWrap .contain .title h2 {
+        font-size: 15px;
+    }
+    .productHome .productWrap .block {
+        padding: 30px 20px 30px 20px;
+    }
+    .productWrap, .blogWrap {
+        margin-top: 30px;
+    }
+    .blogWrap .content h1 {
+        font-size: 18px;
+        line-height: 28px;
+        margin-bottom: 30px;
+    }
+}

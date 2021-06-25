@@ -1,0 +1,187 @@
+/* FUNCTIONS STYLES */
+.function-row {
+    background: #dedbdb;
+    position: relative;
+    padding-left: 20%;
+    margin-bottom: 15px;
+}
+.function-button {
+    display: block;
+    float: left;
+    border-right: 2px solid #ffffff;
+    line-height: 45px;
+    padding: 0 25px;
+    position: relative;
+    background-color: transparent;
+    -webkit-transition: background-color 750ms ease;
+    -moz-transition: background-color 750ms ease;
+    -o-transition: background-color 750ms ease;
+    transition: background-color 750ms ease;
+}
+.function-button:hover {
+    background-color: #44a239;
+    text-decoration: none;
+}
+.function-button span span {
+    display: inline-block;
+    margin: 0 10px;
+    font-family: 'ralewaymedium';
+    font-size: 17px;
+    color: #000000;
+    line-height: 43px;
+    position: relative;
+    top: 2px;
+    cursor: pointer;
+    -webkit-transition: color 750ms ease;
+    -moz-transition: color 750ms ease;
+    -o-transition: color 750ms ease;
+    transition: color 750ms ease;
+}
+.function-button:hover span span {
+    color: #ffffff;
+}
+.function-button span img {
+    display: inline-block;
+    filter: none;
+    -webkit-transition: filter 750ms ease;
+    -moz-transition: filter 750ms ease;
+    -o-transition: filter 750ms ease;
+    transition: filter 750ms ease;
+}
+.function-button:hover span img{
+    filter: brightness(0) invert(1);
+}
+.function-dropdown {
+    display: none;
+    position: absolute;
+    background: #dddddd;
+    left: 0;
+    top: 100%;
+    width: 225px;
+    max-width: 100vw;
+    z-index: 10;
+}
+.function-dropdown a, .function-dropdown a:hover, .function-dropdown a:focus {
+    display: block;
+    line-height: 40px;
+    color: #000000;
+    text-decoration: none;
+    font-family: 'ralewaymedium';
+    font-size: 15px;
+    padding: 0 20px;
+}
+.function-dropdown a + a {
+    border-top: 1px solid #ffffff;
+}
+.function-dropdown a:hover {
+    background: #000000;
+    border-color: #000000;
+    color: #ffffff;
+}
+.function-dropdown a img {
+    float: right;
+    margin-top: 10px;
+    display: block;
+}
+.function-search {
+    display: block;
+    float: left;
+    border-right: 2px solid #ffffff;
+    line-height: 45px;
+    padding: 0 25px;
+    position: absolute;
+    background: #dedbdb;
+    z-index: 1;
+    width: 20%;
+    top: 0;
+    left: 0;
+    -webkit-transition: width 750ms ease;
+    -moz-transition: width 750ms ease;
+    -o-transition: width 750ms ease;
+    transition: width 750ms ease;
+}
+.function-search.active {
+    width: 100%;
+    border-right: none;
+    background: #ffffff;
+    border: 1px solid #dedbdb;
+}
+.function-search button {
+    float: left;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 10%;
+    max-width: 20px;
+}
+.function-search input {
+    float: left;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 0 10px;
+    font-family: 'ralewaymedium';
+    font-size: 17px;
+    color: #000000;
+    position: relative;
+    top: 2px;
+    width: 90%;
+}
+.function-search input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #000000;
+}
+.function-search input::-moz-placeholder { /* Firefox 19+ */
+    color: #000000;
+}
+.function-search input:-ms-input-placeholder { /* IE 10+ */
+    color: #000000;
+}
+.function-search input:-moz-placeholder { /* Firefox 18- */
+    color: #000000;
+}
+/* MEDIA QUERIES */
+@media (max-width: 1199px) {
+    .function-button span span + img, .function-button span span {
+        display: none;
+    }
+}
+@media (max-width: 1024px) {
+    .function-search {
+        width: 30%;
+    }
+    .function-row {
+        padding-left: 30%;
+    }
+}
+@media (max-width: 767px) {
+    .function-button {
+        width: 25%;
+        text-align: center;
+        padding: 0;
+        position: static;
+    }
+    .function-dropdown {
+        width: 100%;
+        border-top: 1px solid #ffffff;
+    }
+    .function-search {
+        width: 100%;
+        padding: 0 15px;
+        position: relative;
+        border-bottom: 1px solid #ffffff;
+    }
+    .function-search.active {
+        box-shadow: none;
+        border-right: 2px solid #ffffff;
+    }
+    .function-row {
+        padding-left: 0;
+    } 
+    .function-search input {
+        font-size: 15px;
+    }
+}

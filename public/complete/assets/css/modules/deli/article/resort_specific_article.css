@@ -1,0 +1,324 @@
+/**
+ *
+ * Resort Specific Article Styling (Adaptive)
+ *
+ */
+
+
+/* header.article-header {} */
+
+/* [role="main"].article-content {} */
+
+.resort-info {
+  padding-right: 30px;
+}
+
+.resort-info .title h2,
+.resort-info .description p {
+  margin-bottom: 45px;
+}
+
+.resort-info .title h2 {
+  font: normal normal 30px 'Century Gothic', sans-serif;
+  font-weight: 700;
+}
+
+.resort-info .title h2 {
+  margin-bottom: 45px;
+}
+
+.resort-info .description p {
+  font: normal normal 17px/30px 'Century Gothic', sans-serif;
+  font-weight: 400;
+}
+
+.facilities .row {
+  line-height: 30px;
+}
+
+.facilities [class*=col] p,
+.validity time {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 28px;
+  margin-bottom: 0;
+  margin-top: 0.5rem;
+}
+
+.validity time {
+  font-size: 17px;
+  line-height: 29px;
+}
+
+.facilities [class*=col] * {
+  color: #000000;
+}
+
+.resort-offer {
+  /* padding-left: 30px; */
+  margin-left: auto !important
+}
+
+/* footer.article-footer {} */
+
+.resort .resort-offer {
+  margin-top: -137.5px;
+  max-width: 365px;
+  max-height: 590px;
+}
+
+.resort .resort-offer .card {
+  background-color: transparent;
+}
+
+.resort .resort-offer .card .enquiry-header {
+  max-height: 135px;
+  background-color: #02131f;
+  color: #ffffff;
+  font-family: 'Century Gothic', sans-serif;
+  margin-top: 0.25rem;
+}
+
+.resort .resort-offer .card .enquiry-content {
+  background-color: #ebebeb;
+  color: #000000;
+  font-family: 'Century Gothic', sans-serif;
+}
+
+.resort .resort-offer .card .enquiry-content h3 {
+  font-size: 17px;
+  line-height: 1;
+  font-weight: 700;
+  font-family: 'Century Gothic', sans-serif;
+  line-height: 25px;
+  margin-bottom: 0.25rem;
+  margin-top: 0.125rem;
+}
+
+.resort .enquiry-content {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.validity h4 {
+  margin-bottom: 0.618rem;
+  margin-top: 0;
+  font-size: 17px;
+  line-height: 1;
+  font-weight: 700;
+  font-family: 'Century Gothic', sans-serif;
+}
+
+.facilities img.img-fluid {
+  vertical-align: text-top;
+  height: 17px;
+}
+
+.enquiry-cta {
+  margin-top: 10px;
+}
+
+.enquiry-cta>a {
+  background-color: #02131f;
+  color: #ffffff;
+  font-family: 'Century Gothic', sans-serif;
+  height: 60px;
+  line-height: 60px;
+  padding: 0 !important;
+}
+
+.resort-offer :not(.text-hide) h4:not(.text-hide) {
+  font: normal normal 40px/40px 'Century Gothic', sans-serif;
+  margin-top: 0.625rem;
+  margin-bottom: 0.625rem
+}
+
+.text-hide {
+  font: 0/0 a !important;
+  color: transparent !important;
+}
+
+.resort-offer h5,
+.resort-offer h6 {
+  margin: 0 !important;
+}
+
+.resort-offer h5,
+.resort-offer h6 {
+  font: normal normal 18px/29px 'Century Gothic', sans-serif;
+}
+
+.resort-info footer.article-footer.py-5.d-none.d-md-block {
+  margin-bottom: 180px;
+}
+
+.resort h2 {
+  font-size: 30px;
+}
+
+.share-modal-all,
+.share-modal-all img.img-fluid {
+  cursor: pointer;
+}
+
+.resort-article-gallery .home-slider {
+  margin-bottom: 0 !important;
+}
+
+.column {
+  max-width: 33.33333%;
+  width: 100%;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  margin-bottom: 1rem;
+}
+
+
+footer.article-footer {
+  margin-bottom: 180px;
+}
+
+.resort .overlay.img-icon {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+
+
+@media only screen and (max-width: 1024px) {
+  .resort h2 {
+    font-size: 23px;
+    line-height: 1.5;
+  }
+
+  .resort .resort-offer {
+    max-width: 435px;
+  }
+
+  .validity time {
+    font-size: 15px;
+  }
+
+  aside~.custom-container {
+    margin-top: 60px !important;
+    margin-bottom: 90px;
+  }
+
+  footer.article-footer {
+    margin-bottom: 90px;
+  }
+
+}
+
+@media only screen and (max-width: 992px) {
+  .resort .resort-offer {
+    max-width: 100%;
+  }
+
+  .resort h2 {
+    font-size: 17px;
+    line-height: 33px;
+  }
+
+  .resort .resort-offer {
+    max-width: 450px;
+    max-height: unset;
+    margin-top: 1rem;
+    margin: auto;
+  }
+
+  .resort-info footer.article-footer.py-5.d-none.d-md-block {
+    margin-bottom: 90px;
+  }
+
+  .resort .resort-offer .card .enquiry-header {
+    margin-top: 0;
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+  #myModalResponsive img.img-fluid {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .resort .resort-offer {
+    max-width: 375px;
+    width: 100%;
+    max-height: 650px;
+    height: auto;
+    margin: auto 20px;
+    margin-bottom: 2rem !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .column {
+    max-width: 100%;
+    width: 100% !important;
+    float: none !important;
+    clear: both !important;
+  }
+
+  .resort-info .title h2 {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  .validity time {
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  .star-rating img.img-fluid {
+    max-height: 18px;
+    max-width: 18px;
+  }
+
+  .resort-info footer.article-footer.py-5.d-none.d-md-block,
+  aside~.custom-container {
+    margin-bottom: 30px;
+  }
+
+  .resort h2 {
+    font-size: 19px;
+    line-height: 25px;
+  }
+
+  .resort-info .description p {
+    font-size: 14px;
+    line-height: 27px;
+  }
+
+  .column {
+    padding: 15px 0 !important;
+  }
+
+  aside~.custom-container {
+    margin-top: 0 !important;
+  }
+
+}
+
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+  .column {
+    float: left;
+    max-width: 33.33333%;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+
+  .resort .resort-offer {
+    max-width: 335px;
+  }
+
+}

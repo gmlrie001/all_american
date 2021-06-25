@@ -1,0 +1,76 @@
+.payment-types {
+  color: inherit;
+  font-size: 1.618rem;
+  line-height: 50px;
+  font-weight: normal;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.payment-types p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.payment-types i span {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.5rem;
+}
+
+.quantity label[for=qdelta] {
+  max-width: 65px !important;
+}
+
+/*
+.form-control,
+.quantity input {
+  text-align: center;
+  align-self: center;
+}
+*/
+
+.headings h6 {
+  font-size: 14px;
+  line-height: 19px;
+  align-self: center;
+  margin: 1rem auto;
+}
+
+.products-listing {
+  color: #000000;
+  font-size: 12px;
+  line-height: 28px;
+}
+
+.products-listing p,
+.products-listing * {
+  font: inherit;
+  font-size: 14px;
+  line-height: 19px;
+  align-self: center;
+  margin-bottom: 0;
+}
+
+.checkout-summary-details {}
+
+.headings {
+  outline: 1px solid #000000;
+  outline-offset: -2px;
+}
+
+.fa-cc-mastercard {
+  color: #ff0000;
+}
+
+.fa-cc-visa {
+  color: #005596;
+}
+
+.fa-cc-paypal {
+  color: #179ad7;
+}
+
+.fa-paypal {
+  color: #f04046;
+}

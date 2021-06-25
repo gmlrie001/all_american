@@ -1,0 +1,6 @@
+.page-slider .slick-slide img, .page-slider-mobile .slick-slide img {
+    width: 100%;
+}
+.overflow-hidden {
+    overflow: hidden;
+}

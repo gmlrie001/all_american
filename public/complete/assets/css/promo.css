@@ -1,0 +1,152 @@
+.promo-page-one h1 {
+    color: #161a60;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 21px;
+    margin-top: 40px;
+}
+.promo-page-one h2 {
+    text-align: center;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+.promo-page-one a {
+    text-align: center;
+}
+.promo-page-one .login-form .btn {
+    margin-top: 10px;
+    line-height: 40px;
+    height: 40px;
+    font-size: 16px;
+}
+.promo-page-one .form-group label {
+    line-height: 17px;
+    font-size: 13px !important;
+}
+.promo-page-one .form-group input {
+    font-size: 12px;
+}
+.promo-page-one form {
+    width: 100% !important;
+}
+.promo-next-link, .promo-next-link:hover, .promo-next-link:focus {
+    display: block;
+    background: #161a60;
+    color: #ffffff;
+    line-height: 40px;
+    padding: 0 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-bottom: 40px;
+    float: left;
+    margin-left: 30px;
+    margin-right: 30px;
+    width: 87%;
+}
+.promo-page-one a img {
+    display: none;
+}
+.promo-page-one a img:first-child {
+    display: block;
+}
+.promo-page-one {
+    margin-bottom: 100px;
+}
+.promo-page-two div.col-lg-8 {
+    border: 1px solid #cccccc;
+    margin-bottom: 50px !important;
+}
+.promo-page-two h1 {
+    text-align: center;
+    margin-top: 35px;
+    margin-bottom: 20px;
+}
+.promo-page-two h1.green {
+    color: #00a532;
+    margin-top: 10px;
+}
+.promo-page-two h1.green span {
+    font-size: 14px;
+    color: #555555;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.promo-page-two h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 35px;
+}
+.promo-page-two form h3 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 15px;
+    margin-top: 20px;
+}
+.promo-page-two form input {
+    line-height: 40px;
+    border-radius: 0;
+    font-size: 14px;
+    border: 1px solid #cccccc;
+    text-align: center;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+.promo-page-two form button {
+    background: #00a532;
+    border: none;
+    display: block;
+    margin: 25px auto 40px auto;
+    padding: 0 20px;
+    min-width: 100%;
+    line-height: 40px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+.promo-page-two a.fa {
+    display: inline-block;
+    height: 43px;
+    width: 43px;
+    text-align: center;
+    line-height: 46px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    margin: 20px 10px 30px 10px;
+}
+.promo-page-two a.fa-facebook-f {
+    background: #23346d;
+}
+.promo-page-two a.fa-twitter {
+    background: #55acee;
+}
+.promo-page-two a.fa-google-plus {
+    background: #dd4b39;
+}
+@media (max-width: 991px) {
+    .promo-page-two img {
+        margin-bottom: 20px;
+    }
+    .promo-page-two h2 {
+        margin-bottom: 20px;
+        padding: 0 5%;
+    }   
+    .promo-page-two form h3 {
+        margin-top: 0;
+    }
+    .promo-page-two form button {
+        margin: 10px auto 40px auto;
+    }
+    .promo-page-two form input {
+        margin-bottom: 0;
+    }
+    .promo-page-two h1 {
+        padding: 0 5%;
+    }
+    .promo-page-two {
+        padding: 0 30px;
+    }
+}

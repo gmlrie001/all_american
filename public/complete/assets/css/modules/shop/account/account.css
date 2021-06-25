@@ -1,0 +1,23 @@
+/**
+ * General and Account Navigation Styling.
+ */
+
+.account ul li>a.nav-link span {
+  font-size: 14px !important;
+  line-height: 50px;
+}
+
+@media only screen and (max-width: 992px) {
+  .resp-smaller {
+    font-size: 90%;
+  }
+
+  .account ul li>a.nav-link {
+    margin-bottom: 0.125rem;
+  }
+
+  .account ul li>a.nav-link span {
+    line-height: 40px;
+  }
+
+}

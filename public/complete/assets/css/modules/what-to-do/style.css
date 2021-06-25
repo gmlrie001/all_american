@@ -1,0 +1,199 @@
+/**
+ * CBC Social Listing
+ *
+ */
+
+.nav-article {
+  margin: 1rem 0 3rem;
+  font: normal normal 20px/30px "Open Sans", sans-serif;
+  color: inherit;
+  text-transform: uppercase;
+}
+
+.nav-article.previous::after {
+  content: "Previous Article";
+}
+
+.nav-article.next::before {
+  content: "Next Article";
+}
+
+.article-gallery .content.description p {
+  font: normal normal 18px/30px "Open Sans", sans-serif;
+  text-align: left !important;
+  margin-bottom: 3rem;
+}
+
+.sharing-links {
+  padding-left: 1rem;
+}
+
+.back-to-listing {
+  width: 40px;
+  height: 40px;
+  background-color: #212529;
+  color: #ffffff;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.back-to-listing a {
+  font-size: 1.375rem;
+  line-height: 40px;
+}
+
+.sharing p,
+.header-title h3 {
+  line-height: 40px;
+}
+
+.soc-item a {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 50%;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .nav-article,
+  .article-gallery .content.description p {
+    font-size: 14px;
+  }
+
+  article .header-title h3 {
+    font-size: 21px;
+  }
+}
+
+/**
+ * CBC Social Specific
+ *
+ */
+
+.social-article-page .nav-article {
+  margin: 1rem 0 3rem;
+  font: normal normal 20px/30px "Open Sans", sans-serif;
+  color: inherit;
+  text-transform: uppercase;
+}
+
+.social-article-page .nav-article.previous::after {
+  content: "Previous Article";
+}
+
+.social-article-page .nav-article.next::before {
+  content: "Next Article";
+}
+
+.social-article-page .article-gallery .content.description p {
+  font: normal normal 18px/30px "Open Sans", sans-serif;
+  text-align: left !important;
+  margin-bottom: 3rem;
+}
+
+.social-article-page .sharing-links {
+  padding-left: 1rem;
+}
+
+.social-article-page .back-to-listing {
+  width: 40px;
+  height: 40px;
+  background-color: #212529;
+  color: #ffffff;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.social-article-page .back-to-listing a {
+  font-size: 1.375rem;
+  line-height: 40px;
+}
+
+.social-article-page .sharing p,
+.social-article-page .header-title h3 {
+  line-height: 40px;
+}
+
+.social-article-page .soc-item a {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.social-article-page .slick-dots {
+  bottom: 30px;
+}
+
+@media only screen and (max-width: 992px) {
+
+  .social-article-page article .header-title h3,
+  h3.text-uppercase.font-weight-semibold,
+  .social-article-page .header-title h3 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+  .social-article-page .banner * {
+    min-height: 300px !important;
+    max-height: 300px !important;
+  }
+
+  .social-article-page .slick-dots {
+    bottom: -240px !important;
+  }
+
+  .social-article-page .nav-article,
+  .social-article-page .article-gallery .content.description p {
+    font-size: 14px !important;
+    line-height: 27px !important;
+  }
+
+  .social-article-page article .header-title h3,
+  h3.text-uppercase.font-weight-semibold,
+  .social-article-page .header-title h3 {
+    font-size: 18px;
+  }
+
+  .social-article-page .article-gallery .content.description p {
+    margin-bottom: 1rem;
+  }
+
+  .social-article-page .soc-item a {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
+
+  .social-article-page .nav-article {
+    margin: 1rem 0;
+    font: normal normal 14px "Open Sans", sans-serif;
+  }
+
+  .social-article-page .sharing p,
+  .social-article-page .header-title h3 {
+    line-height: 30px;
+  }
+
+}
+
+@media only screen and (max-width: 576px) {
+
+  .social-article-page .banner * {
+    min-height: 270px !important;
+    max-height: 270px !important;
+  }
+
+  .social-article-page .slick-dots {
+    bottom: -210px !important;
+  }
+
+}

@@ -1,0 +1,81 @@
+.inspiration-categories h3 {
+    margin-top: 10px;
+    font-size: 17px;
+}
+.inspiration-categories .active h3 {
+    font-weight: bold;
+}
+.inspiration-categories a:hover h3 {
+    font-weight: bold;
+}
+.inspiration-articles > .row {
+    margin-bottom: 20px;
+}
+.inspiration-articles a {
+    position: relative;
+}
+.inspiration-categories {
+    margin-bottom: 25px;
+}
+.inspiration-overlay {
+    position: absolute;
+    z-index: 1;
+    background: #ffffff;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    border-bottom: 3px solid #161a60;
+    padding: 0 20px;
+}
+.inspiration-overlay h2 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #181818;
+}
+.inspiration-overlay h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #181818;
+}
+.inspiration-overlay h3 span {
+    color: #161a60;
+    float: right;
+}
+.inspiration-view {
+    margin-bottom: 30px;
+}
+.inspiration-view h2 {
+    margin-top: 25px;
+}
+.inspiration-view .text-block {
+    border: 1px solid #cccccc;
+    padding: 0 25px;
+}
+.inspiration-categories .row .slick-slide a {
+    max-width: 100%;
+}
+@media (max-width: 1199px){
+    .inspiration-view .text-block {
+        padding: 0 20px;
+    }
+    .inspiration-view h2 {
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+}
+@media (max-width: 991px) {
+    .inspiration-articles a + a {
+        margin-top: 20px;
+    }
+}
+@media (max-width: 767px) {
+    .inspiration-overlay h3 span {
+        font-size: 16px;
+    }
+}

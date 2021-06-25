@@ -1,0 +1,102 @@
+.alert {
+    border-radius: 0;
+}
+.alert-success {
+    background-color: #1cbf01;
+    border-color: #1cbf01;
+}
+.alert-danger {
+   background-color: #fb2424;
+   border-color: #fb2424;
+}
+.alert-warning {
+  background-color: #f19a16;
+  border-color: #f19a16;
+}
+[class*=alert-] {
+    color: #ffffff;
+    font-size: 15px;
+    margin-bottom: 0;
+    padding: 0 15px;
+    border: none;
+    line-height: 50px;
+}
+[class*=alert-] p {
+    line-height: 50px;
+    margin-bottom: 0;
+    font-weight: 500;
+    color: #ffffff;
+}
+[class*=alert-] p i {
+    margin-right: 20px;
+    color: #ffffff;
+}
+[class*=alert-] p i.fa-times {
+    margin-right: 0;
+    float: right;
+    cursor: pointer;
+    line-height: 50px;
+}
+/* .alert-danger p {
+   line-height: 50px;
+   margin-bottom: 0;
+   font-weight: 500;
+   color: #ffffff;
+}
+.alert-danger p i {
+   margin-right: 20px;
+   color: #ffffff;
+}
+.alert-danger p i.fa-times {
+   margin-right: 0;
+   float: right;
+   cursor: pointer;
+   line-height: 50px;
+} */
+@media (max-width: 767px){
+    [class*=alert-] p i {
+        font-size: 10px;
+    }
+    [class*=alert-] p {
+        line-height: 40px;
+        margin-bottom: 0;
+        font-weight: 500;
+        font-size: 12px;
+        padding: 0;
+        position: relative;
+    }
+    [class*=alert-] p i.fa-times {
+        margin-top: 0;
+        left: auto;
+        right: 6px;
+    }
+    /* .alert {
+        border-radius: 0;
+    } */
+    [class*=alert-], [class*=alert-] .container {
+        padding: 0;
+        line-height: 20px;
+    }
+    [class*=alert-] p i {
+        font-size: 10px;
+    }
+    [class*=alert-] p i {
+        margin-right: 10px;
+        position: absolute;
+        top: 12px;
+        left: 6px;
+    }
+    [class*=alert-] p {
+        line-height: 40px;
+        margin-bottom: 0;
+        font-weight: 500;
+        font-size: 14px;
+        padding: 10px 20px;
+        position: relative;
+    }
+    [class*=alert-] p i.fa-times {
+        margin-top: 0;
+        left: auto;
+        right: 6px;
+    }
+}

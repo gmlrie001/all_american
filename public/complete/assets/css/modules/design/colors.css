@@ -1,0 +1,71 @@
+/**
+ * Site Design colours for backgrounds, text, etc.
+ *
+ */
+
+:root {
+  --color-black: #000000;
+  --bg-color-white: #ffffff;
+  --bg-color-green: #5ba940;
+  --bg-color-blue: #0c5875;
+  --bg-color-navy: #041020;
+  --bg-color-darkblue: #030e1c;
+  --bg-color-theme: #ffffff;
+  --bg-color-main: #ffffff;
+  --color-leaf-teal: #98dab4;
+  --color-leaf-lime: #87ce6e;
+  --green-cart: #75983e;
+}
+
+.txt-color-inherit {
+  color: inherit;
+}
+.txt-white {
+  color: var( --bg-color-white ) !important;
+}
+.txt-green {
+  color: var( --bg-color-green ) !important;
+}
+.txt-black {
+  color: var( --color-black ) !important;
+}
+.txt-blue,
+.txt-theme {
+  color: var( --bg-color-blue ) !important;
+}
+.txt-navy {
+  color: var( --bg-color-navy ) !important;
+}
+.txt-darkblue {
+  color: var( --bg-color-darkblue ) !important;
+}
+
+.bg-inherit {
+  background-color: inherit;
+}
+.bg-color-transparent {
+  background-color: transparent !important;
+}
+.bg-color-white {
+  background-color: var( --bg-color-white ) !important;
+}
+.bg-color-green {
+  background-color: var( --bg-color-green ) !important;
+}
+.bg-color-blue,
+.bg-color-theme {
+  background-color: var( --bg-color-blue ) !important;
+}
+.bg-color-navy {
+  background-color: var( --bg-color-navy ) !important;
+}
+.bg-color-darkblue {
+  background-color: var( --bg-color-darkblue ) !important;
+}
+
+.color-leaf-teal {
+  background-color: var( --bg-color-darkblue ) !important;
+}
+.color-leaf-lime {
+  background-color: var( --bg-color-darkblue ) !important;
+}

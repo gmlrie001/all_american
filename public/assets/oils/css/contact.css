@@ -1,0 +1,87 @@
+.contactWrap {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+.contactWrap .title h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    color: #1b1b19;
+}
+.contactWrap a {
+    color: #1b1b19;
+}
+.contactWrap .detail .links {
+    margin-bottom: 40px;
+}
+.contactWrap .detail .links a {
+    display: block;
+    padding-left: 70px;
+    margin-bottom: 10px;
+    line-height: 30px;
+}
+.contactWrap .detail a span {
+    position: absolute;
+    left: 0;
+    font-weight: 500;
+}
+.contactWrap .address a {
+    line-height: 30px;
+}
+.contactWrap .detail .social a {
+    background: #c12136;
+    color: #ffffff;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 40px;
+    margin-right: 20px;
+}
+.contactWrap .formContain form label {
+    font-size: 13px;
+    font-weight: 500;
+}
+.contactWrap .formContain form .form-control {
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 0 0 0 15px;
+    font-size: 1rem;
+    font-weight: 400;    
+    line-height: 40px;
+    color: #b0b0b0;
+    background-color: #ffffff;
+    background-clip: padding-box;
+    border: 1px solid #d6d6d6;
+    border-radius: 0;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.contactWrap .formContain form textarea {
+    border: 1px solid #d6d6d6;
+    border-radius: 0;
+}
+.contactWrap .formContain form button {
+    margin-top: 20px;
+}
+.mapWrap {
+    margin-bottom: 60px;
+    display: none;
+}
+
+@media (max-width: 768px) { 
+    .contactWrap .formContain {
+        margin-top: 40px;
+    }
+    .contactWrap .formContain form button {
+        font-size: 19px;
+    }
+}
+@media (max-width: 576px) {
+    .contactWrap .address {
+        margin-top: 40px;
+    }
+
+}

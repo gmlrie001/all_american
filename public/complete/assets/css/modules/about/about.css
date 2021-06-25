@@ -1,0 +1,55 @@
+/**
+ * File: about.css
+ * About Page Styling (Desktop)
+ *
+ */
+.about-us {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.about-us .introduction [class*=title] {
+  margin-bottom: 60px;
+}
+
+.about-us .introduction p {
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+
+.about-us article {
+  margin-top: 90px;
+  margin-bottom: 90px;
+}
+
+/* .about-us article:last-of-type {
+  margin-bottom: 0;
+} */
+
+.about-us article .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-us article .content {
+  font: normal normal 18px/37px 'Poppins', sans-serif;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 37px;
+  max-width: 768px;
+  width: 100%;
+  margin: 0 auto !important;
+}
+
+.about-us article .content [class*=title],
+.about-us article .content [class*=title] * {
+  margin-bottom: 60px;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: inherit;
+}
+
+.about-us article .content p {
+  margin-bottom: 30px;
+}

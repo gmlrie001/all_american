@@ -1,0 +1,103 @@
+/* FOUNDATION STYLES */
+meta.foundation-version {
+    font-family: "/5.4.5/"; 
+}
+meta.foundation-data-attribute-namespace {
+    font-family: false; 
+}
+/* CROPPING STYLES */
+#croppicModalObj {
+    margin-top: 0 !important;
+}
+.cropControls {
+    right: auto;
+    left: 0;
+}
+.cropImgWrapper {
+    border: 1px solid #ffffff;
+}
+/* TOOTTIPS STYLES */
+.tooltipster-sidetip .tooltipster-box {
+    background: #00c2fb;
+    border: 2px solid #00c2fb;
+    border-radius: 4px;
+    height: auto;
+    width: 310px;
+    font-size: 18px;
+    padding: 15px;
+}
+.tooltipster-sidetip .tooltipster-box p {
+    margin-bottom: 0;
+}
+.tooltipster-sidetip.tooltipster-top .tooltipster-arrow-background {
+    border-top-color: #00c2fb;
+    left: 0;
+    top: -3px;
+}
+
+.tooltipster-sidetip.tooltipster-bottom .tooltipster-arrow-background  {
+    border-bottom-color: #00c2fb;
+    left: 0;
+    top: 3px;
+}
+.tooltipster-sidetip.tooltipster-left .tooltipster-arrow-background  {
+    border-left-color: #00c2fb;
+    left: 0;
+    top: -3px;
+}
+.tooltipster-sidetip.tooltipster-right .tooltipster-arrow-background  {
+    border-right-color: #00c2fb;
+    left: 0;
+    top: -3px;
+}
+
+.tooltipster-sidetip.tooltipster-top .tooltipster-arrow-border {
+    border-top-color: #00c2fb;
+}
+.tooltipster-sidetip.tooltipster-bottom .tooltipster-arrow-border {
+    border-bottom-color: #00c2fb;
+}
+.tooltipster-sidetip.tooltipster-left .tooltipster-arrow-border{
+    border-left-color: #00c2fb;
+}
+.tooltipster-sidetip.tooltipster-right .tooltipster-arrow-border {
+    border-right-color: #00c2fb;
+}
+/* SCROLLBAR STYLES */
+.mCSB_inside>.mCSB_container {
+    margin-right: 0;
+}
+.mCSB_scrollTools {
+    opacity: 1;
+    filter: "alpha(opacity=100)";
+    -ms-filter: "alpha(opacity=100)";
+    width: 5px;
+}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar, .mCSB_scrollTools .mCSB_ {
+    width: 100%;
+    background-color: #ed1c24;
+    border-radius: 0;
+    filter: "alpha(opacity=100)";
+    -ms-filter: "alpha(opacity=100)";
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+}
+.mCSB_scrollTools .mCSB_draggerRail {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 0;
+    filter: "alpha(opacity=100)";
+    -ms-filter: "alpha(opacity=100)";
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+}
+/* SLICK SLIDER STYLES */
+.slick-slider {
+    margin-bottom: 0;
+}
+@media (max-width: 1440px) {
+    .mCSB_scrollTools {
+        width: 10px;
+    }
+}
