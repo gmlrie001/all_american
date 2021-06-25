@@ -21,11 +21,15 @@ class AllAmericanServiceProvider extends ServiceProvider
 
       $this->publishes([
         dirname( __DIR__ ) . DIRECTORY_SEPARATOR . 'config/all_american.php' => config_path( 'all_american.php' ),
-      ], 'config' );
+      ], 'all_american_config' );
 
       $this->publishes([
         dirname( __DIR__ ) . DIRECTORY_SEPARATOR . 'public/assets' => public_path( 'assets' ),
-      ], 'assets' );
+      ], 'all_american_public_html_assets' );
+
+      $this->publishes([
+        dirname( __DIR__ ) . DIRECTORY_SEPARATOR . 'public/assets' => base_path( 'public/assets' ),
+      ], 'all_american_public_assets' );
 
       // $this->publishes([
       //   dirname( __DIR__ ) . DIRECTORY_SEPARATOR . 'config/all_american.php' => config_path( 'all_american.php' ),

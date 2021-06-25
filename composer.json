@@ -1,5 +1,5 @@
 {
-  "name": "template/all_american",
+  "name": "templates/all_american",
   "type": "library",
   "description": "All American Auto Ecommerce site styling, through CSS, and dynamic functionality via JS/JQuery",
   "keywords": [
