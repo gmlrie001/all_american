@@ -25,31 +25,35 @@ $use_vault_logo = ( $use_vault_logo ) ? $use_vault_logo : !1;
 $use_placehold_it = ( $use_placehold_it ) ? $use_placehold_it : !1;
 @endphp
 
-@if( NULL != $imgvar && file_exists( public_path( $imgvar ) ) ) {{-- && file_exists( public_exists( $imgvar ) ) --}}
-  <img 
-    class="@if( NULL != $imgclasses ) {{ $imgclasses }} @endif" 
-    src="{{ url( ltrim( $imgvar, '/' ) ) }}" 
-    alt="{{ $imgtitle }}" 
-    @if( Request::is('blog*') ) style="float:left;margin-right:1rem;margin-bottom:0.618rem;" @endif
-  >
-@else
-  <div class="position-relative 
-    @if( Request::is('blog') ) h-75 
-    @elseif( Request::is('blog*') ) mr-lg-3 mr-0  
-    @endif 
-    @if( NULL != $class ) {{ $class }} @endif"
-    style="clear:right!important;float:left!important;"
-  >
+@if ( isset( $imgvar ) )
 
-  @if( $use_placehold_it )
-    <img class="img-fluid placeholder-background" alt="Placeholder Background Decoration" src="{{ $placeholdit_path }}">
-  @endif
-  
-  @if( $verify_location && $use_vault_logo)
-    <img class="img-fluid position-absolute m-auto vault-placeholder-logo" alt="Vault Placeholder Logo" src="/{{ ltrim( $logo_full_path, '/' ) }}">
-  @endif
-  
-  </div>
+  @if( ! is_null( $imgvar ) && file_exists( public_path( $imgvar ) ) ) {{-- && file_exists( public_exists( $imgvar ) ) --}}
+    <img 
+      class="@if( NULL != $imgclasses ) {{ $imgclasses }} @endif" 
+      src="{{ url( ltrim( $imgvar, '/' ) ) }}" 
+      alt="{{ $imgtitle }}" 
+      @if( Request::is('blog*') ) style="float:left;margin-right:1rem;margin-bottom:0.618rem;" @endif
+    >
+  @else
+    <div class="position-relative 
+      @if( Request::is('blog') ) h-75 
+      @elseif( Request::is('blog*') ) mr-lg-3 mr-0  
+      @endif 
+      @if( NULL != $class ) {{ $class }} @endif"
+      style="clear:right!important;float:left!important;"
+    >
+
+    @if( $use_placehold_it )
+      <img class="img-fluid placeholder-background" alt="Placeholder Background Decoration" src="{{ $placeholdit_path }}">
+    @endif
+    
+    @if( $verify_location && $use_vault_logo)
+      <img class="img-fluid position-absolute m-auto vault-placeholder-logo" alt="Vault Placeholder Logo" src="/{{ ltrim( $logo_full_path, '/' ) }}">
+    @endif
+    
+    </div>
+
+@endif
 
 @if( $verify_location && $use_vault_logo )
   @push( 'pageScripts' )
