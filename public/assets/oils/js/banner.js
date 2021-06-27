@@ -6,7 +6,8 @@ $(document).ready(function(){
         arrows: false, 
         pauseOnFocus: false, 
         pauseOnHover: false, 
-        swipeToSlide: true
+        swipeToSlide: true,
+        rows: 0,
     });
 
     $(".page-slider-mobile").slick({
@@ -15,6 +16,7 @@ $(document).ready(function(){
         arrows: false, 
         pauseOnFocus: false, 
         pauseOnHover: false, 
-        swipeToSlide: true
+        swipeToSlide: true,
+        rows: 0,
     });
 });
