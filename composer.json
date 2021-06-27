@@ -28,10 +28,9 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Templates\\AllAmerican\\AllAmericanServiceProvider"
+        "Templates\\AllAmerican\\TemplateServiceProvider"
       ],
       "aliases": {
-        "AllAmerican": "Templates\\AllAmerican\\Facades\\AllAmerican"
       }
     }
   }
