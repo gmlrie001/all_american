@@ -19,11 +19,11 @@ class TemplateServiceProvider extends ServiceProvider
   {
     $this->publishes([
       dirname( __DIR__ ) . DIRECTORY_SEPARATOR . 'config/all_american.php' => config_path( 'all_american.php' ),
-    ], 'all_american_config' );
+    ], 'all_american' );
 
     $this->publishes([
       dirname( __DIR__ ) . DIRECTORY_SEPARATOR . 'public/assets' => public_path( 'assets' ),
-    ], 'all_american_public_html_assets' );
+    ], 'all_american' );
 
     if ( in_array( env( 'APP_ENV' ), ['local', 'development', 'dev'] ) ) {
       $this->publishes([
@@ -33,7 +33,7 @@ class TemplateServiceProvider extends ServiceProvider
 
     $this->publishes([
       dirname( __DIR__ ) . DIRECTORY_SEPARATOR . 'resources/views/templates' => resource_path( 'views/templates' ),
-    ], 'all_american_resources_template' );
+    ], 'all_american' );
   }
 
   /**
