@@ -14,7 +14,7 @@ footer > .row {
 .copyLinks p,
 .copyLinks * {
   font-size: 13px;
-  line-height: inherit;
+  line-height: 37px;
   color: #fff;
 }
 .website-by p, 
