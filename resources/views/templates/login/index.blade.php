@@ -84,7 +84,7 @@ input:not([type="submit"]):active + .input-requirements {
 </style>
 @endpush
 
-<div class="container sign topMargin beforeFooterWrap">
+<div class="container sign topMargin beforeFooterWrap px-0">
         <div class="row">
             <div class="col-12 col-lg-6 col-xl-5">
                 <div class="formBlock borderWrap">
