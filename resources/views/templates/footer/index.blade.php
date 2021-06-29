@@ -1,31 +1,37 @@
-<style>
+<style id="footer-socialLinks-and-copyright">
 footer, 
 footer * {
-    font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 footer .copyLinks br {
-    display: none;
+  display: none;
 }
 footer > .row {
-    padding: 0.875rem;
-    padding-bottom: 0;
-    border: none !important;
+  padding: 0.875rem;
+  padding-bottom: 0;
+  border: none !important;
 }
-.copyLinks p {
-    color: #171717;
+.copyLinks p,
+.copyLinks * {
+  color: #fff;
+}
+.copyLinks .website-by p, 
+.copyLinks .website-by * {
+  color: #e69418;
 }
 @media (max-width: 992px) {
-    footer .copyLinks br {
-        display: block;
-    }
-    .newsLetterContain {
-        line-height: 1.5;
-    }
-    .formWrap input.form-control {
-        margin-top: 0.618rem;
-    }
+  footer .copyLinks br {
+    display: block;
+  }
+  .newsLetterContain {
+    line-height: 1.5;
+  }
+  .formWrap input.form-control {
+    margin-top: 0.618rem;
+  }
 }
 </style>
+
 <div class="container-fluid newsLetterContain mt-0">
     <div class="container px-lg-5 px-3">
         <div class="row">
@@ -129,29 +135,38 @@ footer > .row {
 <footer class="container-fluid px-0 copyright mt-lg-0 pt-lg-0">
     <div class="row no-gutters m-0">
         <div class="container">
-            <div class="row m-0">
-                <div class="col-12 col-xl-auto footer-links px-0 pb-md-5 pb-lg-4">
+            <div class="row m-0 justify-content-between align-items-center">
+                <div class="col-12 col-xl-auto footer-links px-0">
                     <div class="row m-0 justify-content-between-lg justify-content-center no-gutters">
                         <div class="paymentOptions">
-                            @forelse( $pay_options as $key=>$payopt )
-                            @include( 'templates.placeholders.simple_image_placeholders',
+                        @forelse( $pay_options as $key=>$payopt )
+                          @include( 'templates.placeholders.simple_image_placeholders',
                             [
-                            'imgvar' => ltrim( $payopt->link_image ), 'imgtitle' => $payopt->title,
-                            'imgclasses' => 'img-fluid pb-1 px-2',
-                            'class' => '', 'width' => 80,'height' => 35, 'text' => '+',
-                            'use_vault_logo' => true, 'use_placehold_it' => true
+                              'imgvar' => ltrim( $payopt->link_image ), 
+                              'imgtitle' => $payopt->title,
+                              'imgclasses' => 'img-fluid pb-1 px-2',
+                              'class' => '', 
+                              'width' => 80, 
+                              'height' => 35, 'text' => '+',
+                              'use_vault_logo' => true, 
+                              'use_placehold_it' => true
                             ]
-                            )
-                            @empty
-                            @endforelse
-                            @include( 'templates.placeholders.simple_image_placeholders',
-                            [
-                            'imgvar' => $site_settings->ssl_logo, 'imgtitle' => $site_settings->title,
+                          )
+                        @empty
+                        @endforelse
+                        @include( 'templates.placeholders.simple_image_placeholders',
+                          [
+                            'imgvar' => $site_settings->ssl_logo, 
+                            'imgtitle' => $site_settings->title,
                             'imgclasses' => 'img-fluid pb-1 px-2',
-                            'class' => '', 'width' => 80,'height' => 35, 'text' => '+',
-                            'use_vault_logo' => true, 'use_placehold_it' => true
-                            ]
-                            )
+                            'class' => '', 
+                            'width' => 80, 
+                            'height' => 35, 
+                            'text' => '+',
+                            'use_vault_logo' => true, 
+                            'use_placehold_it' => true
+                          ]
+                        )
                         </div>
                     </div>
                 </div>
@@ -163,8 +178,7 @@ footer > .row {
                         <div
                             class="col-12 col-xl-auto website-by text-xl-right text-center text-white pr-xl-0 pr-3 mt-2 mt-md-1 mt-lg-0">
                             <p>
-                                <a rel="noopener noreferrer" class="" title="Goto Website Designers Website: Monzamedia"
-                                    href="https://monzamedia.com" target="_blank">Website Design by: Monzamedia</a>
+                                <a rel="noopener noreferrer" class="" title="Goto Website Designers Website: Monzamedia" href="https://monzamedia.com" target="_blank">Website Design by: Monzamedia</a>
                             </p>
                         </div>
                     </div>
