@@ -83,53 +83,53 @@
     <link rel="stylesheet" href="/assets/oils/css/general.css" media="all">
     <link rel="stylesheet" href="/assets/oils/css/about.css" media="all">
     <link rel="stylesheet" href="/assets/oils/css/account.css" media="all">
-    <link rel="stylesheet" href="/assets/oils/css/alert.css" media="all">
-    <link rel="stylesheet" href="/assets/oils/css/banner.css" media="all">
+    {{-- <link rel="stylesheet" href="/assets/oils/css/alert.css" media="all"> --}}
+    <link rel="stylesheet" href="/assets/css/banner.css" media="all">
     {{-- <link rel="stylesheet" href="/assets/oils/css/app.css" media="all"> --}}
     {{-- <link rel="stylesheet" href="/assets/oils/css/blender.css" media="all"> --}}
 
-    <link rel="stylesheet" href="/assets/oils/css/blog.css" media="all">
-    <link rel="stylesheet" href="/assets/oils/css/breadcrumbs.css" media="all">
-    <link rel="stylesheet" href="/assets/oils/css/cart-bar.css" media="all">
-    <link rel="stylesheet" href="/assets/oils/css/checkout.css" media="all">
-    <link rel="stylesheet" href="/assets/oils/css/contact.css" media="all">
-    <link rel="stylesheet" href="/assets/oils/css/container.css" media="all">
-    <link rel="stylesheet" href="/assets/oils/css/copyright.css" media="all">
-    <link rel="stylesheet" href="/assets/oils/css/creditmodal.css" media="all">
-    <link rel="stylesheet" href="/assets/oils/css/decofurn.css" media="all">
-    <link rel="stylesheet" href="/assets/oils/css/delivery.css" media="all">
-    <link rel="stylesheet" href="/assets/oils/css/deliverymodal.css" media="all">
-    <link rel="stylesheet" href="/assets/oils/css/directions.css" media="all">
-    <link rel="stylesheet" href="/assets/oils/css/display.css" media="all">
-    <link rel="stylesheet" href="/assets/oils/css/display-responsive.css" media="all">
-    <link rel="stylesheet" href="/assets/oils/css/faq.css" media="all">
-    <link rel="stylesheet" href="/assets/oils/css/faqs.css" media="all">
-    <link rel="stylesheet" href="/assets/oils/css/footer.css" media="all">
-    <link rel="stylesheet" href="/assets/oils/css/grid.css" media="all">
-    <link rel="stylesheet" href="/assets/oils/css/grid-responsive.css" media="all">
-    <link rel="stylesheet" href="/assets/oils/css/home.css" media="all">
-    <link rel="stylesheet" href="/assets/oils/css/inspiration.css" media="all">
-    <link rel="stylesheet" href="/assets/oils/css/loginmodal.css" media="all">
-    <link rel="stylesheet" href="/assets/oils/css/navigation.css" media="all">
+    {{-- <link rel="stylesheet" href="/assets/oils/css/blog.css" media="all"> --}}
+    <link rel="stylesheet" href="/assets/css/breadcrumbs.css" media="all">
+    {{-- <link rel="stylesheet" href="/assets/oils/css/cart-bar.css" media="all"> --}}
+    {{-- <link rel="stylesheet" href="/assets/oils/css/checkout.css" media="all"> --}}
+    <link rel="stylesheet" href="/assets/css/contact.css" media="all">
+    <link rel="stylesheet" href="/assets/css/container.css" media="all">
+    <link rel="stylesheet" href="/assets/css/copyright.css" media="all">
+    <link rel="stylesheet" href="/assets/css/creditmodal.css" media="all">
+    <link rel="stylesheet" href="/assets/css/decofurn.css" media="all">
+    <link rel="stylesheet" href="/assets/css/delivery.css" media="all">
+    <link rel="stylesheet" href="/assets/css/deliverymodal.css" media="all">
+    <link rel="stylesheet" href="/assets/css/directions.css" media="all">
+    <link rel="stylesheet" href="/assets/css/display.css" media="all">
+    <link rel="stylesheet" href="/assets/css/display-responsive.css" media="all">
+    <link rel="stylesheet" href="/assets/css/faq.css" media="all">
+    <link rel="stylesheet" href="/assets/css/faqs.css" media="all">
+    <link rel="stylesheet" href="/assets/css/footer.css" media="all">
+    <link rel="stylesheet" href="/assets/css/grid.css" media="all">
+    <link rel="stylesheet" href="/assets/css/grid-responsive.css" media="all">
+    <link rel="stylesheet" href="/assets/css/home.css" media="all">
+    <link rel="stylesheet" href="/assets/css/inspiration.css" media="all">
+    <link rel="stylesheet" href="/assets/css/loginmodal.css" media="all">
+    {{-- <link rel="stylesheet" href="/assets/oils/css/navigation.css" media="all"> --}}
     <link rel="stylesheet" href="/assets/oils/css/notify.css" media="all">
-    <link rel="stylesheet" href="/assets/oils/css/pagination.css" media="all">
-    <link rel="stylesheet" href="/assets/oils/css/product.css" media="all">
-    <link rel="stylesheet" href="/assets/oils/css/promo.css" media="all">
-    <link rel="stylesheet" href="/assets/oils/css/promobar.css" media="all">
-    <link rel="stylesheet" href="/assets/oils/css/promomodal.css" media="all">
-    <link rel="stylesheet" href="/assets/oils/css/range.css" media="all">
-    <link rel="stylesheet" href="/assets/oils/css/selling_points.css" media="all">
-    <link rel="stylesheet" href="/assets/oils/css/sharemodal.css" media="all">
-    <link rel="stylesheet" href="/assets/oils/css/shop.css" media="all">
-    <link rel="stylesheet" href="/assets/oils/css/store_locator.css" media="all">
-    <link rel="stylesheet" href="/assets/oils/css/styles.css" media="all">
-    <link rel="stylesheet" href="/assets/oils/css/subscribe.css" media="all">
-    <link rel="stylesheet" href="/assets/oils/css/text-pages.css" media="all">
-    <link rel="stylesheet" href="/assets/oils/css/zoom.css" media="all">
+    <link rel="stylesheet" href="/assets/css/pagination.css" media="all">
+    {{-- <link rel="stylesheet" href="/assets/oils/css/product.css" media="all"> --}}
+    {{-- <link rel="stylesheet" href="/assets/oils/css/promo.css" media="all">  --}}
+    <link rel="stylesheet" href="/assets/css/promobar.css" media="all">
+    {{-- <link rel="stylesheet" href="/assets/oils/css/promomodal.css" media="all"> --}}
+    {{-- <link rel="stylesheet" href="/assets/oils/css/range.css" media="all"> --}}
+    <link rel="stylesheet" href="/assets/css/selling_points.css" media="all">
+    {{-- <link rel="stylesheet" href="/assets/oils/css/sharemodal.css" media="all"> --}}
+    {{-- <link rel="stylesheet" href="/assets/oils/css/shop.css" media="all"> --}}
+    <link rel="stylesheet" href="/assets/css/store_locator.css" media="all">
+    <link rel="stylesheet" href="/assets/css/styles.css" media="all">
+    <link rel="stylesheet" href="/assets/css/subscribe.css" media="all">
+    {{-- <link rel="stylesheet" href="/assets/oils/css/text-pages.css" media="all"> --}}
+    <link rel="stylesheet" href="/assets/css/zoom.css" media="all">
     
     <link rel="stylesheet" href="/assets/oils/css/notify.css" media="all" onload="this.media='all';this.removeAttribute('onload');">
     <link rel="stylesheet" href="/assets/oils/css/cart-bar.css" media="all">
-    <link rel="stylesheet" href="/assets/oils/css/header.css" media="all">
+    <link rel="stylesheet" href="/assets/css/header.css" media="all">
     <link rel="stylesheet" href="/assets/oils/css/navigation.css" media="all">
     <link rel="stylesheet" href="/assets/oils/css/footer.css" media="all">
     <link rel="stylesheet" href="/assets/oils/css/home.css" media="all">
