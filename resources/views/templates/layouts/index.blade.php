@@ -7,13 +7,12 @@
 <html lang="en">
 
   <head>
-    {{-- <meta http-equiv="Content-Security-Policy" content="script-src 'self'; object-src 'none'; base-uri 'none';"> --}}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="referrer" content="strict-origin">
+    {{-- <meta http-equiv="Content-Security-Policy" content="script-src 'self'; object-src 'none'; base-uri 'none';"> --}}
 
     <title>@yield( 'title' )</title>
-    <meta name="theme-color" content="#c1ac3a">
 
   @isset( $seo['seo_keywords'] )
     <meta name="keywords" content="{{$seo['seo_keywords']}}" />
@@ -25,10 +24,11 @@
   @isset( $seo['image'] )
     <meta name="image" content="{{$seo['image']}}">
   @endisset
+    <meta name="theme-color" content="#c1ac3a">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="/assets/js/vendor/slick-master/slick/slick.css" media="all">
-    <link rel="stylesheet" href="/assets/js/vendor/slick-master/slick/slick-theme.css" media="all">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/js/vendor/slick-master/slick/slick.css') }}" media="print" onload="this.media='all';this.removeAttribute('onload');">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/js/vendor/slick-master/slick/slick-theme.css') }}" media="print" onload="this.media='all';this.removeAttribute('onload');">
 
   @isset( $seo['title'] )
     <meta itemprop="name" content="{{$seo['title']}}">
@@ -80,89 +80,84 @@
     <link rel="manifest" href="/manifest.json">
   @endif
 
-    <link rel="stylesheet" href="/assets/oils/css/general.css" media="all">
-    <link rel="stylesheet" href="/assets/oils/css/about.css" media="all">
-    <link rel="stylesheet" href="/assets/oils/css/account.css" media="all">
-    {{-- <link rel="stylesheet" href="/assets/oils/css/alert.css" media="all"> --}}
-    <link rel="stylesheet" href="/assets/css/banner.css" media="all">
-    {{-- <link rel="stylesheet" href="/assets/oils/css/app.css" media="all"> --}}
-    {{-- <link rel="stylesheet" href="/assets/oils/css/blender.css" media="all"> --}}
-
-    {{-- <link rel="stylesheet" href="/assets/oils/css/blog.css" media="all"> --}}
-    <link rel="stylesheet" href="/assets/css/breadcrumbs.css" media="all">
-    {{-- <link rel="stylesheet" href="/assets/oils/css/cart-bar.css" media="all"> --}}
-    {{-- <link rel="stylesheet" href="/assets/oils/css/checkout.css" media="all"> --}}
-    <link rel="stylesheet" href="/assets/css/contact.css" media="all">
-    <link rel="stylesheet" href="/assets/css/container.css" media="all">
-    <link rel="stylesheet" href="/assets/css/copyright.css" media="all">
-    <link rel="stylesheet" href="/assets/css/creditmodal.css" media="all">
-    <link rel="stylesheet" href="/assets/css/decofurn.css" media="all">
-    <link rel="stylesheet" href="/assets/css/delivery.css" media="all">
-    <link rel="stylesheet" href="/assets/css/deliverymodal.css" media="all">
-    <link rel="stylesheet" href="/assets/css/directions.css" media="all">
-    <link rel="stylesheet" href="/assets/css/display.css" media="all">
-    <link rel="stylesheet" href="/assets/css/display-responsive.css" media="all">
-    {{-- <link rel="stylesheet" href="/assets/css/faq.css" media="all"> --}}
-    <link rel="stylesheet" href="/assets/css/faqs.css" media="all">
-    <link rel="stylesheet" href="/assets/css/footer.css" media="all">
-    <link rel="stylesheet" href="/assets/css/grid.css" media="all">
-    <link rel="stylesheet" href="/assets/css/grid-responsive.css" media="all">
-    {{-- <link rel="stylesheet" href="/assets/css/home.css" media="all"> --}}
-    <link rel="stylesheet" href="/assets/css/inspiration.css" media="all">
-    <link rel="stylesheet" href="/assets/css/loginmodal.css" media="all">
-    {{-- <link rel="stylesheet" href="/assets/oils/css/navigation.css" media="all"> --}}
-    <link rel="stylesheet" href="/assets/oils/css/notify.css" media="all">
-    <link rel="stylesheet" href="/assets/css/pagination.css" media="all">
-    {{-- <link rel="stylesheet" href="/assets/oils/css/product.css" media="all"> --}}
-    {{-- <link rel="stylesheet" href="/assets/oils/css/promo.css" media="all">  --}}
-    <link rel="stylesheet" href="/assets/css/promobar.css" media="all">
-    {{-- <link rel="stylesheet" href="/assets/oils/css/promomodal.css" media="all"> --}}
-    {{-- <link rel="stylesheet" href="/assets/oils/css/range.css" media="all"> --}}
-    <link rel="stylesheet" href="/assets/css/selling_points.css" media="all">
-    {{-- <link rel="stylesheet" href="/assets/oils/css/sharemodal.css" media="all"> --}}
-    {{-- <link rel="stylesheet" href="/assets/oils/css/shop.css" media="all"> --}}
-    <link rel="stylesheet" href="/assets/css/store_locator.css" media="all">
-    <link rel="stylesheet" href="/assets/css/styles.css" media="all">
-    <link rel="stylesheet" href="/assets/css/subscribe.css" media="all">
-    {{-- <link rel="stylesheet" href="/assets/oils/css/text-pages.css" media="all"> --}}
-    <link rel="stylesheet" href="/assets/css/zoom.css" media="all">
-    
-    <link rel="stylesheet" href="/assets/oils/css/notify.css" media="all" onload="this.media='all';this.removeAttribute('onload');">
-    <link rel="stylesheet" href="/assets/oils/css/cart-bar.css" media="all">
-    <link rel="stylesheet" href="/assets/css/header.css" media="all">
-    <link rel="stylesheet" href="/assets/oils/css/navigation.css" media="all">
-    <link rel="stylesheet" href="/assets/oils/css/footer.css" media="all">
-    <link rel="stylesheet" href="/assets/oils/css/home.css" media="all">
-    <link rel="stylesheet" href="/assets/oils/css/about.css" media="print" onload="this.media='all';this.removeAttribute('onload');">
-    <link rel="stylesheet" href="/assets/oils/css/blog.css" media="print" onload="this.media='all';this.removeAttribute('onload');">
-    <link rel="stylesheet" href="/assets/oils/css/contact.css" media="print" onload="this.media='all';this.removeAttribute('onload');">
-    <link rel="stylesheet" href="/assets/oils/css/delivery.css" media="print" onload="this.media='all';this.removeAttribute('onload');">
-    <link rel="stylesheet" href="/assets/oils/css/faq.css" media="print" onload="this.media='all';this.removeAttribute('onload');">
-    <link rel="stylesheet" href="/assets/oils/css/text-pages.css" media="print" onload="this.media='all';this.removeAttribute('onload');">
-    <link rel="stylesheet" href="/assets/oils/css/account.css" media="print" onload="this.media='all';this.removeAttribute('onload');">
-    <link rel="stylesheet" href="/assets/oils/css/promo.css" media="all">
-    <link rel="stylesheet" href="/assets/oils/css/product.css" media="all">
-    <link rel="stylesheet" href="/assets/oils/css/alert.css" media="print" onload="this.media='all';this.removeAttribute('onload');">
-    <link rel="stylesheet" href="/assets/oils/css/shop.css" media="print" onload="this.media='all';this.removeAttribute('onload');">
-    <link rel="stylesheet" href="/assets/oils/css/range.css" media="print" onload="this.media='all';this.removeAttribute('onload');">
-    <link rel="stylesheet" href="/assets/oils/css/checkout.css" media="print" onload="this.media='all';this.removeAttribute('onload');">
-    <link rel="stylesheet" href="/assets/oils/css/sharemodal.css" media="all" onload="this.media='all';this.removeAttribute('onload');">
-    <link rel="stylesheet" href="/assets/oils/css/promomodal.css" media="all" onload="this.media='all';this.removeAttribute('onload');">
-
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,600,700,800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Muli:200,300,400,600,700,800,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" media="print" onload="this.media='all';this.removeAttribute('onload');">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/v4-shims.css">
-
-    <link rel="stylesheet" href="/assets/js/vendor/Magnific-Popup-master/dist/magnific-popup.css" media="print" onload="this.media='all';this.removeAttribute('onload');">
-    <link rel="stylesheet" href="/assets/js/vendor/zoomio-master/zoomio.css" media="print" onload="this.media='all';this.removeAttribute('onload');">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/malihu-custom-scrollbar-plugin@3.1.5/jquery.mCustomScrollbar.css" media="print" onload="this.media='all';this.removeAttribute('onload');">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.css" media="print" onload="this.media='all';this.removeAttribute('onload');">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.default.min.css" media="print" onload="this.media='all';this.removeAttribute('onload');">
-    <link rel="stylesheet" type="text/css" href="/assets/js/vendor/icheck-1.x/skins/square/orange.css" media="print" onload="this.media='all';this.removeAttribute('onload');">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,600,700,800&display=swap" media="print" onload="this.media='all';this.removeAttribute('onload');">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Muli:200,300,400,600,700,800,900&display=swap" media="print" onload="this.media='all';this.removeAttribute('onload');">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/general.css') }}" media="all">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/about.css') }}" media="all">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/account.css') }}" media="all">
+    {{-- <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/alert.css') }}" media="all"> --}}
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset('assets/css/banner.css') }}" media="all">
+    {{-- <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/app.css') }}" media="all"> --}}
+    {{-- <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/blender.css') }}" media="all"> --}}
+    {{-- <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/blog.css') }}" media="all"> --}}
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset('assets/css/breadcrumbs.css') }}" media="all">
+    {{-- <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/cart-bar.css') }}" media="all"> --}}
+    {{-- <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/checkout.css') }}" media="all"> --}}
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset('assets/css/contact.css') }}" media="all">
+    {{-- <link rel="stylesheet" type="text/css" href="{{ secure_asset('assets/css/container.css') }}" media="all"> --}}
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset('assets/css/copyright.css') }}" media="all">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset('assets/css/creditmodal.css') }}" media="all">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset('assets/css/decofurn.css') }}" media="all">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset('assets/css/delivery.css') }}" media="all">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/css/deliverymodal.css') }}" media="all">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/css/directions.css') }}" media="all">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/css/display.css') }}" media="all">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/css/display-responsive.css') }}" media="all">
+    {{-- <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/css/faq.css') }}" media="all"> --}}
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/css/faqs.css') }}" media="all">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/css/footer.css') }}" media="all">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/css/grid.css') }}" media="all">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/css/grid-responsive.css') }}" media="all">
+    {{-- <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/css/home.css') }}" media="all"> --}}
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/css/inspiration.css') }}" media="all">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/css/loginmodal.css') }}" media="all">
+    {{-- <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/navigation.css') }}" media="all"> --}}
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/notify.css') }}" media="all">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/css/pagination.css') }}" media="all">
+    {{-- <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/product.css') }}" media="all"> --}}
+    {{-- <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/promo.css') }}" media="all">  --}}
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/css/promobar.css') }}" media="all">
+    {{-- <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/promomodal.css') }}" media="all"> --}}
+    {{-- <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/range.css') }}" media="all"> --}}
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/css/selling_points.css') }}" media="all">
+    {{-- <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/sharemodal.css') }}" media="all"> --}}
+    {{-- <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/shop.css') }}" media="all"> --}}
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/css/store_locator.css') }}" media="all">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/css/styles.css') }}" media="all">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/css/subscribe.css') }}" media="all">
+    {{-- <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/text-pages.css') }}" media="all"> --}}
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/css/zoom.css') }}" media="all">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/notify.css') }}" media="all">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/cart-bar.css') }}" media="all">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/css/header.css') }}" media="all">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/navigation.css') }}" media="all">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/footer.css') }}" media="all">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/home.css') }}" media="all">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/about.css') }}" media="print" onload="this.media='all';this.removeAttribute('onload');">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/blog.css') }}" media="print" onload="this.media='all';this.removeAttribute('onload');">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/contact.css') }}" media="print" onload="this.media='all';this.removeAttribute('onload');">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/delivery.css') }}" media="print" onload="this.media='all';this.removeAttribute('onload');">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/faq.css') }}" media="print" onload="this.media='all';this.removeAttribute('onload');">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/text-pages.css') }}" media="print" onload="this.media='all';this.removeAttribute('onload');">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/account.css') }}" media="print" onload="this.media='all';this.removeAttribute('onload');">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/promo.css') }}" media="all">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/product.css') }}" media="all">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/alert.css') }}" media="print" onload="this.media='all';this.removeAttribute('onload');">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/shop.css') }}" media="print" onload="this.media='all';this.removeAttribute('onload');">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/range.css') }}" media="print" onload="this.media='all';this.removeAttribute('onload');">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/checkout.css') }}" media="print" onload="this.media='all';this.removeAttribute('onload');">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/sharemodal.css') }}" media="all" onload="this.media='all';this.removeAttribute('onload');">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/promomodal.css') }}" media="all" onload="this.media='all';this.removeAttribute('onload');">
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" media="print" onload="this.media='all';this.removeAttribute('onload');">
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.15.3/css/v4-shims.css">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/js/vendor/Magnific-Popup-master/dist/magnific-popup.css') }}" media="print" onload="this.media='all';this.removeAttribute('onload');">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/js/vendor/zoomio-master/zoomio.css') }}" media="print" onload="this.media='all';this.removeAttribute('onload');">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/malihu-custom-scrollbar-plugin@3.1.5/jquery.mCustomScrollbar.css" media="print" onload="this.media='all';this.removeAttribute('onload');">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.css" media="print" onload="this.media='all';this.removeAttribute('onload');">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.default.min.css" media="print" onload="this.media='all';this.removeAttribute('onload');">
+    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/js/vendor/icheck-1.x/skins/square/orange.css') }}" media="print" onload="this.media='all';this.removeAttribute('onload');">
 
     @yield('css_assets')
-
     @stack( 'pageStyles' )
     @stack( 'pageHeaderStyles' )
     <style id="main-nav-layout">
@@ -171,6 +166,8 @@
       .vault-placeholder-logo {max-width: 50%;max-height: 50%;height: auto;top: 0;bottom: 0;left: 0;right: 0;}
       .payment-order-summary p, .payment-order-summary p *, .payment-order-summary h3 span {font-size:0.75rem !important;}
       .payment-order-summary h3 span {text-transform:capitalize;}
+      .headerSearch button[type=submit] {width: 40px;height: 37px;line-height: 38px;}
+      .topNavBG * a * {color: inherit;font-size: 12px;font-weight: 300;}
       @media only screen and (max-width:992px) {
         .vault-placeholder-logo {max-width: 100%;width: 100%;}
         .w-65 {width: auto !important;}
@@ -221,41 +218,33 @@
     {{-- @include('templates.sharemodal.index') --}}
     {{-- {!! Sharing::render( $item_sharing ) !!} --}}
 
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="/assets/js/vendor/bootstrap-4/bootstrap.min.js"></script> -->
-    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.0/parsley.min.js"></script>
-    <script src="/assets/js/vendor/slick-master/slick/slick.min.js"></script>
-    <script src="/assets/js/vendor/zoomio-master/zoomio.js"></script>
-    <script src="/assets/js/vendor/number-spinner/dist/jquery.spinner.min.js"></script>
-    <script src="/assets/js/vendor/Magnific-Popup-master/dist/jquery.magnific-popup.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/malihu-custom-scrollbar-plugin@3.1.5/jquery.mCustomScrollbar.min.js"></script>
-    <script src="/assets/js/vendor/stickyHeader/sticky-header.js"></script>
-    <script src="/assets/js/vendor/imageMapResizer.min.js"></script>
-    <script src="/assets/js/vendor/js.cookie.js"></script>
-    <script src="/assets/js/vendor/icheck-2.x/icheck.min.js"></script>
-    <script>$(".spinner").spinner();</script>
-
-    <script src="/assets/oils/js/header.js"></script>
-    <script src="/assets/oils/js/faqs.js"></script>
-    <script src="/assets/oils/js/article.js"></script>
-    <script src="/assets/oils/js/messages.js"></script>
-    <script src="/assets/oils/js/product.js"></script>
-    <script src="/assets/oils/js/banner.js"></script>
-    <script src="/assets/oils/js/profile.js"></script>
-    <script src="/assets/oils/js/sharemodal.js"></script>
-    <script src="/assets/oils/js/promo_modal.js"></script>
-
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.0/parsley.min.js"></script>
+    <script type="text/javascript" src="{{ secure_asset( 'assets/js/vendor/slick-master/slick/slick.min.js') }}"></script>
+    <script type="text/javascript" src="{{ secure_asset( 'assets/js/vendor/zoomio-master/zoomio.js') }}"></script>
+    <script type="text/javascript" src="{{ secure_asset( 'assets/js/vendor/number-spinner/dist/jquery.spinner.min.js') }}"></script>
+    <script type="text/javascript" src="{{ secure_asset( 'assets/js/vendor/Magnific-Popup-master/dist/jquery.magnific-popup.min.js') }}"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/malihu-custom-scrollbar-plugin@3.1.5/jquery.mCustomScrollbar.min.js"></script>
+    <script type="text/javascript" src="{{ secure_asset( 'assets/js/vendor/stickyHeader/sticky-header.js') }}"></script>
+    <script type="text/javascript" src="{{ secure_asset( 'assets/js/vendor/imageMapResizer.min.js') }}"></script>
+    <script type="text/javascript" src="{{ secure_asset( 'assets/js/vendor/js.cookie.js') }}"></script>
+    <script type="text/javascript" src="{{ secure_asset( 'assets/js/vendor/icheck-2.x/icheck.min.js') }}"></script>
+    <script type="text/javascript">$(".spinner").spinner();</script>
+    <script type="text/javascript" src="{{ secure_asset( 'assets/oils/js/header.js') }}"></script>
+    <script type="text/javascript" src="{{ secure_asset( 'assets/oils/js/faqs.js') }}"></script>
+    <script type="text/javascript" src="{{ secure_asset( 'assets/oils/js/article.js') }}"></script>
+    <script type="text/javascript" src="{{ secure_asset( 'assets/oils/js/messages.js') }}"></script>
+    <script type="text/javascript" src="{{ secure_asset( 'assets/oils/js/product.js') }}"></script>
+    <script type="text/javascript" src="{{ secure_asset( 'assets/oils/js/banner.js') }}"></script>
+    <script type="text/javascript" src="{{ secure_asset( 'assets/oils/js/profile.js') }}"></script>
+    <script type="text/javascript" src="{{ secure_asset( 'assets/oils/js/sharemodal.js') }}"></script>
+    <script type="text/javascript" src="{{ secure_asset( 'assets/oils/js/promo_modal.js') }}"></script>
     @yield('js_assets')
-
     @stack( 'pageScripts' )
-
     <script type="text/javascript">
       var onloadCallback = function() {
         try {
@@ -263,7 +252,7 @@
             'sitekey' : '{{ env('GOOGLE_RECAPTCHA_CLIENT_KEY') }}',
             'theme'   : 'light'
           });
-        } catch( err ) { console.warn('\r\n' + err + '\r\n'); }  
+        } catch( err ) { console.warn(err); }  
       }
     </script>
 
