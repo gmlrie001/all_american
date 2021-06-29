@@ -17,7 +17,7 @@ footer > .row {
 }
 .website-by p, 
 .website-by * {
-  color: #e69418;
+  color: #e69418!important;
 }
 @media (max-width: 992px) {
   footer .copyLinks br {
