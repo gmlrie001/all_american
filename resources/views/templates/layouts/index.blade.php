@@ -160,18 +160,18 @@
     @stack( 'pageStyles' )
     @stack( 'pageHeaderStyles' )
     <style id="main-nav-layout">
-      .w-lg-65 {width: 65% !important;}
-      .time-block img { filter:grayscale(1); }
-      .vault-placeholder-logo {max-width: 50%;max-height: 50%;height: auto;top: 0;bottom: 0;left: 0;right: 0;}
-      .payment-order-summary p, .payment-order-summary p *, .payment-order-summary h3 span {font-size:0.75rem !important;}
+      .w-lg-65 {width:65%!important;}
+      .time-block img {filter:grayscale(1);}
+      .vault-placeholder-logo {max-width:50%;max-height:50%;height:auto;top:0;bottom:0;left:0;right:0;}
+      .payment-order-summary p, .payment-order-summary p *, .payment-order-summary h3 span {font-size:0.75rem!important;}
       .payment-order-summary h3 span {text-transform:capitalize;}
-      .headerSearch button[type=submit] {width: 40px;height: 37px;line-height: 38px;}
-      .topNavBG * a * {color: inherit;font-size: 12px;font-weight: 300;}
-      .navigation .linksContain a {font-family: 'Montserrat', sans-serif;}
+      .headerSearch button[type=submit] {width:40px;height:37px;line-height:38px;}
+      .topNavBG, .topNavBG * a * {font-family:'Montserrat',sans-serif;color:#cd8926;font-size:13px;line-height:inherit;font-weight:400;}
+      .navigation .linksContain a {font-family:'Montserrat',sans-serif;}
       @media only screen and (max-width:992px) {
-        .vault-placeholder-logo {max-width: 100%;width: 100%;}
-        .w-65 {width: auto !important;}
-        .payment-order-summary p, .payment-order-summary p *, .payment-order-summary h3 span {font-size:0.875rem !important;}
+        .vault-placeholder-logo {max-width:100%;width:100%;}
+        .w-65 {width:auto!important;}
+        .payment-order-summary p, .payment-order-summary p *, .payment-order-summary h3 span {font-size:0.875rem!important;}
       }
     </style>
 
