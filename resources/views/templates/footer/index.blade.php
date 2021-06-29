@@ -1,26 +1,30 @@
 <style>
+footer, 
+footer * {
+    font-family: 'Montserrat', sans-serif;
+}
+footer .copyLinks br {
+    display: none;
+}
+footer > .row {
+    padding: 0.875rem;
+    padding-bottom: 0;
+    border: none !important;
+}
+.copyLinks p {
+    color: #171717;
+}
+@media (max-width: 992px) {
     footer .copyLinks br {
-        display: none;
+        display: block;
     }
-
-    .copyLinks p {
-        color: #171717;
+    .newsLetterContain {
+        line-height: 1.5;
     }
-
-    @media (max-width: 992px) {
-        footer .copyLinks br {
-            display: block;
-        }
-
-        .newsLetterContain {
-            line-height: 1.5;
-        }
-
-        .formWrap input.form-control {
-            margin-top: 0.618rem;
-        }
+    .formWrap input.form-control {
+        margin-top: 0.618rem;
     }
-
+}
 </style>
 <div class="container-fluid newsLetterContain mt-0">
     <div class="container px-lg-5 px-3">
@@ -30,13 +34,13 @@
                     <span>Sign up for our latest news and updates!</span>
                 </p>
             </div>
-            <div class="col-12 col-md-12 col-lg-6 col-xl-6 formWrap">
+            <div class="col-12 col-md-12 col-lg-6 col-xl-6 formWrap px-0">
                 {!! Form::open(['url' => '/subscribe', 'class' => 'form-row', 'method' => 'POST']) !!}
                 <div class="col-12 col-md-12 col-lg-7 col-xl-8">
                     <input type="email" name="email" class="form-control mw-100 m-lg-0" id="newsLetterEmail"
                         placeholder="Enter your email address" required>
                 </div>
-                <div class="col-12 col-md-12 col-lg-5 col-xl-4">
+                <div class="col-12 col-md-12 col-lg-5 col-xl-4 px-0">
                     <button type="submit" class="btn smlBtn">Signup</button>
                 </div>
                 {!! Honeypot::generate('my_name', 'my_time') !!}
@@ -45,41 +49,45 @@
         </div>
     </div>
 </div>
-<footer class="container-fluid footerContain py-5">
+<footer class="container-fluid footerContain mt-lg-0 py-5">
     <div class="container">
         <div class="row justify-content-between align-items-center">
             <div class="col-4 col-lg-auto logo">
-                <a class="logo" href="/">
-                    @include( 'templates.placeholders.simple_image_placeholders',
+                <a class="logo w-100" href="/">
+                  @include( 'templates.placeholders.simple_image_placeholders',
                     [
-                    'imgvar' => $site_settings->footer_logo, 'imgtitle' => $site_settings->site_name,
+                    'imgvar' => $site_settings->footer_logo, 
+                    'imgtitle' => $site_settings->site_name,
                     'imgclasses' => 'img-fluid',
-                    'class' => '', 'width' => 178,'height' => 80, 'text' => '+',
-                    'use_vault_logo' => true, 'use_placehold_it' => true
+                    'class' => '', 
+                    'width' => 178, 
+                    'height' => 80, 
+                    'text' => '+',
+                    'use_vault_logo' => true, 
+                    'use_placehold_it' => true
                     ]
-                    )
+                  )
                 </a>
             </div>
             @if( $socials && count( $socials ) > 0 )
-            <div class="col-12 col-lg social text-center text-lg-right">
-                @foreach($socials as $social)
-                <a style="background-color: {{$social->social_media_icon_bg_colour}}; color: {{$social->social_media_icon_colour}};"
-                    target="_blank" href="{{$social->social_media_url}}" class="fab {{$social->social_media_icon}}"
-                    alt="{{$social->title}}" title="{{$social->title}}"></a>
-                @endforeach
+            <div class="col-12 col-lg-auto social text-center ml-lg-auto text-lg-right">
+              @foreach($socials as $social)
+                <a rel="noopener noreferer" href="{{$social->social_media_url}}" class="fab {{$social->social_media_icon}}" title="{{$social->title}}" style="background-color:{{$social->social_media_icon_bg_colour}};color:{{$social->social_media_icon_colour}};"
+                 target="_blank"></a>
+              @endforeach
             </div>
             @endif
-            <div class="col-12 col-lg-9 links mx-auto">
-                <div class="row justify-content-between-lg justify-content-center text-center links mb-lg-0 mb-3">
+            <div class="col-12 col-lg-9 links mx-auto mt-lg-0">
+                <div class="row justify-content-between-lg justify-content-center text-center links mb-lg-0 mt-lg-0 mb-3">
                     @foreach($footer_link_categories as $footer_link_category)
-                    <div class="d-inline mx-auto my-1">
-                        <h4 class="text-white">{{$footer_link_category->title}}</h4>
+                    <div class="col-12 col-lg-4 mx-auto my-1">
+                        <h4 class="mb-1">{{$footer_link_category->title}}</h4>
                         <ul class="list-unstyled">
-                            @foreach($footer_link_category->displaylinks as $link)
+                        @foreach($footer_link_category->displaylinks as $link)
                             <li>
-                                <a href="{{url($link->link)}}" target="{{$link->target}}">{{$link->title}}</a>
+                                <a class="" title="{{$link->title}}" href="{{url($link->link)}}" target="{{$link->target}}">{{$link->title}}</a>
                             </li>
-                            @endforeach
+                        @endforeach
                         </ul>
                     </div>
                     @endforeach
@@ -118,7 +126,7 @@
         </div>
     </div>
 </div>
-<footer class="container-fluid px-0 copyright">
+<footer class="container-fluid px-0 copyright mt-lg-0 pt-lg-0">
     <div class="row no-gutters m-0">
         <div class="container">
             <div class="row m-0">
