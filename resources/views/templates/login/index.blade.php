@@ -15,8 +15,9 @@
   margin: 10px 0 20px; 
 } 
 .login h5 span {
-  background:#fff; 
-  padding:0 10px; 
+  background: #fff;
+  padding: 1rem;
+  line-height: 0;
 }
 .sign span {
   display: unset;
