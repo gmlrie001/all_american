@@ -3,8 +3,7 @@
   <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
-
-<html lang="en">
+<html lang="en" dir="ltr">
 
   <head>
     <meta charset="utf-8">
@@ -168,6 +167,7 @@
       .payment-order-summary h3 span {text-transform:capitalize;}
       .headerSearch button[type=submit] {width: 40px;height: 37px;line-height: 38px;}
       .topNavBG * a * {color: inherit;font-size: 12px;font-weight: 300;}
+      .navigation .linksContain a {font-family: 'Montserrat', sans-serif;}
       @media only screen and (max-width:992px) {
         .vault-placeholder-logo {max-width: 100%;width: 100%;}
         .w-65 {width: auto !important;}
@@ -177,13 +177,11 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     @stack( 'pageHeaderScripts' )
-
   </head>
 
   @php ob_end_flush(); @endphp
 
   <body>
-
     @include('templates.promobar.index')
     @include('templates.header.index')
     @include('templates.messages.index')
@@ -195,28 +193,6 @@
     @yield('content')
 
     @include('templates.footer.index')
-
-    {{--
-    <!-- Modal -->
-    <div class="modal fade" id="addToCart" tabindex="-1" role="dialog" aria-labelledby="addToCartLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-body"></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="confirm-overlay"></div>
-      <div class="confirm-modal">
-        <h3>Are you sure you want to delete this item?</h3>
-        <a href="#" class="confirm-button">Yes</a>
-        <a href="#" class="deny-button">No</a>
-      </div>
-    </div>
-    --}}
-
-    {{-- @include('templates.sharemodal.index') --}}
-    {{-- {!! Sharing::render( $item_sharing ) !!} --}}
 
     <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -255,7 +231,6 @@
         } catch( err ) { console.warn(err); }  
       }
     </script>
-
   </body>
 
 </html>
