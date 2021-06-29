@@ -102,12 +102,12 @@
     <link rel="stylesheet" href="/assets/css/directions.css" media="all">
     <link rel="stylesheet" href="/assets/css/display.css" media="all">
     <link rel="stylesheet" href="/assets/css/display-responsive.css" media="all">
-    <link rel="stylesheet" href="/assets/css/faq.css" media="all">
+    {{-- <link rel="stylesheet" href="/assets/css/faq.css" media="all"> --}}
     <link rel="stylesheet" href="/assets/css/faqs.css" media="all">
     <link rel="stylesheet" href="/assets/css/footer.css" media="all">
     <link rel="stylesheet" href="/assets/css/grid.css" media="all">
     <link rel="stylesheet" href="/assets/css/grid-responsive.css" media="all">
-    <link rel="stylesheet" href="/assets/css/home.css" media="all">
+    {{-- <link rel="stylesheet" href="/assets/css/home.css" media="all"> --}}
     <link rel="stylesheet" href="/assets/css/inspiration.css" media="all">
     <link rel="stylesheet" href="/assets/css/loginmodal.css" media="all">
     {{-- <link rel="stylesheet" href="/assets/oils/css/navigation.css" media="all"> --}}
