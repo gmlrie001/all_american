@@ -166,7 +166,7 @@
       .payment-order-summary p, .payment-order-summary p *, .payment-order-summary h3 span {font-size:0.75rem!important;}
       .payment-order-summary h3 span {text-transform:capitalize;}
       .headerSearch button[type=submit] {width:40px;height:37px;line-height:38px;}
-      .topNavBG, .topNavBG * a * {font-family:'Montserrat',sans-serif;color:#cd8926;font-size:13px;line-height:inherit;font-weight:400;}
+      .topNavBG, .topNavBG * a * {font-family:'Montserrat',sans-serif;color:#cd8926;font-size:13px;line-height:inherit;font-weight:600;letter-spacing:calc(1em*(20/1000));}
       .navigation .linksContain a {font-family:'Montserrat',sans-serif;}
       @media only screen and (max-width:992px) {
         .vault-placeholder-logo {max-width:100%;width:100%;}
