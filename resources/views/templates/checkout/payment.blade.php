@@ -274,7 +274,7 @@ address.shipping-address p *,
                             <i class="fa fa-circle @if( in_array( 'EFT', $initOpenOption ) ) active @endif"></i>
                             EFT
                             <div class="payment-image-block">
-                                @foreach($pay_options AS $option)
+                                @foreach($pay_options as $option)
                                 @if($option->title == 'eft')
                                 <img class="img-fluid" src="/{{ $option->link_image }}" />
                                 @endif

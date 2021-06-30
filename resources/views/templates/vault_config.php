@@ -116,7 +116,7 @@ return [
     ], 
     'TheCourierGuy' => [
       'courier' => 'Ppapi_tcg', 
-      'courier_enabled' => 1,
+      'courier_enabled' => 0,
       'courier_package' => [
         'shipment_courier' => "\\Vault\\ShipmentCourier", 
         'tcg_checkout_helper' => \App\Helpers\TheCourierGuyParcelPerfectAPI\CheckoutServices\DeliveryOptionsService::class, 
@@ -191,7 +191,7 @@ return [
   ],
 
   'eft_payment_option' => [
-    'enable' => 0
+    'enable' => 1
   ],
 
   'store_credit_checkout_only_option' => [

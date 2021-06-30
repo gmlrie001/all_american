@@ -1,3 +1,8 @@
+@php
+  $environmentArray = ['staging', 'preview', 'production', 'live'];
+  $environmentCheck = in_array( app()->environment(), $environmentArray );
+@endphp
+
 <!doctype html>
 <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -26,8 +31,8 @@
     <meta name="theme-color" content="#c1ac3a">
 
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/js/vendor/slick-master/slick/slick.css') }}" media="print" onload="this.media='all';this.removeAttribute('onload');">
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/js/vendor/slick-master/slick/slick-theme.css') }}" media="print" onload="this.media='all';this.removeAttribute('onload');">
+    <link rel="stylesheet" type="text/css" href="/assets/js/vendor/slick-master/slick/slick.css" media="print" onload="this.media='all';this.removeAttribute('onload');">
+    <link rel="stylesheet" type="text/css" href="/assets/js/vendor/slick-master/slick/slick-theme.css" media="print" onload="this.media='all';this.removeAttribute('onload');">
 
   @isset( $seo['title'] )
     <meta itemprop="name" content="{{$seo['title']}}">
@@ -81,80 +86,146 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,600,700,800&display=swap" media="print" onload="this.media='all';this.removeAttribute('onload');">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Muli:200,300,400,600,700,800,900&display=swap" media="print" onload="this.media='all';this.removeAttribute('onload');">
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/general.css') }}" media="all">
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/about.css') }}" media="all">
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/account.css') }}" media="all">
-    {{-- <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/alert.css') }}" media="all"> --}}
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset('assets/css/banner.css') }}" media="all">
-    {{-- <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/app.css') }}" media="all"> --}}
-    {{-- <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/blender.css') }}" media="all"> --}}
-    {{-- <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/blog.css') }}" media="all"> --}}
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset('assets/css/breadcrumbs.css') }}" media="all">
-    {{-- <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/cart-bar.css') }}" media="all"> --}}
-    {{-- <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/checkout.css') }}" media="all"> --}}
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset('assets/css/contact.css') }}" media="all">
-    {{-- <link rel="stylesheet" type="text/css" href="{{ secure_asset('assets/css/container.css') }}" media="all"> --}}
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset('assets/css/copyright.css') }}" media="all">
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset('assets/css/creditmodal.css') }}" media="all">
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset('assets/css/decofurn.css') }}" media="all">
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset('assets/css/delivery.css') }}" media="all">
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/css/deliverymodal.css') }}" media="all">
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/css/directions.css') }}" media="all">
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/css/display.css') }}" media="all">
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/css/display-responsive.css') }}" media="all">
-    {{-- <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/css/faq.css') }}" media="all"> --}}
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/css/faqs.css') }}" media="all">
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/css/footer.css') }}" media="all">
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/css/grid.css') }}" media="all">
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/css/grid-responsive.css') }}" media="all">
-    {{-- <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/css/home.css') }}" media="all"> --}}
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/css/inspiration.css') }}" media="all">
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/css/loginmodal.css') }}" media="all">
-    {{-- <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/navigation.css') }}" media="all"> --}}
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/notify.css') }}" media="all">
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/css/pagination.css') }}" media="all">
-    {{-- <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/product.css') }}" media="all"> --}}
-    {{-- <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/promo.css') }}" media="all">  --}}
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/css/promobar.css') }}" media="all">
-    {{-- <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/promomodal.css') }}" media="all"> --}}
-    {{-- <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/range.css') }}" media="all"> --}}
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/css/selling_points.css') }}" media="all">
-    {{-- <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/sharemodal.css') }}" media="all"> --}}
-    {{-- <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/shop.css') }}" media="all"> --}}
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/css/store_locator.css') }}" media="all">
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/css/styles.css') }}" media="all">
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/css/subscribe.css') }}" media="all">
-    {{-- <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/text-pages.css') }}" media="all"> --}}
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/css/zoom.css') }}" media="all">
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/notify.css') }}" media="all">
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/cart-bar.css') }}" media="all">
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/css/header.css') }}" media="all">
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/navigation.css') }}" media="all">
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/footer.css') }}" media="all">
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/home.css') }}" media="all">
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/about.css') }}" media="print" onload="this.media='all';this.removeAttribute('onload');">
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/blog.css') }}" media="print" onload="this.media='all';this.removeAttribute('onload');">
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/contact.css') }}" media="print" onload="this.media='all';this.removeAttribute('onload');">
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/delivery.css') }}" media="print" onload="this.media='all';this.removeAttribute('onload');">
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/faq.css') }}" media="print" onload="this.media='all';this.removeAttribute('onload');">
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/text-pages.css') }}" media="print" onload="this.media='all';this.removeAttribute('onload');">
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/account.css') }}" media="print" onload="this.media='all';this.removeAttribute('onload');">
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/promo.css') }}" media="all">
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/product.css') }}" media="all">
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/alert.css') }}" media="print" onload="this.media='all';this.removeAttribute('onload');">
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/shop.css') }}" media="print" onload="this.media='all';this.removeAttribute('onload');">
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/range.css') }}" media="print" onload="this.media='all';this.removeAttribute('onload');">
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/checkout.css') }}" media="print" onload="this.media='all';this.removeAttribute('onload');">
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/sharemodal.css') }}" media="all" onload="this.media='all';this.removeAttribute('onload');">
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/oils/css/promomodal.css') }}" media="all" onload="this.media='all';this.removeAttribute('onload');">
+    <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/oils/css/general.css' ) }}@else{{ asset( 'assets/oils/css/general.css' ) }}@endif" media="all">
+    <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/oils/css/about.css' ) }}@else{{ asset( 'assets/oils/css/about.css' ) }}@endif" media="all">
+    <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/oils/css/account.css' ) }}@else{{ asset( 'assets/oils/css/account.css' ) }}@endif" media="all">
+    {{-- <link rel="stylesheet" type="text/css" 
+      href="/assets/oils/css/alert.css" media="all"> --}}
+    <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/css/banner.css' ) }}@else{{ asset( 'assets/css/banner.css' ) }}@endif" media="all">
+    {{-- <link rel="stylesheet" type="text/css" 
+      href="/assets/oils/css/app.css" media="all"> --}}
+    {{-- <link rel="stylesheet" type="text/css" 
+      href="/assets/oils/css/blender.css" media="all"> --}}
+    {{-- <link rel="stylesheet" type="text/css" 
+      href="/assets/oils/css/blog.css" media="all"> --}}
+    <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/css/breadcrumbs.css' ) }}@else{{ asset( 'assets/css/breadcrumbs.css' ) }}@endif" media="all">
+    {{-- <link rel="stylesheet" type="text/css" 
+      href="/assets/oils/css/cart-bar.css" media="all"> --}}
+    {{-- <link rel="stylesheet" type="text/css" 
+      href="/assets/oils/css/checkout.css" media="all"> --}}
+    <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/css/contact.css' ) }}@else{{ asset( 'assets/css/contact.css' ) }}@endif" media="all">
+    {{-- <link rel="stylesheet" type="text/css" 
+      href="/assets/css/container.css" media="all"> --}}
+    <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/css/copyright.css' ) }}@else{{ asset( 'assets/css/copyright.css' ) }}@endif" media="all">
+    <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/css/creditmodal.css' ) }}@else{{ asset( 'assets/css/creditmodal.css' ) }}@endif" media="all">
+    <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/css/decofurn.css' ) }}@else{{ asset( 'assets/css/decofurn.css' ) }}@endif" media="all">
+    <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/css/delivery.css' ) }}@else{{ asset( 'assets/css/delivery.css' ) }}@endif" media="all">
+    <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/css/deliverymodal.css' ) }}@else{{ asset( 'assets/css/deliverymodal.css' ) }}@endif" media="all">
+    <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/css/directions.css' ) }}@else{{ asset( 'assets/css/directions.css' ) }}@endif" media="all">
+    <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/css/display.css' ) }}@else{{ asset( 'assets/css/display.css' ) }}@endif" media="all">
+    <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/css/display-responsive.css' ) }}@else{{ asset( 'assets/css/display-responsive.css' ) }}@endif" media="all">
+    {{-- <link rel="stylesheet" type="text/css" 
+      href="/assets/css/faq.css" media="all"> --}}
+    <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/css/faqs.css' ) }}@else{{ asset( 'assets/css/faqs.css' ) }}@endif" media="all">
+    <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/css/footer.css' ) }}@else{{ asset( 'assets/css/footer.css' ) }}@endif" media="all">
+    <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/css/grid.css' ) }}@else{{ asset( 'assets/css/grid.css' ) }}@endif" media="all">
+    <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/css/grid-responsive.css' ) }}@else{{ asset( 'assets/css/grid-responsive.css' ) }}@endif" media="all">
+    {{-- <link rel="stylesheet" type="text/css" 
+      href="/assets/css/home.css" media="all"> --}}
+    <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/css/inspiration.css' ) }}@else{{ asset( 'assets/css/inspiration.css' ) }}@endif" media="all">
+    <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/css/loginmodal.css' ) }}@else{{ asset( 'assets/css/loginmodal.css' ) }}@endif" media="all">
+    {{-- <link rel="stylesheet" type="text/css" 
+      href="/assets/oils/css/navigation.css" media="all"> --}}
+    <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/oils/css/notify.css' ) }}@else{{ asset( 'assets/oils/css/notify.css' ) }}@endif" media="all">
+    <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/css/pagination.css' ) }}@else{{ asset( 'assets/css/pagination.css' ) }}@endif" media="all">
+    {{-- <link rel="stylesheet" type="text/css" 
+      href="/assets/oils/css/product.css" media="all"> --}}
+    {{-- <link rel="stylesheet" type="text/css" 
+      href="/assets/oils/css/promo.css" media="all">  --}}
+    <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/css/promobar.css' ) }}@else{{ asset( 'assets/css/promobar.css' ) }}@endif" media="all">
+    {{-- <link rel="stylesheet" type="text/css" 
+      href="/assets/oils/css/promomodal.css" media="all"> --}}
+    {{-- <link rel="stylesheet" type="text/css" 
+      href="/assets/oils/css/range.css" media="all"> --}}
+    <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/css/selling_points.css' ) }}@else{{ asset( 'assets/css/selling_points.css' ) }}@endif" media="all">
+    {{-- <link rel="stylesheet" type="text/css" 
+      href="/assets/oils/css/sharemodal.css" media="all"> --}}
+    {{-- <link rel="stylesheet" type="text/css" 
+      href="/assets/oils/css/shop.css" media="all"> --}}
+    <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/css/store_locator.css' ) }}@else{{ asset( 'assets/css/store_locator.css' ) }}@endif" media="all">
+    <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/css/styles.css' ) }}@else{{ asset( 'assets/css/styles.css' ) }}@endif" media="all">
+    <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/css/subscribe.css' ) }}@else{{ asset( 'assets/css/subscribe.css' ) }}@endif" media="all">
+    {{-- <link rel="stylesheet" type="text/css" 
+      href="/assets/oils/css/text-pages.css" media="all"> --}}
+    <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/css/zoom.css' ) }}@else{{ asset( 'assets/css/zoom.css' ) }}@endif" media="all">
+    <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/oils/css/notify.css' ) }}@else{{ asset( 'assets/oils/css/notify.css' ) }}@endif" media="all">
+    <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/oils/css/cart-bar.css' ) }}@else{{ asset( 'assets/oils/css/cart-bar.css' ) }}@endif" media="all">
+    <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/css/header.css' ) }}@else{{ asset( 'assets/css/header.css' ) }}@endif" media="all">
+    <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/oils/css/navigation.css' ) }}@else{{ asset( 'assets/oils/css/navigation.css' ) }}@endif" media="all">
+    <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/oils/css/footer.css' ) }}@else{{ asset( 'assets/oils/css/footer.css' ) }}@endif" media="all">
+    <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/oils/css/home.css' ) }}@else{{ asset( 'assets/oils/css/home.css' ) }}@endif" media="all">
+    <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/oils/css/about.css' ) }}@else{{ asset( 'assets/oils/css/about.css' ) }}@endif" media="print" onload="this.media='all';this.removeAttribute('onload');">
+    <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/oils/css/blog.css' ) }}@else{{ asset( 'assets/oils/css/blog.css' ) }}@endif" media="print" onload="this.media='all';this.removeAttribute('onload');">
+    <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/oils/css/contact.css' ) }}@else{{ asset( 'assets/oils/css/contact.css' ) }}@endif" media="print" onload="this.media='all';this.removeAttribute('onload');">
+    <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/oils/css/delivery.css' ) }}@else{{ asset( 'assets/oils/css/delivery.css' ) }}@endif" media="print" onload="this.media='all';this.removeAttribute('onload');">
+    <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/oils/css/faq.css' ) }}@else{{ asset( 'assets/oils/css/faq.css' ) }}@endif" media="print" onload="this.media='all';this.removeAttribute('onload');">
+    <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/oils/css/text-pages.css' ) }}@else{{ asset( 'assets/oils/css/text-pages.css' ) }}@endif" media="print" onload="this.media='all';this.removeAttribute('onload');">
+    <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/oils/css/account.css' ) }}@else{{ asset( 'assets/oils/css/account.css' ) }}@endif" media="print" onload="this.media='all';this.removeAttribute('onload');">
+    <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/oils/css/promo.css' ) }}@else{{ asset( 'assets/oils/css/promo.css' ) }}@endif" media="all">
+    <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/oils/css/product.css' ) }}@else{{ asset( 'assets/oils/css/product.css' ) }}@endif" media="all">
+    <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/oils/css/alert.css' ) }}@else{{ asset( 'assets/oils/css/alert.css' ) }}@endif" media="print" onload="this.media='all';this.removeAttribute('onload');">
+    <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/oils/css/shop.css' ) }}@else{{ asset( 'assets/oils/css/shop.css' ) }}@endif" media="print" onload="this.media='all';this.removeAttribute('onload');">
+    <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/oils/css/range.css' ) }}@else{{ asset( 'assets/oils/css/range.css' ) }}@endif" media="print" onload="this.media='all';this.removeAttribute('onload');">
+    <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/oils/css/checkout.css' ) }}@else{{ asset( 'assets/oils/css/checkout.css' ) }}@endif" media="print" onload="this.media='all';this.removeAttribute('onload');">
+    <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/oils/css/sharemodal.css' ) }}@else{{ asset( 'assets/oils/css/sharemodal.css' ) }}@endif" media="all" onload="this.media='all';this.removeAttribute('onload');">
+    <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/oils/css/promomodal.css' ) }}@else{{ asset( 'assets/oils/css/promomodal.css' ) }}@endif" media="all" onload="this.media='all';this.removeAttribute('onload');">
     <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" media="print" onload="this.media='all';this.removeAttribute('onload');">
     <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.15.3/css/v4-shims.css">
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/js/vendor/Magnific-Popup-master/dist/magnific-popup.css') }}" media="print" onload="this.media='all';this.removeAttribute('onload');">
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/js/vendor/zoomio-master/zoomio.css') }}" media="print" onload="this.media='all';this.removeAttribute('onload');">
+    <link rel="stylesheet" type="text/css" href="/assets/js/vendor/Magnific-Popup-master/dist/magnific-popup.css" media="print" onload="this.media='all';this.removeAttribute('onload');">
+    <link rel="stylesheet" type="text/css" href="/assets/js/vendor/zoomio-master/zoomio.css" media="print" onload="this.media='all';this.removeAttribute('onload');">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/malihu-custom-scrollbar-plugin@3.1.5/jquery.mCustomScrollbar.css" media="print" onload="this.media='all';this.removeAttribute('onload');">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.css" media="print" onload="this.media='all';this.removeAttribute('onload');">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.default.min.css" media="print" onload="this.media='all';this.removeAttribute('onload');">
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset( 'assets/js/vendor/icheck-1.x/skins/square/orange.css') }}" media="print" onload="this.media='all';this.removeAttribute('onload');">
+    <link rel="stylesheet" type="text/css" href="/assets/js/vendor/icheck-1.x/skins/square/orange.css" media="print" onload="this.media='all';this.removeAttribute('onload');">
 
     @yield('css_assets')
     @stack( 'pageStyles' )
@@ -200,26 +271,26 @@
     <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.0/parsley.min.js"></script>
-    <script type="text/javascript" src="{{ secure_asset( 'assets/js/vendor/slick-master/slick/slick.min.js') }}"></script>
-    <script type="text/javascript" src="{{ secure_asset( 'assets/js/vendor/zoomio-master/zoomio.js') }}"></script>
-    <script type="text/javascript" src="{{ secure_asset( 'assets/js/vendor/number-spinner/dist/jquery.spinner.min.js') }}"></script>
-    <script type="text/javascript" src="{{ secure_asset( 'assets/js/vendor/Magnific-Popup-master/dist/jquery.magnific-popup.min.js') }}"></script>
+    <script type="text/javascript" src="/assets/js/vendor/slick-master/slick/slick.min.js"></script>
+    <script type="text/javascript" src="/assets/js/vendor/zoomio-master/zoomio.js"></script>
+    <script type="text/javascript" src="/assets/js/vendor/number-spinner/dist/jquery.spinner.min.js"></script>
+    <script type="text/javascript" src="/assets/js/vendor/Magnific-Popup-master/dist/jquery.magnific-popup.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/malihu-custom-scrollbar-plugin@3.1.5/jquery.mCustomScrollbar.min.js"></script>
-    <script type="text/javascript" src="{{ secure_asset( 'assets/js/vendor/stickyHeader/sticky-header.js') }}"></script>
-    <script type="text/javascript" src="{{ secure_asset( 'assets/js/vendor/imageMapResizer.min.js') }}"></script>
-    <script type="text/javascript" src="{{ secure_asset( 'assets/js/vendor/js.cookie.js') }}"></script>
-    <script type="text/javascript" src="{{ secure_asset( 'assets/js/vendor/icheck-2.x/icheck.min.js') }}"></script>
+    <script type="text/javascript" src="/assets/js/vendor/stickyHeader/sticky-header.js"></script>
+    <script type="text/javascript" src="/assets/js/vendor/imageMapResizer.min.js"></script>
+    <script type="text/javascript" src="/assets/js/vendor/js.cookie.js"></script>
+    <script type="text/javascript" src="/assets/js/vendor/icheck-2.x/icheck.min.js"></script>
     <script type="text/javascript">$(".spinner").spinner();</script>
-    <script type="text/javascript" src="{{ secure_asset( 'assets/oils/js/header.js') }}"></script>
-    <script type="text/javascript" src="{{ secure_asset( 'assets/oils/js/faqs.js') }}"></script>
-    <script type="text/javascript" src="{{ secure_asset( 'assets/oils/js/article.js') }}"></script>
-    <script type="text/javascript" src="{{ secure_asset( 'assets/oils/js/messages.js') }}"></script>
-    <script type="text/javascript" src="{{ secure_asset( 'assets/oils/js/product.js') }}"></script>
-    <script type="text/javascript" src="{{ secure_asset( 'assets/oils/js/banner.js') }}"></script>
-    <script type="text/javascript" src="{{ secure_asset( 'assets/oils/js/profile.js') }}"></script>
-    <script type="text/javascript" src="{{ secure_asset( 'assets/oils/js/sharemodal.js') }}"></script>
-    <script type="text/javascript" src="{{ secure_asset( 'assets/oils/js/promo_modal.js') }}"></script>
+    <script type="text/javascript" src="/assets/oils/js/header.js"></script>
+    <script type="text/javascript" src="/assets/oils/js/faqs.js"></script>
+    <script type="text/javascript" src="/assets/oils/js/article.js"></script>
+    <script type="text/javascript" src="/assets/oils/js/messages.js"></script>
+    <script type="text/javascript" src="/assets/oils/js/product.js"></script>
+    <script type="text/javascript" src="/assets/oils/js/banner.js"></script>
+    <script type="text/javascript" src="/assets/oils/js/profile.js"></script>
+    <script type="text/javascript" src="/assets/oils/js/sharemodal.js"></script>
+    <script type="text/javascript" src="/assets/oils/js/promo_modal.js"></script>
     @yield('js_assets')
     @stack( 'pageScripts' )
     <script type="text/javascript">

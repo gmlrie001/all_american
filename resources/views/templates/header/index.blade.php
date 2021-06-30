@@ -193,46 +193,55 @@
 <nav class="container-fluid mobileNavigation sticky-top px-0 d-block d-lg-none">
     <div class="row no-gutters">
         <div class="container px-0">
-            <div class="row justify-content-between mobileWrap no-gutters">
-                <div class="col-4 px-0 logo">
+            <div class="row justify-content-between mobileWrapa no-gutters px-4">
+                <div class="col-5 px-0 logo">
                     <a href="/">
                       @include( 'templates.placeholders.simple_image_placeholders',
                         [
-                          'imgvar' => $site_settings->mobile_logo, 'imgtitle' => $site_settings->site_name,
-                          'imgclasses' => 'img-fluid',
-                          'class' => '', 'width' => 180,'height' => 60, 'text' => '+',
-                          'use_vault_logo' => true, 'use_placehold_it' => true
+                          'imgvar' => $site_settings->mobile_logo, 
+                          'imgtitle' => $site_settings->site_name,
+                          'imgclasses' => 'img-fluid mw-100',
+                          'class' => '', 
+                          'width' => 180, 
+                          'height' => 60, 
+                          'text' => '+',
+                          'use_vault_logo' => true, 
+                          'use_placehold_it' => true
                         ]
                       )
                     </a>
                 </div>
-                <div class="col-7 offset-1 d-flex content align-self-center">
+                <div class="col-6 offset-1 d-flex justify-content-between align-self-center">
                     <a href="#" class="searchOpen">
-                        <img src="/assets/icons/mobile-search.svg" alt="Search products">
+                      <img src="/assets/icons/mobile-search.svg" alt="Search products">
                     </a>
-                    @if(Session::has('user') && Session::get('user.id') != null)
+
+                  @if(Session::has('user') && Session::get('user.id') != null)
                     <a href="/profile" class="account">
-                        <img src="/assets/icons/mobile-account.svg" alt="Profile">
+                      <img src="/assets/icons/mobile-account.svg" alt="Profile">
                     </a>
-                    @else
+
+                  @else
                     @php Session::put('intended.url', url()->full() ); @endphp
                     <a href="/my-account" class="account">
                         <img src="/assets/icons/mobile-account.svg" alt="Account">
                     </a>
-                    @endif
+                  @endif
+
                     <a href="/cart/view" class="cart">
-                        @if($cart_total > 0)
-                        <div class="position-relative">
-                            <img src="/assets/icons/mobile-cart.svg" alt="Cart">
-                            <span class="position-absolute"
-                                style="top:-0.75rem;right:-1.125rem;font-weight:500;color:#fff;width:25px;height:25px;line-height:25px;background-color:#c1ac3aaa;border-radius:50%;text-align:center;">{{ $cart_total }}</span>
-                        </div>
-                        @else
-                        <img src="/assets/icons/mobile-cart.svg" alt="Cart">
-                        @endif
+                    @if($cart_total > 0)
+                      <div class="position-relative">
+                          <img src="/assets/icons/mobile-cart.svg" alt="Cart">
+                          <span class="position-absolute"
+                              style="top:-0.75rem;right:-1.125rem;font-weight:500;color:#fff;width:25px;height:25px;line-height:25px;background-color:#c1ac3aaa;border-radius:50%;text-align:center;">{{ $cart_total }}</span>
+                      </div>
+                    @else
+                      <img src="/assets/icons/mobile-cart.svg" alt="Cart">
+                    @endif
                     </a>
+
                     <a href="javascript:void(0);" class="menu">
-                        <img src="/assets/icons/mobile-navicon.svg" alt="menu">
+                      <img src="/assets/icons/mobile-navicon.svg" alt="menu">
                     </a>
                 </div>
             </div>
@@ -254,44 +263,45 @@
 </div>
 
 <div class="container-fluid mobileOpen collapse">
-    <div class="row justify-content-between mobileMenu">
+    <div class="row justify-content-between align-items-center mobileMenuu py-2 px-4">
         <a href="/" class="logo" title="{{$site_settings->site_name}}">
           @include( 'templates.placeholders.simple_image_placeholders',
             [
-              'imgvar' => $site_settings->mobile_logo, 'imgtitle' => $site_settings->site_name,
-              'imgclasses' => 'img-fluid',
-              'class' => '', 'width' => 180,'height' => 60, 'text' => '+',
-              'use_vault_logo' => true, 'use_placehold_it' => true
+              'imgvar' => $site_settings->mobile_logo, 
+              'imgtitle' => $site_settings->site_name,
+              'imgclasses' => 'img-fluid mw-100',
+              'class' => '', 
+              'width' => 180, 
+              'height' => 60, 
+              'text' => '+',
+              'use_vault_logo' => true, 
+              'use_placehold_it' => true
             ]
           )
         </a>
-        <div class="menuClose pr-3">
-            <img src="/assets/icons/close-grey.svg" alt="menu">
+        <div class="menuClose">
+          <img src="/assets/icons/close-grey.svg" alt="menu">
         </div>
     </div>
     <div class="row links">
-        <a href="#" class="lrgLink has-second-menu hasDrop pr-3" data-open="#category">
-            Shop by Category
-        </a>
-        <a href="/shop">
-            Shop All
-        </a>
+      {{--
+        <a href="#" class="lrgLink has-second-menu hasDrop pr-3" data-open="#category">Shop by Category</a>
+      --}}
+        <a href="/shop">Shop All</a>
     {{--
-        @if($show_sale_link > 0)
-        <a href="/shop/sale" class="saleLink">
-            {{$site_settings->sale_text}}
-        </a>
-        @endif
-        @if($show_new_link > 0)
-        <a href="/shop/new" class="saleLink">
-            {{$site_settings->new_text}}
-        </a>
-        @endif
+      @if($show_sale_link > 0)
+        <a href="/shop/sale" class="saleLink">{{$site_settings->sale_text}}</a>
+      @endif
+      
+      @if($show_new_link > 0)
+        <a href="/shop/new" class="saleLink">{{$site_settings->new_text}}</a>
+      @endif
     --}}
         @forelse($links as $link)
-            <a href="/{{$link->link}}" target="{{$link->target}}">{{$link->title}}</a>
+          <a href="/{{$link->link}}" target="{{$link->target}}">{{$link->title}}</a>
         @empty
         @endforelse
+
         @if(Session::has('user') && Session::get('user.id') != null)
             <a href="/profile" class="account" title="Profile">Profile</a>
             <a href="/logout" class="account" title="Logout">Logout</a>
@@ -300,31 +310,33 @@
         @endif
     </div>
 </div>
+
 <div class="container-fluid mobileSubnav collapse" id="category">
-    <div class="row justify-content-between mobileMenu">
+    <div class="row justify-content-between align-items-center mobileMenuu py-2 px-4">
         <a href="/" class="logo" title="{{$site_settings->site_name}}">
           @include( 'templates.placeholders.simple_image_placeholders',
             [
-              'imgvar' => $site_settings->mobile_logo, 'imgtitle' => $site_settings->site_name,
-              'imgclasses' => 'img-fluid',
-              'class' => '', 'width' => 180,'height' => 60, 'text' => '+',
-              'use_vault_logo' => true, 'use_placehold_it' => true
+              'imgvar' => $site_settings->mobile_logo, 
+              'imgtitle' => $site_settings->site_name,
+              'imgclasses' => 'img-fluid mw-100',
+              'class' => '', 
+              'width' => 180, 
+              'height' => 60, 
+              'text' => '+',
+              'use_vault_logo' => true, 
+              'use_placehold_it' => true
             ]
           )
         </a>
-        <div class="subMenuClose pr-3">
-            <img src="/assets/icons/close-grey.svg" alt="menu">
+        <div class="subMenuClose">
+          <img src="/assets/icons/close-grey.svg" alt="menu">
         </div>
     </div>
     <div class="row links">
-        <a href="#" class="lrgLink has-second-menu dropBack pr-3" data-open="#category">
-            Shop by Category
-        </a>
-    @isset($prod_cats)
-        @forelse($prod_cats as $prodcat)
-            <a href="/shop/{{$prodcat->url_title}}">{{$prodcat->title}}</a>
-        @empty
-        @endforelse
-    @endisset
+        {{-- <a href="#" class="lrgLink has-second-menu dropBack pr-3" data-open="#category">Shop by Category</a> --}}
+      @forelse($prod_cats as $prodcat)
+        <a href="/shop/{{$prodcat->url_title}}">{{$prodcat->title}}</a>
+      @empty
+      @endforelse
     </div>
 </div>
