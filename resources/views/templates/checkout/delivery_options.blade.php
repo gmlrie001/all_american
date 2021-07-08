@@ -38,8 +38,10 @@ address.shipping-address p *,
 @endpush
 
 @php
+/*
   $shipment_courier = $shipper;
   if ( ! isset( $shipment_courier ) || NULL == $shipment_courier || $shipment_courier == '' ) $shipment_courier = 'Default';
+*/
 @endphp
 
 @php
@@ -145,81 +147,106 @@ address.shipping-address p *,
             } elseif ( $config['external_courier_companies']['Default']['courier_enabled'] ) {
               $shipper = 'Default';
               $courierName = $config['external_courier_companies']['Default']['courier'];
+
+            } elseif ( $config['external_courier_companies']['Collection']['courier_enabled'] ) {
+              $shipper = 'Collection';
+              $courierName = 'Collection'; // $config['external_courier_companies']['Collection']['courier'];
+            }
+          @endphp
+
+          @php
+            if ( isset( $collection_points ) && ! is_null( $collection_points ) ) {
+              $shipper = 'Collection';
+              $courierName = 'Collection'; // $config['external_courier_companies']['Collection']['courier'];
+              $shipperOpt = $collection_points; // new \StdClass();
             }
           @endphp
 
           <form class="col-12">
             <div class="row">
               <div class="col-12 px-0 shipping-options-list-options">
+              @if ( strtolower( $shipper ) === 'collection' )
+
+                @php
+                  $opts = $shipperOpt; // $courier['ppapi_tcg'];
+                  $shipperOpt = $opts;
+                  // dd( __FILE__, __LINE__, get_defined_vars(), @isset( $collection_points ) );
+                @endphp
+
+                @include( 'order_collection::components.collection.options' )
+
+              @else
+              
               @switch( strtolower( $shipper ) )
-
-                @case( 'free shipping' )
-                  @if(isset($free_shipping) && $free_shipping)
-                    <div class="row no-gutters pt-lg-2 pt-3">
-                      <div class="col-12 col-md-1 text-center-lg">
-                        <input id="option_1" data-description="Qualified for free shipping" data-arrival="ESTIMATED 10-14 working days" data-title="FREE Shipping" data-service="free" type="radio" name="option" value="0" required="">
-                        <label for="option_1"></label>
+                  @case( 'free shipping' )
+                    @if(isset($free_shipping) && $free_shipping)
+                      <div class="row no-gutters pt-lg-2 pt-3">
+                        <div class="col-12 col-md-1 text-center-lg">
+                          <input id="option_1" data-description="Qualified for free shipping" data-arrival="ESTIMATED 10-14 working days" data-title="FREE Shipping" data-service="free" type="radio" name="option" value="0" required="">
+                          <label for="option_1"></label>
+                        </div>
+                        <div class="col-12 col-md-2 strong">FREE Shipping</div>
+                        <div class="col-12 col-md-4">Qualified for free shipping</div>
+                        <div class="col-12 col-md-4">ESTIMATED 10&ndash;14 working days</div>
+                        <div class="col-12 col-md-1">FREE</div>
                       </div>
-                      <div class="col-12 col-md-2 strong">FREE Shipping</div>
-                      <div class="col-12 col-md-4">Qualified for free shipping</div>
-                      <div class="col-12 col-md-4">ESTIMATED 10&ndash;14 working days</div>
-                      <div class="col-12 col-md-1">FREE</div>
+                    @endif
+                    @break
+                  
+                  @case( 'aramex' )
+                    @php
+                      $opts = shipperOpt; // $courier['aramex'];
+                      $decoded_opts = json_decode( $opts, false );
+                      $shipperOpt = $decoded_opts->rates;
+                      unset( $opts, $decoded_opts, $courier );
+                    @endphp
+
+                    @include( 'templates.checkout.ecommerce.checkout.step3.couriers.aramex' )
+                    @break
+                  
+                  @case( 'ppapi_tcg' )
+                    @php
+                      $opts = $courier['Ppapi_tcg'];
+                      $decoded_opts = json_decode( $opts, false );
+                      $shipperOpt = $decoded_opts->rates;
+                      unset( $opts, $decoded_opts, $courier );
+                    @endphp
+
+                    {{-- @if( $shipper && strtolower( $shipper ) === "ppapi_tcg" ) --}}
+                      {{-- ideally use @each blade directive --}}
+                      @include( 'templates.checkout.ecommerce.checkout.step3.couriers.ppapi_tcg', ['shipperOpt' => $shipperOpt] )
+                    {{-- @endif --}}
+                    @break
+
+                  @case( 'default' )
+                    @php
+                      $opts = $shipperOpt; // $courier['ppapi_tcg'];
+                      $shipperOpt = $areas;
+                    @endphp
+
+                    @include( 'templates.checkout.ecommerce.checkout.step3.couriers.default_manual' )
+                    @break
+                  
+                  @default
+                    <div class="row pt-lg-4 pt-3">
+                      <div class="col-12">
+                        <h4><strong>Yikes! Unfortunately there are no shipping methods available based on your postal code.</strong></h4>
+                        <p>Please <a rel="noopener noreferer" title="Checkout delivery options - no shipping methods available for supplied address and/or postal code" target="_blank" href="/contact-us" class="">contact us</a> with your issue and we will get as soon as we can.</p>
+                      </div>
                     </div>
-                  @endif
-                  @break
-                
-                @case( 'aramex' )
-                  @php
-                    $opts = shipperOpt; // $courier['aramex'];
-                    $decoded_opts = json_decode( $opts, false );
-                    $shipperOpt = $decoded_opts->rates;
-                    unset( $opts, $decoded_opts, $courier );
-                  @endphp
+                    @break
+                @endswitch
 
-                  @include( 'templates.checkout.ecommerce.checkout.step3.couriers.aramex' )
-                  @break
-                
-                @case( 'ppapi_tcg' )
-                  @php
-                    $opts = $courier['Ppapi_tcg'];
-                    $decoded_opts = json_decode( $opts, false );
-                    $shipperOpt = $decoded_opts->rates;
-                    unset( $opts, $decoded_opts, $courier );
-                  @endphp
-
-                  {{-- @if( $shipper && strtolower( $shipper ) === "ppapi_tcg" ) --}}
-                    {{-- ideally use @each blade directive --}}
-                    @include( 'templates.checkout.ecommerce.checkout.step3.couriers.ppapi_tcg', ['shipperOpt' => $shipperOpt] )
-                  {{-- @endif --}}
-                  @break
-                
-                @case( 'default' )
-                  @php
-                    $opts = $shipperOpt; // $courier['ppapi_tcg'];
-                    $shipperOpt = $opts;
-                  @endphp
-
-                  @include( 'templates.checkout.ecommerce.checkout.step3.couriers.default_manual' )
-                  @break
-                
-                @default
-                  <div class="row pt-lg-4 pt-3">
-                    <div class="col-12">
-                      <h4><strong>Yikes! Unfortunately there are no shipping methods available based on your postal code.</strong></h4>
-                      <p>Please <a rel="noopener noreferer" title="Checkout delivery options - no shipping methods available for supplied address and/or postal code" target="_blank" href="/contact-us" class="">contact us</a> with your issue and we will get as soon as we can.</p>
-                    </div>
-                  </div>
-                  @break
-
-              @endswitch
-
+              @endif
               </div>
             </div>
           </form>
         </div>
       </div>
 
-      @if($can_assemble && sizeof($order->assemblyProducts))
+      {{-- dd( strtolower( $shipper ), get_defined_vars(), $this ) --}}
+
+    @if ( strtolower( $shipper ) !== 'collection' && ( $can_assemble && sizeof($order->assemblyProducts) ) )
       <div class="row">
         <div class="col-12">
           <h1>NEED ANY OF YOUR ITEMS ASSEMBLED FOR YOU?</h1>
@@ -232,7 +259,7 @@ address.shipping-address p *,
           </div>
         </div>
       </div>
-      @endif
+    @endif
     </div>
 
     <div class="col-12 col-lg-3 custom-checkout-padding">

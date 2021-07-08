@@ -5,13 +5,23 @@
 
   $option = $shipperOpt;
   $shipping_options[$shipper] = $option;
+
 @endphp
 
 @if( $shipper && preg_match( "/default/isU", $shipper, $m ) )
+
   @forelse( $shipping_options as $key=>$option )
   <div class="row no-gutters py-lg-1 py-2 courier-{{ $key }} @if( count( $noWeights ) > 0 ) striken @endif">
 
-    @if ( is_array( $option ) ) @php $option = (object) $option; @endphp @endif
+    @if ( is_array( $option ) ) @php $option = $option->first(); @endphp @endif
+    @php
+      $option = $option->first();
+      $option->cost = $option->options->shippingOption->rates->cost;
+      $option->title = $option->description = $site_settings->site_name . ' arranged delivery';
+      $option->service_type = ucfirst( camel_case( $site_settings->site_name ) ) . " Delivery";
+      $option->expected_delivery_date = $option->delivery_time . ' upon arrival of stock in ZA port'
+    @endphp
+
     <div class="col-12 col-md-1 text-center-lg">
       <input 
         id="{{ camel_case( $key ) }}" type="radio" name="option" value="{{ $option->cost }}" 
@@ -65,44 +75,9 @@
       <p>{{ $shipping_error }}</p>
     </section>
     @endisset
-  @endforelse
-@endif
 
-  {{-- <div class="row pt-lg-2 pt-3">
-    <div class="col-12 col-md-1 text-center-lg">
-      <input id="option_{{$counter}}"
-        data-description="{{$area->title}}"
-        data-arrival="ESTIMATED {{$area->delivery_time}}"
-        data-title="{{$option->shippingOption->title}}"
-        type="radio" name="option"
-        value="{{ $cost }}" required="" 
-      >
-      <label for="option_{{$counter}}"></label>
-    </div>
-    <div class="col-12 col-md-2 strong">{{$option->shippingOption->title}}</div>
-    <div class="col-12 col-md-4">{{$area->title}}</div>
-    <div class="col-12 col-md-4">ESTIMATED {{ $area->delivery_time }}</div>
-    <div class="col-12 col-md-1">R {{ number_format( $cost, 0, '.', '' ) }}</div>
-  </div> --}}
-  {{-- @endif --}}
-{{-- 
-  <div class="row pt-lg-2 pt-3">
-    <div class="col-12 col-md-1 text-center-lg">
-      <input id="option_{{$counter}}" 
-        data-description="{{$area->title}}" 
-        data-arrival="ESTIMATED {{$area->delivery_time}}" 
-        data-title="{{$option->shippingOption->title}}" 
-        type="radio" 
-        name="option" 
-        value="{{number_format($cost, 0, '.', '')}}" 
-        required
-      >
-      <label for="option_{{$counter}}"></label>
-    </div>
-    <div class="col-12 col-md-2 strong">{{$option->shippingOption->title}}</div>
-    <div class="col-12 col-md-4">{{$area->title}}</div>
-    <div class="col-12 col-md-4">ESTIMATED {{str_replace( '-', '&ndash;', $area->delivery_time ) }}</div>
-    <div class="col-12 col-md-1">R {{number_format($cost, 0, '.', '')}}</div>
-  </div>
-  @php $counter++; @endphp
-@endif --}}
+  @endforelse
+
+  {{-- dd( __FILE__, __LINE__, $this, get_defined_vars(), $option ) --}}
+
+@endif

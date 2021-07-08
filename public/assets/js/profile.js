@@ -146,17 +146,17 @@ $(document).ready(function(){
     $(".shipping-options-list-options input").change(function(){
         $(".shipping-option-form-results input[name='shipping_title']").val($(this).data('title'));
         $(".shipping-option-form-results input[name='option']").val($(this).val());
+        $(".shipping-option-form-results input[name='collection_code']").val($(this).data('collection_code'));
         $(".shipping-option-form-results input[name='shipping_description']").val($(this).data('description'));
         $(".shipping-option-form-results input[name='shipping_time_of_arrival']").val($(this).data('arrival'));
     });
 
     $(".payment-option-block h2").on('click', function(){
-
         if(!$(this).hasClass('active')){
-//             $(".payment-info-block").slideUp(300);
-//             $(".payment-option-block h2").addClass('active');
-//             $(".payment-option-block h2 i").addClass('fa-check-circle-o');
-//             $(".payment-option-block h2 i").removeClass('fa-circle-o');
+            $(".payment-info-block").slideUp(300);
+            $(".payment-option-block h2").removeClass('active');
+            $(".payment-option-block h2 i").removeClass('fa-check-circle-o');
+            $(".payment-option-block h2 i").addClass('fa-circle-o');
 
             $(this).parent().find(".payment-info-block").slideDown(300);
             $(this).find('i').addClass('fa-check-circle-o');
@@ -228,7 +228,7 @@ $(document).ready(function(){
         $(this).addClass('active');
     });
 
-    $(".wishlist-modal h1 a, .wishlist-overlay").click(function(e){
+    $("#close-wishlist-modal, .wishlist-overlay").click(function(e){
         e.preventDefault();
         $(".wishlist-overlay").fadeOut(300);
         $(".wishlist-modal").fadeOut(300);

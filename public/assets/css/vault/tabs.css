@@ -32,11 +32,11 @@
     top: 0;
 }
 .mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonLeft {
-    background: url("/assets/images/vault/template/functions/slider-arrow-left.svg") no-repeat center center;
+    background: url("/assets/vault/template/functions/slider-arrow-left.svg") no-repeat center center;
     background-size: contain;
 }
 .mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonRight {
-    background: url("/assets/images/vault/template/functions/slider-arrow-right.svg") no-repeat center center;
+    background: url("/assets/vault/template/functions/slider-arrow-right.svg") no-repeat center center;
     background-size: contain;
 }
 .mCSB_scrollTools .mCSB_buttonLeft:hover, .mCSB_scrollTools .mCSB_buttonRight:hover {

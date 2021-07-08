@@ -62,9 +62,6 @@
 .contactWrap .formContain form textarea {
     border: 1px solid #d6d6d6;
     border-radius: 0;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 40px;
 }
 .contactWrap .formContain form button {
     margin-top: 20px;

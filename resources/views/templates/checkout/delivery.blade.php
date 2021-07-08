@@ -314,6 +314,11 @@ address.shipping-address p *,
 
 						@if( $user->addresses && count( $user->addresses ) > 0 )
 								@include( 'templates.checkout.ecommerce.checkout.step2._components.address_rows.cart_addresses' )
+
+								@if( class_exists( 'OrderCollection' ) )
+									@include( 'order_collection::components.step2_add_in.section' )
+								@endif
+
 						@else
 								@include( 'template.checkout.ecommerce.checkout.step2._components.address_rows.add_address' )
 						@endif

@@ -63,17 +63,20 @@ address.shipping-address p *,
   }
 
   // Deduction of STORE CREDIT
-  $storeCreditUpdate = (object) StoreCredit::getUsersStoreCredits( auth()->user() );
-  $walletMaxTotal = $storeCreditUpdate->walletMaxTotal;
+  if ( class_exists('StoreCredit') ) {
+    $cart = StoreCredit::preRender();
 
-  if ( $order->store_credit_value == 0 || $order->store_credit_value == null ) {
-    $creditTotal = $walletMaxTotal;
+    $storeCreditUpdate = (object) StoreCredit::getUsersStoreCredits( auth()->user() );
+    $walletMaxTotal = $storeCreditUpdate->walletMaxTotal;
+
+    if ( $order->store_credit_value == 0 || $order->store_credit_value == null ) {
+      $creditTotal = $walletMaxTotal;
+    } else {
+      $creditTotal = $order->store_credit_value;
+    }
   } else {
-    $creditTotal = $order->store_credit_value;
+    $creditTotal = floatval(0.0);
   }
-
-  $subTotal -= ( $creditTotal + $couponTotal + $discountTotal );
-  $subTotal += $shippingTotal;
 
   $cart->calculateOrderTotal();
   $cart->fresh();
@@ -143,7 +146,7 @@ address.shipping-address p *,
                         <div class="payment-info-block row @if( in_array( 'PAYFAST', $initOpenOption ) ) initialOpenOption @endif">
                           @if ( $config['payfast_payment_option']['is_test'] )
                           {{-- SANDBOX Mode --}}                            
-                            <form action="https://sandbox.payfast.co.za/eng/process" method="POST">
+                          <form action="https://sandbox.payfast.co.za/eng/process" method="POST">
                             <input type="hidden" name="merchant_id" value="10000100">
                             <input type="hidden" name="merchant_key" value="46f0cd694581a">
                             <input type="hidden" name="item_name" value="Order ID: {{ $cart->id }}">
@@ -152,17 +155,17 @@ address.shipping-address p *,
                             <input type="hidden" name="return_url" value="{{url('/')}}/success">
                             <input type="hidden" name="cancel_url" value="{{url('/')}}/error">
                             <input type="hidden" name="notify_url" value="{{url('/')}}/notify">
-                            {{-- <input type="submit" value="Pay with Payfast" /> --}}
                             <table>
-                                <tr>
-                                  <td colspan="2" align="center">
-                                    <input type="image" src="https://www.payfast.co.za/images/buttons/light-small-paynow.png" width="165" height="36" alt="Pay Now" title="Pay Now with PayFast">
-                                  </td>
-                                </tr>
-                              </table>
-                            </form>
+                              <tr>
+                                <td colspan="2" align="center">
+                                  <input type="image" src="https://www.payfast.co.za/images/buttons/light-small-paynow.png" width="165" height="36" alt="Pay Now" title="Pay Now with PayFast">
+                                </td>
+                              </tr>
+                            </table>
+                          </form>
+
                           @elseif( $config['payfast_payment_option']['live'] )
-                          {{-- LIVE Mode --}}
+                            {{-- LIVE Mode --}}
                             <script language="JavaScript" type="text/javascript">
                               function click_{{ $config['payfast_payment_option']['live']['frontendUUID'] }}(aform_reference) {
                                 var aform = aform_reference;
@@ -206,27 +209,18 @@ address.shipping-address p *,
                         </h2>
                         <div class="payment-info-block row @if( in_array( 'OZOW', $initOpenOption ) ) initialOpenOption @endif">
                             <div class="payment-info-form col-12 col-md-10">
-                                <p>Ozow is an instant payment solution that facilitates online EFT payments across
-                                    South Africa’s major banks, including ABSA, Capitec, FNB, Investec, Nedbank, and
-                                    Standard Bank.</p>
+                                <p>Ozow is an instant payment solution that facilitates online EFT payments across South Africa’s major banks, including ABSA, Capitec, FNB, Investec, Nedbank, and Standard Bank.</p>
                                 <p><strong>HOW DOES IT WORK?</strong></p>
                                 <ul>
                                     <li>Click on “Ozow Instant EFT” to start the payment process.</li>
                                     <li>Select your bank and log in using your internet banking credentials.</li>
-                                    <li>Select an account to pay from, and your order number will be automatically
-                                        added as your reference.</li>
-                                    <li>Your bank will send you an OTP (One Time Pin) or mobile authentication
-                                        message to verify the payment.</li>
+                                    <li>Select an account to pay from, and your order number will be automatically added as your reference.</li>
+                                    <li>Your bank will send you an OTP (One Time Pin) or mobile authentication message to verify the payment.</li>
                                     <li>Enter the OTP or accept the authentication message to complete the payment.
                                     </li>
                                 </ul>
-                                <p>Once the payment is complete, we’ll send you an email confirming your order and
-                                    direct you to the Order confirmation page.<br> No further action is required
-                                    from your side!<br> Capitec users: Note that there’s a transaction limit of
-                                    R14000 per order.</p>
-                                <p>By clicking "Pay via iPay" you confirm you have read and accept our <a
-                                        href="{{ url('terms-conditions') }}" target="_blank">T&Cs</a></p>
-
+                                <p>Once the payment is complete, we’ll send you an email confirming your order and direct you to the Order confirmation page.<br> No further action is required from your side!<br> Capitec users: Note that there’s a transaction limit of R14000 per order.</p>
+                                <p>By clicking "Pay via iPay" you confirm you have read and accept our <a href="{{ url('terms-conditions') }}" target="_blank">T&Cs</a></p>
                             </div>
                             @php
                             $hash = hash("SHA512",
@@ -239,34 +233,6 @@ address.shipping-address p *,
                     </div>
                     @endif
 
-                    {{--
-                        <!-- NOT POSSIBLE HERE - Not enough credit and would require a partner payment method to complete checkout -->
-                        @if ( $config['store_credit_checkout_only_option'] )
-                        <div class="col-12 payment-option-block mb-3">
-                            <h2 class="mb-lg-3 mb-2">
-                                <i class="fa fa-circle @if( in_array( 'Store Credit', $initOpenOption ) ) active @endif"></i>
-                                <div class="payment-image-block">
-                                @foreach($pay_options AS $option)
-                                  @if( strtolower( $option->title ) == 'store credit')
-                                    {{ ucwords( $option->title ) }}
-                                    @isset( $option->link_image )
-                                    <img class="img-fluid" src="/{{ $option->link_image }}" />
-                                    @endisset
-                                  @endif
-                                @endforeach
-                                </div>
-                            </h2>
-                            <div class="payment-info-block row no-gutters @if( in_array( 'Store Credit', $initOpenOption ) ) initialOpenOption @endif">
-                                <form action="{{ url('storeCredit') }}">
-                                    {!! Form::token() !!}
-                                    {!! Form::hidden('orderId', $cart->id) !!}
-                                    {!! Form::hidden('payment_method', 'StoreCredit') !!}
-                                    <input class="form-control px-5 ml-0" type="submit" value="Checkout with Store Credit" />
-                                </form>
-                            </div>
-                        </div>
-                        @endif
-                    --}}
                     <!-- EFT -->
                     @if( !empty($config['eft_payment_option']['enable']) || $config['eft_payment_option']['enable'])
                     <div class="col-12 payment-option-block mb-3">
@@ -285,7 +251,7 @@ address.shipping-address p *,
                             <div class="payment-info-form col-12 col-md-10">
                                 {!! $site_settings->eft_info !!}
                             </div>
-                            <form action="{{ url('eft') }}">
+                            <form id="electronicFundTransfer" action="{{ url('eft') }}" class="">
                                 {!! Form::token() !!}
                                 {!! Form::hidden('orderId', $cart->id) !!}
                                 <input type="submit" value="Pay via EFT" />
@@ -318,6 +284,7 @@ address.shipping-address p *,
 
                             {!! Form::hidden('orderId', $cart->id) !!}
                             {!! Form::hidden('payment_method', 'StoreCredit') !!}
+                            {!! Form::hidden('store_credit_value', $cart->store_credit_value) !!}
 
                             {!! Honeypot::generate('my_name', 'my_time') !!}
 
