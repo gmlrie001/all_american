@@ -3,7 +3,7 @@
   $shipping_options = [];
   $shipping_error   = NULL;
 
-  $option = $shipperOpt;
+  $option = $shipperOpt = $areas;
   $shipping_options[$shipper] = $option;
 
 @endphp

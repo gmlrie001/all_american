@@ -144,6 +144,16 @@ return [
       ], 
       'options' => [], 
     ],
+    'Collection' => [
+      'courier' => 'Collection', 
+      'courier_enabled' => 1,
+      'courier_package' => [
+        'shipment_courier' => \App\Models\CollectionPoint::class, 
+        'tcg_checkout_helper' => NULL, 
+        'courier_default' => "", 
+      ], 
+      'options' => [], 
+    ],
   ],
 
   'free_shipping_enabled' => !1,

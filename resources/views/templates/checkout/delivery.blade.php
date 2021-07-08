@@ -315,7 +315,7 @@ address.shipping-address p *,
 						@if( $user->addresses && count( $user->addresses ) > 0 )
 								@include( 'templates.checkout.ecommerce.checkout.step2._components.address_rows.cart_addresses' )
 
-								@if( class_exists( 'OrderCollection' ) )
+								@if ( $config['external_courier_companies']['Collection']['courier_enabled'] && class_exists( 'OrderCollection' ) )
 									@include( 'order_collection::components.step2_add_in.section' )
 								@endif
 

@@ -87,14 +87,14 @@
             //         '', 
             //     ]
             // ],  
-            // 'collection_points' => [
-            //     'title' => 'Collection Points', 
-            //     'icon' => 'fa fa-car', 
-            //     'specific_id' => '', 
-            //     'sub_database_tables' => [
-            //         '', 
-            //     ]
-            // ],  
+            'collection_points' => [
+                'title' => 'Collection Points', 
+                'icon' => 'fa fa-car', 
+                'specific_id' => '', 
+                'sub_database_tables' => [
+                    '', 
+                ]
+            ],  
         ], 
         'tab_database_tables' => [
             'basket_products', 

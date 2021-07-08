@@ -160,6 +160,7 @@ address.shipping-address p *,
               $courierName = 'Collection'; // $config['external_courier_companies']['Collection']['courier'];
               $shipperOpt = $collection_points; // new \StdClass();
             }
+            // dd( __FILE__, __LINE__, $this, get_defined_vars() );
           @endphp
 
           <form class="col-12">
@@ -170,10 +171,11 @@ address.shipping-address p *,
                 @php
                   $opts = $shipperOpt; // $courier['ppapi_tcg'];
                   $shipperOpt = $opts;
-                  // dd( __FILE__, __LINE__, get_defined_vars(), @isset( $collection_points ) );
                 @endphp
 
-                @include( 'order_collection::components.collection.options' )
+                @if ( $config['external_courier_companies']['Collection']['courier_enabled'] && class_exists( 'OrderCollection' ) )
+                  @include( 'order_collection::components.collection.options' )
+                @endif
 
               @else
               
