@@ -50,31 +50,33 @@ return [
     'Aramex' => [
       'courier' => 'Aramex', 
       'courier_enabled'  => 0,
+      'courier_package' => [
+      ], 
       'aramex_shipping_package' => [
-        "\\Vault\\ShipmentCourier",
-        "\\Vault\\CourierAramex", 
+        'shipment_courier'       => "\\Vault\\ShipmentCourier", 
+        'aramex_checkout_helper' => [
+          \App\Helpers\AramexShipping\AramexAPI::class, 
+          \App\Helpers\AramexShipping\AramexPostalCodeValidation::class, 
+        ],
+        'courier_aramex'         => "\\Vault\\CourierAramex", 
       ], 
       'options' => [
         'aramex_credentials' => [
           'AccountCountryCode' => 'ZA',
-          'AccountEntity'	     => 'CPT',
-          'AccountNumber' 	   => '251333',
-          'AccountPin'	       => '654654',
-          'UserName'           => 'daniel@africanoils.co.za',
-          'Password'           => 'Password@123',
+          'AccountEntity'	     => '',
+          'AccountNumber' 	   => '',
+          'AccountPin'	       => '',
+          'UserName'           => '@',
+          'Password'           => '',
           'Version'            => '1.0',
       
-          //    'rateCalcEndPoint'    => NULL,
-          'rateCalcEndPoint'    => 'GetDomesticBestService',
           'ProductGroup'        => 'DOM',
           'PaymentType'         => 'P',
           'ProductType'         => 'OND', // PPX, DPX, GPX, EPX
-          //     'ServiceType' => '', // 'PEC|ONP'
-          //     'ServiceCodeTrans' => [
-          //       'PEC' => 'Domestic Economy Shipping',
-          //       'ONP' => 'Domestic Overnight Shipping',
-          //     ],
-          // 
+          'rateCalcEndPoint'    => NULL,
+          // Monzamedia specific endpoint specially created for the Vault
+            // 'rateCalcEndPoint'    => 'GetDomesticBestService',
+
           // Vault SPECIFIC implementation of Aramex ZA for getting best rates for domestic shipping
           // Leave empty to activate Vault SPECIFIC implementation.
           'ServiceType'       => '',
@@ -86,27 +88,27 @@ return [
             'SMP' => 'Same day shipment',
           ],
       
-          'OriginStreetAddress' => '7 Section Street',
-          'OriginBusinessPark'  => 'Shop No. 4, Section Street Business Park',
+          'OriginStreetAddress' => '',
+          'OriginBusinessPark'  => '',
           'OriginOtherAddress'  => NULL,
           'OriginCountryCode'   => 'ZA',
           'OriginCountryName'   => 'South Africa',
           'OriginState'         => 'Western Cape',
-          'OriginSuburb'        => 'Brooklyn',
+          'OriginSuburb'        => '',
           'OriginCity'          => 'Cape Town',
-          'OriginPostCode'      => '7405',
+          'OriginPostCode'      => '',
       
-          'SenderName'          => 'Daniel Kantor',
-          'SenderReference1'    => 'African Oils Ecommerce Online Order: https://africanoils.co.za',
-          'SenderReference2'    => 'None',
-          'SenderContactPerson' => 'Daniel Kantor',
-          'SenderContactNumber' => '07699139873',
-          'SenderContactEmail'  => 'daniel@africanoils.co.za',
+          'SenderName'          => '',
+          'SenderReference1'    => '',
+          'SenderReference2'    => null,
+          'SenderContactPerson' => '',
+          'SenderContactNumber' => '',
+          'SenderContactEmail'  => '@',
       
           'isDocsDefault'       => false,
-          'reqInsDefault'       => false,
-          'insValDefault'       => 0,
-          'wbTmplDefault'       => 9201, // 9202
+          'reqInsDefault'       => false, // requires insurance
+          'insValDefault'       => 0, // default insurance amount if above is true
+          'wbTmplDefault'       => 9201, // -> via URL and 9202 -> , 
           'wbFtchDefault'       => 'URL', // null
       
           'shopWaybillPrefix'   => '',
@@ -114,36 +116,42 @@ return [
         ],
       ], 
     ], 
+  
     'TheCourierGuy' => [
       'courier' => 'Ppapi_tcg', 
       'courier_enabled' => 0,
       'courier_package' => [
-        'shipment_courier' => "\\Vault\\ShipmentCourier", 
-        'tcg_checkout_helper' => \App\Helpers\TheCourierGuyParcelPerfectAPI\CheckoutServices\DeliveryOptionsService::class, 
-        'courier_tcg' => "\\Vault\\CourierTcg", 
+        'shipment_courier'    => "\\Vault\\ShipmentCourier", 
+        'tcg_checkout_helper' => [
+          \App\Helpers\TheCourierGuyParcelPerfectAPI\CheckoutServices\DeliveryOptionsService::class, 
+        ], 
+        'courier_tcg'         => "\\Vault\\CourierTcg", 
       ], 
       'options' => [],
-    ],  
+    ], 
+    
     'ParcelNinja' => [
       'courier' => 'Parcel_ninja', 
       'courier_enabled' => 0,
       'courier_package' => [
-        'shipment_courier' => "\\Vault\\ShipmentCourier", 
-        'tcg_checkout_helper' => \App\Helpers\TheCourierGuyParcelPerfectAPI\CheckoutServices\DeliveryOptionsService::class, 
-        'courier_tcg' => "\\Vault\\CourierTcg", 
+        'shipment_courier'   => "\\Vault\\ShipmentCourier", 
+        'pn_checkout_helper' => [], 
+        'courier_pn'         => "\\Vault\\CourierParcelNinja", 
       ], 
       'options' => [], 
     ], 
+
     'Default' => [
       'courier' => 'Default', 
       'courier_enabled' => 1,
       'courier_package' => [
-        'shipment_courier' => "\\App\\Models\\ShippingOption", 
+        'shipment_courier' => \App\Models\ShippingOption::class, 
         'tcg_checkout_helper' => NULL, 
         'courier_default' => "", 
       ], 
       'options' => [], 
-    ],
+    ], 
+
     'Collection' => [
       'courier' => 'Collection', 
       'courier_enabled' => 1,
@@ -157,41 +165,25 @@ return [
   ],
 
   'free_shipping_enabled' => !1,
-  'free_shipping_value_threshold_default' => 100.00,
+  'free_shipping_value_threshold_default' => 999.00,
+  // SPECIAL OPTIONS -> Rate/Shipping Cost Specific
   'shipment_options' => [
-    // SPECIAL OPTIONS -> Rate/Shipping Cost Specific
-    'enable_subsidize' => 0,
     // Absorb/Wave %_percentage_% of the shipping cost/expense
     //    0 => No cover; (or NULL);
     //   45 => Percentage subsidize;
     //  100 => Full cover
-    'absorb_shipping_cost' => 100,
+    'enable_subsidize' => 0,
+
     // Subdize percentage <= 100 and > 0 - e.g. 45;
     // 'shipment_subsidize_percent'  => null,
     // Override Shipping rate cost with this Value > 0
     // 'override_shipment_cost_with' => null,
-    // /
+    'absorb_shipping_cost' => 100,
   ],
+
 
   'payment_options' => [
     'model' => \App\Models\PaymentOption::class,
-  //   'filters' => [
-  //     ['where'=>[
-  //       'status', 'PUBLISHED'
-  //     ],
-  //     ['orWhere'=>[
-  //       'status', 'SCHEDULED'=>[
-  //         'where'=>[
-  //           'status_date', '>', strtotime('now')
-  //         ]
-  //       ]
-  //     ],
-  //     ['status'=>[
-  //       'SCHEDULED'=>[
-  //         'status_date'=>''
-  //       ]
-  //     ]
-  //   ],
   ],
   'payment_options_enabled' => [
     'eft_payment_option', 
@@ -210,57 +202,77 @@ return [
 
   'payfast_payment_option' => [
     'enable' => 1, 
-    'is_test' => !0,
+    'is_test' => !1,
+
     'sandbox' => [
-      'url' => 'https://sandbox.payfast.co.za/eng/process',
-      'merchant_id'  => '10000100', 
-      'merchant_key' => '46f0cd694581a', 
+      'url'          => env( 'PAYFAST_WEBSERVICE_URL_SANDBOX', 'https://sandbox.payfast.co.za/eng/process' ),
+      'merchant_id'  => env( 'PAYFAST_MERCHANT_ID_SANDBOX', '10000100' ), 
+      'merchant_key' => env( 'PAYFAST_MERCHANT_KEY_SANDBOX', '46f0cd694581a' ), 
     ],
     'live' => [
-      'frontendUUID' => 'a7275aa3b7abd9c3f49f369ad392987f',
-      'url' => 'https://www.payfast.co.za/eng/process',
-      'cmd' => '_paynow', 
-      'receiver' => '15514262', 
-      'merchant_key' => '5gajd08znxwe4', 
+      'url'          => env( 'PAYFAST_WEBSERVICE_URL', 'https://www.payfast.co.za/eng/process' ),
+      'receiver'     => env( 'PAYFAST_MERCHANT_RECEIVER', '15514262' ), 
+      'merchant_key' => env( 'PAYFAST_MERCHANT_KEY', '5gajd08znxwe4' ), 
+      'cmd'          => env( 'PAYFAST_WEBSERVICE_CMD', '_paynow' ), 
+      'frontendUUID' => env( 'PAYFAST_MERCHANT_CLIENT_UUID', 'a7275aa3b7abd9c3f49f369ad392987f' ),
     ],
+
     'COUNTRY_CODE' => 'ZA',
     'CURRENCY_CODE' => 'ZAR',
-    'TRANSACTION_REFERENCE' => '',
+
     'BANK_REFERENCE' => '',
-    'RETURN_URL' => env( 'APP_URL' ) . '/success', // success
-    'ERROR_URL' => env( 'APP_URL' ) . '/error',         // error
-    'CANCEL_URL' => env( 'APP_URL' ) . '/cart/view',     // cancel
+    'TRANSACTION_REFERENCE' => '',
+
+    'RETURN_URL' => env( 'APP_URL' ) . '/success',   // success
+    'ERROR_URL'  => env( 'APP_URL' ) . '/error',     // error
+    'CANCEL_URL' => env( 'APP_URL' ) . '/cart/view', // cancel
+    'NOTIFY_URL' => env( 'APP_URL' ) . '/notify',    // notifications
   ],
 
   'ozow_payment_option' => [
-    'enable' => 1,
-    'IS_TEST' => true,
-    'SITE_CODE' => 'AFR-AFR-016',
-    'SECRET_KEY' => '676886137f4d438a8b8dea986588dabd',
-    'OZOW_PRIVATE' => '676886137f4d438a8b8dea986588dabd',
-    'OZOW_APIKEY' => '7a20ff57466e44c29a4443f446f53555',
+    'enable' => !1,
+    'is_test' => !1,
+
+    'SITE_CODE'    => env( 'OZOW_SITE_CODE', 'AFR-AFR-016' ),
+    'SECRET_KEY'   => env( 'OZOW_SECRET_KEY', '676886137f4d438a8b8dea986588dabd' ),
+    'OZOW_PRIVATE' => env( 'GOOGLE_PRIVATE_KEY', '676886137f4d438a8b8dea986588dabd' ),
+    'OZOW_APIKEY'  => env( 'GOOGLE_API_KEY', '7a20ff57466e44c29a4443f446f53555' ),
+
     'COUNTRY_CODE' => 'ZA',
     'CURRENCY_CODE' => 'ZAR',
-    'BANK_REFERENCE' => 'AO',
-    'TRANSACTION_REFERENCE' => 'AO',
+
+    'BANK_REFERENCE' => '',
+    'TRANSACTION_REFERENCE' => '',
+
     'RETURN_URL' => env( 'APP_URL' ) . '/ipay?orderId=', // success
-    'ERROR_URL' => env( 'APP_URL' ) . '/error',         // error
+    'ERROR_URL'  => env( 'APP_URL' ) . '/error',         // error
     'CANCEL_URL' => env( 'APP_URL' ) . '/cart/view',     // cancel
     'NOTIFY_URL' => env( 'APP_URL' ) . '/ipay/notify',   // notifications
   ],
   
-  // 'google_sigin_enable' => 0,
-  // 'google_sigin' => [
-  //   'oauth_clientId' => '1024907060635-n9dkce27h4f4a5a4g9bh6jep2cmerf6t.apps.googleusercontent.com',
-  //   'oauth_secretId' => 'dXaXDebv2TlYH6m6wiU59hue',
-  //   'oauth_redirect' => env('APP_URL').'/login/google/callback'
+  // 'google' => [
+    // 'google_recaptcha_enable' => !1,
+    // 'google_recaptcha' => [
+    //   'service'    => \App\Helpers\GoogleReCaptcha\GoogleRecaptchaHelper::class,
+    //   'client_key' => env( 'GOOGLE_CLIENT_KEY', null ),
+    //   'secret_key' => env( 'GOOGLE_SECRET_KEY', null ),
+    // ],
+
+    // 'google_sigin_enable' => !1,
+    // 'google_sigin' => [
+    //   'oauth_clientId' => '1024907060635-n9dkce27h4f4a5a4g9bh6jep2cmerf6t.apps.googleusercontent.com',
+    //   'oauth_secretId' => 'dXaXDebv2TlYH6m6wiU59hue',
+    //   'oauth_redirect' => env('APP_URL').'/login/google/callback'
+    // ],
   // ],
 
-  // 'facebook_sigin_enable' => 0,
-  // 'facebook_sigin' => [
-  //   'oauth_clientId' => '',
-  //   'oauth_secretId' => '',
-  //   'oauth_redirect' => env('APP_URL').'/login/facebook/callback'
+  // 'facebook' => [
+    // 'facebook_sigin_enable' => !1,
+    // 'facebook_sigin' => [
+    //   'oauth_clientId' => '',
+    //   'oauth_secretId' => '',
+    //   'oauth_redirect' => env('APP_URL').'/login/facebook/callback'
+    // ],
   // ],
 
-  ];
+];

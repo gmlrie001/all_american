@@ -51,7 +51,7 @@ footer > .row {
                 <div class="col-12 col-md-12 col-lg-5 col-xl-4 px-0">
                     <button type="submit" class="btn smlBtn">Signup</button>
                 </div>
-                {!! Honeypot::generate('my_name', 'my_time') !!}
+                {!! Honeypot::generate('my_name_subscribe', 'my_time_subscribe') !!}
                 {!! Form::close() !!}
             </div>
         </div>
