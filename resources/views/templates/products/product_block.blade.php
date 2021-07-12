@@ -6,7 +6,8 @@
     @endif
     <div class="col-12 block">
         @if( $product->product_thumbnail )
-            <img class="img-fluid" src="/{{$product->product_thumbnail}}" alt="">
+            @php list( , , , $attrWidthAndHeight ) = getimagesize( public_path( ltrim( $product->product_thumbnail, '/' ) ) ); @endphp
+            <img class="img-fluid" {!! $attrWidthAndHeight !!} src="{{ url( ltrim( $product->product_thumbnail, '/' ) ) }}" @isset( $product->title ) alt="{{ $product->title }}" @endisset>
         @else
             @include(
                 'templates.placeholders.simple_image_placeholders',

@@ -12,24 +12,27 @@
  *
  */
 
-$class = ( $class != NULL || $class || gettype( $class ) === 'string' ) ? $class : '';
-$width = ( $width != NULL || $width || gettype( $width ) === 'integer' ) ? $width : 800;
+$class  = ( $class != NULL || $class || gettype( $class ) === 'string' ) ? $class : '';
+$width  = ( $width != NULL || $width || gettype( $width ) === 'integer' ) ? $width : 800;
 $height = ( $height != NULL || $height || gettype( $height ) === 'integer' ) ? $height : 600;
-$text = ( $text != NULL || $text || gettype( $text ) === 'string' ) ? $text : '+';
+$text   = ( $text != NULL || $text || gettype( $text ) === 'string' ) ? $text : '+';
 
 $placeholdit_path = 'https://via.placeholder.com/'.$width.'x'.$height.'.png&text='.$text;
 
-$logo_full_path = 'assets/placeholder/vault_placeholder_main_logo.svg';
-$verify_location = file_exists( $_SERVER['DOCUMENT_ROOT'].'/'.$logo_full_path );
-$use_vault_logo = ( $use_vault_logo ) ? $use_vault_logo : !1;
+$logo_full_path   = 'assets/placeholder/vault_placeholder_main_logo.svg';
+$verify_location  = file_exists( $_SERVER['DOCUMENT_ROOT'].'/'.$logo_full_path );
+$use_vault_logo   = ( $use_vault_logo ) ? $use_vault_logo : !1;
 $use_placehold_it = ( $use_placehold_it ) ? $use_placehold_it : !1;
 @endphp
 
 @if ( isset( $imgvar ) )
-
   @if( ! is_null( $imgvar ) && file_exists( public_path( $imgvar ) ) ) {{-- && file_exists( public_exists( $imgvar ) ) --}}
+    @php
+      list( , , , $attrWidthAndHeight ) = getimagesize( public_path( ltrim( $imgvar, '/' ) ) );
+    @endphp
     <img 
       class="@if( NULL != $imgclasses ) {{ $imgclasses }} @endif" 
+      {!! $attrWidthAndHeight !!}
       src="{{ url( ltrim( $imgvar, '/' ) ) }}" 
       alt="{{ $imgtitle }}" 
       @if( Request::is('blog*') ) style="float:left;margin-right:1rem;margin-bottom:0.618rem;" @endif
@@ -48,11 +51,9 @@ $use_placehold_it = ( $use_placehold_it ) ? $use_placehold_it : !1;
     @endif
     
     @if( $verify_location && $use_vault_logo)
-      <img class="img-fluid position-absolute m-auto vault-placeholder-logo" alt="Vault Placeholder Logo" src="/{{ ltrim( $logo_full_path, '/' ) }}">
+      <img class="img-fluid position-absolute m-auto vault-placeholder-logo" alt="Vault Placeholder Logo" src="{{ url( ltrim( $logo_full_path, '/' ) ) }}">
     @endif
-    
     </div>
-
 @endif
 
 @if( $verify_location && $use_vault_logo )
@@ -95,11 +96,20 @@ $use_placehold_it = ( $use_placehold_it ) ? $use_placehold_it : !1;
     }
 
     document.addEventListener('DOMContentReady', function(){
-      var stylingString = `@media only screen and (max-width:992px){.position-relative{clear:both!important;;float:unset!important;}}.blog-specific{max-width:100%;width:100%;}.vault-placeholder-logo {max-width:80px;max-height:80px;height:auto;top:0;bottom:0;left:0;right:0;} @media only screen and (max-width:992px) { .vault-placeholder-logo {max-width: 100%;width: 100%;} }`,
+      var stylingString = `@media only screen and (max-width:992px){
+          .position-relative{clear:both!important;;float:unset!important;}
+      }
+      .blog-specific{max-width:100%;width:100%;}
+      .vault-placeholder-logo {max-width:80px;max-height:80px;height:auto;top:0;bottom:0;left:0;right:0;} 
+      @media only screen and (max-width:992px) { 
+          .vault-placeholder-logo {max-width: 100%;width: 100%;}
+      }`,
+
       head = document.getElementsByTagName('head')[0];
 
       try {
         addInlineCss( stylingString );
+
       } catch( error ) { console.warn( "\r\n" + error + "\r\n" ); }
     });
   </script>
