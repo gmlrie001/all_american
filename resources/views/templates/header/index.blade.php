@@ -58,10 +58,15 @@
             <div class="col-4 image">
                 @include( 'templates.placeholders.simple_image_placeholders',
                   [
-                    'imgvar' => $cart_product->product->product_image, 'imgtitle' => $cart_product->product->title,
+                    'imgvar' => $cart_product->product->product_image, 
+                    'imgtitle' => $cart_product->product->title,
                     'imgclasses' => 'img-fluid',
-                    'class' => '', 'width' => 800,'height' => 600, 'text' => '+',
-                    'use_vault_logo' => true, 'use_placehold_it' => true
+                    'class' => '', 
+                    'width' => 800, 
+                    'height' => 600, 
+                    'text' => '+',
+                    'use_vault_logo' => true, 
+                    'use_placehold_it' => true
                   ]
                 )
                 {{-- <img class="img-fluid" src="/{{$cart_product->product->product_image}}" alt="{{$cart_product->product->title}} "> --}}
@@ -69,38 +74,35 @@
             <div class="col-8">
                 <div class="row title">
                     <div class="col-12 pr-5">
-                        <h2>{{$cart_product->product->title}}
+                        <h2 class="mb-lg-2">{{$cart_product->product->title}}
                             <a href="/cart/delete/{{$cart_product->id}}" class="deletCartDropdown font-weight-medium border-0 outline-0 boxshadow-0 mt-0">
-                                <i class="fa fa-trash"></i>
+                                <i class="fa fa-trash" style="font-family:'Font Awesome 5 Free' !important;"></i>
                             </a>
                         </h2>
-                        <h3>SKU:<span> {{$cart_product->code}}</span></h3>
+                        <h3 class="my-lg-1">SKU:<span> {{$cart_product->code}}</span></h3>
                     </div>
                 </div>
                 <div class="row price mt-0">
-                    <div class="col-7 input-group">
-                        <form action="/cart/update/{{$cart_product->id}}" method="post" data-parsley-validate="" class="no-submit row">
+                    <div class="col-5 input-group">
+                        <form action="/cart/update/{{$cart_product->id}}" method="post" data-parsley-validate="" class="no-submit row" style="background-color:transparent;color:inherit;">
                             {!!Form::token()!!}
                             <div class="input-append d-flex flex-row spinner" data-trigger="spinner">
-                                <input type="text" value="{{ $cart_product->quantity }}" name="quantity" data-rule="quantity" class="checkout-quantity-input w-50" style="max-height:40px;line-height:40px;">
-                                <div class="add-on" style="height:40px;line-height:40px;">
-                                    <a href="javascript:;" class="spin-up" data-spin="up" style="max-height:20px;line-height:20px;">
-                                        <i class="fa fa-caret-up"></i>
+                                <input type="text" value="{{ $cart_product->quantity }}" name="quantity" data-rule="quantity" class="checkout-quantity-input" style="max-height:30px;line-height:30px;max-width:30px;color:#cd8926;background-color:#c12136;">
+
+                                <div class="add-on" style="height:30px;line-height:30px;color:#cd8926;">
+                                    <a href="javascript:void(0);" class="spin-up" data-spin="up" style="max-height:10px;line-height:10px;color:inherit;">
+                                        <i class="fa fa-caret-up" style="font-family:'Font Awesome 5 Free'!important;color:inherit;"></i>
                                     </a>
-                                    <a href="javascript:;" class="spin-down" data-spin="down" style="max-height:20px;line-height:20px;">
-                                        <i class="fa fa-caret-down"></i>
+                                    <a href="javascript:void(0);" class="spin-down" data-spin="down" style="max-height:10px;line-height:10px;color:inherit;">
+                                        <i class="fa fa-caret-down" style="font-family:'Font Awesome 5 Free'!important;color:inherit;"></i>
                                     </a>
                                 </div>
+
                             </div>
                         </form>
-                    {{--
-                        <input type="button" value="-" class="button-minus" data-field="quantity">
-                        <input type="number" step="1" max="" value="{{ $cart_product->quantity }}" name="quantity" class="quantity-field">
-                        <input type="button" value="+" class="button-plus" data-field="quantity">
-                    --}}
                     </div>
-                    <div class="col-5">
-                        <h5 style="line-height:40px;max-height:40px;">R {{$cart_product->price}}</h5>
+                    <div class="col-auto">
+                        <h5 style="font-size:1rem;line-height:30px;max-height:30px;margin:auto!important;">R {{$cart_product->price}}</h5>
                     </div>
                 </div>
             </div>
@@ -131,7 +133,7 @@
                 <input type="text" name="search" class="form-control" value="{{ request()->get('search') }}"
                     placeholder="Search products...">
                 <div class="input-group-append">
-                    <button class="btn" type="submit"><span class="fa fa-search"></span></button>
+                    <button class="btn" type="submit"><span class="fa fa-search" style="font-family:'Font Awesome 5 Free' !important;"></span></button>
                 </div>
                 {!! Form::close() !!}
             </div>
@@ -139,10 +141,15 @@
                 <a href="/">
                     @include( 'templates.placeholders.simple_image_placeholders',
                       [
-                        'imgvar' => $site_settings->logo, 'imgtitle' => $site_settings->site_name,
+                        'imgvar' => $site_settings->logo, 
+                        'imgtitle' => $site_settings->site_name,
                         'imgclasses' => 'img-fluid',
-                        'class' => '', 'width' => 360,'height' => 80, 'text' => '+',
-                        'use_vault_logo' => true, 'use_placehold_it' => true
+                        'class' => '', 
+                        'width' => 360, 
+                        'height' => 80, 
+                        'text' => '+',
+                        'use_vault_logo' => true, 
+                        'use_placehold_it' => true
                       ]
                     )
                 </a>
@@ -181,7 +188,7 @@
                 <input type="text" name="search" class="form-control" value="{{ request()->get('search') }}"
                     placeholder="Search products...">
                 <div class="input-group-append">
-                    <button class="btn py-0" type="submit"><span class="fa fa-search"></span></button>
+                    <button class="btn py-0" type="submit"><span class="fa fa-search" style="font-family:'Font Awesome 5 Free' !important;"></span></button>
                 </div>
                 {!! Form::close() !!}
             </div>
@@ -255,7 +262,7 @@
             {!! Form::open(['url' => '/search', 'class' => 'input-group', 'method' => 'GET']) !!}
             <div class="input-group-append mw-100 w-100">
                 <input type="text" name="search" class="form-control" placeholder="Search products...">
-                <button class="btn" type="submit"><span class="fa fa-search"></span></button>
+                <button class="btn" type="submit"><span class="fa fa-search" style="font-family:'Font Awesome 5 Free' !important;"></span></button>
             </div>
             {!! Form::close() !!}
         </div>
