@@ -26,6 +26,7 @@ address.shipping-address p *,
 @endpush
 
 @php
+  /*
   if ( isset( $cart ) && ! isset( $order ) ) {
     $order = $cart;
   } elseif ( isset( $order ) && ! isset( $cart ) ) {
@@ -42,28 +43,101 @@ address.shipping-address p *,
   }
 
   // Deduction of DISCOUNTS
-  if ( $discount == null || $discount == 0 ) {
+  if ( $cart->discount == null || $cart->discount == 0 ) {
     $discountTotal = 0;
   } else {
-    $discountTotal = ( $discount_type == 0 ) ? $total_cost * ( $discount * 0.01 ) : $discount;
+    $discountTotal = ( $cart->discount_type == 0 ) ? $total_cost * ( $cart->discount * 0.01 ) : $cart->discount;
   }
 
   // Deduction of COUPON
-  if ( $order->coupon == 0 || $order->coupon == null ) {
+  if ( $cart->coupon_value == 0 || $cart->coupon_value == null ) {
     $couponTotal = 0;
   } else {
-    $couponTotal = ( $order->coupon_discount_type == 0 ) ? $subTotal * ( $order->coupon_discount * 0.01 ) : $order->coupon_discount;
+    $couponTotal = ( $cart->coupon_discount_type == 0 ) ? $subTotal * ( $cart->coupon_discount * 0.01 ) : $cart->coupon_value;
   }
 
   // Addition of SHIPPING COST
-  if ( $order->shipping_cost == 0 || $order->shipping_cost == null ) {
+  if ( $cart->shipping_cost == 0 || $cart->shipping_cost == null ) {
     $shippingTotal = 0;
   } else {
-    $shippingTotal = $order->shipping_cost;
+    $shippingTotal = $cart->shipping_cost;
   }
 
   // Deduction of STORE CREDIT
-  if ( class_exists('StoreCredit') ) {
+  if ( class_exists( 'StoreCredit' ) && 
+       method_exists( 'StoreCredit', 'preRender' ) 
+  ) {
+  
+  if ( class_exists( 'StoreCredit' ) ) {
+    $cart = StoreCredit::preRender();
+
+    $storeCreditUpdate = (object) StoreCredit::getUsersStoreCredits( auth()->user() );
+    $walletMaxTotal = $storeCreditUpdate->walletMaxTotal;
+
+    if ( $cart->store_credit_value == 0 || $cart->store_credit_value == null ) {
+      $creditTotal = $walletMaxTotal;
+
+    } else {
+      $creditTotal = $cart->store_credit_value;
+    }
+
+  } else {
+    $creditTotal = floatval(0.0);
+  }
+  */
+
+  // dd( __FILE__, __LINE__, get_defined_vars() );
+  // $cart->calculateOrderTotal();
+  // $cart->fresh();
+  // $subTotal = $cart->total;
+@endphp
+
+@php
+  if ( isset( $cart ) && ! isset( $order ) ) {
+    $order = $cart;
+  } elseif ( isset( $order ) && ! isset( $cart ) ) {
+    $cart  = $order;
+  }
+
+  $subTotal = $total_cost;
+  $subTotal = $order->subtotal;
+
+  // Number of Items in Cart
+  if (($cart_products != null || isset($cart_products)) && count($cart_products) > 0) {
+    $cart_total = (($cart_products != null || isset($cart_products)) && count($cart_products) > 0) 
+                  ? $cart_products->sum('quantity') : 0;
+  }
+
+  // Deduction of DISCOUNTS
+  if ( $order->discount == null || $order->discount == 0 ) {
+    $discountTotal = 0;
+  } else {
+    $discountTotal = ( $order->discount_type == 0 ) ? $total_cost * ( $order->discount * 0.01 ) : $order->discount;
+  }
+  $subTotal -= $discountTotal;
+
+  // Deduction of COUPON
+  if ( $order->coupon_value == 0 || $order->coupon_value == null ) {
+    $couponTotal = 0;
+  } else {
+    $couponTotal = ( $order->coupon_discount_type == 0 ) 
+                    ? $subTotal * ( $order->coupon_discount * 0.01 ) 
+                    : $order->coupon_value;
+  }
+  $subTotal -= $couponTotal;
+
+  // Addition of SHIPPING COST
+  $shippingTotal = 0;
+  $subTotal += $shippingTotal;
+  // if ( $order->shipping_cost == 0 || $order->shipping_cost == null ) {
+  //   $shippingTotal = 0;
+  // } else {
+  //   $shippingTotal = $order->shipping_cost;
+  //   $subTotal += $shippingTotal;
+  // }
+
+  // Deduction of STORE CREDIT
+  if ( class_exists( 'StoreCredit' ) ) {
     $cart = StoreCredit::preRender();
 
     $storeCreditUpdate = (object) StoreCredit::getUsersStoreCredits( auth()->user() );
@@ -71,17 +145,24 @@ address.shipping-address p *,
 
     if ( $order->store_credit_value == 0 || $order->store_credit_value == null ) {
       $creditTotal = $walletMaxTotal;
+
     } else {
       $creditTotal = $order->store_credit_value;
     }
+
   } else {
     $creditTotal = floatval(0.0);
   }
+  
+  // if ( $order->store_credit_value == 0 || $order->store_credit_value == null ) {
+  //    $creditTotal = 0;
+  // } else {
+  //    $creditTotal = $order->store_credit_value;
+  // }
+  // $subTotal -= $creditTotal;
 
-  $cart->calculateOrderTotal();
-  $cart->fresh();
-
-  $subTotal = $cart->total;
+  
+  // dd( __FILE__, __LINE__, get_defined_vars() );
 @endphp
 
 @section('content')
@@ -120,11 +201,13 @@ address.shipping-address p *,
                     ->orderBy('order', 'asc')
                   ->get();
 
+                  /*
                   $cart = $cart->calculateOrderTotal();
                   $cart->fresh();
+                  */
 
                   $subTotal = floatval( $cart->total );
-                  // dd( floatval( $subTotal ), $subTotal > floatval(0.0) );
+                  // dd( $cart, $cart->calculateOrderTotal()->total, get_defined_vars(), request()->all(), session()->all() );
                 @endphp
 
                 <div class="row">
