@@ -327,59 +327,60 @@ address.shipping-address p *,
 
 		<div class="col-12 col-lg-3 custom-checkout-padding">
 			<div class="row">
-
-        @php
-          if ( isset( $cart ) && ! isset( $order ) ) {
-            $order = $cart;
-          } elseif ( isset( $order ) && ! isset( $cart ) ) {
-            $cart  = $order;
-          }
-
-          $subTotal = $total_cost;
-          $subTotal = $order->subtotal;
-
-          // Number of Items in Cart
-          if (($cart_products != null || isset($cart_products)) && count($cart_products) > 0) {
-            $cart_total = (($cart_products != null || isset($cart_products)) && count($cart_products) > 0) 
-                          ? $cart_products->sum('quantity') : 0;
-          }
-
-          // Deduction of DISCOUNTS
-          if ( $discount == null || $discount == 0 ) {
-            $discountTotal = 0;
-          } else {
-            $discountTotal = ( $discount_type == 0 ) ? $total_cost * ( $discount * 0.01 ) : $discount;
-            $subTotal -= $discountTotal;
-          }
-
-          // Deduction of COUPON
-          if ( $order->coupon == 0 || $order->coupon == null ) {
-            $couponTotal = 0;
-          } else {
-            $couponTotal = ( $order->coupon_discount_type == 0 ) ? $subTotal * ( $order->coupon_discount * 0.01 ) : $order->coupon_discount;
-            $subTotal -= $couponTotal;
-          }
-
-          // Deduction of STORE CREDIT
-          if ( $order->store_credit_value == 0 || $order->store_credit_value == null ) {
-            $creditTotal = 0;
-          } else {
-            $creditTotal = $order->store_credit_value;
-            $subTotal -= $creditTotal;
-          }
-
-          // Addition of SHIPPING COST
-          $shippingTotal = 0;
-          $subTotal += $shippingTotal;
-          // if ( $order->shipping_cost == 0 || $order->shipping_cost == null ) {
-          //   $shippingTotal = 0;
-          // } else {
-          //   $shippingTotal = $order->shipping_cost;
-          //   $subTotal += $shippingTotal;
-          // }
-        @endphp
-
-        @include( 'templates.checkout.new_order_summary' )
+                @php
+                  if ( isset( $cart ) && ! isset( $order ) ) {
+                    $order = $cart;
+                  } elseif ( isset( $order ) && ! isset( $cart ) ) {
+                    $cart  = $order;
+                  }
+        
+                  $subTotal = $total_cost;
+                  $subTotal = $order->subtotal;
+        
+                  // Number of Items in Cart
+                  if (($cart_products != null || isset($cart_products)) && count($cart_products) > 0) {
+                    $cart_total = (($cart_products != null || isset($cart_products)) && count($cart_products) > 0) 
+                                  ? $cart_products->sum('quantity') : 0;
+                  }
+        
+                  // Deduction of DISCOUNTS
+                  if ( $discount == null || $discount == 0 ) {
+                    $discountTotal = 0;
+                  } else {
+                    $discountTotal = ( $discount_type == 0 ) ? $total_cost * ( $discount * 0.01 ) : $discount;
+                  }
+                  $subTotal -= $discountTotal;
+        
+                  // Deduction of COUPON
+                  if ( $order->coupon_value == 0 || $order->coupon_value == null ) {
+                    $couponTotal = 0;
+                  } else {
+                    $couponTotal = ( $order->coupon_discount_type == 0 ) 
+                                    ? $subTotal * ( $order->coupon_discount * 0.01 ) 
+                                    : $order->coupon_value;
+                  }
+                  $subTotal -= $couponTotal;
+        
+                  // Deduction of STORE CREDIT
+                  if ( $order->store_credit_value == 0 || $order->store_credit_value == null ) {
+                    $creditTotal = 0;
+                  } else {
+                    $creditTotal = $order->store_credit_value;
+                  }
+                  $subTotal -= $creditTotal;
+        
+                  // Addition of SHIPPING COST
+                  $shippingTotal = 0;
+                  $subTotal += $shippingTotal;
+                  // if ( $order->shipping_cost == 0 || $order->shipping_cost == null ) {
+                  //   $shippingTotal = 0;
+                  // } else {
+                  //   $shippingTotal = $order->shipping_cost;
+                  //   $subTotal += $shippingTotal;
+                  // }
+                @endphp
+        
+                @include( 'templates.checkout.new_order_summary' )
 
 				@if($order->coupon != null)
 					<div class="col-12 applied-coupon">
@@ -393,10 +394,10 @@ address.shipping-address p *,
 							<div class="col-12 available-coupons">
 									<h2>Available Coupon Codes</h2>
 									@foreach($available_coupons as $available_coupon)
-											<a href="/apply/coupon/{{$available_coupon->id}}">
-													{{$available_coupon->code}}
-													<i class="fa fa-plus"></i>
-											</a>
+										<a href="/apply/coupon/{{$available_coupon->id}}">
+											{{$available_coupon->code}}
+											<i class="fa fa-plus"></i>
+										</a>
 									@endforeach
 							</div>
 					@endif
