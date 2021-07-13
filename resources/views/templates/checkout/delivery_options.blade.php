@@ -65,31 +65,35 @@ address.shipping-address p *,
     $discountTotal = 0;
   } else {
     $discountTotal = ( $discount_type == 0 ) ? $total_cost * ( $discount * 0.01 ) : $discount;
-    $subTotal -= $discountTotal;
   }
+  $subTotal -= $discountTotal;
 
   // Deduction of COUPON
-  if ( $order->coupon == 0 || $order->coupon == null ) {
+  if ( $order->coupon_value == 0 || $order->coupon_value == null ) {
     $couponTotal = 0;
   } else {
-    $couponTotal = ( $order->coupon_discount_type == 0 ) ? $subTotal * ( $order->coupon_discount * 0.01 ) : $order->coupon_discount;
-    $subTotal -= $couponTotal;
+    $couponTotal = ( $order->coupon_discount_type == 0 ) 
+                    ? $subTotal * ( $order->coupon_discount * 0.01 ) 
+                    : $order->coupon_value;
   }
+  $subTotal -= $couponTotal;
 
   // Deduction of STORE CREDIT
   if ( $order->store_credit_value == 0 || $order->store_credit_value == null ) {
     $creditTotal = 0;
   } else {
     $creditTotal = $order->store_credit_value;
-    $subTotal -= $creditTotal;
   }
+  $subTotal -= $creditTotal;
 
   // Addition of SHIPPING COST
+  $shippingTotal = 0;
+  $subTotal += $shippingTotal;
   // if ( $order->shipping_cost == 0 || $order->shipping_cost == null ) {
-    $shippingTotal = 0;
+  //   $shippingTotal = 0;
   // } else {
-    // $shippingTotal = $order->shipping_cost;
-    $subTotal += $shippingTotal;
+  //   $shippingTotal = $order->shipping_cost;
+  //   $subTotal += $shippingTotal;
   // }
 @endphp
 
@@ -160,7 +164,6 @@ address.shipping-address p *,
               $courierName = 'Collection'; // $config['external_courier_companies']['Collection']['courier'];
               $shipperOpt = $collection_points; // new \StdClass();
             }
-            // dd( __FILE__, __LINE__, $this, get_defined_vars() );
           @endphp
 
           <form class="col-12">
@@ -245,8 +248,6 @@ address.shipping-address p *,
           </form>
         </div>
       </div>
-
-      {{-- dd( strtolower( $shipper ), get_defined_vars(), $this ) --}}
 
     @if ( strtolower( $shipper ) !== 'collection' && ( $can_assemble && sizeof($order->assemblyProducts) ) )
       <div class="row">
