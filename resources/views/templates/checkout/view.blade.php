@@ -330,24 +330,26 @@ address.shipping-address p *,
             $discountTotal = 0;
           } else {
             $discountTotal = ( $discount_type == 0 ) ? $total_cost * ( $discount * 0.01 ) : $discount;
-            $subTotal -= $discountTotal;
           }
+          $subTotal -= $discountTotal;
 
           // Deduction of COUPON
-          if ( $order->coupon == 0 || $order->coupon == null ) {
+          if ( $order->coupon_value == 0 || $order->coupon_value == null ) {
             $couponTotal = 0;
           } else {
-            $couponTotal = ( $order->coupon_discount_type == 0 ) ? $subTotal * ( $order->coupon_discount * 0.01 ) : $order->coupon_discount;
-            $subTotal -= $couponTotal;
+            $couponTotal = ( $order->coupon_discount_type == 0 ) 
+                            ? $subTotal * ( $order->coupon_discount * 0.01 ) 
+                            : $order->coupon_value;
           }
+          $subTotal -= $couponTotal;
 
           // Deduction of STORE CREDIT
           if ( $order->store_credit_value == 0 || $order->store_credit_value == null ) {
             $creditTotal = 0;
           } else {
             $creditTotal = $order->store_credit_value;
-            $subTotal -= $creditTotal;
           }
+          $subTotal -= $creditTotal;
 
           // Addition of SHIPPING COST
           $shippingTotal = 0;
@@ -393,6 +395,8 @@ address.shipping-address p *,
                   </div>
               </form>
           @endif
+
+          {{-- dd( __FILE__, __LINE__, 'Coupon details: ', [$order->id, $order->coupon_discount, $order->coupon_value, $couponTotal] ) --}}
 
           <form action="/cart/delivery" method="post" class="col-12 p-0">
               {!!Form::token()!!}
