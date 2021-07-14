@@ -242,8 +242,10 @@
       .headerSearch button[type=submit] {width:40px;height:37px;line-height:38px;}
       .topNavBG, .topNavBG * a * {font-family:'Montserrat',sans-serif;color:#cd8926;font-size:13px;line-height:inherit;font-weight:600;letter-spacing:calc(1em*(20/1000));}
       .navigation .linksContain a {font-family:'Montserrat',sans-serif;}
+      .mobileNavigation, .mobileNavigation * a * {font-family:'Montserrat',sans-serif;color:#cd8926;}
       .profile-top-nav .profile-nav {padding-top:0.5rem;padding-bottom:0.5rem;}
       @media only screen and (max-width:992px) {
+        /*.mobileNavigation, .mobileNavigation * a * {font-family:'Montserrat',sans-serif;color:#cd8926;}*/
         .vault-placeholder-logo {max-width:100%;width:100%;}
         .w-65 {width:auto!important;}
         .payment-order-summary p, .payment-order-summary p *, .payment-order-summary h3 span {font-size:0.875rem!important;}
