@@ -88,7 +88,6 @@
                             {!!Form::token()!!}
                             <div class="input-append d-flex flex-row spinner" data-trigger="spinner">
                                 <input type="text" value="{{ $cart_product->quantity }}" name="quantity" data-rule="quantity" class="checkout-quantity-input" style="max-height:30px;line-height:30px;max-width:30px;color:#cd8926;background-color:#c12136;">
-
                                 <div class="add-on" style="height:30px;line-height:30px;color:#cd8926;">
                                     <a href="javascript:void(0);" class="spin-up" data-spin="up" style="max-height:10px;line-height:10px;color:inherit;">
                                         <i class="fa fa-caret-up" style="font-family:'Font Awesome 5 Free'!important;color:inherit;"></i>
@@ -97,7 +96,6 @@
                                         <i class="fa fa-caret-down" style="font-family:'Font Awesome 5 Free'!important;color:inherit;"></i>
                                     </a>
                                 </div>
-
                             </div>
                         </form>
                     </div>
@@ -107,7 +105,7 @@
                 </div>
             </div>
         </div>
-        @php $cartTot += ( $cart_product->price*$cart_product->quantity ); @endphp
+        @php $cartTot += ( $cart_product->price * $cart_product->quantity ); @endphp
         @empty
         @endforelse
         <div class="row justify-content-between total">
@@ -239,8 +237,7 @@
                       @if($cart_total > 0)
                         <div class="position-relative">
                           <img src="/assets/icons/mobile-cart.svg" alt="Cart">
-                          <span class="position-absolute"
-                              style="top:-0.75rem;right:-1.125rem;font-weight:500;color:#fff;width:25px;height:25px;line-height:25px;background-color:#c1ac3aaa;border-radius:50%;text-align:center;">{{ $cart_total }}</span>
+                          <span class="position-absolute">{{ $cart_total }}</span>
                         </div>
                       @else
                         <img src="/assets/icons/mobile-cart.svg" alt="Cart">
