@@ -4,7 +4,6 @@
 
 @section('content')
 
-
     @if(sizeof($home_link))
         <div class="container-fluid">
             <section class="container quickLinksWrap">
@@ -13,10 +12,15 @@
                         <a href="{{$homeLink->link}}" class="col-6 col-lg-3 col-xl-3 contain">
                           @include( 'templates.placeholders.simple_image_placeholders', 
                             [
-                              'imgvar' => $homeLink->link_image, 'imgtitle' => $homeLink->title,
+                              'imgvar' => $homeLink->link_image, 
+                              'imgtitle' => $homeLink->title,
                               'imgclasses' => 'img-fluid',
-                              'class' => '', 'width' => 800,'height' => 600, 'text' => '+', 
-                              'use_vault_logo' => true, 'use_placehold_it' => true
+                              'class' => '', 
+                              'width' => 800, 
+                              'height' => 600, 
+                              'text' => '+', 
+                              'use_vault_logo' => true, 
+                              'use_placehold_it' => true
                             ] 
                           )
                         </a>
@@ -76,10 +80,15 @@
                 <a href="/blog/{{$blog->url_title}}/" class="col-12 col-md-6 content">
                     @include( 'templates.placeholders.simple_image_placeholders', 
                       [
-                        'imgvar' => $blog->listing_image, 'imgtitle' => $blog->title,
+                        'imgvar' => $blog->listing_image, 
+                        'imgtitle' => $blog->title,
                         'imgclasses' => 'img-fluid',
-                        'class' => '', 'width' => 800,'height' => 600, 'text' => '+', 
-                        'use_vault_logo' => true, 'use_placehold_it' => true
+                        'class' => '', 
+                        'width' => 800, 
+                        'height' => 600, 
+                        'text' => '+', 
+                        'use_vault_logo' => true, 
+                        'use_placehold_it' => true
                       ] 
                     )                    
                     <div class="row info">
@@ -95,7 +104,8 @@
         </div>
     @endif
 
-    <!--@if(sizeof($homerecipes))
+    {{--@if ( (null != $homerecipes || isset( $homerecipes )) && sizeof($homerecipes) )--}}
+    @if(sizeof($homerecipes))
         <div class="container blogHome mt-5">
             <div class="row">
                 <div class="col-12 sectionTitle">
@@ -107,10 +117,15 @@
                     <a href="/recipes/{{$recipe->url_title}}" class="col-12 col-md-6 col-lg-4 recipe-block">
                         @include( 'templates.placeholders.simple_image_placeholders', 
                           [
-                            'imgvar' => $recipe->featured_image, 'imgtitle' => $recipe->title,
+                            'imgvar' => $recipe->featured_image, 
+                            'imgtitle' => $recipe->title,
                             'imgclasses' => 'img-fluid',
-                            'class' => '', 'width' => 800,'height' => 600, 'text' => '+', 
-                            'use_vault_logo' => true, 'use_placehold_it' => true
+                            'class' => '', 
+                            'width' => 800, 
+                            'height' => 600, 
+                            'text' => '+', 
+                            'use_vault_logo' => true, 
+                            'use_placehold_it' => true
                           ] 
                         )  
                         <div>
@@ -122,24 +137,24 @@
                 @endforeach
             </div>
         </div>
-    @endif-->
+    @endif
 
     @if( $site_settings->home_title && $site_settings->home_description )
     <div class="container mt-lg-5 mt-2">
-	@isset( $site_settings->home_title )
+	  @isset( $site_settings->home_title )
         <div class="row">
             <div class="col-12 sectionTitle">
                 <h2 class="text-center">{{$site_settings->home_title}}</h2>
             </div>
         </div>
-	@endisset
-	@isset( $site_settings->home_description )
+	  @endisset
+	  @isset( $site_settings->home_description )
         <div class="row article mb-lg-1 mb-0">
             <div class="col-12 col-md-10 text-center mx-auto">
                 {!! $site_settings->home_description !!}
             </div>
         </div>
-	@endisset
+	  @endisset
     </div>
     @endif
 
@@ -147,10 +162,31 @@
     <div class="container-fluid ctaBanner d-none d-sm-block" style="background-image:url(/{{$homeArt->banner_image}});background-repeat:no-repeat;background-position:center;background-size:cover;height:500px;margin-bottom:2px;background-color:lightgrey;">
         <div class="row">
             <div class="col-12 col-md-9 col-xl-6 offset-xl-1 heroText">
+                @isset( $homeArt->title )
                 <h3>{{$homeArt->title}}</h3>
+                @endisset
+
+                @isset( $homeArt->subtitle )
                 <h1>{{$homeArt->subtitle}}</h1>
+                @endisset
+
+                @isset( $homeArt->description )
                 {!! $homeArt->description !!}
-                <a class="btn smlBtn" href="{{$homeArt->link}}">{{$homeArt->link_text}}</a>
+                @endisset
+
+                @isset( $homeArt->link )
+                <a 
+                 rel="noopener noreferer" 
+                 title="@if( null != $homeArt->link_text && isset( $homeArt->link_text ) ){{$homeArt->link_text}}@else{{ __( "READ MORE" ) }}@endif" 
+                 href="{{$homeArt->link}}" 
+                 class="btn smlBtn" 
+                 target="_blank"
+                >
+                  @if( null != $homeArt->link_text && isset( $homeArt->link_text ) ){{$homeArt->link_text}}
+                  @else{{ __( "READ MORE" ) }}
+                  @endif
+                </a>
+                @endisset
             </div>
         </div>
     </div>
