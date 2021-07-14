@@ -2184,23 +2184,24 @@ input.laybye-input[type=number]::-webkit-inner-spin-button, input.laybye-input[t
     .order-container {
         padding: 0 20px 20px 20px;
     }
-    .cart-product .delete-button, .cart-product .delete-button:hover, .cart-product .delete-button:focus {
-        text-align: center;
+    .cart-product .delete-button, 
+    .cart-product .delete-button:hover, 
+    .cart-product .delete-button:focus {
         display: block;
-        float: left;
-        width: 20px;
-        background: #cccccc;
-        color: #1f1f1f;
-        padding: 0;
-        line-height: 20px;
-        height: 20px;
-        font-size: 0;
-        margin-top: 0;
-        text-decoration: none;
-        margin-bottom: 0;
         position: absolute;
         top: -13px;
         right: 7px;
+        width: 20px;
+        height: 20px;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 0;
+        background: #cccccc;
+        color: #1f1f1f;
+        font-size: 0;
+        line-height: 20px !important;
+        text-align: center;
+        text-decoration: none;
         z-index: 10;
     }
     .cart-product .delete-button:after {
