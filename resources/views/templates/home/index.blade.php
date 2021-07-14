@@ -36,7 +36,7 @@
                             <div class="card-text">
                                 {!! $homefeat->description !!}
                             </div>
-                            <a target="_self" href="{{$homefeat->link}}" class="stretched-link text-black" style="color:inherit!imporatant;">READ MORE</a>
+                            <a target="_self" href="{{$homefeat->link}}" class="stretched-link text-black" style="color:inherit!important;">READ MORE</a>
                         </div>
                     </article>
                 @endforeach
