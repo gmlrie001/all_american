@@ -112,7 +112,7 @@
                     <h2 class="text-center">Recipes</h2>
                 </div>
             </div>
-            <div class="row mt-5 mb-lg-1 mb-0">
+            <div class="row">
                 @foreach($homerecipes as $recipe)
                     <a href="/recipes/{{$recipe->url_title}}" class="col-12 col-md-6 col-lg-4 recipe-block">
                         @include( 'templates.placeholders.simple_image_placeholders', 
