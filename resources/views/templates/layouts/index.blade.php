@@ -28,7 +28,7 @@
   @isset( $seo['image'] )
     <meta name="image" content="{{$seo['image']}}">
   @endisset
-    <meta name="theme-color" content="#c1ac3a">
+    <meta name="theme-color" content="#051c2e">
 
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/assets/js/vendor/slick-master/slick/slick.css" media="print" onload="this.media='all';this.removeAttribute('onload');">
@@ -228,8 +228,11 @@
     <link rel="stylesheet" type="text/css" href="/assets/js/vendor/icheck-1.x/skins/square/orange.css" media="print" onload="this.media='all';this.removeAttribute('onload');">
 
     @yield('css_assets')
+
     @stack( 'pageStyles' )
+
     @stack( 'pageHeaderStyles' )
+
     <style id="main-nav-layout">
       .w-lg-65 {width:65%!important;}
       .time-block img {filter:grayscale(1);}
@@ -248,7 +251,9 @@
     </style>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
     @stack( 'pageHeaderScripts' )
+
   </head>
 
   @php ob_end_flush(); @endphp
@@ -291,8 +296,10 @@
     <script type="text/javascript" src="/assets/oils/js/profile.js"></script>
     <script type="text/javascript" src="/assets/oils/js/sharemodal.js"></script>
     <script type="text/javascript" src="/assets/oils/js/promo_modal.js"></script>
+
     @yield('js_assets')
     @stack( 'pageScripts' )
+
     <script type="text/javascript">
       var onloadCallback = function() {
         try {
@@ -303,6 +310,7 @@
         } catch( err ) { console.warn(err); }  
       }
     </script>
+
   </body>
 
 </html>
