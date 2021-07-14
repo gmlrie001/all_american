@@ -237,6 +237,20 @@ button,
 .border-radius-0 {
   border-radius: 0 !important;
 }
+.card-title {
+  min-height: 3rem;
+}
+.card-text {
+  min-height: 12.5rem;
+}
+@media only screen and (max-width: 992px) {
+  .card-title {
+    min-height: unset;
+  }
+  .card-text {
+    min-height: unset;
+  }  
+}
 /* .featured-products .listing-card .product-interactions.position-absolute {} */
 .featured-products .listing-card .product-interactions {
   display: flex;
