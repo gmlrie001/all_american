@@ -201,7 +201,7 @@
     <div class="row">
         <div class="container">
             <div class="row justify-content-between mobileWrapa no-gutters">
-                <div class="col-7 logo">
+                <div class="col-6 logo">
                     <a href="/">
                       @include( 'templates.placeholders.simple_image_placeholders',
                         [
@@ -218,7 +218,7 @@
                       )
                     </a>
                 </div>
-                <div class="col-5 d-flex justify-content-between align-self-center">
+                <div class="col-6 navigation-icons d-flex justify-content-between align-self-center">
                     <a href="#" class="searchOpen">
                       <img src="/assets/icons/mobile-search.svg" alt="Search products">
                     </a>
@@ -286,7 +286,7 @@
             ]
           )
         </a>
-        <div class="col-6 d-flex justify-content-end align-self-center menuClose p-1">
+        <div class="col-6 navigation-icons d-flex justify-content-end align-self-center menuClose p-1">
           <img src="/assets/icons/close-grey.svg" alt="menu">
         </div>
     </div>
