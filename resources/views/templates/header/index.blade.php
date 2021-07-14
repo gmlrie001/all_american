@@ -237,7 +237,9 @@
                       @if($cart_total > 0)
                         <div class="position-relative">
                           <img src="/assets/icons/mobile-cart.svg" alt="Cart">
-                          <span class="position-absolute">{{ $cart_total }}</span>
+                          <span class="position-absolute">
+                            <sup>{{ $cart_total }}</sup>
+                          </span>
                         </div>
                       @else
                         <img src="/assets/icons/mobile-cart.svg" alt="Cart">
