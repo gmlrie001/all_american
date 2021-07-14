@@ -1,4 +1,3 @@
-
 /*cart styles*/
 .arrow {
     position: relative;
@@ -1562,13 +1561,13 @@ input.laybye-input[type=number]::-webkit-inner-spin-button, input.laybye-input[t
         width: 45px;
         height: 45px;
         border-radius: 50%;
-        text-align: center;
-        line-height: 42px;
-        border: 2px solid #161a60;
+        border: 2px solid #051c2e;
+        background: #051c2e;
         color: #ffffff;
         font-weight: 400;
         font-size: 23px;
-        background: #161a60;
+        line-height: 45px !important;
+        text-align: center;
     }
     .arrow div span {
         display: inline-block;
@@ -1576,9 +1575,9 @@ input.laybye-input[type=number]::-webkit-inner-spin-button, input.laybye-input[t
         height: 45px;
         border-radius: 50%;
         text-align: center;
-        line-height: 45px;
-        border: 2px solid #c6c6c6;
-        color: #c6c6c6;
+        line-height: 45px !important;
+        border: 2px solid #051c2e;
+        color: #051c2e;
         font-weight: 400;
         font-size: 23px;
         margin: 0 0 0 0;
@@ -1594,7 +1593,7 @@ input.laybye-input[type=number]::-webkit-inner-spin-button, input.laybye-input[t
         content: "";
         display: block;
         height: 3px;
-        background: #b4b4b4;
+        background: #051c2e;
         float: left;
         width: 100%;
         position: absolute;
