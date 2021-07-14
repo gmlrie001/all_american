@@ -197,11 +197,11 @@
 </div>
 
 <!--  CART DROPDOWN   -->
-<nav class="container-fluid mobileNavigation sticky-top px-0 d-block d-lg-none">
-    <div class="row no-gutters">
-        <div class="container px-0">
-            <div class="row justify-content-between mobileWrapa no-gutters px-4">
-                <div class="col-5 px-0 logo">
+<nav class="container-fluid mobileNavigation sticky-top d-block d-lg-none">
+    <div class="row">
+        <div class="container">
+            <div class="row justify-content-between mobileWrapa no-gutters">
+                <div class="col-7 logo">
                     <a href="/">
                       @include( 'templates.placeholders.simple_image_placeholders',
                         [
@@ -218,7 +218,7 @@
                       )
                     </a>
                 </div>
-                <div class="col-6 offset-1 d-flex justify-content-between align-self-center">
+                <div class="col-5 d-flex justify-content-between align-self-center">
                     <a href="#" class="searchOpen">
                       <img src="/assets/icons/mobile-search.svg" alt="Search products">
                     </a>
@@ -236,15 +236,15 @@
                   @endif
 
                     <a href="/cart/view" class="cart">
-                    @if($cart_total > 0)
-                      <div class="position-relative">
+                      @if($cart_total > 0)
+                        <div class="position-relative">
                           <img src="/assets/icons/mobile-cart.svg" alt="Cart">
                           <span class="position-absolute"
                               style="top:-0.75rem;right:-1.125rem;font-weight:500;color:#fff;width:25px;height:25px;line-height:25px;background-color:#c1ac3aaa;border-radius:50%;text-align:center;">{{ $cart_total }}</span>
-                      </div>
-                    @else
-                      <img src="/assets/icons/mobile-cart.svg" alt="Cart">
-                    @endif
+                        </div>
+                      @else
+                        <img src="/assets/icons/mobile-cart.svg" alt="Cart">
+                      @endif
                     </a>
 
                     <a href="javascript:void(0);" class="menu">
@@ -270,8 +270,8 @@
 </div>
 
 <div class="container-fluid mobileOpen collapse">
-    <div class="row justify-content-between align-items-center mobileMenuu py-2 px-4">
-        <a href="/" class="logo" title="{{$site_settings->site_name}}">
+    <div class="row justify-content-between align-items-center mobileMenu no-gutters py-1 px-0">
+        <a href="/" class="col-6 logo pt-3" title="{{$site_settings->site_name}}">
           @include( 'templates.placeholders.simple_image_placeholders',
             [
               'imgvar' => $site_settings->mobile_logo, 
@@ -286,7 +286,7 @@
             ]
           )
         </a>
-        <div class="menuClose">
+        <div class="col-6 d-flex justify-content-end align-self-center menuClose p-1">
           <img src="/assets/icons/close-grey.svg" alt="menu">
         </div>
     </div>
