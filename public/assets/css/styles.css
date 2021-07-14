@@ -370,7 +370,7 @@ fieldset {
   overflow-y: auto
 }
 .overflow-xy-auto {
-  overflow: auto hidden;
+  overflow: auto;
 }
 .overflow-x-hidden {
   overflow-y: hidden;
@@ -556,7 +556,7 @@ fieldset {
 
 @media only screen and (max-width: 1440px) {
   dialog,
-  dialog#site-search {
+  #site-search {
     max-width: 75%;
   }
   header:not(.article-header) nav ul li>a,
@@ -581,7 +581,7 @@ fieldset {
     top: 40%;
   }
   dialog,
-  dialog#site-search {
+  #site-search {
     max-width: 87.5%;
   }
   footer:not(.article-footer) .nav-item .nav-link {
@@ -595,7 +595,7 @@ fieldset {
     padding-top: 150px;
   }
   dialog,
-  dialog#site-search {
+  #site-search {
     max-width: 92.5%;
   }
   footer:not(.article-footer) .nav-item .nav-link {
@@ -701,7 +701,7 @@ fieldset {
     margin-bottom: 0.618rem;
   }
   dialog,
-  dialog#site-search {
+  #site-search {
     max-width: 95%;
   }
   .profile-section-title h2,
