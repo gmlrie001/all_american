@@ -102,7 +102,7 @@ address.shipping-address p *,
                           <div class="col-12 col-lg-6">
                               <h2><a href="/product/{{$cart_prod->product->url_title}}">{{$cart_prod->product->title}}</a></h2>
                               <h3>{{$cart_prod->code}}</h3>
-                              <a href="#" class="wishlist-modal-button fa fa-heart-o m-2" data-id="{{$cart_prod->product->id}}"></a>
+                              <a href="javascript:void(0);" class="wishlist-modal-button fa fa-heart-o m-2" data-id="{{$cart_prod->product->id}}"></a>
                               <a href="/cart/delete/{{ $cart_prod->id }}" class="delete-button m-2">x</a>
                           </div>
                           <div class="col-12 col-lg-2">
@@ -210,7 +210,7 @@ address.shipping-address p *,
                                 <div class="col-12 col-lg-6">
                                     <h2><a href="/product/{{$cart_prod->product->url_title}}">{{$cart_prod->product->title}}</a></h2>
                                     <h3>{{ $cart_prod->code }}</h3>
-                                    <a href="#" class="wishlist-modal-button fa fa-heart-o m-2" data-id="{{$cart_prod->product->id}}"></a>
+                                    <a href="javascript:void(0);" class="wishlist-modal-button fa fa-heart-o m-2" data-id="{{$cart_prod->product->id}}"></a>
                                 </div>
                             </div>
                         </div>
