@@ -1,5 +1,5 @@
 .navigation {
-    background-color: #051c2e;
+    background-color: #920d1e;
     color: #171717;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -49,7 +49,7 @@
 .navigation .linksContain .dropdown-menu a:hover {
     font-size: 0.93rem;
     color: #fff !important;
-    background-color: #051c2e;
+    background-color: #920d1e;
 }
 .headerSearch {
     margin-top: 50px;
@@ -64,7 +64,7 @@
     font-weight: 400;
     line-height: 1.5;
     color: #ffffff;
-    background-color: #051c2e;
+    background-color: #920d1e;
     background-clip: padding-box;
     border-left: none;
     border-right: none;
@@ -97,7 +97,7 @@ form button.btn {
 .mobileNavigation {
     padding-top: 0;
     padding-bottom: 0;
-    background: #051c2e;
+    background: #920d1e;
     color: #171717;
     -webkit-box-shadow: 0px 5px 12px 0px rgba(2,3,3,0.2);
     -moz-box-shadow: 0px 5px 12px 0px rgba(2,3,3,0.2);
@@ -131,7 +131,7 @@ form button.btn {
     top: 0;
     bottom: 0;
     right: 0;
-    background: #051c2e;
+    background: #920d1e;
     color: #171717;
 }
 .mobileOpen .links {
@@ -169,7 +169,7 @@ form button.btn {
     right: 125vw;
     bottom: 0;
     width: 100%;
-    background: #051c2e;
+    background: #920d1e;
     color: #171717;
     -webkit-transition: right 500ms ease;
     -moz-transition: right 500ms ease;
