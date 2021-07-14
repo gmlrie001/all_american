@@ -208,8 +208,9 @@ address.shipping-address p *,
                                 </a>
                                 <div class="col-12 col-lg-6">
                                     <h2><a href="/product/{{$cart_prod->product->url_title}}">{{$cart_prod->product->title}}</a></h2>
-                                    <h3>{{$cart_prod->code}}</h3>
+                                    <h3>{{ $cart_prod->code }}</h3>
                                     <a href="#" class="wishlist-modal-button fa fa-heart-o m-2" data-id="{{$cart_prod->product->id}}"></a>
+                                    <a href="/cart/delete/{{ $cart_prod->id }}" class="delete-button m-2">x</a>
                                 </div>
                             </div>
                         </div>
@@ -286,9 +287,7 @@ address.shipping-address p *,
                 @endforeach
                 </div>
             </div>
-        {{-- </div>
-        <div class="row mt-2"> --}}
-            {{-- Payment Options --}}
+
             <div class="col-md-12 offset-md-12 order-continue-row p-0 mt-3">
                 <div class="float-right">
                   <span>We accept:</span>
