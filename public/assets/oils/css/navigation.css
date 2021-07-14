@@ -114,12 +114,10 @@ form button.btn {
 .mobileNavigation .content a:last-type {
     margin-right: 0;
 }
-a.account.fa.fa-sign-out-alt {
-    position: relative;
-    top: 0.375vh;
-    color: #000;
-    font-size: 1.375rem;
-    line-height: 20px;
+.mobileNavigation .navigation-icons, 
+.mobileOpen .navigation-icons, 
+.navigation-icons {
+    filter: invert();
 }
 .mobileNavigation .content img, 
 .mobileNavigation .mobileWrapa a.menu > img[src*="navicon.svg"][alt*="menu"], 
@@ -200,6 +198,13 @@ a.account.fa.fa-sign-out-alt {
 }
 .mobileHeaderSearch {
     display: none;
+}
+a.account.fa.fa-sign-out-alt {
+    position: relative;
+    top: 0.375vh;
+    color: #000;
+    font-size: 1.375rem;
+    line-height: 20px;
 }
 @media (max-width: 992px) {
     .topNavBG, .navigation {
