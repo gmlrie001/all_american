@@ -95,14 +95,14 @@ form button.btn {
     color: #171717;
 }
 .mobileNavigation {
-    z-index: 15;
+    padding-top: 0;
+    padding-bottom: 0;
     background: #6c50da;
     color: #171717;
-    padding-top: 10px;
-    padding-bottom: 10px;
     -webkit-box-shadow: 0px 5px 12px 0px rgba(2,3,3,0.2);
     -moz-box-shadow: 0px 5px 12px 0px rgba(2,3,3,0.2);
     box-shadow: 0px 5px 12px 0px rgba(2,3,3,0.2);
+    z-index: 15;
 }
 .mobileNavigation .logo img {
     max-width: 160%;
@@ -121,7 +121,9 @@ a.account.fa.fa-sign-out-alt {
     font-size: 1.375rem;
     line-height: 20px;
 }
-.mobileNavigation .content img {
+.mobileNavigation .content img, 
+.mobileNavigation .mobileWrapa a.menu > img[src*="navicon.svg"][alt*="menu"], 
+.mobileOpen img[src*="grey.svg"][alt*="menu"] {
     filter: brightness(0);
 }
 .mobileOpen {
@@ -131,7 +133,7 @@ a.account.fa.fa-sign-out-alt {
     top: 0;
     bottom: 0;
     right: 0;
-    background: #a18fe8;
+    background: #051c2e;
     color: #171717;
 }
 .mobileOpen .links {
@@ -169,7 +171,7 @@ a.account.fa.fa-sign-out-alt {
     right: 125vw;
     bottom: 0;
     width: 100%;
-    background: #a18fe8;
+    background: #051c2e;
     color: #171717;
     -webkit-transition: right 500ms ease;
     -moz-transition: right 500ms ease;
@@ -209,16 +211,6 @@ a.account.fa.fa-sign-out-alt {
     .mobileNavigation .mobileWrap .content {
 	justify-content: flex-end;
     }
-/*
-  .mobileWrap .headerSearch {
-    background-color: #f2feef;
-    position: absolute;
-    top: 37.5px;
-    right: -17.5%;
-    left: 30.5%;
-    display: none;
-  }
-*/
   .mobileHeaderSearch {
     display: none;
     position: absolute;
@@ -271,11 +263,6 @@ a.account.fa.fa-sign-out-alt {
     .topNavBG, .navigation {
         display: none;
     }
-/*
-    .mobileNavigation {
-        display: none;
-    }
-*/
     .mobileNavigation .mobileWrap .content {
 	justify-content: center;
     }
