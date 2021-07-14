@@ -103,6 +103,7 @@ address.shipping-address p *,
                               <h2><a href="/product/{{$cart_prod->product->url_title}}">{{$cart_prod->product->title}}</a></h2>
                               <h3>{{$cart_prod->code}}</h3>
                               <a href="#" class="wishlist-modal-button fa fa-heart-o m-2" data-id="{{$cart_prod->product->id}}"></a>
+                              <a href="/cart/delete/{{ $cart_prod->id }}" class="delete-button m-2">x</a>
                           </div>
                           <div class="col-12 col-lg-2">
                               @if($cart_prod->components != null && $cart_prod->components != 'null')
@@ -210,7 +211,6 @@ address.shipping-address p *,
                                     <h2><a href="/product/{{$cart_prod->product->url_title}}">{{$cart_prod->product->title}}</a></h2>
                                     <h3>{{ $cart_prod->code }}</h3>
                                     <a href="#" class="wishlist-modal-button fa fa-heart-o m-2" data-id="{{$cart_prod->product->id}}"></a>
-                                    <a href="/cart/delete/{{ $cart_prod->id }}" class="delete-button m-2">x</a>
                                 </div>
                             </div>
                         </div>
