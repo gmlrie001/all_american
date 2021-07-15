@@ -25,16 +25,16 @@ return [
     'checkout',
     'shop',
     // 'aramax_shipping', 
-    'aramex_shipping', 
+    // 'aramex_shipping', 
     // 'thecourierguy_shipping', 
     'home',
-    'portfolio',
+    // 'portfolio',
     // 'recipes',
     // 'blog',
     // 'contact',
     // 'faq_categories',
     // 'information_pages',
-    'country_names_and_codes',
+    // 'country_names_and_codes',
   ],
 
   'sage_accounting_enable' => 0,
@@ -58,7 +58,7 @@ return [
           \App\Helpers\AramexShipping\AramexAPI::class, 
           \App\Helpers\AramexShipping\AramexPostalCodeValidation::class, 
         ],
-        'courier_aramex'         => "\\Vault\\CourierAramex", 
+        'courier_default'        => "\\Vault\\CourierAramex", 
       ], 
       'options' => [
         'aramex_credentials' => [
@@ -121,11 +121,11 @@ return [
       'courier' => 'Ppapi_tcg', 
       'courier_enabled' => 0,
       'courier_package' => [
-        'shipment_courier'    => "\\Vault\\ShipmentCourier", 
-        'tcg_checkout_helper' => [
+        'shipment_courier' => "\\Vault\\ShipmentCourier", 
+        'checkout_helper'  => [
           \App\Helpers\TheCourierGuyParcelPerfectAPI\CheckoutServices\DeliveryOptionsService::class, 
         ], 
-        'courier_tcg'         => "\\Vault\\CourierTcg", 
+        'courier_default'  => "\\Vault\\CourierTcg", 
       ], 
       'options' => [],
     ], 
@@ -134,9 +134,9 @@ return [
       'courier' => 'Parcel_ninja', 
       'courier_enabled' => 0,
       'courier_package' => [
-        'shipment_courier'   => "\\Vault\\ShipmentCourier", 
-        'pn_checkout_helper' => [], 
-        'courier_pn'         => "\\Vault\\CourierParcelNinja", 
+        'shipment_courier' => "\\Vault\\ShipmentCourier", 
+        'checkout_helper'  => [], 
+        'courier_default'  => "\\Vault\\CourierParcelNinja", 
       ], 
       'options' => [], 
     ], 
@@ -146,19 +146,19 @@ return [
       'courier_enabled' => 1,
       'courier_package' => [
         'shipment_courier' => \App\Models\ShippingOption::class, 
-        'tcg_checkout_helper' => NULL, 
-        'courier_default' => "", 
+        'checkout_helper'  => [], 
+        'courier_default'  => "", 
       ], 
       'options' => [], 
     ], 
 
     'Collection' => [
       'courier' => 'Collection', 
-      'courier_enabled' => 1,
+      'courier_enabled' => !1,
       'courier_package' => [
         'shipment_courier' => \App\Models\CollectionPoint::class, 
-        'tcg_checkout_helper' => NULL, 
-        'courier_default' => "", 
+        'checkout_helper'  => [], 
+        'courier_default'  => "", 
       ], 
       'options' => [], 
     ],
