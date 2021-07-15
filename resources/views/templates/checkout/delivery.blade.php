@@ -418,9 +418,10 @@ address.shipping-address p *,
 			<div class="row continue-checkout-form">
 				@php
 					$user->load( 'addresses' );
-					$defaultUserAddy = $user->addresses->where( 'default_address', 1 )->first();
-					$defaultUserAddy = ( NULL == $defaultUserAddy ) ? $user_addresses->first() : $defaultUserAddy;
-			                           // ?? $user_addresses[0]->id;
+					$userAddressFirst = $user->addresses->sortBy( 'created_at' )->first();
+					$defaultUserAddy = $user->addresses->where( 'default_address', 1 );
+					$defaultUserAddy = ( NULL != $defaultUserAddy ) ? $defaultUserAddy->first() : $userAddressFirst;
+					// dd( __FILE__, __LINE__, ( NULL == $defaultUserAddy ) ?: $user_addresses->first(), $userAddressFirst, $defaultUserAddy );
 				@endphp
 
 				@if(sizeof($user_addresses) && NULL != $defaultUserAddy )
@@ -432,20 +433,18 @@ address.shipping-address p *,
 					<form action="/cart/delivery/option" method="post" class="col-12 p-0">
 						{!! Form::token() !!}
 						{!! Form::hidden( 'cart_id', $cart_id ) !!}
-						{!! Form::hidden( 'shipping_id', $shippingid )!!}
+						{!! Form::hidden( 'shipping_id', $shippingid ) !!}
 						{!! Form::hidden(  'billing_id',  $billingid ) !!}
-						<input class="continue-button blue-background" type="submit" value="continue checkout"
-								name="basketDelivery" />
+						<input class="continue-button blue-background" type="submit" value="continue checkout" name="basketDelivery">
 					</form>
 				
 				@else
 					<form action="/cart/delivery/option" method="post" class="col-12 p-0">
 						{!! Form::token() !!}
 						{!! Form::hidden( 'cart_id', $cart_id ) !!}
-						{!! Form::hidden( 'shipping_id', $defaultUserAddy->id ?? 0 ) !!}
-						{!! Form::hidden(  'billing_id', $defaultUserAddy->id ?? 0 ) !!}
-						<input class="continue-button blue-background" type="submit" value="continue checkout"
-								name="basketDelivery" disabled="" />
+						{!! Form::hidden( 'shipping_id', $defaultUserAddy->id ?? $userAddressFirst->id ) !!}
+						{!! Form::hidden(  'billing_id', $defaultUserAddy->id ?? $userAddressFirst->id ) !!}
+						<input class="continue-button blue-background" type="submit" value="continue checkout" name="basketDelivery" disabled="">
 					</form>
 				@endif
 			</div>
