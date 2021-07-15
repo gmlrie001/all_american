@@ -159,11 +159,12 @@ address.shipping-address p *,
           @endphp
 
           @php
-            if ( isset( $collection_points ) && ! is_null( $collection_points ) ) {
+            if ( $config['external_courier_companies']['Collection']['courier_enabled'] && ( isset( $collection_points ) && ! is_null( $collection_points ) ) ) {
               $shipper = 'Collection';
               $courierName = 'Collection'; // $config['external_courier_companies']['Collection']['courier'];
-              $shipperOpt = $collection_points; // new \StdClass();
+              $shipperOpt = $collection_points; // $config['external_courier_companies']['Collection']['options'];
             }
+            // dd( __FILE__, __LINE__, $this, get_defined_vars(), $shipper, $config['external_courier_companies']['Collection'] );
           @endphp
 
           <form class="col-12">
