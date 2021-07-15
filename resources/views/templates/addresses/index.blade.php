@@ -132,7 +132,7 @@
 											<input name="address_line_1" placeholder="Street Address Line 1" class="col-12" required="" value="{{$address->address_line_1}}" />
 											<input name="address_line_2" placeholder="Street Address Line 2" class="col-12" value="{{$address->address_line_2}}" />
 										</div>
-										@if ( $config['aramex_shipping_enable'] )
+										@if ( $config['external_courier_companies']['Aramex']['courier_enabled'] )
 										<div class="form-group">
 											<label class="col-12" for="edit-suburb_{{$address->id}}">Suburb*</label>
 											<input name="suburb" placeholder="Suburb" class="col-12" id="edit-suburb_{{$address->id}}" list="edit-suburbia_{{$address->id}}" autocomplete="off" value="{{$address->suburb}}" required="" />
@@ -197,6 +197,7 @@
 									</div>
 								{!! Form::close() !!}
 							</div>
+							@if ( $config['external_courier_companies']['Aramex']['courier_enabled'] )
 							<script id="edit-address_{{$address->id}}-aramex-check">
 								$(document).ready(function(){
 									$("#edit-address_{{$address->id}}").on("submit", function(event){
@@ -227,6 +228,7 @@
 									});
 								});
 							</script>
+						    @endif
 					@endforeach
 				</div>
 			</div>
@@ -309,6 +311,7 @@
 			{!! Form::close() !!}
 	</div>
 	
+	@if ( $config['external_courier_companies']['Aramex']['courier_enabled'] || $config['external_courier_companies']['TheCourierGuy']['courier_enabled'] )
 	<script id="add-address-aramex-check">
 	/**
 		* // keys should match input's parent data-verify-provider value.
@@ -397,6 +400,7 @@
 		});
 	});
 	</script>
+	@endif
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/skins/square/blue.css" />
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/icheck.min.js"></script>
