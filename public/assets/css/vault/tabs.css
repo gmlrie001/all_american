@@ -1,0 +1,162 @@
+/* TAB STYLES */
+.tab-container {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-bottom: 7px solid #c30d16;
+    font-size: 17px;
+}
+.tabs {
+    float: left;
+    width: 88%;
+    overflow-x: auto;
+}
+.tabs .mCSB_horizontal.mCSB_inside>.mCSB_container {
+    margin-bottom: 0;
+}
+.tabs .mCSB_scrollTools.mCSB_scrollTools_horizontal a+.mCSB_draggerContainer{
+    visibility: hidden;
+}
+.mCSB_scrollTools .mCSB_buttonLeft, .mCSB_scrollTools .mCSB_buttonRight {
+    background-image: none;
+    background-repeat: no-repeat;
+    opacity: 0;
+    top: 0 !important;
+    bottom: 0;
+    background: #ffffff;
+    filter: "alpha(opacity=0)";
+    -ms-filter: "alpha(opacity=0)";
+    height: 55px !important;
+}
+.mCSB_scrollTools.mCSB_scrollTools_horizontal {
+    height: 0;
+    top: 0;
+}
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonLeft {
+    background: url("/assets/vault/template/functions/slider-arrow-left.svg") no-repeat center center;
+    background-size: contain;
+}
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonRight {
+    background: url("/assets/vault/template/functions/slider-arrow-right.svg") no-repeat center center;
+    background-size: contain;
+}
+.mCSB_scrollTools .mCSB_buttonLeft:hover, .mCSB_scrollTools .mCSB_buttonRight:hover {
+    background-color: #c30d16;
+    opacity: 0.75;
+    filter: "alpha(opacity=75)";
+    -ms-filter: "alpha(opacity=75)";
+}
+.tab-container a, .tab-container a:hover, .tab-container a:focus, .mobile-tab-container > div, .mobile-tab-container > a, .mobile-tab-container > a:hover, .mobile-tab-container > a:focus {
+    display: block;
+    float: left;
+    line-height: 54px;
+    background-color: #636363;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-family: 'ralewaymedium';
+    color: #ffffff;
+    /* min-width: 12%;
+    max-width: 100%; */
+    padding: 0 15px;
+    text-align: center;
+    margin-right: 1px;
+    text-decoration: none;
+}
+.tab-container a, .tab-container a:hover, .tab-container a:focus{
+    line-height: 40px;
+    top: 14px;
+    position: relative;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.tab-container a:first-of-type, .tab-container a:first-of-type:hover, .tab-container a:first-of-type:focus {
+    line-height: 54px !important;
+    top: 0 !important;
+    background-color: #181818;
+}
+/* .tab-container a.sub-tab, .tab-container a.sub-tab:hover, .tab-container a.sub-tab:focus {
+    line-height: 40px;
+    margin-top: 14px;
+} */
+.tab-container a:hover, .tab-container a.active, .mobile-tab-container > div, .mobile-tab-container > a, .tab-container a:first-of-type:hover  {
+    background-color: #c30d16;
+    line-height: 45px;
+    top: 9px;
+}
+.tab-container a.add-btn, .tab-container a.add-btn:hover, .tab-container a.add-btn:focus, .mobile-tab-container > a.add-btn {
+    background-color: #158600;
+    margin-right: 0;
+}
+.tab-container a.add-btn, .tab-container a.add-btn:hover, .tab-container a.add-btn:focus {
+    width: 12%;
+}
+@media (max-width: 1199px) {
+    .tab-container a, .tab-container a:hover, .tab-container a:focus {
+        font-size: 13px;
+    }
+}
+@media (max-width: 767px) {
+    .mobile-tab-container > a, .mobile-tab-container > div {
+        width: 50%;
+        margin-bottom: 15px;
+        margin-top: 15px;
+        float: left;
+        margin-right: 0;
+        cursor: pointer;
+        position: relative;
+    }
+    .mobile-tab-container > div div {
+        display: none;
+        position: absolute;
+        top: 54px;
+        right: 0;
+        left: 0;
+        z-index: 9;
+    }
+    .tabs {
+        float: left;
+        width: 70%;
+        overflow-x: auto;
+    }
+    .tab-container a.add-btn, .tab-container a.add-btn:hover, .tab-container a.add-btn:focus {
+        width: 29.5%;
+    }
+    .mobile-tab-container > div div a, .mobile-tab-container > div div a:hover, .mobile-tab-container > div div a:focus {
+        display: block;
+        float: left;
+        width: 100%;
+        line-height: 40px;
+        padding: 0 15px;
+        background: #181818;
+        color: #ffffff;
+        font-size: 12px;
+        text-decoration: none;
+        border-bottom: 1px solid #ffffff;
+    }
+    .mobile-tab-container > div i {
+        margin-left: 15px;
+    }
+    .sticking.mobile-tab-container a, .sticking.mobile-tab-container div {
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    .sticking.mobile-tab-container {
+        top: 45px !important;
+        width: 90%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        z-index: 999999999;
+    }
+    .padding-top {
+        padding-top: 40px !important;
+    }
+}
+@media(max-width: 480px) {
+    .mobile-tab-container > a, .mobile-tab-container > div {
+        width: 100%;
+        font-size: 17px;
+    }
+    .mobile-tab-container > a {
+        margin-top: 0;
+    }
+}

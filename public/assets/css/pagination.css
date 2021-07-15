@@ -1,0 +1,91 @@
+.pagination {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+}
+.pagination .page-item {
+    margin: 0.75rem 0;
+    width: 45px;
+    height: 45px;
+    font-weight: 400;
+    line-height: 45px;
+}
+.pagination .page-item, 
+.pagination li {
+  margin-left: 5px;    
+}
+.page-item:first-child .page-link {
+  margin-left: 0;
+  border-top-left-radius: .5rem;
+  border-bottom-left-radius: .5rem;
+  border-bottom-right-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+.page-item:last-child .page-link {
+  margin-left: 0;
+  border-top-right-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+  border-bottom-left-radius: 0.25rem;
+  border-top-left-radius: 0.25rem;
+}
+.pagination .page-item *, 
+.pagination li * {
+  padding: 0;
+  border: 1px solid #818181;
+  border-radius: 0.25rem;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 45px;
+  text-align: center;
+  text-decoration: none;
+}
+.page-item.active .page-link, 
+.pagination li:hover *, 
+.pagination li.active * {
+  border: 1px solid #818181;
+  background: #161a60;
+  color: #fff;
+  font-weight: 600;
+}
+.page-item.disabled .page-link {
+  pointer-events: none;
+  border-color: #818181;
+  background-color: #920d1e;
+  color: #fff;
+  cursor: auto;
+  font-weight: 600;
+}
+.pagination li *:active, 
+.pagination li *:hover, 
+.pagination li *:focus {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+@media only screen and (max-width: 992px) {
+    .pagination {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+    .pagination .page-item * {
+        width: 40px;
+        height: 40px;
+        line-height: 38px!important;
+    }
+    .pagination .page-item *, 
+    .pagination li *,
+    .page-item.active .page-link, 
+    .pagination li:hover *, 
+    .pagination li.active * {
+        line-height: 38px!important;
+    }
+    .pagination .page-item, 
+    .pagination .page-item * {
+        margin-bottom: 0;
+    }
+    .pagination .page-item {
+        margin-top: 0.25rem;
+    }
+}

@@ -1,0 +1,894 @@
+/**
+ *
+ * General / Site-Wide Styling (Repsonsive/Adaptive)
+ * Non-Template based html documents and markup.
+ *
+ * Monzamedia
+ * August 2019
+ *
+ *=
+ * Readapted for Template based html documents and markup.
+ *
+ * May-August 2020 (Update)
+ * Updated as part of "OILS"-based template
+ *=
+ */
+
+:root {
+  --theme-color: #0c5875;
+  --color-background: #ffffff;
+  --color-white: #ffffff;
+  --btn-color: #0f0b00;
+/*   --font-lato: 'Lato', sans-serif; */
+/*   --font-muli: 'Muli', sans-serif; */
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-open-sans: 'Open Sans', sans-serif;
+  --main-font: 'Montserrat', sans-serif;
+  --title-font: 'Montserrat', sans-serif;
+  --alt-font: 'Open Sans', sans-serif;
+  --body-font: 'Open Sans', sans-serif;
+  --text-primary-color: #2d2d2d;
+  --text-secondary-color: #d3d3d3;
+  --font-size: 18px;
+  --line-height: 37px;
+  --general-box-shadow: 0 0 2px 3px rgba(10, 10, 10, 0.65);
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+html {
+  max-width: 100%;
+  font-family: var(--body-font);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+html,
+body {
+  font-style: normal;
+  font-weight: 300;
+}
+
+main {
+  all: unset;
+}
+main {
+/*   all: unset; */
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  min-height: 5vmax;
+  height: auto;
+  margin: 0;
+  padding-top: 200px;
+}
+
+sup {
+  display: block;
+  top: -0.75rem;
+  right: 0;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #051c2e!important;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 25px;
+  text-align: center;
+}
+
+figure {
+  margin-bottom: 0 !important;
+}
+
+div[class*=error], 
+[class*=error] {
+  display: none;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, a {
+  vertical-align: baseline;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1.618rem;
+  font-weight: 400;
+  line-height: var( --line-height );
+}
+h1, h2, h3 {
+  margin-top: 1.618rem;
+}
+h4, h5, h6 {
+  margin-top: 0.618rem;
+}
+
+.page-title,
+.page-title h1,
+h1.page-title,
+h1, .h1 {
+  font-family: var( --title-font );
+  font-size: 30px;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+.page-title:before,
+.page-title h1:before,
+h1.page-title:before,
+.h1:before {
+  content: url('/assets/images/decorations/title-deco.png');
+  vertical-align: middle;
+  max-width: 100%;
+  margin: 0;
+  margin-left: -10px;
+  margin-right: 5px;
+  padding: 0;
+}
+
+.section-title:after,
+.article-title:after,
+h2.article-title:after,
+h2.section-title:after,
+.h2:after {
+  content: url('/assets/images/decorations/sub-section-title-deco.png');
+  vertical-align: super;
+  max-width: 100%;
+  margin: 0;
+  margin-left: 5px;
+  padding: 0;
+}
+h2, h2[class*=title] {
+  letter-spacing: calc(1em * (-20 / 1000));
+  word-spacing: normal;
+}
+.section-title h2,
+h2.section-title {
+  font-size: 27px;
+}
+
+@media only screen and (max-width: 992px) {
+  .login h5 span {
+    line-height: 1 !important;
+  }
+}
+
+a,
+span,
+p {
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  letter-spacing: normal;
+  word-spacing: normal;
+}
+p > a {
+  color: var(--bg-color-blue);
+}
+a {
+  color: var(--color-white);
+  word-break: normal;
+  white-space: wrap;
+}
+a,
+a:focus,
+a:active,
+a:hover {
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.nav-item .fa {
+  min-width: 17px;
+}
+navbar-nav .nav-link,
+.nav-link {
+  padding: 0 !important;
+}
+.navigation[role=navigation] {
+  display: none;
+}
+.repsonsive-navi[role=navigation],
+hgroup#responsive-nav {
+  display: flex;
+}
+
+.input-group>.custom-file .custom-file-input:focus~.custom-file-label, 
+.input-group>.custom-select:focus, 
+.input-group>.form-control:focus {
+  z-index: 1;
+}
+.input-group {
+  margin-bottom: 0 !important;
+}
+button:active,
+button:focus,
+button:hover,
+a:active,
+a:focus,
+a:hover {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+button.btn,
+[class*=submit] {
+  max-width: 280px;
+  width: 100%;
+  max-height: 50px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  background-color: var(--bg-color-green);
+  line-height: 50px;
+}
+button[class*=submit],
+[class*=submit] {
+  background-color: #0c5875;
+  color: #ffffff;
+  font: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 40px;
+  width: 40px;
+  text-align: center;
+}
+button,
+.btn,
+[class*=submit] {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 43px;
+  border: none;
+  box-shadow: none;
+  outline: 0;
+}
+
+* .card,
+.card *,
+.border-radius-0 {
+  border-radius: 0 !important;
+}
+.card-title {
+  min-height: 3rem;
+}
+.card-text {
+  min-height: 12.5rem;
+}
+@media only screen and (max-width: 992px) {
+  .card-title {
+    min-height: unset;
+  }
+  .card-text {
+    min-height: unset;
+  }  
+}
+/* .featured-products .listing-card .product-interactions.position-absolute {} */
+.featured-products .listing-card .product-interactions {
+  display: flex;
+  max-width: 100%;
+  width: 100%;
+  justify-content: space-between;
+  left: 0;
+  right: 0;
+  bottom: 1.618rem;
+  color: #fff;
+}
+.featured-products .listing-card .image span {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 5px 10px;
+  border-radius: 50%;
+  background-color: #000a;
+  color: #fff;
+  font-size: 0.75rem;
+}
+.featured-products .listing-card h4 {
+  margin: 0.618rem 0;
+  font-size: 125%;
+}
+
+/**
+ * SOCIAL MEDIA icons and modal coloring and styling.
+ */
+.share-overlay .share-modal h1,
+.share-overlay .share-modal h2,
+.share-overlay .share-modal h3 {
+  letter-spacing: calc(1em * (20 / 1000));
+}
+#share-follow [class*=share-modal] {
+  box-shadow: var(--general-box-shadow);
+}
+/** FACEBOOK: * .share-modal a.fa-facebook-f, */
+a.fa-facebook-f {
+  background: #23346d;
+}
+/** TWITTER: * .share-modal a.fa-twitter, */
+a.fa-twitter {
+  background: #55acee;
+}
+/** PINTEREST: * .share-modal a.fa-pinterest-p, */
+a.fa-pinterest-p {
+  background: #cb2027;
+}
+/** GOOGLE PLUS (NOTICE: DEPRECATED): * .share-modal a.fa-google-plus, */
+a.fa-google-plus {
+  /* background: #dd4b39; */
+  display: none;
+  position: absolute;
+  top: -100000px;
+  left: -100000px;
+  visibility: hidden;
+  opacity: 0;
+}
+/** ENVELOPE/MAIL: * .share-modal a.fa-envelope, */
+a.fa-envelope {
+  background: #23346d;
+}
+/** WHATSAPP: * .share-modal a.fa-whatsapp, */
+a.fa-whatsapp {
+  background: #25d366;
+}
+/** LINKEDIN: * .share-modal a.fa-linkedin, */
+a.fa-linkedin {
+  background: #0077b5;
+}
+/** REDDIT: * .share-modal a.fa-reddit, */
+a.fa-reddit {
+  background: #cee3f8;
+}
+/** TUMBLR: * .share-modal a.fa-tumblr, */
+a.fa-tumblr {
+  background: #36465d;
+}
+/** STUMBLEUPON: * .share-modal a.fa-stumbleupon, */
+a.fa-stumbleupon {
+  background: #eb4924;
+}
+/** INSTAGRAM: * .share-modal a.fa-instagram, */
+a.fa-instagram {
+  /*background: #e4e4e4;*/
+  background-color: #b4b4b4;
+}
+
+/**
+ * MISC Helper Classes
+ *  (badly attempting to mimic bootstrap framework).
+ */
+.border-0,
+fieldset {
+  border: 0 !important;
+}
+.no-home-slider {
+  display: none;
+}
+.d-lg-grid {
+  display: grid !important;
+}
+.dropshadow {
+  box-shadow: var(--general-box-shadow);
+}
+.cursor-pointer {
+  cursor: pointer
+}
+
+.section-padding {
+  padding: 40px 25px;
+}
+.page-padding {
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+
+.overflow-auto {
+  overflow: auto;
+  margin: 0 1rem;
+}
+.overflow-hidden {
+  overflow: hidden;
+  margin: 0 1rem;
+}
+.overflow-x-auto {
+  overflow-x: auto
+}
+.overflow-y-auto {
+  overflow-y: auto
+}
+.overflow-xy-auto {
+  overflow: auto;
+}
+.overflow-x-hidden {
+  overflow-y: hidden;
+}
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+.overflow-xy-hidden {
+  overflow: hidden;
+}
+
+.font-family-main, 
+.font-family-title {
+  font-family: var(--title-font);
+}
+.font-family-alt, 
+.font-family-body {
+  font-family: var(--body-font);
+}
+.ellipsis {
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.purple-bottom-border,
+.lime-bottom-border,
+.mauve-bottom-border,
+.orange-bottom-border {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-height: 15px;
+  height: 100%;
+}
+.purple-bottom-border {
+  background-color: #7153a9;
+}
+.lime-bottom-border {
+  background-color: #a0dc61;
+}
+.mauve-bottom-border {
+  background-color: #be537f;
+}
+.orange-bottom-border {
+  background-color: #ea7815;
+}
+
+/** * Transition/Animation and KEYFRAMES */
+.fade {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+  -webkit-animation-duration: 0.309s;
+  animation-duration: 0.309s;
+}
+@keyframes fadeOut {
+  0% {opacity: 1;}
+  to {opacity: 0;}
+}
+@-webkit-keyframes fadeOut {
+  0% {opacity: 1;}
+  to {opacity: 0;}
+}
+/** * ================================== */
+
+/**
+ * ================================================================= *
+ * Plugin Style Adjustment: Slick Slider (Ken Wheeler)
+ * ================================================================= *
+ */
+.slick-next,
+.slick-prev {
+  z-index: 10010;
+}
+.slick-prev {
+  left: 0;
+}
+.slick-prev:before {
+  content: url('/assets/images/prev.jpg');
+}
+.slick-next {
+  right: 50px;
+}
+.slick-next:before {
+  content: url('/assets/images/next.jpg');
+}
+.slick-dots {
+  bottom: 1rem;
+}
+.slick-dotted.slick-slider {
+  margin-bottom: 0;
+}
+[class*=recipe] .slick-next,
+[class*=recipe] .slick-prev,
+[class*=news] .slick-next,
+[class*=news] .slick-prev {
+  top: 45%;
+}
+[class*=recipe] .slick-next, 
+[class*=news] .slick-next,
+[class*=blog] .slick-next, 
+[class*=post] .slick-next {
+  right: 50px;
+}
+/** * ================================================================= */
+/** * ================================================================= */
+
+/**
+ * Custom sized bootstrap Container Class
+ *   with RESPONSIVE property-values as well.
+ */
+/** * ================================================================= */
+.custom-container {
+  max-width: 1590px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: var(--text-color);
+}
+@media only screen and (max-width: 1600px) {
+  .custom-container {
+    display: flex;
+    max-width: 87.5%;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .custom-container {
+    max-width: 1140px;
+  }
+}
+@media only screen and (max-width: 1440px) {
+  .custom-container {
+/*     max-width: 92.5%; */
+    max-width: 1140px;
+  }
+}
+@media only screen and (max-width: 1366px) {
+  .custom-container {
+/*     max-width: 87.5%; */
+    max-width: 1140px;
+  }
+}
+@media only screen and (max-width:1280px) {
+  .custom-container {
+    max-width: 1140px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .custom-container {
+    max-width: calc(100% - 30px);
+  }
+}
+@media only screen and (max-width: 992px) {
+  .custom-container {
+    max-width: 92.5%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .custom-container {
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .custom-container {
+    max-width: 100%;
+  }
+}
+/** * ================================================================= */
+
+/** * ================================================================= */
+/** * RESPONSIVE Site-Wide */
+/** * ================================================================= */
+@media only screen and (max-width: 1600px) {
+  html,
+  body {
+    font-size: 15px !important;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  dialog,
+  #site-search {
+    max-width: 75%;
+  }
+  header:not(.article-header) nav ul li>a,
+  .nav-item a.nav-link,
+  .nav-link,
+  nav a.nav-link {
+    padding-bottom: 45px;
+  }
+}
+
+/* @media only screen and (max-width: 1366px) {} */
+@media only screen and (max-width: 1280px) {
+  /**
+   * ============================================================== *
+   * Plugin Style Update (RESPONSIVE): Slick Slider (K. Wheeler)
+   * ============================================================== *
+   */
+  [class*=recipe] .slick-next,
+  [class*=recipe] .slick-prev,
+  [class*=news] .slick-next,
+  [class*=news] .slick-prev {
+    top: 40%;
+  }
+  dialog,
+  #site-search {
+    max-width: 87.5%;
+  }
+  footer:not(.article-footer) .nav-item .nav-link {
+    font-size: 15px;
+    line-height: 31px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  main {
+    padding-top: 150px;
+  }
+  dialog,
+  #site-search {
+    max-width: 92.5%;
+  }
+  footer:not(.article-footer) .nav-item .nav-link {
+    font-size: 14px;
+    line-height: 25px;
+  }
+  .page-title,
+  .page-title h1,
+  h1.page-title,
+  h1,
+  .h1 {
+    font-size: 27px;
+    line-height: 33px;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+  .section-title h2,
+  h2.section-title,
+  .section-title {
+    font-size: 23px !important;
+  }
+  a,
+  span,
+  p {
+    font-size: 15px;
+    line-height: 31px;
+    font-weight: inherit;
+    letter-spacing: 0;
+  }
+  .page-title:before,
+  .page-title h1:before,
+  h1.page-title:before,
+  .h1:before {
+    content: url('/assets/images/decorations/title-deco-responsive.png');
+  }
+  header:not(.article-header) nav ul li>a,
+  .nav-item a.nav-link,
+  .nav-link,
+  nav a.nav-link {
+    font-size: 87.5%;
+    padding-bottom: 30px;
+  }
+  /**
+   * ============================================================== *
+   * Plugin Style Update (RESPONSIVE): Slick Slider (K. Wheeler)
+   * ============================================================== *
+   */
+  .slick-prev:before {
+    content: url('/assets/images/prev.jpg');
+  }
+  .slick-next:before {
+    content: url('/assets/images/next.jpg');
+  }
+  /** * ============================================================== */
+}
+
+@media only screen and (max-width: 1024px) and (orientation: landscape) {}
+@media only screen and (max-width: 992px) {
+  .breadcrumb-item,
+  .breadcrumb-item * {
+    font-size: 12px !important;
+    line-height: 25px !important;
+    margin-bottom: 1rem;
+  }
+  /**
+   * ============================================================== *
+   * Plugin Style Update (RESPONSIVE): Slick Slider (K. Wheeler)
+   * ============================================================== *
+   */
+  .slick-next,
+  .slick-prev {
+    transform: scale(.5);
+  }
+  .slick-prev {
+    left: -5px !important;
+  }
+  .slick-prev:before {
+    content: url('/assets/images/prev.jpg');
+  }
+  .slick-next {
+    right: 20px !important;
+  }
+  .slick-next {
+    right: 50px;
+  }
+  .slick-next:before {
+    content: url('/assets/images/next.jpg');
+  }
+  /** * ============================================================== */
+
+  navbar-nav .nav-link,
+  .nav-link {
+    padding: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  a,
+  span,
+  p {
+    font-size: 14px;
+    line-height: 29px;
+    letter-spacing: 0;
+    word-spacing: normal;
+    margin-bottom: 0.618rem;
+  }
+  dialog,
+  #site-search {
+    max-width: 95%;
+  }
+  .profile-section-title h2,
+  [class*=title] h2,
+  h2 [class*=title],
+  .h2 {
+    font-size: 21px;
+    line-height: 37px;
+    margin: 0.309rem auto;
+  }
+  .page-title,
+  .page-title h1,
+  h1.page-title,
+  h1,
+  .h1 {
+    font-size: 20px;
+    line-height: 38px;
+  }
+  .page-title:before,
+  .page-title h1:before,
+  h1.page-title:before,
+  .h1:before {
+    content: url('/assets/images/decorations/title-deco-mobile.png');
+  }
+  .section-title,
+  .article-title,
+  h2.article-title,
+  h2.section-title,
+  .h2 {
+    font-size: 18px !important;
+    line-height: 30px;
+  }
+  .section-title:after,
+  .article-title:after,
+  h2.article-title:after,
+  h2.section-title:after,
+  .h2:after {
+    content: url('/assets/images/decorations/sub-section-title-deco-mobile.png');
+    margin-left: 5px;
+  }
+  h3.section-title {
+    font-size: 115%;
+  }
+  h4 {
+    font-size: 17px;
+    line-height: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  p,
+  p *,
+  a,
+  span,
+  ul li,
+  ul li * {
+    color: inherit;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 25px;
+    letter-spacing: 0;
+  }
+  figure {
+    margin: 0 !important;
+  }
+  .show {
+    display: block !important;
+  }
+  .page-padding {
+    padding-top: 40px;
+  }
+  /** * Navigation hamburger menu icon and cross animation */
+  .navicon-container {
+    line-height: normal !important;
+    max-height: 25px;
+    align-self: center;
+  }
+  .bar1,
+  .bar2,
+  .bar3 {
+    width: 27px;
+    height: 2px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: calc(0.618s * 0.618);
+  }
+  .change .bar1,
+  .change .bar2 {
+    margin: 5px 0;
+  }
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-5px, 5px);
+    transform: rotate(-45deg) translate(-5px, 5px);
+    width: 21px;
+  }
+  .change .bar2 {
+    opacity: 0;
+  }
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-5px, -5px);
+    transform: rotate(45deg) translate(-5px, -5px);
+    width: 21px;
+  }
+  /** * Navigation hamburger menu icon and cross animation */
+  .navigation[role=navigation] {
+    max-width: 75%;
+    width: 100%;
+    background-color: var(--bg-color-blue);
+  }
+  .repsonsive-navi[role=navigation] {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 992px) and (orientation: landscape) {}
+@media only screen and (max-width: 768px) {
+  main {
+    padding-top: 180px;
+  }
+  /**
+   * ============================================================== *
+   * Plugin Style Update (RESPONSIVE): Slick Slider (K. Wheeler)
+   * ============================================================== *
+   */
+  .slick-prev:before {
+    content: url('/assets/images/prev.jpg');
+  }
+  .slick-next:before {
+    content: url('/assets/images/next.jpg');
+  }
+  /** * ============================================================== */
+}
+
+@media only screen and (max-width: 768px) and (orientation: landscape) {}
+@media only screen and (max-width: 576px) {
+  html,
+  body {
+    font-size: 16px;
+  }
+  main {
+    padding-top: 120px;
+  }
+  p,
+  p *,
+  a,
+  span,
+  ul li,
+  ul li * {
+    font-size: 14px !important;
+    line-height: 25px !important;
+  }
+  ul li,
+  ul li * {
+    letter-spacing: 0;
+    margin-bottom: 0.125rem;
+  }
+  a[class*=btn],
+  a[class*=cta] {
+    font-size: 15px;
+    font-weight: 700;
+  }
+}
+
+@media only screen and (max-width: 576px) and (orientation: landscape) {}

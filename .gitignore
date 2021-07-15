@@ -1,3 +1,9 @@
+#
+/_
+/__
+
+/*dev
+
 /vendor/
 
 *.zip
@@ -9,3 +15,11 @@
 *.tgz
 *.tar.bz2
 *.tbz2
+
+resources/views/templates/_
+resources/views/templates/*dev*
+resources/views/templates/_checkout/
+reources/views/templates/checkout/_testingOrderSummary/
+
+public/_assets/
+
