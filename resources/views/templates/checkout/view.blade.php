@@ -365,7 +365,7 @@ address.shipping-address p *,
 
           @if($order->coupon != null)
               <div class="col-12 applied-coupon">
-              <a href="/remove/coupon/{{$order->id}}">
+              <a href="/remove/coupon/{{$order->id}}?return_url={{ url()->full() }}">
                   {{$order->coupon}}
                   <i class="fa fa-times"></i>
               </a>
@@ -375,7 +375,7 @@ address.shipping-address p *,
                   <div class="col-12 available-coupons">
                       <h2>Available Coupon Codes</h2>
                       @foreach($available_coupons as $available_coupon)
-                          <a href="/apply/coupon/{{$available_coupon->id}}">
+                          <a href="/apply/coupon/{{$available_coupon->id}}?return_url={{ url()->full() }}">
                               {{$available_coupon->code}}
                               <i class="fa fa-plus"></i>
                           </a>
@@ -384,12 +384,11 @@ address.shipping-address p *,
               @endif
               <form action="/apply/coupon/code" method="post" class="col-12 p-0 promo-form">
                   {!!Form::token()!!}
+				  <input type="hidden" name="return_url" value="{{ url()->full() }}">
                   <div class="input-group">
                       <input type="text" class="form-control" placeholder="Enter Promo Code" name="code">
                       <div class="input-group-append">
-                          <button type="submit">
-                              GO
-                          </button>
+                          <button type="submit">GO</button>
                       </div>
                   </div>
               </form>
