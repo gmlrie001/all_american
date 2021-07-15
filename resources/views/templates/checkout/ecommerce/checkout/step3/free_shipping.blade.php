@@ -38,7 +38,7 @@
       <div class="col-12 col-md-4">*ESTIMATED delivery time is usually between 7-14 working days</div>
     @endisset
       <div class="col-12 col-lg-10 offset-lg-1 disclaimer my-1 order-last">
-        <p>
+        <p style="font-size: 100%;line-height:inherit;margin:0.5rem auto !important;">
           <small>
             <em>*</em> Indicated <u>ESTIMATED</u> time of arrival or delivery date provided by shipper/courier company. {{ $site_settings->site_name }} cannot be held liable for any changes, delays or damages that may occur during transit.
           </small>
@@ -46,7 +46,7 @@
       </div>
 
     @isset( $option->shipping_cost )
-      <div class="col-12 col-md-1" style="font-size:65%!important;line-height:23px;font-weight:400;">R{{ $option->shipping_cost }}</div>
+      <div class="col-12 col-md-1" style="font-size:100%!important;line-height:23px;font-weight:400;">R{{ $option->shipping_cost }}</div>
     @endisset
 
     </div>
