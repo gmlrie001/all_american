@@ -154,7 +154,7 @@ return [
 
     'Collection' => [
       'courier' => 'Collection', 
-      'courier_enabled' => !1,
+      'courier_enabled' => 1,
       'courier_package' => [
         'shipment_courier' => \App\Models\CollectionPoint::class, 
         'checkout_helper'  => [], 
