@@ -30,10 +30,14 @@
           @else
             <div class="col-12 col-md-4">*ESTIMATED 5&ndash;7 working days</div>
           @endisset
+            <div class="col-12 col-md-1" style="font-size:100%!important;line-height:23px;font-weight:400;">R {{ number_format( $aramex_shipping_cost ?? 0, 2, ".", "" ) }}</div>
             <div class="col-12 disclaimer my-1 order-last">
-              <p><small><em>*</em> Indicated <u>ESTIMATED</u> time of arrival or delivery date provided by shipper/courier company. {{ $site_settings->site_name }} cannot be held liable for any changes, delays or damages that may occur during transit.</small></p>
+              <p style="font-size: 100%;line-height:inherit;margin:0.5rem auto !important;">
+                <small>
+                  <em>*</em> Indicated <u>ESTIMATED</u> time of arrival or delivery date provided by shipper/courier company. {{ $site_settings->site_name }} cannot be held liable for any changes, delays or damages that may occur during transit.
+                </small>
+              </p>
             </div>
-            <div class="col-12 col-md-1" style="font-size:65%!important;line-height:23px;font-weight:400;">R {{ number_format( $aramex_shipping_cost ?? 0, 2, ".", "" ) }}</div>
           </div>
         </div>
         {{--  2</div>  --}}
