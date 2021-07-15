@@ -238,8 +238,8 @@ button[class*=submit],
 button,
 .btn,
 [class*=submit] {
-  font-family: 'Poppins', sans-serif;
-  line-height: 50px;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 43px;
   border: none;
   box-shadow: none;
   outline: 0;
