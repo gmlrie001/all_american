@@ -773,15 +773,16 @@ footer .footer-legal p {
     display: block;
     padding-left: 70px;
     margin-bottom: 10px;
-    line-height: 30px;
+    line-height: 37px;
 }
 .contactWrap .detail a span {
     position: absolute;
     left: 0;
     font-weight: 500;
 }
-.contactWrap .address a {
-    line-height: 30px;
+.contactWrap .address a, .contactWrap a {
+  line-height: 37px;
+  font-weight: 400;
 }
 .contactWrap .detail .social a {
     background: #c12136;
@@ -811,14 +812,35 @@ footer .footer-legal p {
     background-clip: padding-box;
     border: 1px solid #d6d6d6;
     border-radius: 0;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 .contactWrap .formContain form textarea {
     border: 1px solid #d6d6d6;
     border-radius: 0;
+    font-size: 0.875rem;
+    padding: 0 1rem;
+    line-height: 40px;
+}
+.contactWrap .formContain form .form-control::-webkit-input-placeholder {
+    font-size: 0.875rem;
+    line-height: 40px;
+}
+.contactWrap .formContain form .form-control::-moz-placeholder {
+    font-size: 0.875rem;
+    line-height: 40px;
+}
+.contactWrap .formContain form .form-control:-ms-input-placeholder {
+    font-size: 0.875rem;
+    line-height: 40px;
+}
+.contactWrap .formContain form .form-control:-moz-placeholder {
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    line-height: 40px;
 }
 .contactWrap .formContain form button {
-    margin-top: 20px;
+    font-size: 1rem;
+    line-height: 45px;
 }
 .mapWrap {
     margin-bottom: 60px;
@@ -837,7 +859,6 @@ footer .footer-legal p {
     .contactWrap .address {
         margin-top: 40px;
     }
-
 }
 
 .deliveryForm {
@@ -941,8 +962,10 @@ footer .footer-legal p {
 }
 .faqContain .answerContain .questionBlock h3 {
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 600;
     text-transform: uppercase;
+    position: relative;
+    margin: 1rem auto;
     padding: 10px;
     border-bottom: 1px solid #d6d6d6;
 }
@@ -954,9 +977,9 @@ footer .footer-legal p {
 .faqContain .answerContain .questionBlock h3::after {
     content: "+";
     position: absolute;
-    right: 20px;
-    top: 5px;
     display: block;
+    right: 20px;
+    top: 20px;
     height: 20px;
     width: 20px;
     border: 1px solid #d6d6d6;
