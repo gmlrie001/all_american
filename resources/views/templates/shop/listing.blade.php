@@ -122,7 +122,7 @@
         <div class="row justify-content-between">
             <div class="col breadCrumb">
                 @isset( $article )
-                <h1>{{$article->title}} <i>({{sizeof($products)}})</i></h1>
+                <h1>{{$article->title}} <i>({{ $products->total() }})</i></h1>
                 @endisset
             </div>
             <div class="sortBy d-none d-md-block">
@@ -161,7 +161,7 @@
     <div class="row">
         <div class="col-12">
             <div class="filteropen">
-                <a class="filterBtn" href="">Filters</a>
+                <a class="filterBtn">Filters</a>
             </div>
             <div class="viewChange d-inline-block">
                 <a href="#">
@@ -208,7 +208,7 @@
     </div>
     <form method="GET" action="">
         <div class="title">
-            <h5>Filters</h5>
+            <h5 class="mb-3">Filters</h5>
         </div>
         <div class="applied borderTop pt-3">
             @if(isset($clear_link))
@@ -260,10 +260,12 @@
           $show_images = false;
           $ky = explode("-", $key);
 
-          $firstOption = \App\Models\FilterOption::find( $firstFilter['id'] );
+          if ( ! is_null( $firstFilter ) ) {
+            $firstOption = \App\Models\FilterOption::find( $firstFilter['id'] );
           
-          if($firstOption != null && $firstOption->swatch_image != null){
-            $show_images = true;
+            if($firstOption != null && $firstOption->swatch_image != null){
+              $show_images = true;
+            }
           }
         @endphp
         <div class="d-flex flex-column flex-wrap sizeContain borderTop productPadding pt-3">
@@ -374,7 +376,7 @@
         <div class="col-12 col-lg-2 col-xl-3 filterWrap d-none d-md-block mb-lg-5 mb-4">
             <form method="GET" action="">
                 <div class="title">
-                    <h5>Filters</h5>
+                    <h5 class="mb-3">Filters</h5>
                 </div>
                 <div class="applied">
                     @if(isset($clear_link))
@@ -382,7 +384,7 @@
                     @endif
                 </div>
                 @if( $subcats && count( $subcats ) > 0 )
-                <div class="d-flex flex-column flex-wrap sizeContain borderTop productPadding">
+                <div class="d-flex flex-column flex-wrap sizeContain borderTop productPadding pt-2">
                     <div class="title">
                         <h4>Categories</h4>
                     </div>
@@ -410,17 +412,19 @@
 
                 @foreach($filters as $key => $filter)
                 @php
-                $ky = explode("-", $key);
-                $firstFilter = reset($filter);
+                  $ky = explode("-", $key);
+                  $firstFilter = reset($filter);
+                  $show_images = false;
 
-                $show_images = false;
-                $firstOption = \App\Models\FilterOption::find($firstFilter['id']);
-
-                if($firstOption != null && $firstOption->swatch_image != null){
-                    $show_images = true;
-                }
+                  if ( ! is_null( $firstFilter ) ) {
+                    $firstOption = \App\Models\FilterOption::find( $firstFilter['id'] );
+                  
+                    if($firstOption != null && $firstOption->swatch_image != null){
+                      $show_images = true;
+                    }
+                  }
                 @endphp
-                <div class="d-flex flex-column flex-wrap sizeContain borderTop productPadding py-lg-2 py-3">
+                <div class="d-flex flex-column flex-wrap sizeContain borderTop productPadding pt-2">
                     <div class="title">
                         <h4>{{$ky[0]}}</h4>
                     </div>
@@ -458,11 +462,11 @@
                 @endforeach
 
                 @if($min_price != $max_price)
-                <div class="d-flex flex-column flex-wrap priceContain borderTop productPadding py-lg-2 py-3">
+                <div class="d-flex flex-column flex-wrap priceContain borderTop productPadding pt-2">
                     <div class="title">
                         <h4 class="mb-lg-2">Price range:</h4>
                     </div>
-                    
+                
                     <fieldset id="priceFilterContain" class="d-flex flex-column flex-wrap float-left">
                         <p class="mb-lg-0">
                             <label for="amount" class="mb-lg-0 d-none collapse hidden" hidden>Price range:</label>
@@ -510,7 +514,7 @@
                 </div>
             </form>
         </div>
-        <div class="col-12 col-lg-10 col-xl-9 productListWrap beforeFooterWrap pb-lg-5 pb-4 mb-lg-5 mb-4">
+        <div class="col-12 col-lg-10 col-xl-9 productListWrap beforeFooterWrap pt-2 pb-lg-5 pb-4 mb-lg-5 mb-4">
             <div class="row">
                 @foreach($products as $product)
                     @include('templates.products.product_block', ['product' => $product])
@@ -521,14 +525,6 @@
                     {!! $products->render() !!}
                 </div>
             </div>
-            
-            {{-- 
-              <div class="row">
-                  <div class="col-12 paginator">
-                    <a href="/" class="col-12 text-center link loadMore" title="view all our products">Load more</a>
-                  </div>
-              </div>
-            --}}
         </div>
     </div>
 </div>
