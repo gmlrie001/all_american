@@ -470,7 +470,7 @@ a.continue-shopping:hover {
 }
 a.continue-shopping {
     display: block;
-    line-height: 40px;
+    line-height: 45px !important;
     text-align: center;
     margin: auto;
     width: 100%;
@@ -480,6 +480,15 @@ a.continue-shopping {
     text-transform: uppercase;
     font-size: 14px;
     cursor: pointer;
+}
+@media only screen and (max-width: 992px) {
+    a.continue-shopping,
+    .input-group-append, 
+    .promo-form button {
+        line-height: 35px !important;
+        height: 35px !important;
+    }
+    
 }
 .blue-background {
     background: #25d01c !important;
