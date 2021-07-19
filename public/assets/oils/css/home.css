@@ -18,7 +18,7 @@
 }
 .heroBanner .heroText h3, .ctaBanner .heroText h3 {
     color: #90a351;
-    font-family: 'ACarlsonPro-Semibold', Fallback, sans-serif;
+    /* font-family: 'ACarlsonPro-Semibold', Fallback, sans-serif; */
     font-size: 18px;
     font-weight: 600;
     text-transform: uppercase;
@@ -26,7 +26,7 @@
 }
 .heroBanner .heroText h1, .ctaBanner .heroText h1 {
     font-size: 50px;
-    font-family: 'ACarlsonPro-Bold', Fallback, sans-serif;
+    /* font-family: 'ACarlsonPro-Semibold', Fallback, sans-serif; */
     line-height: 46px;
     font-weight: 600;
     text-transform: uppercase;
@@ -35,13 +35,13 @@
 }
 .heroBanner .heroText p, .ctaBanner .heroText p {
     font-size: 15px;
-    font-family: 'ACarlsonPro-Regular', Fallback, sans-serif;
+    /* font-family: 'ACarlsonPro-Semibold', Fallback, sans-serif; */
     font-weight: 400;
     line-height: 28px;
     margin-bottom: 1rem;
 }
 .heroText a.btn.smlBtn {
-    font-family: 'ACarlsonPro-Semibold', Fallback, sans-serif;
+    /* font-family: 'ACarlsonPro-Semibold', Fallback, sans-serif; */
     max-width: 300px;
     width: auto !important;
     padding: 0 3rem !important;
@@ -53,37 +53,37 @@
 .heroText a.btn.smlBtn:active,
 .heroText a.btn.smlBtn:focus,
 .heroText a.btn.smlBtn:hover {
-    font-family: 'ACarlsonPro-Semibold', Fallback, sans-serif;
+    /* font-family: 'ACarlsonPro-Semibold', Fallback, sans-serif; */
     background-color: #c1ac3a !important;
     color: #ffffff !important;
 }
 .heroBannerMobile .heroText {
-    font-family: 'ACarlsonPro-Regular', Fallback, sans-serif;
+    /* font-family: 'ACarlsonPro-Semibold', Fallback, sans-serif; */
     color: #4e523b;    
     margin-top: 60px;
 }
 .heroBannerMobile .heroText h3 {
-    font-family: 'ACarlsonPro-Regular', Fallback, sans-serif;
+    /* font-family: 'ACarlsonPro-Semibold', Fallback, sans-serif; */
     color: #90a351;
     font-size: 18px;
     font-weight: 400;
     text-transform: uppercase;
 }
 .heroBannerMobile .heroText h1 {
-    font-family: 'ACarlsonPro-Bold', Fallback, sans-serif;
+    /* font-family: 'ACarlsonPro-Semibold', Fallback, sans-serif; */
     font-size: 35px;
     line-height: 38px;
     font-weight: 700;
     text-transform: uppercase;
 }
 .heroBannerMobile .heroText p {
-    font-family: 'ACarlsonPro-Regular', Fallback, sans-serif;
+    /* font-family: 'ACarlsonPro-Semibold', Fallback, sans-serif; */
     font-size: 15px;
     font-weight: 400;
     line-height: 28px;
 }
 .heroBannerMobile .heroText a {
-    font-family: 'ACarlsonPro-Semibold', Fallback, sans-serif;
+    /* font-family: 'ACarlsonPro-Semibold', Fallback, sans-serif; */
     margin-top: 30px;
 }
 .quickLinksWrap {
@@ -123,6 +123,12 @@
     text-align: center;
     padding-left: 30px;
     padding-right: 30px;
+}
+@media only screen and (max-width: 992px) {
+  .quickLinksWrap {
+    padding-top:15px;
+    padding-bottom:25px;
+  }
 }
 .productHome, .blogHome {
     margin-top: 70px;
