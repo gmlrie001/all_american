@@ -45,8 +45,7 @@ return [
    * | ============================================================= *
    */
   'assets_source'      => dirname( __DIR__ )  .DIRECTORY_SEPARATOR. 'public/assets', 
-  'assets_destination' => public_path( 'assets' ), 
-
+  'assets_destination' => base_path( 'public_html/assets' ), 
   'assets_tagname'     => 'all_american_assets', 
 
 ];
