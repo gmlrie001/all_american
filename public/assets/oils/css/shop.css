@@ -273,6 +273,10 @@
     float: left;
     margin-left: 4.5%;
 }
+#priceFilterContain span {
+   font-size: 1rem;
+   font-weight: 500;
+}
 .filter-block h3.blue-title {
     margin-top: 0;
     margin-bottom: 0;
@@ -822,4 +826,4 @@ h2 .product-view-label {
         border: 1px solid #cccccc;
         margin-bottom: 10px;
     }
-}   
+}
