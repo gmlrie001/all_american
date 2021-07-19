@@ -183,7 +183,7 @@ input:not([type="submit"]):active + .input-requirements {
                             </div>
                             <div class="misc-errors"></div>
                             <div class="form-group">
-                                <div class="g-recaptcha" id="g-captcha"></div>
+                                <div class="g-recaptcha col-12 px-lg-0" id="g-captcha"></div>
                             </div>
                             <button class="btn smlBtn green my-0" type="submit">
                                 REGISTER
