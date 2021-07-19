@@ -24,7 +24,8 @@ class TemplateServiceProvider extends ServiceProvider
     ], 'all_american_config');
 
     $this->publishes([
-      dirname( __DIR__ ) .DIRECTORY_SEPARATOR. 'public/assets' => config( 'all_american.assets_destination' ),
+//       dirname( __DIR__ ) .DIRECTORY_SEPARATOR. 'public/assets' => config( 'all_american.assets_destination' ),
+      dirname( __DIR__ ) . DIRECTORY_SEPARATOR . 'public/assets' => public_path( 'assets' ),
     ], 'all_american_assets');
 
     if ( in_array( env( 'APP_ENV' ), ['local', 'development', 'dev'] ) ) {
