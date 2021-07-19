@@ -92,26 +92,12 @@
       href="@if($environmentCheck){{ secure_asset( 'assets/oils/css/about.css' ) }}@else{{ asset( 'assets/oils/css/about.css' ) }}@endif" media="all">
     <link rel="stylesheet" type="text/css" 
       href="@if($environmentCheck){{ secure_asset( 'assets/oils/css/account.css' ) }}@else{{ asset( 'assets/oils/css/account.css' ) }}@endif" media="all">
-    {{-- <link rel="stylesheet" type="text/css" 
-      href="/assets/oils/css/alert.css" media="all"> --}}
     <link rel="stylesheet" type="text/css" 
       href="@if($environmentCheck){{ secure_asset( 'assets/css/banner.css' ) }}@else{{ asset( 'assets/css/banner.css' ) }}@endif" media="all">
-    {{-- <link rel="stylesheet" type="text/css" 
-      href="/assets/oils/css/app.css" media="all"> --}}
-    {{-- <link rel="stylesheet" type="text/css" 
-      href="/assets/oils/css/blender.css" media="all"> --}}
-    {{-- <link rel="stylesheet" type="text/css" 
-      href="/assets/oils/css/blog.css" media="all"> --}}
     <link rel="stylesheet" type="text/css" 
       href="@if($environmentCheck){{ secure_asset( 'assets/css/breadcrumbs.css' ) }}@else{{ asset( 'assets/css/breadcrumbs.css' ) }}@endif" media="all">
-    {{-- <link rel="stylesheet" type="text/css" 
-      href="/assets/oils/css/cart-bar.css" media="all"> --}}
-    {{-- <link rel="stylesheet" type="text/css" 
-      href="/assets/oils/css/checkout.css" media="all"> --}}
     <link rel="stylesheet" type="text/css" 
       href="@if($environmentCheck){{ secure_asset( 'assets/css/contact.css' ) }}@else{{ asset( 'assets/css/contact.css' ) }}@endif" media="all">
-    {{-- <link rel="stylesheet" type="text/css" 
-      href="/assets/css/container.css" media="all"> --}}
     <link rel="stylesheet" type="text/css" 
       href="@if($environmentCheck){{ secure_asset( 'assets/css/copyright.css' ) }}@else{{ asset( 'assets/css/copyright.css' ) }}@endif" media="all">
     <link rel="stylesheet" type="text/css" 
@@ -128,8 +114,6 @@
       href="@if($environmentCheck){{ secure_asset( 'assets/css/display.css' ) }}@else{{ asset( 'assets/css/display.css' ) }}@endif" media="all">
     <link rel="stylesheet" type="text/css" 
       href="@if($environmentCheck){{ secure_asset( 'assets/css/display-responsive.css' ) }}@else{{ asset( 'assets/css/display-responsive.css' ) }}@endif" media="all">
-    {{-- <link rel="stylesheet" type="text/css" 
-      href="/assets/css/faq.css" media="all"> --}}
     <link rel="stylesheet" type="text/css" 
       href="@if($environmentCheck){{ secure_asset( 'assets/css/faqs.css' ) }}@else{{ asset( 'assets/css/faqs.css' ) }}@endif" media="all">
     <link rel="stylesheet" type="text/css" 
@@ -138,42 +122,24 @@
       href="@if($environmentCheck){{ secure_asset( 'assets/css/grid.css' ) }}@else{{ asset( 'assets/css/grid.css' ) }}@endif" media="all">
     <link rel="stylesheet" type="text/css" 
       href="@if($environmentCheck){{ secure_asset( 'assets/css/grid-responsive.css' ) }}@else{{ asset( 'assets/css/grid-responsive.css' ) }}@endif" media="all">
-    {{-- <link rel="stylesheet" type="text/css" 
-      href="/assets/css/home.css" media="all"> --}}
     <link rel="stylesheet" type="text/css" 
       href="@if($environmentCheck){{ secure_asset( 'assets/css/inspiration.css' ) }}@else{{ asset( 'assets/css/inspiration.css' ) }}@endif" media="all">
     <link rel="stylesheet" type="text/css" 
       href="@if($environmentCheck){{ secure_asset( 'assets/css/loginmodal.css' ) }}@else{{ asset( 'assets/css/loginmodal.css' ) }}@endif" media="all">
-    {{-- <link rel="stylesheet" type="text/css" 
-      href="/assets/oils/css/navigation.css" media="all"> --}}
     <link rel="stylesheet" type="text/css" 
       href="@if($environmentCheck){{ secure_asset( 'assets/oils/css/notify.css' ) }}@else{{ asset( 'assets/oils/css/notify.css' ) }}@endif" media="all">
     <link rel="stylesheet" type="text/css" 
       href="@if($environmentCheck){{ secure_asset( 'assets/css/pagination.css' ) }}@else{{ asset( 'assets/css/pagination.css' ) }}@endif" media="all">
-    {{-- <link rel="stylesheet" type="text/css" 
-      href="/assets/oils/css/product.css" media="all"> --}}
-    {{-- <link rel="stylesheet" type="text/css" 
-      href="/assets/oils/css/promo.css" media="all">  --}}
     <link rel="stylesheet" type="text/css" 
       href="@if($environmentCheck){{ secure_asset( 'assets/css/promobar.css' ) }}@else{{ asset( 'assets/css/promobar.css' ) }}@endif" media="all">
-    {{-- <link rel="stylesheet" type="text/css" 
-      href="/assets/oils/css/promomodal.css" media="all"> --}}
-    {{-- <link rel="stylesheet" type="text/css" 
-      href="/assets/oils/css/range.css" media="all"> --}}
     <link rel="stylesheet" type="text/css" 
       href="@if($environmentCheck){{ secure_asset( 'assets/css/selling_points.css' ) }}@else{{ asset( 'assets/css/selling_points.css' ) }}@endif" media="all">
-    {{-- <link rel="stylesheet" type="text/css" 
-      href="/assets/oils/css/sharemodal.css" media="all"> --}}
-    {{-- <link rel="stylesheet" type="text/css" 
-      href="/assets/oils/css/shop.css" media="all"> --}}
     <link rel="stylesheet" type="text/css" 
       href="@if($environmentCheck){{ secure_asset( 'assets/css/store_locator.css' ) }}@else{{ asset( 'assets/css/store_locator.css' ) }}@endif" media="all">
     <link rel="stylesheet" type="text/css" 
       href="@if($environmentCheck){{ secure_asset( 'assets/css/styles.css' ) }}@else{{ asset( 'assets/css/styles.css' ) }}@endif" media="all">
     <link rel="stylesheet" type="text/css" 
       href="@if($environmentCheck){{ secure_asset( 'assets/css/subscribe.css' ) }}@else{{ asset( 'assets/css/subscribe.css' ) }}@endif" media="all">
-    {{-- <link rel="stylesheet" type="text/css" 
-      href="/assets/oils/css/text-pages.css" media="all"> --}}
     <link rel="stylesheet" type="text/css" 
       href="@if($environmentCheck){{ secure_asset( 'assets/css/zoom.css' ) }}@else{{ asset( 'assets/css/zoom.css' ) }}@endif" media="all">
     <link rel="stylesheet" type="text/css" 
@@ -184,6 +150,9 @@
       href="@if($environmentCheck){{ secure_asset( 'assets/css/header.css' ) }}@else{{ asset( 'assets/css/header.css' ) }}@endif" media="all">
     <link rel="stylesheet" type="text/css" 
       href="@if($environmentCheck){{ secure_asset( 'assets/oils/css/navigation.css' ) }}@else{{ asset( 'assets/oils/css/navigation.css' ) }}@endif" media="all">
+    <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/oils/css/min/general.css' ) }}@else{{ asset( 'assets/oils/min/general.css' ) }}@endif" media="all">
+{{--
     <link rel="stylesheet" type="text/css" 
       href="@if($environmentCheck){{ secure_asset( 'assets/oils/css/footer.css' ) }}@else{{ asset( 'assets/oils/css/footer.css' ) }}@endif" media="all">
     <link rel="stylesheet" type="text/css" 
@@ -200,6 +169,7 @@
       href="@if($environmentCheck){{ secure_asset( 'assets/oils/css/faq.css' ) }}@else{{ asset( 'assets/oils/css/faq.css' ) }}@endif" media="print" onload="this.media='all';this.removeAttribute('onload');">
     <link rel="stylesheet" type="text/css" 
       href="@if($environmentCheck){{ secure_asset( 'assets/oils/css/text-pages.css' ) }}@else{{ asset( 'assets/oils/css/text-pages.css' ) }}@endif" media="print" onload="this.media='all';this.removeAttribute('onload');">
+--}}
     <link rel="stylesheet" type="text/css" 
       href="@if($environmentCheck){{ secure_asset( 'assets/oils/css/account.css' ) }}@else{{ asset( 'assets/oils/css/account.css' ) }}@endif" media="print" onload="this.media='all';this.removeAttribute('onload');">
     <link rel="stylesheet" type="text/css" 
@@ -215,9 +185,13 @@
     <link rel="stylesheet" type="text/css" 
       href="@if($environmentCheck){{ secure_asset( 'assets/oils/css/checkout.css' ) }}@else{{ asset( 'assets/oils/css/checkout.css' ) }}@endif" media="print" onload="this.media='all';this.removeAttribute('onload');">
     <link rel="stylesheet" type="text/css" 
+      href="@if($environmentCheck){{ secure_asset( 'assets/oils/css/min/modal.css' ) }}@else{{ asset( 'assets/oils/css/min/modal.css' ) }}@endif" media="all" onload="this.media='all';this.removeAttribute('onload');">
+{{--
+    <link rel="stylesheet" type="text/css" 
       href="@if($environmentCheck){{ secure_asset( 'assets/oils/css/sharemodal.css' ) }}@else{{ asset( 'assets/oils/css/sharemodal.css' ) }}@endif" media="all" onload="this.media='all';this.removeAttribute('onload');">
     <link rel="stylesheet" type="text/css" 
       href="@if($environmentCheck){{ secure_asset( 'assets/oils/css/promomodal.css' ) }}@else{{ asset( 'assets/oils/css/promomodal.css' ) }}@endif" media="all" onload="this.media='all';this.removeAttribute('onload');">
+--}}
     <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" media="print" onload="this.media='all';this.removeAttribute('onload');">
     <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.15.3/css/v4-shims.css">
     <link rel="stylesheet" type="text/css" href="/assets/js/vendor/Magnific-Popup-master/dist/magnific-popup.css" media="print" onload="this.media='all';this.removeAttribute('onload');">
@@ -244,8 +218,8 @@
       .navigation .linksContain a {font-family:'Montserrat',sans-serif;}
       .mobileNavigation, .mobileNavigation * a * {font-family:'Montserrat',sans-serif;color:#cd8926;}
       .profile-top-nav .profile-nav {padding-top:0.5rem;padding-bottom:0.5rem;}
+      button[type=submit] {text-transform:uppercase;}
       @media only screen and (max-width:992px) {
-        /*.mobileNavigation, .mobileNavigation * a * {font-family:'Montserrat',sans-serif;color:#cd8926;}*/
         .vault-placeholder-logo {max-width:100%;width:100%;}
         .w-65 {width:auto!important;}
         .payment-order-summary p, .payment-order-summary p *, .payment-order-summary h3 span {font-size:0.875rem!important;}
