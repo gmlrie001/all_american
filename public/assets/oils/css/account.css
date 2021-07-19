@@ -514,7 +514,7 @@
   display: block;
   float: left;
   width: 60%;
-  line-height: 40px;
+  line-height: 43px;
   padding: 0 20px;
   font-size: 14px;
   border: 1px solid #cccccc;
@@ -524,7 +524,7 @@
   float: left;
   width: 40%;
   border: none;
-  line-height: 44px;
+  line-height: 45px;
   background: #000000;
   color: #ffffff;
   cursor: pointer;
@@ -594,6 +594,9 @@
   margin-bottom: 5px;
   width: 100%;
   font-size: 13px;
+}
+a.shop-now {
+  line-height: 45px !important;
 }
 .checkout-quote-button, .checkout-quote-button:hover, .checkout-quote-button:focus {
   float: right;
