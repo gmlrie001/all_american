@@ -227,6 +227,8 @@
     </style>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+
 
     @stack( 'pageHeaderScripts' )
 
@@ -280,7 +282,7 @@
       var onloadCallback = function() {
         try {
           grecaptcha.render( 'g-captcha', {
-            'sitekey' : '{{ env('GOOGLE_RECAPTCHA_CLIENT_KEY') }}',
+            'sitekey' : '{{ env('GOOGLE_RECAPTCHA_CLIENT_KEY', '6LcsfaYaAAAAAOTsVn9WxyScK3UZLLQJXaWJLuch') }}',
             'theme'   : 'light'
           });
         } catch( err ) { console.warn(err); }  
