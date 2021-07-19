@@ -203,9 +203,9 @@ FILTER
     min-height: 52px;
     margin-top: 1rem;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 600 !important;
     line-height: inherit;
-    /* text-transform: uppercase; */
+    text-transform: uppercase !important;
 }
 .productListWrap .block .info {
     margin-top: 5px;
