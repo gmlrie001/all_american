@@ -420,7 +420,6 @@ address.shipping-address p *,
 					$userAddressFirst = $user->addresses->sortBy( 'created_at' )->first();
 					$defaultUserAddy = $user->addresses->where( 'default_address', 1 );
 					$defaultUserAddy = ( NULL != $defaultUserAddy ) ? $defaultUserAddy->first() : $userAddressFirst;
-					// dd( __FILE__, __LINE__, ( NULL == $defaultUserAddy ) ?: $user_addresses->first(), $userAddressFirst, $defaultUserAddy );
 				@endphp
 
 				@if(sizeof($user_addresses) && NULL != $defaultUserAddy )
