@@ -216,7 +216,7 @@
                       )
                     </a>
                 </div>
-                <div class="col-6 navigation-icons d-flex justify-content-between align-self-center">
+                <div class="col-6 navigation-icons d-flex justify-content-between align-self-center pt-2">
                     <a href="#" class="searchOpen">
                       <img src="/assets/icons/mobile-search.svg" alt="Search products">
                     </a>
@@ -270,7 +270,7 @@
 
 <div class="container-fluid mobileOpen collapse">
     <div class="row justify-content-between align-items-center mobileMenu no-gutters py-1 px-0">
-        <a href="/" class="col-6 logo pt-3" title="{{$site_settings->site_name}}">
+        <a href="/" class="col-6 logo" title="{{$site_settings->site_name}}">
           @include( 'templates.placeholders.simple_image_placeholders',
             [
               'imgvar' => $site_settings->mobile_logo, 
@@ -290,19 +290,6 @@
         </div>
     </div>
     <div class="row links">
-      {{--
-        <a href="#" class="lrgLink has-second-menu hasDrop pr-3" data-open="#category">Shop by Category</a>
-      --}}
-        <a href="/shop">Shop All</a>
-    {{--
-      @if($show_sale_link > 0)
-        <a href="/shop/sale" class="saleLink">{{$site_settings->sale_text}}</a>
-      @endif
-      
-      @if($show_new_link > 0)
-        <a href="/shop/new" class="saleLink">{{$site_settings->new_text}}</a>
-      @endif
-    --}}
         @forelse($links as $link)
           <a href="/{{$link->link}}" target="{{$link->target}}">{{$link->title}}</a>
         @empty
