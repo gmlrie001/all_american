@@ -33,7 +33,7 @@ return [
     // 'blog',
     // 'contact',
     // 'faq_categories',
-    // 'information_pages',
+    'information_pages',
     // 'country_names_and_codes',
   ],
 
