@@ -157,6 +157,7 @@ form button.btn {
 .mobileOpen .links .lrgLink:after {
     content: url( '/assets/icons/dropdown-mobile.svg' );
     float: right;
+    filter: invert(1);
 }
 .mobileMenu .logo img {
     max-width: 95px;
