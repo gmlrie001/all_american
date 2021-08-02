@@ -486,7 +486,7 @@
 .wallet-block .shop-now, .wallet-block .shop-now:hover, .wallet-block .shop-now:focus {
   display: block;
   line-height: 40px;
-  margin-top: 25px;
+  margin-top: 1rem;
   background: #000000;
   float: left;
   width: 45%;
