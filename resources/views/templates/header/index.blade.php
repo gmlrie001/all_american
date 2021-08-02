@@ -290,6 +290,8 @@
         </div>
     </div>
     <div class="row links">
+        <a href="#" class="lrgLink has-second-menu hasDrop pr-3" data-open="#category">Shop by Category</a>
+        <a href="/shop">Shop All</a>
         @forelse($links as $link)
           <a href="/{{$link->link}}" target="{{$link->target}}">{{$link->title}}</a>
         @empty
