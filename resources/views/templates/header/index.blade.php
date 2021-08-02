@@ -306,7 +306,7 @@
     </div>
 </div>
 
-<div class="container-fluid mobileSubnav collapse" id="category">
+<div class="container-fluid mobileSubnav" id="category">
     <div class="row justify-content-between align-items-center mobileMenuu py-2 px-4">
         <a href="/" class="logo" title="{{$site_settings->site_name}}">
           @include( 'templates.placeholders.simple_image_placeholders',
