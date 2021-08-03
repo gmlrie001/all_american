@@ -320,7 +320,7 @@ address.shipping-address p *,
 								@endif
 
 						@else
-								@include( 'template.checkout.ecommerce.checkout.step2._components.address_rows.add_address' )
+								@include( 'templates.checkout.ecommerce.checkout.step2._components.address_rows.add_address' )
 						@endif
 				</div>
 		</div>
@@ -422,10 +422,10 @@ address.shipping-address p *,
 					$defaultUserAddy = ( NULL != $defaultUserAddy ) ? $defaultUserAddy->first() : $userAddressFirst;
 				@endphp
 
-				@if(sizeof($user_addresses) && NULL != $defaultUserAddy )
+				@if(NULL != $defaultUserAddy )
 					@php
-						$shippingid = ( ! isset( $shippingid ) ) ? $defaultUserAddy->id : $shippingid;
-						$billingid  =  ( ! isset( $billingid ) ) ? $defaultUserAddy->id :  $billingid;
+						$shippingid = ( ! isset( $shippingid ) ) ? optional( $defaultUserAddy )->id : 0;
+						$billingid  =  ( ! isset( $billingid ) ) ? optional( $defaultUserAddy )->id : 0;
 					@endphp
 				
 					<form action="/cart/delivery/option" method="post" class="col-12 p-0">
@@ -440,8 +440,8 @@ address.shipping-address p *,
 					<form action="/cart/delivery/option" method="post" class="col-12 p-0">
 						{!! Form::token() !!}
 						{!! Form::hidden( 'cart_id', $cart_id ) !!}
-						{!! Form::hidden( 'shipping_id', $defaultUserAddy->id ?? $userAddressFirst->id ) !!}
-						{!! Form::hidden(  'billing_id', $defaultUserAddy->id ?? $userAddressFirst->id ) !!}
+						{!! Form::hidden( 'shipping_id', optional( $defaultUserAddy )->id ? optional( $userAddressFirst )->id : 0 ) !!}
+						{!! Form::hidden(  'billing_id', optional( $defaultUserAddy )->id ? optional( $userAddressFirst )->id : 0 ) !!}
 						<input class="continue-button blue-background" type="submit" value="continue checkout" name="basketDelivery" disabled="">
 					</form>
 				@endif
