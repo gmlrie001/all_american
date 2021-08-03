@@ -32,16 +32,22 @@
     background: rgba(0,0,0,0.8);
     z-index: 101;
 }
+.share-modal .fa-times {
+    font-size: 1.618rem;
+    line-height: 1.5;
+    color: #000;
+}
 .share-modal h1 {
     float: left;
     display: block;
     width: 100%;
     text-align: center;
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 700;
     font-size: 20px;
     color: #000000;
-    margin-top: 40px;
+    margin-top: 50px;
+    margin-bottom: 10px;
 }
 .share-modal a {
     display: inline-block;
