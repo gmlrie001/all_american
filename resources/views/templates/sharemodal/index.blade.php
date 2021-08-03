@@ -1,7 +1,7 @@
 <div class="share-overlay"></div>
 <div class="share-modal">
     <a class="close-share" href="javascript:void(0);">
-        <img class="img-responsive img-fluid" src="/assets/images/template/header/close-grey.svg" />
+        <i class="fa fa-times" style="font-size:1.618rem;line-height:1.5;font-weight:bold;color:#000;"></i>
     </a>
 
     <h1>Share {{$site_settings->site_name}}</h1>
