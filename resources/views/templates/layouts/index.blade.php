@@ -241,13 +241,14 @@
     @include('templates.header.index')
     @include('templates.messages.index')
 
-    @if( ! Request( 'contact-us' ) )
+    @if( ! request()->is( 'contact-us' ) )
       @include('templates.page_banner.index')
     @endif
 
     @yield('content')
 
-    @include('templates.footer.index')
+    @include( 'templates.footer.index' )
+    @include( 'templates.sharemodal.index' )
 
     <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
