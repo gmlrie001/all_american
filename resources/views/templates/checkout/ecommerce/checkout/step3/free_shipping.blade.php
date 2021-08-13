@@ -3,7 +3,7 @@
   $option = $shipperOpt;
   $shipping_options[] = $option;
 
-  dd( get_defined_vars() );
+  // dd( get_defined_vars() );
 @endphp
 
 @if( $shipper && preg_match( "/free/isU", $shipper, $m ) )
