@@ -122,6 +122,7 @@
 @endif
 
 {{--@if ( (null != $homerecipes || isset( $homerecipes )) && sizeof($homerecipes) )--}}
+{{--
 @if(sizeof($homerecipes))
 <div class="container blogHome my-3">
     <div class="row">
@@ -147,7 +148,7 @@
                 )  
                 <div>
                     <h2>{{$recipe->title}}</h2>
-                    {!! \Illuminate\Support\Str::limit( $recipe->description, 200 ) !!}
+                    {!! str_limit( $recipe->description, 200 ) !!}
                     <span>read more</span>
                 </div>
             </a>
@@ -155,6 +156,7 @@
     </div>
 </div>
 @endif
+--}}
 
 @if( $site_settings->home_title && $site_settings->home_description )
 <div class="container my-3">
@@ -176,7 +178,7 @@
 @endif
 
 @forelse($home_articles as $homeArt)
-<div class="container-fluid ctaBanner d-none d-sm-block">
+<div class="container-fluid footer-ctaBanner d-none d-sm-block py-lg-5 py-4" style="background-color:#051c2e;color:#fff;">
     <div class="row">
         <div class="col-12 col-md-9 col-xl-6 offset-xl-1 heroText">
           @isset( $homeArt->title )
@@ -193,7 +195,7 @@
              rel="noopener noreferer" 
              title="@if( null != $homeArt->link_text && isset( $homeArt->link_text ) ){{$homeArt->link_text}}@else{{ __( "READ MORE" ) }}@endif" 
              href="{{$homeArt->link}}" 
-             class="btn smlBtn" 
+             class="btn smlBtn mb-lg-5 mb-3" 
              target="_blank"
             >
               @if( null != $homeArt->link_text && isset( $homeArt->link_text ) ){{$homeArt->link_text}}
