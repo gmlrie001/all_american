@@ -145,7 +145,7 @@ address.shipping-address p *,
                               ?>
                               @endif
                               @if($cart_prod->assembly_cost != null && $cart_prod->assembly_cost != 0)
-                                <h4><span>Assembly Cost:</span>R {{ number_format($cart_prod->assembly_cost, 0)}}</h4>
+                                <h4><span>Assembly Cost:</span>R {{ number_format($cart_prod->assembly_cost, 2, ".", "")}}</h4>
                               @endif
                           </div>
                           <div class="col-12 col-lg-6">
@@ -153,13 +153,13 @@ address.shipping-address p *,
                               {!!Form::token()!!}
                               <div class="col-12 col-lg-4">
                                 @if($cart_prod->original_price != null)
-                                    <label style="text-decoration: line-through;"><span class="d-block d-lg-none" style="text-decoration: line-through;">Price</span>R {{number_format(($cart_prod->original_price), 0)}}</label>
-                                    <label style="color: #ce0000; font-weight: 600;"><span class="d-block d-lg-none">Price</span>R {{ number_format(($cart_prod->price), 0) }}</label>
+                                    <label style="text-decoration: line-through;"><span class="d-block d-lg-none" style="text-decoration: line-through;">Price</span>R {{number_format(($cart_prod->original_price), 2, ".", "")}}</label>
+                                    <label style="color: #ce0000; font-weight: 600;"><span class="d-block d-lg-none">Price</span>R {{ number_format(($cart_prod->price), 2, ".", "") }}</label>
                                 @else
-                                    <label><span class="d-block d-lg-none">Price</span>R {{ number_format(($cart_prod->price), 0) }}</label>
+                                    <label><span class="d-block d-lg-none">Price</span>R {{ number_format(($cart_prod->price), 2, ".", "") }}</label>
                                 @endif
                                 {{--
-                                <label><span class="d-block d-lg-none">Price</span>R {{ number_format(($cart_prod->price), 0) }}</label>
+                                <label><span class="d-block d-lg-none">Price</span>R {{ number_format(($cart_prod->price), 2, ".", "") }}</label>
                                 --}}
                               </div>
                               <div class="col-12 col-lg-4">
@@ -177,7 +177,7 @@ address.shipping-address p *,
                                 </div>
                               </div>
                               <div class="col-12 col-lg-4">
-                                <label><span class="d-block d-lg-none">Total</span>R {{number_format(($cart_prod->price*$cart_prod->quantity), 0)}}</label>
+                                <label><span class="d-block d-lg-none">Total</span>R {{number_format(($cart_prod->price*$cart_prod->quantity), 2, ".", "")}}</label>
                               </div>
                             </form>
                           </div>
@@ -254,7 +254,7 @@ address.shipping-address p *,
                                 ?>
                             @endif
                             @if($cart_prod->assembly_cost != null && $cart_prod->assembly_cost != 0)
-                                <h4><span>Assembly Cost:</span>R {{ number_format($cart_prod->assembly_cost, 0)}}</h4>
+                                <h4><span>Assembly Cost:</span>R {{ number_format($cart_prod->assembly_cost, 2, ".", "")}}</h4>
                             @endif
                         </div>
                         <div class="col-12 col-lg-5">
@@ -262,18 +262,18 @@ address.shipping-address p *,
                                 {!!Form::token()!!}
                                 <div class="col-12 col-lg-4">
                                 @if($cart_prod->original_price != null)
-                                    <label class="mb-0" style="line-height:1.5;text-decoration:line-through;"><span class="d-block d-lg-none" style="line-height:1.5;text-decoration:line-through;">Old Price</span>R {{number_format(($cart_prod->original_price), 0)}}</label>
-                                    <label class="mb-0" style="color:#ce0000;line-height:1.5;font-weight:600;"><span class="d-block d-lg-none">Price</span>R {{ number_format(($cart_prod->price), 0) }}</label>
+                                    <label class="mb-0" style="line-height:1.5;text-decoration:line-through;"><span class="d-block d-lg-none" style="line-height:1.5;text-decoration:line-through;">Old Price</span>R {{number_format(($cart_prod->original_price), 2, ".", "")}}</label>
+                                    <label class="mb-0" style="color:#ce0000;line-height:1.5;font-weight:600;"><span class="d-block d-lg-none">Price</span>R {{ number_format(($cart_prod->price), 2, ".", "") }}</label>
                                 @else
-                                    <label class="mb-0"><span class="d-block d-lg-none">Unit Price</span>R {{ number_format(($cart_prod->price), 0) }}</label>
+                                    <label class="mb-0"><span class="d-block d-lg-none">Unit Price</span>R {{ number_format(($cart_prod->price), 2, ".", "") }}</label>
                                 @endif
                                 {{--
-                                <label class="mb-0"><span class="d-block d-lg-none">Price</span>R {{ number_format(($cart_prod->price), 0) }}</label>
+                                <label class="mb-0"><span class="d-block d-lg-none">Price</span>R {{ number_format(($cart_prod->price), 2, ".", "") }}</label>
                                 --}}
                                 </div>
                                 {{--
                                 <div class="col-12 col-lg-4">
-                                    <label class="mb-0"><span class="d-block d-lg-none">Price</span>R {{ number_format(($cart_prod->price), 0) }}</label>
+                                    <label class="mb-0"><span class="d-block d-lg-none">Price</span>R {{ number_format(($cart_prod->price), 2, ".", "") }}</label>
                                 </div>
                                 --}}
                                 <div class="col-12 col-lg-4">
@@ -291,7 +291,7 @@ address.shipping-address p *,
                                     </div>
                                 </div>
                                 <div class="col-12 col-lg-4">
-                                    <label class="mb-0"><span class="d-block d-lg-none">Total</span>R {{ number_format( ( $cart_prod->price * $cart_prod->quantity ), 0, ".", "" ) }} </label>
+                                    <label class="mb-0"><span class="d-block d-lg-none">Total</span>R {{ number_format( ( $cart_prod->price * $cart_prod->quantity ), 2, ".", "" ) }} </label>
                                 </div>
                             </form>
                         </div>
@@ -412,8 +412,8 @@ address.shipping-address p *,
           <form action="/cart/delivery" method="post" class="col-12 p-0">
               {!!Form::token()!!}
               {!!Form::hidden('cart_id', $cart_id)!!}
-              {!!Form::hidden('discount', number_format($discountTotal, 2, '.', ''))!!}
-              {!!Form::hidden('total', number_format($total_cost, 2, '.', ''))!!}
+              {!!Form::hidden('discount', number_format($discountTotal, 2, ".", ""))!!}
+              {!!Form::hidden('total', number_format($total_cost, 2, ".", ""))!!}
               <div class="mb-5">
                   @include('templates.checkout.continue_shopping_button')
               </div>
