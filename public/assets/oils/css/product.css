@@ -25,13 +25,14 @@
     vertical-align: 1px;
 }
 .sortBy .dropdown-menu {
-    background: #ffffff;
+    background: #fff;
     border-radius: 0;
     z-index: 1000;
     float: left;
-    min-width: auto;
+    /*min-width: auto;*/
     text-align: right;
     list-style: none;
+    border: 1px solid rgba(0,0,0);
     border: 1px solid rgba(0,0,0,.15);
     padding-top: 0;
     padding-bottom: 0;
@@ -39,14 +40,15 @@
     left: -131px !important;
 }
 .sortBy .dropdown-menu a {
-    font-size: 0.93333333333rem;
+    font-size: 0.93333rem;
     color: #1b1b19;
     padding-left: 85px;
 }
-.sortBy .dropdown-item:focus, .sortBy .dropdown-item:hover {
-    color: #ffffff;
+.sortBy .dropdown-item:focus, 
+.sortBy .dropdown-item:hover {
+    color: #fff;
     text-decoration: none;
-    background-color: #000000;
+    background-color: #000;
 }
 
 /*--
@@ -56,7 +58,9 @@ FILTER
     border-top: 1px solid #f4f4f4;
     padding: 20px 0;
 }
-/* .accordion .collapse {
+
+/*
+.accordion .collapse {
     margin-top: 15px !important;
 }
 .filterWrap .collapse.show .accordion h5::after {
@@ -98,18 +102,23 @@ FILTER
 .filterWrap label p {
     font-size: 10px;
     margin-top: 5px;
-} */
-.filterWrap .title h5, .filterMobileopen .title h5 {
+}
+*/
+
+.filterWrap .title h5, 
+.filterMobileopen .title h5 {
     font-size: 15px;
     font-weight: 600;
     text-transform: uppercase;
 }
-.filterWrap .title h4, .filterMobileopen .title h4 {
+.filterWrap .title h4, 
+.filterMobileopen .title h4 {
     font-size: 13px;
     font-weight: 600;
     text-transform: uppercase;
 }
-.filterWrap .applied a, .filterMobileopen .applied a {
+.filterWrap .applied a, 
+.filterMobileopen .applied a {
     background: #f4f4f4;
     font-size: 12px;
     color: #212121;
@@ -117,38 +126,51 @@ FILTER
     padding-left: 5px;
     padding-right: 5px;
 }
-.filterWrap .applied a:last-of-type, .filterMobileopen .applied a:last-of-type {
+.filterWrap .applied a:last-of-type, 
+.filterMobileopen .applied a:last-of-type {
     background: none;
     text-decoration: underline;
 }
-.filterWrap .applied, .filterMobileopen .applied {
+.filterWrap .applied, 
+.filterMobileopen .applied {
     margin-bottom: 20px;
 }
-.filterWrap .productPadding, .filterMobileopen .productPadding {
+.filterWrap .productPadding, 
+.filterMobileopen .productPadding {
     padding-bottom: 20px;
 }
-.filterWrap .sizeContain input[type="radio"], .filterMobileopen .sizeContain input[type="radio"] {
+.filterWrap .sizeContain input[type="radio"], 
+.filterMobileopen .sizeContain input[type="radio"] {
     width: 30px !important;
     height: 30px !important;
 }
-.filterWrap .sizeContain label span:first-of-type, .filterMobileopen .sizeContain label span:first-of-type {
+.filterWrap .sizeContain label span:first-of-type, 
+.filterMobileopen .sizeContain label span:first-of-type {
     left: -30px !important;
     top: -12px !important;
 }
-.filterWrap .sizeContain.productPadding, .filterWrap .colourContain.productPadding, .filterMobileopen .colourContain.productPadding {
+.filterWrap .sizeContain.productPadding, 
+.filterWrap .colourContain.productPadding, 
+.filterMobileopen .colourContain.productPadding {
     padding-bottom: 16px;
 }
-.filterWrap .sizeContain h4, .filterWrap .colourContain h4, .filterWrap .materialContain h4, .filterMobileopen .materialContain h4 {
+.filterWrap .sizeContain h4, 
+.filterWrap .colourContain h4, 
+.filterWrap .materialContain h4, 
+.filterMobileopen .materialContain h4 {
     margin-bottom: 15px;
 }
-.filterWrap .custom-control, .filterMobileopen .custom-control {
+.filterWrap .custom-control, 
+.filterMobileopen .custom-control {
     margin-bottom: 3px;
 }
-.filterWrap .custom-control .custom-control-label, .filterMobileopen .custom-control .custom-control-label {
+.filterWrap .custom-control .custom-control-label, 
+.filterMobileopen .custom-control .custom-control-label {
     font-size: 13px;
     padding-left: 10px;
 }
-.filterWrap .custom-control-label span, .filterMobileopen .custom-control-label::before {
+.filterWrap .custom-control-label span, 
+.filterMobileopen .custom-control-label::before {
     position: absolute;
     top: .25rem;
     left: 0;
@@ -180,7 +202,7 @@ FILTER
     top: 0;
     bottom: 0;
     right: 0;
-    background: #ffffff;
+    background: #fff;
 }
 
 .productListWrap .block.soldOut {
@@ -193,10 +215,15 @@ FILTER
     padding: 0px;
     margin-bottom: 30px;
 }
-.productListWrap .block .title h1, .productListWrap .block .info h2, .productListWrap .block .info h5  {
+.productListWrap .block .title h1, 
+.productListWrap .block .info h2, 
+.productListWrap .block .info h5  {
     color: #212121;
 }
-.productListWrap .block .title h1, .productListWrap .block .info h2, .productListWrap .block .info h5, .productListWrap .block .info h4 {
+.productListWrap .block .title h1, 
+.productListWrap .block .info h2, 
+.productListWrap .block .info h5, 
+.productListWrap .block .info h4 {
     margin-bottom: 0;
 }
 .productListWrap .block .title h1 {
@@ -205,13 +232,13 @@ FILTER
     font-size: 14px;
     font-weight: 400;
     line-height: inherit;
-    /* text-transform: uppercase; */
 }
 .productListWrap .block .info {
     margin-top: 5px;
 }
-.productListWrap .block .info h4, .productListWrap .block .info h2 {
-    color: #000000 !important;
+.productListWrap .block .info h4, 
+.productListWrap .block .info h2 {
+    color: #000 !important;
     font-size: 16px;
     font-weight: 700;
     line-height: 21px;
@@ -227,10 +254,12 @@ FILTER
 .productListWrap .block .info .size {
     border-left: 1px #212121 solid;
 }
+/*
 .productListWrap .block .price {
-    /* padding-left: 0;
-    padding-right: 0; */
+    padding-left: 0;
+    padding-right: 0;
 }
+*/
 .productListWrap .block .price * {
     color: #c1ac3a !important;
 }
@@ -282,7 +311,9 @@ FILTER
     padding: 5px 15px;
     text-align: center;
 }
-
+/*--
+PRODUCT
+--*/
 .productViewWrap .image .thumbNail {
     margin-top: 20px;
 }
@@ -290,37 +321,43 @@ FILTER
     border: 1px solid #d6d6d6;
 }
 .productViewWrap .image .thumbNail .slick-slide {
-    /* border: 1px solid #cccccc; */
+    /* border: 1px solid #ccc; */
     margin: 0 15px;
 }
-
-/*--
-PRODUCT
---*/
 .productViewWrap .sizeContain {
     position: relative;
 }
-.productViewWrap .details .sizeContain label, .filterWrap .sizeContain label, .filterMobileopen .sizeContain label {
+.productViewWrap .details .sizeContain label, 
+.filterWrap .sizeContain label, 
+.filterMobileopen .sizeContain label {
     margin-right: 10px;
 }
-.productViewWrap .details .sizeContain label:hover, .filterWrap .sizeContain label:hover, .filterMobileopen .sizeContain label:hover {
+.productViewWrap .details .sizeContain label:hover, 
+.filterWrap .sizeContain label:hover, 
+.filterMobileopen .sizeContain label:hover {
     cursor: pointer;
 }
-.productViewWrap .details .sizeContain input[type="radio"], .filterWrap .sizeContain input[type="radio"], .filterMobileopen .details .sizeContain input[type="radio"] {
+.productViewWrap .details .sizeContain input[type="radio"], 
+.filterWrap .sizeContain input[type="radio"], 
+.filterMobileopen .details .sizeContain input[type="radio"] {
     width: 40px;
     height: 40px;
     border-radius: 0;
     background-color: white;
-    -webkit-appearance: none; /*to disable the default appearance of radio button*/
+    -webkit-appearance: none;
     -moz-appearance: none;
 }
-.productViewWrap .details .sizeContain input[type="radio"]:focus { /*no need, if you don't disable default appearance*/
-    outline-color: transparent; /*to remove the square border on focus*/
+.productViewWrap .details .sizeContain input[type="radio"]:focus {
+    outline-color: transparent;
 }
-.productViewWrap .details .sizeContain input[type="radio"]:checked, .filterWrap .sizeContain input[type="radio"]:checked, .filterMobileopen .sizeContain input[type="radio"]:checked { /*no need, if you don't disable default appearance*/
+.productViewWrap .details .sizeContain input[type="radio"]:checked, 
+.filterWrap .sizeContain input[type="radio"]:checked, 
+.filterMobileopen .sizeContain input[type="radio"]:checked {
     border: 2px solid #004737;
 }
-.productViewWrap .details .sizeContain input[type="radio"]:checked ~ span:first-of-type, .filterWrap .sizeContain input[type="radio"]:checked ~ span:first-of-type, .filterMobileopen .sizeContain input[type="radio"]:checked ~ span:first-of-type {
+.productViewWrap .details .sizeContain input[type="radio"]:checked ~ span:first-of-type, 
+.filterWrap .sizeContain input[type="radio"]:checked ~ span:first-of-type, 
+.filterMobileopen .sizeContain input[type="radio"]:checked ~ span:first-of-type {
     color: #004737;
 }
 .custom-control-label::before,
@@ -331,55 +368,65 @@ input[type=checkbox] .custom-checkbox::after {
 .custom-control-label::before,
 .custom-checkbox::before,
 input[type=checkbox]:checked .custom-checkbox::after,
-.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
     background-color: #b1b1b1;
 }
-.productViewWrap .details .sizeContain label span:first-of-type, .filterWrap .sizeContain label span:first-of-type, .filterMobileopen .sizeContain label span:first-of-type {
+.productViewWrap .details .sizeContain label span:first-of-type, 
+.filterWrap .sizeContain label span:first-of-type, 
+.filterMobileopen .sizeContain label span:first-of-type {
     position: relative;
     left: -23px;
     top: -15px;
     bottom: 0;
     font-size: 10px;
-    color: #000000;
+    color: #000;
     text-align: center;
     line-height: 40px;
 }
-.productViewWrap .details .colourContain label:hover, .filterWrap .colourContain label:hover, .filterMobileopen .colourContain label:hover {
+.productViewWrap .details .colourContain label:hover, 
+.filterWrap .colourContain label:hover, 
+.filterMobileopen .colourContain label:hover {
     cursor: pointer;
 }
-.productViewWrap .details .colourContain input[type="radio"], .filterWrap .colourContain input[type="radio"], .filterMobileopen .colourContain input[type="radio"] {
+.productViewWrap .details .colourContain input[type="radio"], 
+.filterWrap .colourContain input[type="radio"], 
+.filterMobileopen .colourContain input[type="radio"] {
     width: 30px;
     height: 30px;
     border-radius: 0;
     border: none;
     background-color: white;
-    -webkit-appearance: none; /*to disable the default appearance of radio button*/
+    -webkit-appearance: none;
     -moz-appearance: none;
 }
-.productViewWrap .details .colourContain p, .filterWrap .colourContain p, .filterMobileopen .colourContain p {
+.productViewWrap .details .colourContain p, 
+.filterWrap .colourContain p, 
+.filterMobileopen .colourContain p {
     font-size: 10px;
 }
-.productViewWrap .details .colourContain input[type="radio"]:focus { /*no need, if you don't disable default appearance*/
-    outline-color: transparent; /*to remove the square border on focus*/
+.productViewWrap .details .colourContain input[type="radio"]:focus {
+    outline-color: transparent;
 }
-.productViewWrap .details .colourContain input[type="radio"]:checked, .filterMobileopen .details .colourContain input[type="radio"]:checked { /*no need, if you don't disable default appearance*/
+.productViewWrap .details .colourContain input[type="radio"]:checked, 
+.filterMobileopen .details .colourContain input[type="radio"]:checked {
     border: 2px solid #004737;
-    /* border-radius: 50%; */
     width: 32px;
     height: 32px;
 }
-.productViewWrap .details .colourContain label span:first-of-type, .filterWrap .colourContain label span:first-of-type {
+.productViewWrap .details .colourContain label span:first-of-type, 
+.filterWrap .colourContain label span:first-of-type {
     position: relative;
     left: -34px;
     top: -12px;
     bottom: 0;
 }
-
 .productViewWrap .details .title h1 {
     font-size: 18px;
-    font-weight: 400;
-    text-transform: uppercase;
-    margin-bottom: 10px;
+    font-weight: 600;
+    text-transform: uppercase !important;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    line-height: 1.618;
 }
 .productViewWrap .details .code h5 {
     font-size: 14px;
@@ -390,7 +437,8 @@ input[type=checkbox]:checked .custom-checkbox::after,
 .productViewWrap .details .amounts {
     display: inline-block;
 }
-.productViewWrap .details .amounts .price, .productViewWrap .details .amounts .slashedPrice {
+.productViewWrap .details .amounts .price, 
+.productViewWrap .details .amounts .slashedPrice {
     display: inline-block;
 }
 .productViewWrap .details .amounts .price h2 {
@@ -399,7 +447,8 @@ input[type=checkbox]:checked .custom-checkbox::after,
     text-transform: uppercase;
     display: inline-block;
     color: #051c2e;
-    margin-bottom: 17px;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
 }
 .productViewWrap .details .amounts .slashedPrice h3 {
     font-size: 16px;
@@ -408,13 +457,17 @@ input[type=checkbox]:checked .custom-checkbox::after,
     color: #bfbfbf;
     margin-left: 10px;
 } 
-.productViewWrap .details .sizeContain .title h4, .productViewWrap .details .colourContain .title h4, .productViewWrap .details .quantityContain .title h4, .productViewWrap .details .materialContain .title h4 {
+.productViewWrap .details .sizeContain .title h4, 
+.productViewWrap .details .colourContain .title h4, 
+.productViewWrap .details .quantityContain .title h4, 
+.productViewWrap .details .materialContain .title h4 {
     font-size: 17px;
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 20px; 
 }
-.productViewWrap .details .sizeContain .title h4 span, .productViewWrap .details .colourContain .title h4 span {
+.productViewWrap .details .sizeContain .title h4 span, 
+.productViewWrap .details .colourContain .title h4 span {
     font-size: 15px;
     font-weight: 400;
     text-transform: initial;
@@ -434,7 +487,7 @@ input[type=checkbox]:checked .custom-checkbox::after,
     font-size: 15px;
     font-weight: 400;
     line-height: 45px;
-    color: #000000;
+    color: #000;
     background-color: #fff;
     background-clip: padding-box;
     border: 1px solid #d6d6d6;
@@ -442,9 +495,14 @@ input[type=checkbox]:checked .custom-checkbox::after,
     transition: border-color .15s ease-in-out,box-shadow .15s 
 }
 .productDescr {
-    margin-top: 15px;
+    padding-top: 1rem;
 }
-.productDescr .nav-tabs .nav-item.show .nav-link, .productDescr .nav-tabs .nav-link.active {
+.productDescr .tab-content {
+    display: flex;
+    margin-top: 1rem;
+}
+.productDescr .nav-tabs .nav-item.show .nav-link, 
+.productDescr .nav-tabs .nav-link.active {
     color: #495057;
     background-color: #fff;
     border: none;
@@ -463,13 +521,20 @@ input[type=checkbox]:checked .custom-checkbox::after,
     text-transform: uppercase;
     color: #495057;
 }
-.productDescr .tab-content {
-    margin-top: 20px;
+.nav-tabs .nav-items {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.nav-tabs .nav-items:first-of-type {
+  margin-left: 0 !important;
+}
+.nav-tabs .nav-items:last-of-type {
+  margin-right: 0 !important;
 }
 
-
 @media (max-width: 1024px) { 
-    .productListWrap .block .info h4, .productListWrap .block .info h2 {
+    .productListWrap .block .info h4, 
+    .productListWrap .block .info h2 {
         font-size: 13px;
         font-weight: 700;
     }
@@ -509,12 +574,10 @@ input[type=checkbox]:checked .custom-checkbox::after,
     .productViewWrap .image .thumbNail {
         display: none;
     }
-
     .sortBy {
         display: none;
     }
     .sortBy a.dropdown-toggle {
-       /* border: 1px solid #c7c7c7; */
         width: 100%;
         display: block;
         height: 40px;
