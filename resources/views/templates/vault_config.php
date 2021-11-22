@@ -156,7 +156,7 @@ return [
     // Working
     'Collection' => [
       'courier' => 'Collection', 
-      'courier_enabled' => !1,
+      'courier_enabled' => 1,
       'courier_package' => [
         'shipment_courier' => \App\Models\CollectionPoint::class, 
         'checkout_helper'  => "", 
@@ -166,7 +166,7 @@ return [
     ],
   ],
 
-  'free_shipping_enabled' => !1,
+  'free_shipping_enabled' => !0,
   'free_shipping_value_threshold_default' => 199.00,
   // SPECIAL OPTIONS -> Rate/Shipping Cost Specific
   'shipment_options' => [
