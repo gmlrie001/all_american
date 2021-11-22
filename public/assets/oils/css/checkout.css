@@ -14,7 +14,7 @@ html .ui-button.ui-state-disabled:active {
 .ui-button,
 html .ui-button.ui-state-disabled:hover,
 html .ui-button.ui-state-disabled:active {
-    border: 0px solid #000000 !important;
+    border: 0px solid #000 !important;
 }
 
 /*cart styles*/
@@ -38,7 +38,7 @@ h1.add-address {
     font-weight: 300;
     font-size: 12px;
     text-transform: uppercase;
-    background: #ffffff;
+    background: #fff;
     border-top: 1px solid #f0f0f0;
     border-bottom: 1px solid #f0f0f0;
 }
@@ -87,7 +87,7 @@ h1.add-address {
     content: '';
     height: 0;
     display: block;
-    border-color: transparent transparent transparent #ffffff;
+    border-color: transparent transparent transparent #fff;
     border-width: 29px;
     border-style: solid;
     position: absolute;
@@ -100,11 +100,11 @@ h1.add-address {
     line-height: 60px;
     padding: 0;
     width: 100%;
-    color: #ffffff;
+    color: #fff;
     font-weight: 600;
     font-size: 14px;
     text-transform: uppercase;
-    background: #000000;
+    background: #000;
 }
 .arrow.active div span {
     display: inline-block;
@@ -113,8 +113,8 @@ h1.add-address {
     border-radius: 50%;
     text-align: center;
     line-height: 22px;
-    border: 2px solid #ffffff;
-    color: #ffffff;
+    border: 2px solid #fff;
+    color: #fff;
     font-weight: 400;
     font-size: 13px;
 }
@@ -122,7 +122,7 @@ h1.add-address {
     content: '';
     height: 0;
     display: block;
-    border-color: transparent transparent transparent #000000;
+    border-color: transparent transparent transparent #000;
     border-width: 29.5px;
     border-style: solid;
     position: absolute;
@@ -160,7 +160,7 @@ h1.add-address {
     z-index: 1;
 }
 .order-summary-row, .order-footer-row {
-    background: #000000;
+    background: #000;
     height: 30px;
     line-height: 30px;
     position: relative;
@@ -168,7 +168,7 @@ h1.add-address {
 .order-summary-row > p {
     float: left;
     font-weight: 400;
-    color: #ffffff;
+    color: #fff;
     font-size: 13px;
 }
 .order-summary-row > p strong {
@@ -178,7 +178,7 @@ h1.add-address {
     float: right;
     font-weight: 400;
     font-size: 13px;
-    color: #ffffff;
+    color: #fff;
     cursor: pointer;
     text-transform: uppercase;
 }
@@ -192,7 +192,7 @@ h1.add-address {
     position: absolute;
     top: 0;
     right: 0;
-    color: #555555;
+    color: #555;
     text-decoration: none !important;
 }
 .cart-product .wishlist-modal-button.active {
@@ -230,14 +230,14 @@ h1.add-address {
     margin-bottom: 20px;
     font-weight: 400;
     font-size: 18px;
-    color: #000000;
+    color: #000;
     text-transform: uppercase;
 }
 .order-block p {
     font-weight: 400;
     font-size: 15px;
     line-height: 15px;
-    color: #000000;
+    color: #000;
     margin-bottom: 10px;
     text-align: right;
     width: 100%;
@@ -268,7 +268,7 @@ h1.add-address {
     width: 175px;
     height: 40px;
     background: #1cbf01;
-    color: #ffffff;
+    color: #fff;
     font-weight: 500;
     font-size: 16px;
     cursor: pointer;
@@ -307,7 +307,7 @@ h1.add-address {
     text-transform: uppercase;
     font-size: 13px;
     font-weight: 600;
-    color: #000000;
+    color: #000;
     line-height: 15px;
     padding-bottom: 20px;
     padding-top: 20px;
@@ -367,7 +367,7 @@ h1.add-address {
     display: block;
     float: left;
     width: 15px;
-    background: #cccccc;
+    background: #ccc;
     color: #1f1f1f;
     padding: 0;
     line-height: 13px;
@@ -387,7 +387,7 @@ h1.add-address {
     font-weight: 400;
     font-size: 12px;
     line-height: 12px;
-    color: #000000;
+    color: #000;
 }
 .cart-product h4 span {
     display: block;
@@ -427,17 +427,33 @@ h1.add-address {
     float: left;
     width: 100%;
     text-transform: uppercase;
-    color: #000000;
+    color: #000;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 15px;
 }
+.form-control::placeholder {
+    color:#9f9f9f;
+}
+.form-control::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color:#9f9f9f;
+}
+.form-control::-moz-placeholder { /* Firefox 19+ */
+    color:#9f9f9f;
+}
+.form-control:-ms-input-placeholder { /* IE 10+ */
+    color:#9f9f9f;
+}
+.form-control:-moz-placeholder { /* Firefox 18- */
+    color:#9f9f9f;
+}
+
 .available-coupons a, .available-coupons a:hover, .available-coupons a:focus {
     display: block;
     float: left;
     width: 100%;
     padding: 0 10px;
     line-height: 35px;
-    border-bottom: 1px solid #cccccc;
+    border-bottom: 1px solid #ccc;
     font-size: 12px;
     color: #1f1f1f;
     text-decoration: none;
@@ -448,7 +464,7 @@ h1.add-address {
     width: 100%;
     padding: 0 10px;
     line-height: 35px;
-    border-bottom: 1px solid #cccccc;
+    border-bottom: 1px solid #ccc;
     font-size: 12px;
     color: #1f1f1f;
     text-decoration: none;
@@ -459,7 +475,7 @@ h1.add-address {
     width: 100%;
     float: left;
     border: none;
-    color: #ffffff;
+    color: #fff;
     text-transform: uppercase;
     font-size: 16px;
     font-weight: 600;
@@ -476,7 +492,7 @@ a.continue-shopping {
     width: 100%;
     float: left;
     border: none;
-    color: #ffffff;
+    color: #fff;
     text-transform: uppercase;
     font-size: 14px;
     cursor: pointer;
@@ -485,7 +501,7 @@ a.continue-shopping {
     background: #25d01c !important;
 }
 .orange-background {
-    background: #000000 !important;
+    background: #000 !important;
 }
 .continue-button:disabled {
     background: #ccc;
@@ -495,9 +511,9 @@ a.continue-shopping {
     margin-bottom: 25px;
 }
 .promo-form button {
-    background: #000000;
+    background: #000;
     border: none;
-    color: #ffffff;
+    color: #fff;
     font-size: 16px;
     padding: 0 8px;
 }
@@ -562,7 +578,7 @@ a.continue-shopping {
     display: block;
     float: right;
     font-size: 11px;
-    color: #ffffff;
+    color: #fff;
     font-weight: 400;
     background: #f7336b;
     border-radius: 50%;
@@ -583,8 +599,8 @@ a.continue-shopping {
     float: left;
     display: block;
     margin-top: 15px;
-    margin-bottom: 15px;
-    color: #000000;
+    margin-bottom: 0;
+    color: #000;
     font-weight: 600;
     font-size: 14px;
     text-transform: uppercase;
@@ -606,7 +622,7 @@ a.continue-shopping {
 }
 .cart-addresses {
     padding: 20px 45px 40px 45px;
-    border: 1px solid #cccccc;
+    border: 1px solid #ccc;
 }
 .user-address-select span i {
     color: #bdbdbd;
@@ -623,7 +639,7 @@ a.continue-shopping {
 .add-address a {
     display: block;
     float: right;
-    background: #000000;
+    background: #000;
     width: 25%;
     text-align: center;
     height: 40px;
@@ -633,7 +649,7 @@ a.continue-shopping {
     font-size: 15px;
     text-decoration: none;
     font-weight: 400;
-    color: #ffffff;
+    color: #fff;
 }
 h1.add-address a, h1.add-address a:hover, h1.add-address a:focus {
     display: block;
@@ -648,31 +664,31 @@ h1.add-address a, h1.add-address a:hover, h1.add-address a:focus {
     font-size: 15px;
     text-decoration: none;
     font-weight: 400;
-    color: #ffffff;
+    color: #fff;
 }
 .add-address-form {
     display: none;
     position: fixed;
     z-index: 100;
-    background: #ffffff;
+    background: #fff;
     top: 10%;
     /* bottom: 10%; */
     left: 30%;
     right: 30%;
     padding: 30px;
-    border: 5px solid #000000;
+    border: 5px solid #000;
 }
 .edit-address-form {
     display: none;
     position: fixed;
     z-index: 100;
-    background: #ffffff;
+    background: #fff;
     top: 10%;
     bottom: 10%;
     left: 30%;
     right: 30%;
     padding: 30px;
-    border: 5px solid #000000;
+    border: 5px solid #000;
 }
 .selectric .label {
     font-size: 13px;
@@ -701,7 +717,7 @@ h1.add-address a, h1.add-address a:hover, h1.add-address a:focus {
     margin-bottom: 0 !important;
     width: 100% !important;
     text-align: left !important;
-    color: #000000 !important;
+    color: #000 !important;
 }
 .add-address-form input + input {
     margin-top: 10px !important;
@@ -731,7 +747,7 @@ h1.add-address a, h1.add-address a:hover, h1.add-address a:focus {
 .add-address-form .form-group input {
     height: 40px;
     padding: 0 15px;
-    border: 1px solid #000000;
+    border: 1px solid #000;
     font-weight: 300;
     font-size: 13px !important;
     color: #9f9f9f;
@@ -749,7 +765,7 @@ h1.add-address a, h1.add-address a:hover, h1.add-address a:focus {
     width: 25%;
     height: 40px;
     background: #004737;
-    color: #ffffff;
+    color: #fff;
     font-weight: 500;
     font-size: 14px;
     text-transform: uppercase;
@@ -757,7 +773,6 @@ h1.add-address a, h1.add-address a:hover, h1.add-address a:focus {
     margin-right: 0;
     cursor: pointer;
 }
-
 
 .edit-address-form label {
     padding: 0 0;
@@ -799,7 +814,7 @@ h1.add-address a, h1.add-address a:hover, h1.add-address a:focus {
 .edit-address-form input {
     height: 40px;
     padding: 0 15px;
-    border: 1px solid #000000;
+    border: 1px solid #000;
     font-weight: 300;
     font-size: 13px;
     color: #9f9f9f;
@@ -816,8 +831,8 @@ h1.add-address a, h1.add-address a:hover, h1.add-address a:focus {
     max-width: 100%;
     width: 25%;
     height: 40px;
-    background: #000000;
-    color: #ffffff;
+    background: #000;
+    color: #fff;
     font-weight: 500;
     font-size: 15px;
     text-transform: uppercase;
@@ -832,14 +847,14 @@ h1.add-address a, h1.add-address a:hover, h1.add-address a:focus {
     height: 40px;
     line-height: 39px;
     padding: 0 15px;
-    background: #ffffff;
+    background: #fff;
     font-weight: 400;
     font-size: 13px;
-    color: #555555;
+    color: #555;
     cursor: pointer;
     margin-bottom: 0;
     margin-top: 15px;
-    border: 1px solid #cccccc;
+    border: 1px solid #ccc;
 }
 .address-info h1 i {
     display: block;
@@ -847,7 +862,7 @@ h1.add-address a, h1.add-address a:hover, h1.add-address a:focus {
     float: right;
     padding-left: 25px;
     padding-right: 10px;
-    border-left: 1px solid #cccccc;
+    border-left: 1px solid #ccc;
     cursor: pointer;
     font-size: 15px;
     color: #bdbdbd;
@@ -856,9 +871,9 @@ h1.add-address a, h1.add-address a:hover, h1.add-address a:focus {
     border-left: none;
     padding-left: 0;
     padding-right: 15px;
-    border-right: 1px solid #cccccc;
+    border-right: 1px solid #ccc;
     margin-right: 15px;
-    color: #555555;
+    color: #555;
     font-size: 12px;
     margin-left: 0;
 }
@@ -868,7 +883,7 @@ h1.add-address a, h1.add-address a:hover, h1.add-address a:focus {
 .address-info h1 span {
     font-weight: 300;
     font-size: 13px;
-    color: #555555;
+    color: #555;
     float: right;
     display: block;
     line-height: 39px;
@@ -915,7 +930,7 @@ h1.add-address a, h1.add-address a:hover, h1.add-address a:focus {
     float: left;
     width: 100%;
     margin-top: 30px;
-    border: 1px solid #cccccc;
+    border: 1px solid #ccc;
     padding: 20px 20px 15px 20px;
 }
 .shipping-options-list {    
@@ -953,7 +968,7 @@ h1.add-address a, h1.add-address a:hover, h1.add-address a:focus {
 .shipping-options-list-options input[type="radio"] + label {
     display: inline;
     font-size: 14px;
-    color: #000000;
+    color: #000;
     font-family: "Font Awesome 5 Free";
     cursor: pointer;
 }
@@ -968,7 +983,7 @@ h1.add-address a, h1.add-address a:hover, h1.add-address a:focus {
 }
 .payment-options {
     padding: 20px 35px 10px 35px;
-    border: 1px solid #cccccc;
+    border: 1px solid #ccc;
     margin-top: 25px;
 }
 .payment-options h1 {
@@ -977,11 +992,11 @@ h1.add-address a, h1.add-address a:hover, h1.add-address a:focus {
     font-size: 16px;
     margin-top: 0;
     margin-bottom: 0;
-    border-bottom: 1px solid #cccccc;
+    border-bottom: 1px solid #ccc;
     padding-bottom: 10px;
 }
 .payment-option-block {
-    border-bottom: 1px solid #cccccc;
+    border-bottom: 1px solid #ccc;
     margin-bottom: 10px;
 }
 .payment-option-block h2 {
@@ -1007,7 +1022,7 @@ h1.add-address a, h1.add-address a:hover, h1.add-address a:focus {
 }
 .payment-info-block {
     margin-bottom: 25px;
-  /*  border-top: 1px solid #cccccc; */
+  /*  border-top: 1px solid #ccc; */
     margin-top: 10px;
     float: left;
     width: 100%;
@@ -1019,9 +1034,9 @@ h1.add-address a, h1.add-address a:hover, h1.add-address a:focus {
 }
 .payment-info-block input[type="submit"], .payment-button, .payment-button:hover, .payment-button:focus {
     margin-left: 5%;
-    background: #000000;
+    background: #000;
     border: none;
-    color: #ffffff;
+    color: #fff;
     line-height: 45px;
     padding: 0;
     min-width: 200px;
@@ -1067,13 +1082,13 @@ h1.add-address a, h1.add-address a:hover, h1.add-address a:focus {
     float: left;
     width: 100%;
     margin-bottom: 20px;
-    background: #000000;
+    background: #000;
     line-height: 35px;
-    color: #ffffff;
+    color: #fff;
     text-align: center;
 }
 .apply-store-credit {
-    border-bottom: 1px solid #cccccc;
+    border-bottom: 1px solid #ccc;
     margin-bottom: 20px;
 }
 .payment-info-block .form-group label {
@@ -1126,7 +1141,7 @@ h1.add-address a, h1.add-address a:hover, h1.add-address a:focus {
     display: block;
     float: left;
     width: 100%;
-    border: 1px solid #000000;
+    border: 1px solid #000;
     border-right: none;
     height: 35px;
     line-height: 35px;
@@ -1135,7 +1150,7 @@ h1.add-address a, h1.add-address a:hover, h1.add-address a:focus {
 .payment-tabs h1.active {
     background: #333333;
     border: 1px solid #333333;
-    color: #ffffff;
+    color: #fff;
 }
 .payment-content {
     margin-top: 40px;
@@ -1182,7 +1197,7 @@ h1.add-address a, h1.add-address a:hover, h1.add-address a:focus {
     width: 175px;
     height: 40px;
     background: #1cbf01;
-    color: #ffffff;
+    color: #fff;
     font-weight: 500;
     font-size: 15px;
     float: right;
@@ -1225,7 +1240,7 @@ h1.add-address a, h1.add-address a:hover, h1.add-address a:focus {
     float: left;
     padding: 0 5px;
     border-radius: 3PX;
-    color: #ffffff;
+    color: #fff;
     font-size: 11px;
 }
 .payment-content .pull-right + .parsley-errors-list {
@@ -1252,7 +1267,7 @@ h1.add-address a, h1.add-address a:hover, h1.add-address a:focus {
     float: left;
     width: 100%;
     text-transform: uppercase;
-    color: #000000;
+    color: #000;
     font-weight: 700;
     font-size: 18px;
 }
@@ -1261,7 +1276,7 @@ h1.add-address a, h1.add-address a:hover, h1.add-address a:focus {
     float: left;
     width: 100%;
     text-transform: uppercase;
-    color: #000000;
+    color: #000;
     font-weight: 500;
     font-size: 14px;
     margin-bottom: 0px;
@@ -1276,7 +1291,7 @@ h1.add-address a, h1.add-address a:hover, h1.add-address a:focus {
     float: left;
     width: 100%;
     text-transform: uppercase;
-    color: #000000;
+    color: #000;
     font-weight: 700;
     font-size: 14px;
     margin-bottom: 10px;
@@ -1289,7 +1304,7 @@ h1.add-address a, h1.add-address a:hover, h1.add-address a:focus {
     font-weight: 500;
 }
 .payment-order-summary p {
-    color: #000000;
+    color: #000;
     font-size: 12px;
     margin-bottom: 2px;
     float: left;
@@ -1324,7 +1339,7 @@ h1.add-address a, h1.add-address a:hover, h1.add-address a:focus {
     margin-bottom: 25px;
     font-weight: 300;
     font-size: 18px;
-    color: #000000;
+    color: #000;
 }
 .error-page a {
     display: block;
@@ -1334,7 +1349,7 @@ h1.add-address a, h1.add-address a:hover, h1.add-address a:focus {
     height: 50px;
     line-height: 50px;
     text-align: center;
-    color: #ffffff;
+    color: #fff;
     background: #cd2727;
     margin-top: 20px;
     margin-right: 20px;
@@ -1358,7 +1373,7 @@ h1.add-address a, h1.add-address a:hover, h1.add-address a:focus {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 24px;
-    color: #000000;
+    color: #000;
 }
 .success-page h3 {
     display: block;
@@ -1369,7 +1384,7 @@ h1.add-address a, h1.add-address a:hover, h1.add-address a:focus {
     text-transform: uppercase;
     font-weight: 500;
     font-size: 15px;
-    color: #000000;
+    color: #000;
 }
 .success-page h3 span {
     float: left;
@@ -1380,12 +1395,12 @@ h1.add-address a, h1.add-address a:hover, h1.add-address a:focus {
     width: 100%;
     margin-bottom: 15px;
     font-weight: 300;
-    color: #000000;
+    color: #000;
 }
 .success-page ul li {
     font-weight: 300;
     font-size: 13px;
-    color: #000000;
+    color: #000;
 }
 .success-page div p {
     font-size: 13px;
@@ -1408,8 +1423,8 @@ h1.add-address a, h1.add-address a:hover, h1.add-address a:focus {
     height: 50px;
     line-height: 50px;
     text-align: center;
-    color: #ffffff;
-    background: #000000;
+    color: #fff;
+    background: #000;
     margin-top: 20px;
     margin-right: 20px;
     font-weight: 400;
@@ -1420,7 +1435,7 @@ h1.add-address a, h1.add-address a:hover, h1.add-address a:focus {
     margin-top: 50px;
 }
 .order-sum > div {
-    border-right: 1px solid #000000;
+    border-right: 1px solid #000;
     padding: 0 50px;
 }
 .laybye-input {
@@ -1447,7 +1462,7 @@ input.laybye-input[type=number]::-webkit-inner-spin-button, input.laybye-input[t
 }
 .payment-form.form-horizontal .control-label {
     text-align: left;
-    color: #000000;
+    color: #000;
     font-weight: 400;
 }
 .payment-form .form-control {
@@ -1574,7 +1589,7 @@ input.laybye-input[type=number]::-webkit-inner-spin-button, input.laybye-input[t
         text-align: center;
         line-height: 45px !important;
         border: 2px solid #051c2e;
-        color: #ffffff;
+        color: #fff;
         font-weight: 400;
         font-size: 23px;
         background: #051c2e;
@@ -1633,7 +1648,7 @@ input.laybye-input[type=number]::-webkit-inner-spin-button, input.laybye-input[t
         margin-bottom: 20px;
     }
     .order-summary-row, .order-footer-row {
-        background: #ffffff;
+        background: #fff;
         height: auto;
         line-height: 1.4;
         position: relative;
@@ -1732,7 +1747,7 @@ input.laybye-input[type=number]::-webkit-inner-spin-button, input.laybye-input[t
         display: block;
         float: right;
         font-size: 18px;
-        color: #ffffff;
+        color: #fff;
         font-weight: 400;
         background: #f7336b;
         border-radius: 50%;
@@ -1795,7 +1810,7 @@ input.laybye-input[type=number]::-webkit-inner-spin-button, input.laybye-input[t
         margin-left: 5%;
         background: #00a532;
         border: none;
-        color: #ffffff;
+        color: #fff;
         line-height: 45px;
         padding: 0;
         min-width: 100%;
@@ -1807,7 +1822,7 @@ input.laybye-input[type=number]::-webkit-inner-spin-button, input.laybye-input[t
     .payment-option-block h2 {
         margin-top: 10px;
         margin-bottom: 10px;
-        color: #000000;
+        color: #000;
         text-transform: uppercase;
         font-size: 14px;
         position: relative;
@@ -1822,7 +1837,7 @@ input.laybye-input[type=number]::-webkit-inner-spin-button, input.laybye-input[t
         font-size: 19px;
     }
     .payment-option-block {
-        border-bottom: 1px solid #cccccc;
+        border-bottom: 1px solid #ccc;
         margin-bottom: 5px;
         min-height: 70px;
     }
@@ -1845,7 +1860,7 @@ input.laybye-input[type=number]::-webkit-inner-spin-button, input.laybye-input[t
         display: block;
         float: left;
         width: 85%;
-        background: #cccccc;
+        background: #ccc;
         color: #1f1f1f;
         padding: 0;
         line-height: 35px;
@@ -1892,7 +1907,7 @@ input.laybye-input[type=number]::-webkit-inner-spin-button, input.laybye-input[t
         height: 50px;
         line-height: 50px;
         text-align: center;
-        color: #ffffff;
+        color: #fff;
         background: #1cbf01;
         margin-top: 20px;
         margin-right: 20px;
@@ -1917,7 +1932,7 @@ input.laybye-input[type=number]::-webkit-inner-spin-button, input.laybye-input[t
         text-transform: uppercase;
         font-weight: 600;
         font-size: 13px;
-        color: #000000;
+        color: #000;
     }
     .success-page .grey-order-summary h3:first-child {
         margin-bottom: 10px;
@@ -1993,17 +2008,17 @@ input.laybye-input[type=number]::-webkit-inner-spin-button, input.laybye-input[t
     .quantity-row {
         padding-top: 0;
         padding-bottom: 0;
-        border-bottom: 1px solid #cccccc;
+        border-bottom: 1px solid #ccc;
         margin-bottom: 25px !important;
         margin-top: 0;
-        border-top: 1px solid #cccccc;
-        border: 1px solid #cccccc;
+        border-top: 1px solid #ccc;
+        border: 1px solid #ccc;
         height: 40px;
     }
     .quantity-row label {
         width: 60%;
         text-align: center;
-        border-right: 1px solid #cccccc;
+        border-right: 1px solid #ccc;
     }
     .quantity-row input {
         border-radius: 0;
@@ -2095,7 +2110,7 @@ input.laybye-input[type=number]::-webkit-inner-spin-button, input.laybye-input[t
         display: block;
         margin-top: 15px;
         margin-bottom: 15px;
-        color: #000000;
+        color: #000;
         font-weight: 600;
         font-size: 14px;
         text-transform: uppercase;
@@ -2117,7 +2132,7 @@ input.laybye-input[type=number]::-webkit-inner-spin-button, input.laybye-input[t
     }
     .cart-addresses {
         padding: 20px 30px 40px 30px;
-        border: 1px solid #cccccc;
+        border: 1px solid #ccc;
     }
     .address-info > div {
         margin-top: 20px;
@@ -2146,14 +2161,14 @@ input.laybye-input[type=number]::-webkit-inner-spin-button, input.laybye-input[t
         height: 40px;
         line-height: 39px;
         padding: 0 10px;
-        background: #ffffff;
+        background: #fff;
         font-weight: 400;
         font-size: 11px;
-        color: #555555;
+        color: #555;
         cursor: pointer;
         margin-bottom: 0;
         margin-top: 15px;
-        border: 1px solid #cccccc;
+        border: 1px solid #ccc;
     }
     .add-address a {
         width: 100%;
@@ -2175,7 +2190,7 @@ input.laybye-input[type=number]::-webkit-inner-spin-button, input.laybye-input[t
         display: none;
     }
     .cart-product input {
-        border-right: 1px solid #cccccc;
+        border-right: 1px solid #ccc;
     }
     .cart-product h2 {
         margin-top: 19px;
@@ -2196,7 +2211,7 @@ input.laybye-input[type=number]::-webkit-inner-spin-button, input.laybye-input[t
         margin-top: 0;
         margin-bottom: 0;
         padding: 0;
-        background: #cccccc;
+        background: #ccc;
         color: #1f1f1f;
         font-size: 0;
         line-height: 20px !important;
