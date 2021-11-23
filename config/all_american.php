@@ -34,7 +34,7 @@ return [
     // 'blog',
     // 'contact',
     // 'faq_categories',
-    // 'information_pages',
+    'information_pages',
     // 'country_names_and_codes',
   ],
 
@@ -238,10 +238,10 @@ return [
     'enable' => !1,
     'is_test' => !1,
 
-    'SITE_CODE'    => env( 'OZOW_SITE_CODE', 'AFR-AFR-016' ),
-    'SECRET_KEY'   => env( 'OZOW_SECRET_KEY', '676886137f4d438a8b8dea986588dabd' ),
-    'OZOW_PRIVATE' => env( 'GOOGLE_PRIVATE_KEY', '676886137f4d438a8b8dea986588dabd' ),
-    'OZOW_APIKEY'  => env( 'GOOGLE_API_KEY', '7a20ff57466e44c29a4443f446f53555' ),
+    'SITE_CODE'    => env( 'OZOW_SITE_CODE', '' ),
+    'SECRET_KEY'   => env( 'OZOW_SECRET_KEY', '' ),
+    'OZOW_PRIVATE' => env( 'GOOGLE_PRIVATE_KEY', '' ),
+    'OZOW_APIKEY'  => env( 'GOOGLE_API_KEY', '' ),
 
     'COUNTRY_CODE' => 'ZA',
     'CURRENCY_CODE' => 'ZAR',
