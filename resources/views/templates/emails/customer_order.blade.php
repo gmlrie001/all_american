@@ -259,6 +259,7 @@
           {{ $cart->shipment->waybill_tracking_number }}</td>
       </tr>
       @endisset
+    {{--
       @if( preg_match( '/(aramex.*?)+/isU', $cart->shipment->shipper, $m ) )
       <tr>
         <td width="80.5%" style="border: 1px solid #1f1f1f;padding: 10px 20px;color: #1f1f1f;">
@@ -281,6 +282,7 @@
             title="Track your parcel">ParcelNinja Tracking</a>.</td>
       </tr>
       @endif
+    --}}
       <tr>
         <td width="80.5%" style="border: 1px solid #1f1f1f;padding: 10px 20px;color: #1f1f1f;">
           Payment Method:</td>
