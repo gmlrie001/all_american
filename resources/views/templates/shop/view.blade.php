@@ -18,6 +18,7 @@
 @endpush
 
 @section('content')
+
     <div class="container-fluid pageHeader">
         <div class="container">
             <div class="row justify-content-between">
@@ -318,29 +319,29 @@
                     </div>
                 @endif
                 {!! Form::close() !!}
-            </section>
-        </div>
-        <div class="row productDescr">
-            <div class="col-12">
-                <ul class="nav nav-tabs px-3" id="descriptionTab" role="tablist">
-                @foreach($product->displayTabs as $key => $tab)
-                    <li class="nav-items">
-                        <a class="nav-link @if($key == 0) active @endif" id="" data-toggle="tab" href="#tab_{{$tab->id}}" role="tab" aria-controls="descr" aria-selected="true">{{$tab->title}}</a>
-                    </li>
-                @endforeach
-                </ul>
-                <div class="tab-content article" id="myTabContent">
-                @foreach($product->displayTabs as $key => $tab)
-                    <div class="tab-pane fade px-3 @if($key == 0) show active @endif" id="tab_{{$tab->id}}" role="tabpanel" aria-labelledby="tab_{{$tab->id}}">
-                        {!! $tab->description !!}
+                <div class="row productDescr">
+                    <div class="col-12">
+                        <ul class="nav nav-tabs" id="descriptionTab" role="tablist">
+                            @foreach($product->displayTabs as $key => $tab)
+                                <li class="nav-items">
+                                    <a class="nav-link @if($key == 0) active @endif" id="" data-toggle="tab" href="#tab_{{$tab->id}}" role="tab" aria-controls="descr" aria-selected="true">{{$tab->title}}</a>
+                                </li>
+                            @endforeach
+                        </ul>
+                        <div class="tab-content article" id="myTabContent">
+                            @foreach($product->displayTabs as $key => $tab)
+                                <div class="tab-pane fade  @if($key == 0) show active @endif" id="tab_{{$tab->id}}" role="tabpanel" aria-labelledby="tab_{{$tab->id}}">
+                                    {!! $tab->description !!}
+                                </div>
+                            @endforeach
+                        </div>
                     </div>
-                @endforeach
                 </div>
-            </div>
+            </section>
         </div>
     </div>
 
-    <script>
+  <script>
     $(".filter-select").change(function(){
       if(!($(this).closest(".composite-product-block").length)){
         selectElement = this;
@@ -360,11 +361,11 @@
           data: {
             product_id: product,
           },
-          
           async: false,
           dataType: 'json'
 
         }).done(function(data){
+
           console.log( data.variant_id );
 
           if(data.variant_id > 0 && data.variant_id != null) {
@@ -397,8 +398,8 @@
 
       }
     });
-    </script>
-    <script id="select-options-sorting">
+  </script>
+  <script id="select-options-sorting">
     $('document').ready( function() {
       setTimeout( function() {
         console.clear();
@@ -415,17 +416,21 @@
       $( "select.filter-select" ).append(
         $( "select.filter-select option" ).remove()
         .sort( function( a, b ) { 
+
           var at = parseInt( 
             $(a).text()
             .replace(/(\d+?)l|kg$/ig, '$1000')
             .replace(/(\d+?)ml|g$/ig, '$1')
           );
+
           var bt = parseInt( 
             $(b).text()
             .replace(/(\d+?)l|kg$/ig, '$1000')
             .replace(/(\d+?)ml|g$/ig, '$1')
           );
+
           if( dbg ) console.log( at + "\t" + bt );
+
           return (at > bt) ? 1 : ((at < bt) ? -1 : 0);
 
         })

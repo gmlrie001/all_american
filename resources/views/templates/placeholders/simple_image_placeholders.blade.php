@@ -27,10 +27,12 @@ $use_placehold_it = ( $use_placehold_it ) ? $use_placehold_it : !1;
 
 @if ( isset( $imgvar ) )
   @if( ! is_null( $imgvar ) && file_exists( public_path( $imgvar ) ) ) {{-- && file_exists( public_exists( $imgvar ) ) --}}
-    @php // list( , , , $attrWidthAndHeight ) = getimagesize( public_path( ltrim( $imgvar, '/' ) ) ); @endphp
+    @php
+      list( , , , $attrWidthAndHeight ) = getimagesize( public_path( ltrim( $imgvar, '/' ) ) );
+    @endphp
     <img 
       class="@if( NULL != $imgclasses ) {{ $imgclasses }} @endif" 
-      {{-- $attrWidthAndHeight --}}
+      {!! $attrWidthAndHeight !!}
       src="{{ url( ltrim( $imgvar, '/' ) ) }}" 
       alt="{{ $imgtitle }}" 
       @if( Request::is('blog*') ) style="float:left;margin-right:1rem;margin-bottom:0.618rem;" @endif

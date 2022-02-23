@@ -1,12 +1,9 @@
 @php
   $noWeights        = [];
   $shipping_options = [];
+
   $shipping_error   = NULL;
-
-  $option = $shipperOpt;
-  $shipping_options[strtolower( $shipper )] = $option;
-
-  // dump( get_defined_vars() );
+  $shipping_options = $shipperOpt;
 @endphp
 
 @push( 'pageStyles' )
@@ -106,7 +103,7 @@ details div, label div {
 {{-- <details class="courier-{{ $shipper }}" open> --}}
   {{-- <summary>The Courier Guy Rate Options</summary> --}}
 
-  @forelse( $shipping_options[strtolower( $shipper )] as $key=>$option )
+  @forelse( $shipping_options as $key=>$option )
     <label for="courier-option-{{ $key }}" class="row no-gutters py-lg-3 py-2 courier-{{ $shipper }}-options option-{{ $key }} @if( count( $noWeights ) > 0 ) striken @endif position-relative">
 
       @if ( is_array( $option ) ) @php $option = (object) $option; @endphp @endif

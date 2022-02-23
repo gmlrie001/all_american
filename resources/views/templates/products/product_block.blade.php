@@ -5,22 +5,17 @@
         </span>
     @endif
     <div class="col-12 block">
-        @if( $product->product_thumbnail && file_exists( base_path( 'public_html/'.$product->product_thumbnail )) )
-            @php /* list( , , , $attrWidthAndHeight ) = getimagesize( public_path( ltrim( $product->product_thumbnail, '/' ) ) ); */ @endphp
-            <img class="img-fluid" {{-- $attrWidthAndHeight --}} src="{{ url( ltrim( $product->product_thumbnail, '/' ) ) }}" @isset( $product->title ) alt="{{ $product->title }}" @endisset>
+        @if( $product->product_thumbnail )
+            @php list( , , , $attrWidthAndHeight ) = getimagesize( public_path( ltrim( $product->product_thumbnail, '/' ) ) ); @endphp
+            <img class="img-fluid" {!! $attrWidthAndHeight !!} src="{{ url( ltrim( $product->product_thumbnail, '/' ) ) }}" @isset( $product->title ) alt="{{ $product->title }}" @endisset>
         @else
             @include(
                 'templates.placeholders.simple_image_placeholders',
                 [
-                'imgvar' => $product->product_thumbnail, 
-                'class'  => '', 
-                'width'  => 800,
-                'height' => 600, 
-                'text'   => '+',
-                'use_vault_logo'   => true, 
-                'use_placehold_it' => true,
+                'class' => '', 'width' => 800,'height' => 600, 'text' => '+',
+                'use_vault_logo' => true, 'use_placehold_it' => true
                 ]
-            )
+                )
         @endif
         <div class="row">
             <div class="col-12 title">
