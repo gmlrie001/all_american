@@ -1,3 +1,8 @@
+ .alert {
+   max-height: 50px;
+   line-height: 50px;
+   transition: all 0.5s ease-out;
+ }
  .alert-success {
     background-color: #1cbf01;
     border-color: #1cbf01;
@@ -7,11 +12,13 @@
     padding: 0 15px;
     border: none;
     line-height: 50px;
+    transition: all 0.5s ease-out;
 }
 .alert-success p {
     margin-bottom: 0;
     font-weight: 500;
     color: #ffffff;
+    line-height: 50px !important;
 }
 .alert-success p i {
     margin-right: 20px;
@@ -32,6 +39,7 @@
    padding: 0 15px;
    border: none;
    line-height: 50px;
+   transition: all 0.5s ease-out;
 }
 .alert-danger p {
    margin-bottom: 0;
@@ -47,6 +55,10 @@
    float: right;
    cursor: pointer;
    line-height: 50px;
+}
+.h-0 {
+  height: 0;
+  transition: all 0.5s ease-out;
 }
 @media (max-width: 767px){
     .alert-success p i {

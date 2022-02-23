@@ -30,19 +30,18 @@ $honeypot_submit_input = 'honeypot_submit';
 
 <div class="add-address-overlay"></div>
 <div class="add-address-form">
-
     <h1 style="font-size: 16px;">Add Address <a href="#">X</a></h1>
     
     {!! Form::open( ['url' => '/user/address/add', 'data-parsley-validate' => '', 'id' => 'add-address', 'autocapitalization' => 'off'] ) !!}
 
+      <input type="hidden" name="redirect_to" value="{{ url()->full() }}" class="d-none collapse hidden" hidden>
+
       @forelse( $immutableInputArray as $groupKey => $groupedItems )
       <div class="col-12 col-md-6">
-
         @forelse( $groupedItems as $key => $item )
           @include( $bladePath.".".$item )
         @empty
         @endforelse
-  
       </div>
       @empty
       @endforelse
@@ -50,5 +49,4 @@ $honeypot_submit_input = 'honeypot_submit';
       @include( $bladePath . "." . $honeypot_submit_input )
 
     {!! Form::close() !!}
-
 </div>

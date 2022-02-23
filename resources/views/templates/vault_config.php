@@ -33,7 +33,7 @@ return [
     // 'blog',
     // 'contact',
     // 'faq_categories',
-    // 'information_pages',
+    'information_pages',
     // 'country_names_and_codes',
   ],
 
@@ -254,8 +254,8 @@ return [
     // 'google_recaptcha_enable' => !1,
     // 'google_recaptcha' => [
     //   'service'    => \App\Helpers\GoogleReCaptcha\GoogleRecaptchaHelper::class,
-    //   'client_key' => env( 'GOOGLE_CLIENT_KEY', null ),
-    //   'secret_key' => env( 'GOOGLE_SECRET_KEY', null ),
+    //   'client_key' => env( 'GOOGLE_RECAPTCHA_CLIENT_KEY', '6LcsfaYaAAAAAOTsVn9WxyScK3UZLLQJXaWJLuch' ),
+    //   'secret_key' => env( 'GOOGLE_RECAPTCHA_SECRET_KEY', '6LcsfaYaAAAAAB_lmN44MJc4iXRSHe0S1XCgPySB' ),
     // ],
 
     // 'google_sigin_enable' => !1,

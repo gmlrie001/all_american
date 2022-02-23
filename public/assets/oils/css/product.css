@@ -56,49 +56,6 @@ FILTER
     border-top: 1px solid #f4f4f4;
     padding: 20px 0;
 }
-/* .accordion .collapse {
-    margin-top: 15px !important;
-}
-.filterWrap .collapse.show .accordion h5::after {
-    content: "+";
-}
-.filterWrap .accordion h5 {
-    font-size: 17px;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-.filterWrap .accordion h5::after {
-    content: "-";
-    line-height: 20px;
-    font-size: 30px;
-    float: right;
-}
-.filterWrap .sizeFilter a {
-    font-size: 10px;
-    color: #1b1b19;
-    border: 1px solid #d6d6d6;
-    padding: 5px;
-    width: 30px;
-    height: 30px;
-    line-height: 18px;
-    text-align: center;
-    display: inline-block;
-    margin-right: 10px;
-}
-.filterWrap label.filterSelect input {
-    display: none;
-}
-.filterWrap label.filterSelect.active img, .filterWrap label.filterSelect:hover img, .filterWrap label.filterSelect input:checked + img {
-    border-radius: 50%;
-    box-sizing: content-box;
-}
-.filterWrap label {
-    margin-right: 25px;
-}
-.filterWrap label p {
-    font-size: 10px;
-    margin-top: 5px;
-} */
 .filterWrap .title h5, .filterMobileopen .title h5 {
     font-size: 15px;
     font-weight: 600;
@@ -147,6 +104,7 @@ FILTER
 .filterWrap .custom-control .custom-control-label, .filterMobileopen .custom-control .custom-control-label {
     font-size: 13px;
     padding-left: 10px;
+    line-height: 27px;
 }
 .filterWrap .custom-control-label span, .filterMobileopen .custom-control-label::before {
     position: absolute;
@@ -203,9 +161,9 @@ FILTER
     min-height: 52px;
     margin-top: 1rem;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 600 !important;
     line-height: inherit;
-    /* text-transform: uppercase; */
+    text-transform: uppercase !important;
 }
 .productListWrap .block .info {
     margin-top: 5px;
@@ -227,10 +185,12 @@ FILTER
 .productListWrap .block .info .size {
     border-left: 1px #212121 solid;
 }
+/*
 .productListWrap .block .price {
-    /* padding-left: 0;
-    padding-right: 0; */
+    padding-left: 0;
+    padding-right: 0;
 }
+*/
 .productListWrap .block .price * {
     color: #c1ac3a !important;
 }
@@ -282,7 +242,6 @@ FILTER
     padding: 5px 15px;
     text-align: center;
 }
-
 .productViewWrap .image .thumbNail {
     margin-top: 20px;
 }
@@ -290,13 +249,10 @@ FILTER
     border: 1px solid #d6d6d6;
 }
 .productViewWrap .image .thumbNail .slick-slide {
-    /* border: 1px solid #cccccc; */
     margin: 0 15px;
 }
 
-/*--
-PRODUCT
---*/
+/*-- PRODUCT --*/
 .productViewWrap .sizeContain {
     position: relative;
 }
@@ -311,13 +267,13 @@ PRODUCT
     height: 40px;
     border-radius: 0;
     background-color: white;
-    -webkit-appearance: none; /*to disable the default appearance of radio button*/
+    -webkit-appearance: none;
     -moz-appearance: none;
 }
-.productViewWrap .details .sizeContain input[type="radio"]:focus { /*no need, if you don't disable default appearance*/
-    outline-color: transparent; /*to remove the square border on focus*/
+.productViewWrap .details .sizeContain input[type="radio"]:focus {
+    outline-color: transparent;
 }
-.productViewWrap .details .sizeContain input[type="radio"]:checked, .filterWrap .sizeContain input[type="radio"]:checked, .filterMobileopen .sizeContain input[type="radio"]:checked { /*no need, if you don't disable default appearance*/
+.productViewWrap .details .sizeContain input[type="radio"]:checked, .filterWrap .sizeContain input[type="radio"]:checked, .filterMobileopen .sizeContain input[type="radio"]:checked {
     border: 2px solid #004737;
 }
 .productViewWrap .details .sizeContain input[type="radio"]:checked ~ span:first-of-type, .filterWrap .sizeContain input[type="radio"]:checked ~ span:first-of-type, .filterMobileopen .sizeContain input[type="radio"]:checked ~ span:first-of-type {
@@ -332,7 +288,7 @@ input[type=checkbox] .custom-checkbox::after {
 .custom-checkbox::before,
 input[type=checkbox]:checked .custom-checkbox::after,
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-    background-color: #b1b1b1;
+    background-color: #c12136;
 }
 .productViewWrap .details .sizeContain label span:first-of-type, .filterWrap .sizeContain label span:first-of-type, .filterMobileopen .sizeContain label span:first-of-type {
     position: relative;
@@ -353,18 +309,17 @@ input[type=checkbox]:checked .custom-checkbox::after,
     border-radius: 0;
     border: none;
     background-color: white;
-    -webkit-appearance: none; /*to disable the default appearance of radio button*/
+    -webkit-appearance: none;
     -moz-appearance: none;
 }
 .productViewWrap .details .colourContain p, .filterWrap .colourContain p, .filterMobileopen .colourContain p {
     font-size: 10px;
 }
-.productViewWrap .details .colourContain input[type="radio"]:focus { /*no need, if you don't disable default appearance*/
-    outline-color: transparent; /*to remove the square border on focus*/
+.productViewWrap .details .colourContain input[type="radio"]:focus {
+    outline-color: transparent;
 }
-.productViewWrap .details .colourContain input[type="radio"]:checked, .filterMobileopen .details .colourContain input[type="radio"]:checked { /*no need, if you don't disable default appearance*/
+.productViewWrap .details .colourContain input[type="radio"]:checked, .filterMobileopen .details .colourContain input[type="radio"]:checked {
     border: 2px solid #004737;
-    /* border-radius: 50%; */
     width: 32px;
     height: 32px;
 }
@@ -374,7 +329,6 @@ input[type=checkbox]:checked .custom-checkbox::after,
     top: -12px;
     bottom: 0;
 }
-
 .productViewWrap .details .title h1 {
     font-size: 18px;
     font-weight: 400;
@@ -467,7 +421,6 @@ input[type=checkbox]:checked .custom-checkbox::after,
     margin-top: 20px;
 }
 
-
 @media (max-width: 1024px) { 
     .productListWrap .block .info h4, .productListWrap .block .info h2 {
         font-size: 13px;
@@ -514,7 +467,6 @@ input[type=checkbox]:checked .custom-checkbox::after,
         display: none;
     }
     .sortBy a.dropdown-toggle {
-       /* border: 1px solid #c7c7c7; */
         width: 100%;
         display: block;
         height: 40px;

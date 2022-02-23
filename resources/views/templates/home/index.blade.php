@@ -23,7 +23,7 @@
 
 @if(sizeof($home_link))
 <div class="container-fluid">
-    <section class="container quickLinksWrap">
+    <section class="container quickLinksWrap pb-0 pb-lg-3">
         <div class="row">
             @foreach($home_link as $homeLink)
                 <a href="{{$homeLink->link}}" class="col-6 col-lg-3 col-xl-3 contain">
@@ -51,9 +51,9 @@
 <div class="container home-feats mt-lg-5 mt-2">
     <div class="row mb-lg-2 mb-1">
         @foreach($home_features as $homefeat)
-            <article class="card col-12 col-xl-4 mb-5 border-0">
+            <article class="card col-12 col-xl-4 mb-3 mb-lg-4 border-0">
                 <div class="card-body px-lg-0 px-3">
-                    <h2 class="card-title">{{ $homefeat->title }}</h2>
+                    <h2 class="card-title mt-1 mt-lg-4">{{ $homefeat->title }}</h2>
                     <div class="card-text">
                         {!! $homefeat->description !!}
                     </div>

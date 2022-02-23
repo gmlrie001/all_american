@@ -51,12 +51,6 @@
     color: #fff !important;
     background-color: #920d1e;
 }
-
-/**
- * =================================
- * Site-wide search in header
- * =================================
- */
 .headerSearch {
     margin-top: 50px;
 }
@@ -66,16 +60,17 @@
 .headerSearch .form-control {
     height: calc(1.5em + .75rem + 2px);
     padding: .375rem .75rem;
-    border: none;
-    border-bottom: 1px solid #c12136;
-    border-radius: 0;
-    background-clip: padding-box;
-    background-color: #920d1e;
-    color: #fff;
     font-size: 0.8rem;
     font-weight: 400;
     line-height: 1.5;
-    transition: all .15s ease-in-out;
+    background-color: #fff;
+    background-clip: padding-box;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 1px solid #c12136;
+    border-radius: 0;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 .headerSearch .form-control {
   height: 37px !important;
@@ -85,26 +80,13 @@
   line-height: 37px !important;
 }
 form button.btn {
-    background-color: #c12136;
+    background-color: #c12136 !important;
     color: #424242;
 }
-
-::-webkit-input-placeholder {
-  color: #fff !important;
+.topNavBG, 
+.topNavBG * a * {
+    color: #fff !important;
 }
-::-moz-placeholder {
-  color: #fff !important;
-}
-::-ms-input-placeholder {
-  color: #fff !important;
-}
-:-ms-input-placeholder {
-  color: #fff !important;
-}
-:-moz-placeholder {
-  color: #fff !important;
-}
-/** * ================================= */
 
 /**
  *======================
@@ -175,6 +157,7 @@ form button.btn {
 .mobileOpen .links .lrgLink:after {
     content: url( '/assets/icons/dropdown-mobile.svg' );
     float: right;
+    filter: invert(1);
 }
 .mobileMenu .logo img {
     max-width: 95px;
@@ -228,7 +211,6 @@ a.account.fa.fa-sign-out-alt {
     font-size: 1.375rem;
     line-height: 20px;
 }
-
 @media (max-width: 992px) {
     .topNavBG, .navigation {
         display: none;
@@ -253,8 +235,8 @@ a.account.fa.fa-sign-out-alt {
   .input-group-prepend .btn {
     border-radius: 0;
   }
-}
 
+}
 @media (max-width: 768px) {
     .headerSearch .input-group {
         width: auto;
@@ -280,7 +262,6 @@ a.account.fa.fa-sign-out-alt {
         height: 38px;
     }
 }
-
 @media (max-width: 576px) {
     .mobileNavigation {
         display: block;

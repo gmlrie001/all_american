@@ -9,7 +9,7 @@
         @foreach($addresses as $key => $address)
         <div class="col-12 col-md-12 col-lg-7">
             <div class="row">
-                <section class="col-12 col-md-6 col-lg-6 detail">
+                <section class="col-12 col-lg-7 detail">
                     <div class="col-12 links">
                         <div class="title">
                             <h3>{{$address->title}}</h3>
@@ -40,7 +40,7 @@
                     </div>
                     @endif
                 </section>
-                <section class="col-12 col-md-6 col-lg-6 address">
+                <section class="col-12 col-lg-5 address">
                     <div class="col-12">
                         <div class="title">
                             <h3>Where to find us</h3>

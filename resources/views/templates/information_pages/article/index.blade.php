@@ -21,17 +21,6 @@
           'use_vault_logo' => true, 'use_placehold_it' => true
           ]
         )
-        @forelse($article->displayArticles as $key => $art)
-          @include( 'templates.placeholders.simple_image_placeholders',
-            [
-            'imgvar' => $art->featured_image, 'imgtitle' => $art->title,
-            'imgclasses' => 'img-fluid',
-            'class' => '', 'width' => 800,'height' => 600, 'text' => '+',
-            'use_vault_logo' => true, 'use_placehold_it' => true
-            ]
-          )
-        @empty
-        @endforelse
       </div>
     </div>
   </div>

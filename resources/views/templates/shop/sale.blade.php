@@ -14,25 +14,25 @@
                 Sort by <span></span>
                 </a>
                 <div class="dropdown-menu">
-                <a href="/sort/by/order-asc" class="dropdown-item">
+                <a href="/sort/by/order-asc?return_url={{ url()->full() }}"" class="dropdown-item">
                     Sort by default
                 </a>
-                <a href="/sort/by/price-asc" class="dropdown-item">
+                <a href="/sort/by/price-asc?return_url={{ url()->full() }}"" class="dropdown-item">
                     Sort by price (low to high)
                 </a>
-                <a href="/sort/by/price-desc" class="dropdown-item">
+                <a href="/sort/by/price-desc?return_url={{ url()->full() }}"" class="dropdown-item">
                     Sort by price (high to low)
                 </a>
-                <a href="/sort/by/created_at-asc" class="dropdown-item">
+                <a href="/sort/by/created_at-asc?return_url={{ url()->full() }}"" class="dropdown-item">
                     Sort by Oldest
                 </a>
-                <a href="/sort/by/created_at-desc" class="dropdown-item">
+                <a href="/sort/by/created_at-desc?return_url={{ url()->full() }}"" class="dropdown-item">
                     Sort by Newest
                 </a>
-                <a href="/sort/by/title-asc" class="dropdown-item">
+                <a href="/sort/by/title-asc?return_url={{ url()->full() }}"" class="dropdown-item">
                     Sort by A - Z
                 </a>
-                <a href="/sort/by/title-desc" class="dropdown-item">
+                <a href="/sort/by/title-desc?return_url={{ url()->full() }}"" class="dropdown-item">
                     Sort by Z - A
                 </a>
                 </div>
@@ -57,25 +57,25 @@
                 Sort by <span></span>
                 </a>
                 <div class="dropdown-menu">
-                    <a href="/sort/by/order-asc" class="dropdown-item">
+                    <a href="/sort/by/order-asc?return_url={{ url()->full() }}"" class="dropdown-item">
                         Sort by default
                     </a>
-                    <a href="/sort/by/price-asc" class="dropdown-item">
+                    <a href="/sort/by/price-asc?return_url={{ url()->full() }}"" class="dropdown-item">
                         Sort by price (low to high)
                     </a>
-                    <a href="/sort/by/price-desc" class="dropdown-item">
+                    <a href="/sort/by/price-desc?return_url={{ url()->full() }}"" class="dropdown-item">
                         Sort by price (high to low)
                     </a>
-                    <a href="/sort/by/created_at-asc" class="dropdown-item">
+                    <a href="/sort/by/created_at-asc?return_url={{ url()->full() }}"" class="dropdown-item">
                         Sort by Oldest
                     </a>
-                    <a href="/sort/by/created_at-desc" class="dropdown-item">
+                    <a href="/sort/by/created_at-desc?return_url={{ url()->full() }}"" class="dropdown-item">
                         Sort by Newest
                     </a>
-                    <a href="/sort/by/title-asc" class="dropdown-item">
+                    <a href="/sort/by/title-asc?return_url={{ url()->full() }}"" class="dropdown-item">
                         Sort by A - Z
                     </a>
-                    <a href="/sort/by/title-desc" class="dropdown-item">
+                    <a href="/sort/by/title-desc?return_url={{ url()->full() }}"" class="dropdown-item">
                         Sort by Z - A
                     </a>
                 </div>

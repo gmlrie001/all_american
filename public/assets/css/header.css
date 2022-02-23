@@ -1,5 +1,4 @@
 header {
-    /* background: #161a60; */
     background: #ffffff;
 }
 .logo, .logo:hover, .logo:focus {
@@ -10,7 +9,6 @@ header {
     margin-top: 30px;
 }
 .quick-links a, .quick-links a:hover, .quick-links a:focus {
-    /* color: #ffffff; */
     color: #161a60;
     font-weight: 300;
     font-size: 15px;
@@ -20,7 +18,6 @@ header {
     text-align: right;
     margin-left: 30px;
     padding-left: 30px;
-    /* border-left: 1px solid #ffffff; */
     border-left: 1px solid #161a60;
 }
 .quick-links a strong, .quick-links a:hover strong, .quick-links a:focus strong {
@@ -105,10 +102,8 @@ header {
     border-top: 1px solid #cccccc;
     margin-top: 10px;
     padding-top: 10px;
-
 }
 .simple-nav a, .simple-nav a:hover, .simple-nav a:focus {
-    /* color: #ffffff; */
     color: #161a60;
     font-weight: 300;
     font-size: 14px;
@@ -125,7 +120,6 @@ header {
 .simple-nav a.share-open, .simple-nav a:hover.share-open, .simple-nav a:focus.share-open {
     margin-left: 30px;
     padding-left: 30px;
-    /* border-left: 1px solid #ffffff; */
     border-left: 1px solid #161a60;
 }
 .simple-nav a.cart-open img, .simple-nav a:hover.cart-open img, .simple-nav a:focus.cart-open img {
@@ -133,7 +127,6 @@ header {
     width: 15px;
 }
 .cart-open.active, .cart-open.active:hover, .cart-open.active:focus{
-    /* color: #24e317 !important; */
     color: #00a1e0 !important;
 }
 .login-link, .login-link:hover, .login-link:focus {
@@ -142,7 +135,6 @@ header {
     font-weight: 400 !important;
 }
 .login-link + .login-link {
-    /* border-right: 1px solid #ffffff; */
     border-right: 1px solid #161a60;
 }
 .header-block {
@@ -174,7 +166,6 @@ header {
     position: absolute;
     width: 100%;
     height: 0;
-    /* margin-left: 100%; */
     -webkit-transition: all .5s linear;
     -moz-transition: all .5s linear;
     -o-transition: all .5s linear;
@@ -286,8 +277,8 @@ header {
         display: none;
     }
     .logo, .logo:hover, .logo:focus {
-        margin-top: 15px;
-        margin-bottom: 15px;
+        margin-top: 5px;
+        margin-bottom: 5px;
         max-width: 40%;
     }
     .mobile-controller {
@@ -298,6 +289,5 @@ header {
     }
     header {
         background: #161a60;
-        /* background: #ffffff; */
     }
 }
