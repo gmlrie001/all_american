@@ -13,7 +13,11 @@ include( 'templates.checkout.checkout_functions.helpers'/*, ['order' => $cart,'d
     list( $subTotal, $couponTotal )   = checkout_deductions( $subTotal, $order->coupon, $order->coupon_discount_type );
     list( $subTotal, $creditTotal )   = checkout_deductions( $subTotal, $order->store_credit_value, NULL );
     // list( $subTotal, $_ ) = checkout_deductions( $subTotal, 0, NULL );
-    dd( get_defined_vars() );
+
+
+
+
+
 @endphp
 
 <div class="col-12 col-lg-3 custom-checkout-padding">
