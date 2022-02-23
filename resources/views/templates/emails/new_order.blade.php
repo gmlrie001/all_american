@@ -225,6 +225,7 @@
           {{$cart->shipment->shipper}}</td>
       </tr>
       @endisset
+    {{--      
       @if( preg_match( '/(aramex.*?)+/isU', $cart->shipment->shipper, $m ) )
       <tr>
         <td width="80.5%" style="border: 1px solid #1f1f1f;padding: 10px 20px;color: #1f1f1f;">
@@ -264,7 +265,10 @@
             href="{{$cart->shipment->shipping_label_link}}">Printable Shipping Label</a></td>
       </tr>
       @endif
+      
       @if( preg_match( '/(parcel\s?ninja.*?)+/isU', $cart->shipment->shipper, $m ) )
+    --}}
+
       @isset( $cart->shipment->estimated_delivery_date )
       <tr>
         <td width="80.5%" style="border: 1px solid #1f1f1f;padding: 10px 20px;color: #1f1f1f;">
@@ -310,7 +314,9 @@
             href="{{$cart->shipment->shipping_label_link}}">Printable Shipping Label</a></td>
       </tr>
       @endisset
+    {{--
       @endif
+    --}}
     </table>
   </td>
 </tr>

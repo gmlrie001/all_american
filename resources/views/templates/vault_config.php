@@ -18,6 +18,7 @@
  */
 
 return [
+
   'vault_navitems' => [
     'site_settings',
     // 'sage_one',
@@ -39,8 +40,8 @@ return [
 
   'sage_accounting_enable' => 0,
   'sage_credencials' => [
-    'SAGEONE_USERNAME' => 'killimouna86@yahoo.com',
-    'SAGEONE_PASSWORD' => 'lLIg&r666x9J',
+    'SAGEONE_USERNAME' => '',
+    'SAGEONE_PASSWORD' => '',
     'SAGEONE_APIKEY' => '{D3B6A4C2-F62E-40DB-97BC-07C285581554}',
     'SAGEONE_ENDPOINT' => 'https://resellers.accounting.sageone.co.za/api/2.0.0',
   ],
@@ -117,15 +118,14 @@ return [
       ], 
     ], 
   
+    // To be tested and QA
     'TheCourierGuy' => [
       'courier' => 'Ppapi_tcg', 
-      'courier_enabled' => 0,
+      'courier_enabled' => 1,
       'courier_package' => [
-        'shipment_courier' => "\\Vault\\ShipmentCourier", 
-        'checkout_helper'  => [
-          \App\Helpers\TheCourierGuyParcelPerfectAPI\CheckoutServices\DeliveryOptionsService::class, 
-        ], 
-        'courier_default'  => "\\Vault\\CourierTcg", 
+        'shipment_courier'    => "\\Vault\\ShipmentCourier", 
+        'courier_default'     => "\\Vault\\CourierTcg", 
+        'checkout_helper' => \App\Helpers\TheCourierGuyParcelPerfectAPI\CheckoutServices\DeliveryOptionsService::class, 
       ], 
       'options' => [],
     ], 
@@ -135,37 +135,39 @@ return [
       'courier_enabled' => 0,
       'courier_package' => [
         'shipment_courier' => "\\Vault\\ShipmentCourier", 
-        'checkout_helper'  => [], 
+        'checkout_helper'  => "", 
         'courier_default'  => "\\Vault\\CourierParcelNinja", 
       ], 
       'options' => [], 
     ], 
 
+    // Working
     'Default' => [
       'courier' => 'Default', 
       'courier_enabled' => 1,
       'courier_package' => [
         'shipment_courier' => \App\Models\ShippingOption::class, 
-        'checkout_helper'  => [], 
+        'checkout_helper'  => "", 
         'courier_default'  => "", 
       ], 
       'options' => [], 
     ], 
 
+    // Working
     'Collection' => [
       'courier' => 'Collection', 
       'courier_enabled' => 1,
       'courier_package' => [
         'shipment_courier' => \App\Models\CollectionPoint::class, 
-        'checkout_helper'  => [], 
+        'checkout_helper'  => "", 
         'courier_default'  => "", 
       ], 
       'options' => [], 
     ],
   ],
 
-  'free_shipping_enabled' => !1,
-  'free_shipping_value_threshold_default' => 999.00,
+  'free_shipping_enabled' => !0,
+  'free_shipping_value_threshold_default' => 199.00,
   // SPECIAL OPTIONS -> Rate/Shipping Cost Specific
   'shipment_options' => [
     // Absorb/Wave %_percentage_% of the shipping cost/expense
@@ -181,10 +183,10 @@ return [
     'absorb_shipping_cost' => 100,
   ],
 
-
   'payment_options' => [
     'model' => \App\Models\PaymentOption::class,
   ],
+
   'payment_options_enabled' => [
     'eft_payment_option', 
     'payfast_payment_option', 
@@ -192,17 +194,20 @@ return [
     'store_credit_checkout_only_option', 
   ],
 
+  // Working
   'eft_payment_option' => [
     'enable' => 1
   ],
 
+  /** FIXME: Still needs to be implemented in the Controller and on the blade */
   'store_credit_checkout_only_option' => [
     'enable' => 1
   ],
 
+  // Working
   'payfast_payment_option' => [
-    'enable' => 1, 
-    'is_test' => !1,
+    'enable'  => 1, 
+    'is_test' => 1,
 
     'sandbox' => [
       'url'          => env( 'PAYFAST_WEBSERVICE_URL_SANDBOX', 'https://sandbox.payfast.co.za/eng/process' ),

@@ -29,25 +29,27 @@ a:hover {
     border-top: 1px solid #d6d6d6;
 }
 .textRed {
-    color: #e53935 !important;
+    color: #e53935;
 }
 .textGreen {
-    color: #2e7d32 !important;
+    color: #2e7d32;
 }
 .textBlue {
-    color: #1565c0 !important;
+    color: #1565c0;
 }
 .productPadding {
-    padding-top: 40px;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
 }
+
 /*--
 BUTTONS
 --*/
-a.grey {
-    background-color: #bdbdbd !important;
+.grey {
+    background-color: #bdbdbd;
 }
-button.green {
-    background-color: #004737 !important;
+.green {
+    background-color: #004737
 }
 a.smlBtn:nth-of-type(2) {
     margin-left: 20px;
@@ -60,29 +62,30 @@ button.smlBtn, a.smlBtn {
     min-height: 50px;
     border: none;
     padding: 0;
-    background-color: #ffffff;
+    background-color: #fff;
     border-radius: 0;
-    color: #ffffff;
+    color: #fff;
     font-size: 14px;
     font-weight: 600;
     line-height: 50px;
     text-align: center;
     text-transform: uppercase;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
     vertical-align: middle;
-
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
 }
-button.smlBtn:hover, a.smlBtn:hover, a.longBtn:hover {
+button.smlBtn:hover, 
+a.smlBtn:hover, 
+a.longBtn:hover {
     background-color: #051c2e;
-    color: #ffffff;
+    color: #fff;
 }
 a.tinyBtn {
     background-color: #f68121;
-    color: #ffffff;
+    color: #fff;
     display: inline-block;
     min-width: 49%;
     min-height: 40px;
@@ -93,7 +96,8 @@ a.tinyBtn {
     line-height: 40px;
     font-size: 1rem;
 }
-a.tinyBtn.BtnGrey, a.smlBtn.BtnGrey {
+a.tinyBtn.BtnGrey, 
+a.smlBtn.BtnGrey {
     background-color: #cacaca;
 }
 a.longBtn {
@@ -101,7 +105,7 @@ a.longBtn {
     min-height: 50px;
     display: inline-block;
     font-weight: 600;
-    color: #ffffff;
+    color: #fff;
     text-align: center;
     vertical-align: middle;
     -webkit-user-select: none;
@@ -114,9 +118,9 @@ a.longBtn {
     font-size: 1rem;
     line-height: 50px;
     border-radius: 0;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
-a.deleteBtn {
+.deleteBtn {
     min-height: 50px;
     line-height: 50px;
     display: inline-block;
@@ -130,7 +134,7 @@ button.wishBtn {
     min-height: 50px;
     display: inline-block;
     font-weight: 600;
-    color: #ffffff;
+    color: #fff;
     text-align: center;
     vertical-align: middle;
     -webkit-user-select: none;
@@ -159,7 +163,7 @@ button.wishBtn {
     color: #1b1b19;
     font-weight: 300;
     line-height: 30px;
-    margin-top: 30px;
+    margin-bottom: 1rem;
 }
 .page .article p {
     margin-top: 0px;
@@ -214,7 +218,7 @@ PAGE BANNERS
 .pageBanner .heroText {
     position: absolute;
     top: 35%;
-    color: #ffffff;
+    color: #fff;
     text-transform: uppercase;
     padding-left: 60px;
 }
@@ -234,6 +238,7 @@ a.link {
     font-weight: 700;
     margin-top: 10px;
 }
+
 /**
  * Page Title CSS
  */
@@ -242,12 +247,12 @@ a.link {
     color: #4e4e4e;
     margin-bottom: 40px;
 }  
-.pageHeader .breadCrumb a, .pageHeader .breadCrumb h1 {
+.pageHeader .breadCrumb a, 
+.pageHeader .breadCrumb h1 {
     font-size: 15px;
     display: inline;
     line-height: 60px;
     font-weight: 400;
-   /* text-transform: uppercase; */
 }
 .pageHeader .breadCrumb > a {
     color: #4e4e4e;   
@@ -255,7 +260,7 @@ a.link {
     padding-right: 40px;
 }
 .pageHeader a.sharing {
-    color: #000000;
+    color: #000;
     line-height: 60px;
 }
 .pageHeader .breadCrumb a::after {
@@ -268,7 +273,7 @@ a.link {
 }
 
 button.btn {
-    color: #ffffff !important;
+    color: #fff !important;
 }
 
 #zoomiocontainer,

@@ -309,107 +309,110 @@ address.shipping-address p *,
 <div class="container mt-5">
 	<div class="row">
 		<div class="col-12 col-lg-9 custom-checkout-padding">
-				<div class="row">
-						@include( 'templates.checkout.ecommerce.checkout.step2._components.navigation.checkout_nav' )
+			<div class="row">
+				@include( 'templates.checkout.ecommerce.checkout.step2._components.navigation.checkout_nav' )
 
-						@if( $user->addresses && count( $user->addresses ) > 0 )
-								@include( 'templates.checkout.ecommerce.checkout.step2._components.address_rows.cart_addresses' )
+				@if( $user->addresses && count( $user->addresses ) > 0 )
+					@include( 'templates.checkout.ecommerce.checkout.step2._components.address_rows.cart_addresses' )
 
-								@if ( $config['external_courier_companies']['Collection']['courier_enabled'] && class_exists( 'OrderCollection' ) )
-									@include( 'order_collection::components.step2_add_in.section' )
-								@endif
+					@if ( $config['external_courier_companies']['Collection']['courier_enabled'] && class_exists( 'OrderCollection' ) )
+						@include( 'order_collection::components.step2_add_in.section' )
+					@endif
 
-						@else
-								@include( 'template.checkout.ecommerce.checkout.step2._components.address_rows.add_address' )
-						@endif
-				</div>
+				@else
+					@include( 'templates.checkout.ecommerce.checkout.step2._components.address_rows.add_address' )
+				@endif
+			</div>
 		</div>
 
 		<div class="col-12 col-lg-3 custom-checkout-padding">
 			<div class="row">
-                @php
-                  if ( isset( $cart ) && ! isset( $order ) ) {
-                    $order = $cart;
-                  } elseif ( isset( $order ) && ! isset( $cart ) ) {
-                    $cart  = $order;
-                  }
-        
-                  $subTotal = $total_cost;
-                  $subTotal = $order->subtotal;
-        
-                  // Number of Items in Cart
-                  if (($cart_products != null || isset($cart_products)) && count($cart_products) > 0) {
-                    $cart_total = (($cart_products != null || isset($cart_products)) && count($cart_products) > 0) 
-                                  ? $cart_products->sum('quantity') : 0;
-                  }
-        
-                  // Deduction of DISCOUNTS
-                  if ( $discount == null || $discount == 0 ) {
-                    $discountTotal = 0;
-                  } else {
-                    $discountTotal = ( $discount_type == 0 ) ? $total_cost * ( $discount * 0.01 ) : $discount;
-                  }
-                  $subTotal -= $discountTotal;
-        
-                  // Deduction of COUPON
-                  if ( $order->coupon_value == 0 || $order->coupon_value == null ) {
-                    $couponTotal = 0;
-                  } else {
-                    $couponTotal = ( $order->coupon_discount_type == 0 ) 
-                                    ? $subTotal * ( $order->coupon_discount * 0.01 ) 
-                                    : $order->coupon_value;
-                  }
-                  $subTotal -= $couponTotal;
-        
-                  // Deduction of STORE CREDIT
-                  if ( $order->store_credit_value == 0 || $order->store_credit_value == null ) {
-                    $creditTotal = 0;
-                  } else {
-                    $creditTotal = $order->store_credit_value;
-                  }
-                  $subTotal -= $creditTotal;
-        
-                  // Addition of SHIPPING COST
-                  $shippingTotal = 0;
-                  $subTotal += $shippingTotal;
-                  // if ( $order->shipping_cost == 0 || $order->shipping_cost == null ) {
-                  //   $shippingTotal = 0;
-                  // } else {
-                  //   $shippingTotal = $order->shipping_cost;
-                  //   $subTotal += $shippingTotal;
-                  // }
-                @endphp
-        
-                @include( 'templates.checkout.new_order_summary' )
+				@php
+				  if ( isset( $cart ) && ! isset( $order ) ) {
+				    $order = $cart;
+				  } elseif ( isset( $order ) && ! isset( $cart ) ) {
+				    $cart  = $order;
+				  }
+
+				  $subTotal = $total_cost;
+				  $subTotal = $order->subtotal;
+
+				  // Number of Items in Cart
+				  if (($cart_products != null || isset($cart_products)) && count($cart_products) > 0) {
+				    $cart_total = (($cart_products != null || isset($cart_products)) && count($cart_products) > 0) 
+						  ? $cart_products->sum('quantity') : 0;
+				  }
+
+				  // Deduction of DISCOUNTS
+				  if ( $discount == null || $discount == 0 ) {
+				    $discountTotal = 0;
+				  } else {
+				    $discountTotal = ( $discount_type == 0 ) ? $total_cost * ( $discount * 0.01 ) : $discount;
+				  }
+				  // $subTotal -= $discountTotal;
+
+				  // Deduction of COUPON
+				  if ( $order->coupon_value == 0 || $order->coupon_value == null ) {
+				    $couponTotal = 0;
+				  } else {
+				    $couponTotal = $order->coupon_value;
+				    /* ( $order->coupon_discount_type == 0 ) 
+						    ? $subTotal * ( $order->coupon_discount * 0.01 ) 
+						    : $order->coupon_value; */
+				  }
+				  // $subTotal -= $couponTotal;
+
+				  // Deduction of STORE CREDIT
+				  if ( $order->store_credit_value == 0 || $order->store_credit_value == null ) {
+				    $creditTotal = 0;
+				  } else {
+				    $creditTotal = $order->store_credit_value;
+				  }
+				  // $subTotal -= $creditTotal;
+
+				  // Addition of SHIPPING COST
+				  $shippingTotal = $order->shipping_cost;
+				  $subTotal += $shippingTotal;
+				  // if ( $order->shipping_cost == 0 || $order->shipping_cost == null ) {
+				  //   $shippingTotal = 0;
+				  // } else {
+				  //   $shippingTotal = $order->shipping_cost;
+				  //   $subTotal += $shippingTotal;
+				  // }
+
+				  $order = $order->calculateOrderTotal();
+				@endphp
+
+				@include( 'templates.checkout.new_order_summary' )
 
 				@if($order->coupon != null)
 					<div class="col-12 applied-coupon">
 						<a href="/remove/coupon/{{$order->id}}?return_url={{ url()->full() }}">
-								{{$order->coupon}}
-								<i class="fa fa-times"></i>
+							{{$order->coupon}}
+							<i class="fa fa-times"></i>
 						</a>
 					</div>
 				@else
 					@if(sizeof($available_coupons))
-							<div class="col-12 available-coupons">
-									<h2>Available Coupon Codes</h2>
-									@foreach($available_coupons as $available_coupon)
-										<a href="/apply/coupon/{{$available_coupon->id}}?return_url={{ url()->full() }}">
-											{{$available_coupon->code}}
-											<i class="fa fa-plus"></i>
-										</a>
-									@endforeach
-							</div>
+						<div class="col-12 available-coupons">
+							<h2>Available Coupon Codes</h2>
+							@foreach($available_coupons as $available_coupon)
+							<a href="/apply/coupon/{{$available_coupon->id}}?return_url={{ url()->full() }}">
+								{{$available_coupon->code}}
+								<i class="fa fa-plus"></i>
+							</a>
+							@endforeach
+						</div>
 					@endif
 					<form action="/apply/coupon/code" method="post" class="col-12 p-0 promo-form">
-							{!!Form::token()!!}
-							<input type="hidden" name="return_url" value="{{ url()->full() }}">
-							<div class="input-group">
-									<input type="text" class="form-control" placeholder="Enter Promo Code" name="code">
-									<div class="input-group-append">
-											<button type="submit">GO</button>
-									</div>
+						{!!Form::token()!!}
+						<input type="hidden" name="return_url" value="{{ url()->full() }}">
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Enter Promo Code" name="code">
+							<div class="input-group-append">
+								<button type="submit">GO</button>
 							</div>
+						</div>
 					</form>
 				@endif
 			</div>
@@ -417,32 +420,33 @@ address.shipping-address p *,
 			<div class="row continue-checkout-form">
 				@php
 					$user->load( 'addresses' );
-					$userAddressFirst = $user->addresses->sortBy( 'created_at' )->first();
+					$userAddressFirst = $user->addresses()->latest()->first();
+
 					$defaultUserAddy = $user->addresses->where( 'default_address', 1 );
 					$defaultUserAddy = ( NULL != $defaultUserAddy ) ? $defaultUserAddy->first() : $userAddressFirst;
-					// dd( __FILE__, __LINE__, ( NULL == $defaultUserAddy ) ?: $user_addresses->first(), $userAddressFirst, $defaultUserAddy );
 				@endphp
 
-				@if(sizeof($user_addresses) && NULL != $defaultUserAddy )
+				@if(sizeof($user->addresses) || NULL == $defaultUserAddy )
 					@php
-						$shippingid = ( ! isset( $shippingid ) ) ? $defaultUserAddy->id : $shippingid;
-						$billingid  =  ( ! isset( $billingid ) ) ? $defaultUserAddy->id :  $billingid;
+						$shippingid = ( isset( $shippingid ) ? $shippingid : NULL != $defaultUserAddy ) ? $defaultUserAddy->id : 0;
+						$billingid  = ( isset( $billingid ) ? $billingid : NULL != $defaultUserAddy ) ? $defaultUserAddy->id : 0;
 					@endphp
-				
 					<form action="/cart/delivery/option" method="post" class="col-12 p-0">
 						{!! Form::token() !!}
+						{!! Form::hidden( 'return_url', url()->full() ) !!}
 						{!! Form::hidden( 'cart_id', $cart_id ) !!}
 						{!! Form::hidden( 'shipping_id', $shippingid ) !!}
-						{!! Form::hidden(  'billing_id',  $billingid ) !!}
+						{!! Form::hidden( 'billing_id',  $billingid ) !!}
 						<input class="continue-button blue-background" type="submit" value="continue checkout" name="basketDelivery">
 					</form>
 				
 				@else
 					<form action="/cart/delivery/option" method="post" class="col-12 p-0">
 						{!! Form::token() !!}
+						{!! Form::hidden( 'return_url', url()->full() ) !!}
 						{!! Form::hidden( 'cart_id', $cart_id ) !!}
 						{!! Form::hidden( 'shipping_id', $defaultUserAddy->id ?? $userAddressFirst->id ) !!}
-						{!! Form::hidden(  'billing_id', $defaultUserAddy->id ?? $userAddressFirst->id ) !!}
+						{!! Form::hidden( 'billing_id', $defaultUserAddy->id ?? $userAddressFirst->id ) !!}
 						<input class="continue-button blue-background" type="submit" value="continue checkout" name="basketDelivery" disabled="">
 					</form>
 				@endif
@@ -455,7 +459,7 @@ address.shipping-address p *,
 @include( 'templates.checkout.ecommerce.checkout.step2._components.new_address.add' )
 
 @if( env( 'APP_ENV' ) === 'production' )
-  @include('templates.tab_open_check')
+	@include('templates.tab_open_check')
 @endif
 
 @endsection
