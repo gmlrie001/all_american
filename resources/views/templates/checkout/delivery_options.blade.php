@@ -211,20 +211,17 @@ address.shipping-address p *,
                     @break
                   
                   @case( 'ppapi_tcg' )
-                  @case( 'Ppapi_tcg' )
-                  @case( 'ppapitcg' )
                     @php
-                      $opts = $courier['ppapi_tcg']; // $shipperOpt;
+                      $opts = $courier['Ppapi_tcg'];
                       $decoded_opts = json_decode( $opts, false );
                       $shipperOpt = $decoded_opts->rates;
                       unset( $opts, $decoded_opts, $courier );
                     @endphp
 
-                    {{-- ideally use @each blade directive --}}
-                    @includeWhen( 
-                      $shipper && strtolower( $shipper ) === "ppapi_tcg", 
-                      'templates.checkout.ecommerce.checkout.step3.couriers.ppapi_tcg', ['shipperOpt' => $shipperOpt] 
-                    )
+                    {{-- @if( $shipper && strtolower( $shipper ) === "ppapi_tcg" ) --}}
+                      {{-- ideally use @each blade directive --}}
+                      @include( 'templates.checkout.ecommerce.checkout.step3.couriers.ppapi_tcg', ['shipperOpt' => $shipperOpt] )
+                    {{-- @endif --}}
                     @break
 
                   @case( 'default' )
